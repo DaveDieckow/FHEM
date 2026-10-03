@@ -1,0 +1,49 @@
+#!/bin/bash
+# $Id: postinst 30674 2025-12-30 12:32:04Z betateilchen $
+set -e
+
+user_exists=$(id -u fhem > /dev/null 2>&1; echo $?)
+if [ "$user_exists" -eq "1" ]; then
+    echo "creating user fhem"
+    useradd --system --home /opt/fhem -g dialout -G plugdev --shell /bin/false fhem
+fi
+
+chown -R fhem:dialout /opt/fhem
+
+# remove repository entry after first installation
+echo "removing repo from sources"
+if [ -f /etc/apt/sources.list ]; then
+sed -i /debian.fhem.de/d /etc/apt/sources.list
+fi
+if [ -f /etc/apt/sources.list.d/debianfhemde.list ]; then
+  rm /etc/apt/sources.list.d/debianfhemde.list
+fi
+if [ -f /etc/apt/sources.list.d/debianfhemde.sources ]; then
+  rm /etc/apt/sources.list.d/debianfhemde.sources
+fi
+
+# set up of autostart
+# systemd:  supported
+# sysvinit: supported
+# upstart:  not supported
+
+# detect init system
+test=$(stat /sbin/init |grep "/sbin/init")
+re="systemd$"
+
+if [[ $test =~ $re ]];
+then
+   cp /opt/fhem/contrib/init-scripts/fhem.service /etc/systemd/system
+   systemctl daemon-reload
+   systemctl enable fhem.service
+   systemctl start fhem.service
+else
+   cp /opt/fhem/contrib/init-scripts/fhem.3 /etc/init.d/fhem
+   chmod ugo+x /etc/init.d/fhem
+   update-rc.d fhem defaults
+   if test -f /etc/init.d/fhem; then
+      /etc/init.d/fhem start noaptmark
+   fi
+fi
+
+exit 0

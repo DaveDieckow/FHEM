@@ -1,0 +1,35 @@
+#Tue Oct 11 16:11:08 2022
+{
+  'HI_Stromzaehler' => [
+                         [
+                           '1665497429.40912',
+                           'MQTT2_shellyem3_244CAB432745',
+                           'energy: 38.3478',
+                           '16:10:29&nbsp;&nbsp;<a href="/fhem?detail=MQTT2_shellyem3_244CAB432745">Stromzähler</a> energy: 38.3478'
+                         ],
+                         [
+                           '1665497369.40633',
+                           'MQTT2_shellyem3_244CAB432745',
+                           'energy: 38.3452',
+                           '16:09:29&nbsp;&nbsp;<a href="/fhem?detail=MQTT2_shellyem3_244CAB432745">Stromzähler</a> energy: 38.3452'
+                         ],
+                         [
+                           '1665497309.38686',
+                           'MQTT2_shellyem3_244CAB432745',
+                           'energy: 38.3424',
+                           '16:08:29&nbsp;&nbsp;<a href="/fhem?detail=MQTT2_shellyem3_244CAB432745">Stromzähler</a> energy: 38.3424'
+                         ],
+                         [
+                           '1665497249.3835',
+                           'MQTT2_shellyem3_244CAB432745',
+                           'energy: 38.3374',
+                           '16:07:29&nbsp;&nbsp;<a href="/fhem?detail=MQTT2_shellyem3_244CAB432745">Stromzähler</a> energy: 38.3374'
+                         ],
+                         [
+                           '1665497189.37613',
+                           'MQTT2_shellyem3_244CAB432745',
+                           'energy: 38.3374',
+                           '16:06:29&nbsp;&nbsp;<a href="/fhem?detail=MQTT2_shellyem3_244CAB432745">Stromzähler</a> energy: 38.3374'
+                         ]
+                       ]
+}

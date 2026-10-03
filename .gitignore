@@ -1,0 +1,13 @@
+archive/
+backupt/
+log/
+www/
+restoreDir/
+.ssh/
+*.zip
+*.gz
+*.png
+*.jpeg
+*.jpg
+*.deb
+*.PNG

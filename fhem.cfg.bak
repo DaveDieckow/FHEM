@@ -1,0 +1,2745 @@
+attr global userattr DbLogExclude DbLogExclude:textField-long DbLogInclude DbLogInclude:textField-long DbLogValueFn:textField-long alexaName alexaProactiveEvents:1,0 alexaRoom cmdIcon devStateIcon devStateIcon:textField-long devStateStyle genericDeviceType:security,ignore,switch,outlet,light,blind,thermometer,thermostat,contact,garage,window,lock,scene homebridgeMapping:textField-long icon lightSceneParamsToSave lightSceneRestoreOnlyIfChanged:1,0 sortby structexclude webCmd webCmdLabel:textField-long widgetOverride
+attr global altitude 80
+attr global autoload_undefined_devices 1
+attr global autosave 0
+attr global backup_before_update 1
+attr global backupdir /opt/sd
+attr global dnsServer 8.8.8.8
+attr global exclude_from_update 36_LaCrosseGateway.pm
+attr global featurelevel 99.99
+attr global latitude 52.518611
+attr global logfile ./log/fhem-%Y-w%W.log
+attr global longitude 13.376111
+attr global modpath .
+attr global motd Messages collected while initializing FHEM:\
+attr global mseclog 1
+attr global mseclog 1
+attr global room Log
+attr global sendStatistics never
+attr global stacktrace 0
+attr global statefile ./fhem.save
+attr global updateInBackground 1
+attr global verbose 2
+define myDbLog DbLog ./db.conf .*:.*
+setuuid myDbLog 5c9a0e92-f33f-572c-ccaf-a339ba15002fbbb7
+attr myDbLog DbLogSelectionMode Include
+attr myDbLog DbLogType Current/History
+attr myDbLog addStateEvent 1
+attr myDbLog asyncMode 1
+attr myDbLog cacheEvents 2
+attr myDbLog cacheLimit 1000
+attr myDbLog devStateIcon .*active:10px-kreis-gelb connected:10px-kreis-gruen .*disconnect:10px-kreis-rot
+attr myDbLog disable 0
+attr myDbLog icon it_storage
+attr myDbLog insertMode 0
+attr myDbLog room Log
+attr myDbLog showNotifyTime 0
+attr myDbLog showproctime 1
+attr myDbLog syncInterval 30
+attr myDbLog verbose 2
+define Log.DB.Standby.Remote DbLog ./FHEM/db.standby.conf .*:.*
+setuuid Log.DB.Standby.Remote 633e7bb6-f33f-c425-5695-5b939374b689fd4f
+attr Log.DB.Standby.Remote DbLogSelectionMode Include
+attr Log.DB.Standby.Remote DbLogType History
+attr Log.DB.Standby.Remote addStateEvent 1
+attr Log.DB.Standby.Remote asyncMode 1
+attr Log.DB.Standby.Remote cacheEvents 2
+attr Log.DB.Standby.Remote cacheLimit 1000
+attr Log.DB.Standby.Remote devStateIcon .*active:10px-kreis-gelb connected:10px-kreis-gruen .*disconnect:10px-kreis-rot
+attr Log.DB.Standby.Remote disable 0
+attr Log.DB.Standby.Remote icon it_storage
+attr Log.DB.Standby.Remote insertMode 0
+attr Log.DB.Standby.Remote room Log
+attr Log.DB.Standby.Remote showNotifyTime 0
+attr Log.DB.Standby.Remote showproctime 1
+attr Log.DB.Standby.Remote syncInterval 30
+attr Log.DB.Standby.Remote verbose 2
+
+# Geo-Koordinaten
+
+# Zentrales Logging pro Kalenderwoche
+
+# Backup vor Update
+
+# FHEM Daily Backup
+define SYS_Backup dummy
+setuuid SYS_Backup 5c9a0e89-f33f-572c-3687-3b5f2eee5b2e5720
+attr SYS_Backup alias FHEM Backup ausführen
+attr SYS_Backup group Backup
+attr SYS_Backup icon it_drive
+attr SYS_Backup room System
+attr SYS_Backup webCmd Ausführen
+define SYS_BackupRun notify SYS_Backup:* backup
+setuuid SYS_BackupRun 5c9a0e89-f33f-572c-6a65-77b38574451b8dbb
+attr SYS_BackupRun alias Backup
+attr SYS_BackupRun group Backup
+attr SYS_BackupRun room System
+
+define NTFY_BackupRun at *23:59:00 set SYS_Backup Ausführen
+setuuid NTFY_BackupRun 5c9a0e89-f33f-572c-24c9-cba41009b3e868a4
+attr NTFY_BackupRun group AT
+attr NTFY_BackupRun room System
+
+#define telnetPort telnet 7072 global
+#attr telnetPort room System
+
+define WEB FHEMWEB 8083 global
+setuuid WEB 5c9a0e8a-f33f-572c-f0b1-7efa8a7a21b92143
+attr WEB JavaScripts codemirror/fhem_codemirror.js
+attr WEB SVGcache 0
+attr WEB column Energie:Leistung,Energie%20Monat,Energie%20Tag
+attr WEB confirmDelete 0
+attr WEB csrfToken none
+attr WEB defaultRoom Haus
+attr WEB editConfig 1
+attr WEB editFileList Own modules and helper files:$MW_dir:^(.*sh|[0-9][0-9].*Util.*pm|.*cfg.*pm|.*holiday|myUtilsTemplate.pm|.*layout|.*html|.*conf)$\
+Gplot files:$FW_gplotdir:^.*gplot$\
+Styles:$FW_cssdir:^.*(css|svg)$\
+HTML:$HTML_dir:^.*html$\
+Conf:$MW_dir:^.*conf$
+attr WEB fwcompress 1
+attr WEB group FHEM
+attr WEB icon system_fhem
+attr WEB menuEntries restart,cmd=shutdown+restart,update,cmd=update,updatecheck,cmd=update+check,Backup,/fhem?cmd=backup
+attr WEB nrAxis 1,1
+attr WEB plotEmbed 2
+attr WEB plotfork 1
+attr WEB plotmode SVG
+attr WEB reverseLogs 1
+attr WEB room System
+attr WEB roomIcons Aussen:scene_garden Cubieboard:it_server Kueche:scene_dinner Heizung:sani_boiler_temp Kinderzimmer:scene_childs_room Treppenhaus:scene_stairs Schlafzimmer:scene_sleeping Waschkueche:scene_laundry_room Badezimmer:scene_bathroom Arbeitszimmer:scene_office Wohnzimmer:scene_livingroom Flur:scene_hall Waschküche:scene_washing_machine System:cul Energie:stromzaehler_icon Graphen:fts_blade_s Unsorted:message_attention
+attr WEB sortRooms Aussen Haus Heizung Arbeitszimmer Badezimmer Flur Gaestezimmer Kinderzimmer Kueche Schlafzimmer Treppenhaus Wohnzimmer Waschkueche Waschküche Energie System Unsorted Everything
+attr WEB stylesheetPrefix dark
+attr WEB verbose 3
+
+
+define allowed_WEB allowed
+setuuid allowed_WEB 5c9a0e8a-f33f-572c-c0e8-b12ea86e8335d14d
+attr allowed_WEB basicAuth ZGF2aWQ6Z2g4azk3NWJ3
+attr allowed_WEB room hidden
+attr allowed_WEB validFor WEB
+
+define TABLETUI HTTPSRV ftui/ ./www/tablet Tablet-UI
+setuuid TABLETUI 5c9a0e8a-f33f-572c-0bcb-36951127ba87d36c
+attr TABLETUI group FHEM
+attr TABLETUI icon system_fhem
+attr TABLETUI room System
+
+
+# Fake FileLog entry, to access the fhem log from FHEMWEB 
+define Logfile FileLog ./log/fhem-%Y-w%W.log fakelog
+setuuid Logfile 5c9a0e8a-f33f-572c-3318-ba629f4882ecb538
+attr Logfile archiveCompress 1
+attr Logfile archivedir /opt/fhem/archive
+attr Logfile nrarchive 10
+attr Logfile room Log
+
+define autocreate autocreate
+setuuid autocreate 5c9a0e8a-f33f-572c-15f7-efe2e70c6f294c38
+attr autocreate autocreateThreshold Revolt:6:120,IT:5:60
+attr autocreate device_room Auto
+attr autocreate disable 0
+attr autocreate group FHEM
+attr autocreate icon system_fhem_reboot
+attr autocreate room System
+define eventTypes eventTypes demolog/eventTypes.txt
+setuuid eventTypes 5c9a0e8a-f33f-572c-9d11-98d1a3cc65356a89
+attr eventTypes room hidden
+
+
+
+
+
+#define sduino FHEMduino /dev/ttyUSB3@9600
+#attr sduino room System
+#attr sduino verbose 5
+
+#define Arduino FHEMduino /dev/ttyUSB1@9600
+#attr Arduino room System
+
+define CUL3 CUL 192.168.178.59:2323 1554
+setuuid CUL3 5c9a0e8e-f33f-572c-a49f-cc9499d16f5b013b
+attr CUL3 DbLogInclude credit10ms
+attr CUL3 addvaltrigger 1
+attr CUL3 alias CUL_868_MAX
+attr CUL3 devStateIcon {my $text = ' Credits: '.ReadingsVal($name,"credit10ms","0").sprintf(" RSSI: %d ", \
+InternalVal($name,"RSSI","-1"));;\
+my $onl = ReadingsVal($name,"state","false") eq "Initialized"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}
+attr CUL3 event-min-interval credit10ms:600
+attr CUL3 event-on-change-reading credit10ms
+attr CUL3 event-on-update-reading credit10ms:600
+attr CUL3 group Interfaces
+attr CUL3 icon cul_868
+attr CUL3 maxid 123456
+attr CUL3 rfmode MAX
+attr CUL3 room System
+attr CUL3 stateFormat {sprintf("Status: %s<br>Credit: %.1f", ReadingsVal($name,"state",0), ReadingsVal($name,"credit10ms",0))}\
+
+define CUL_MAX_Device CUL_MAX 123456
+setuuid CUL_MAX_Device 5c9a0e91-f33f-572c-b073-af63b552d2863dd7
+attr CUL_MAX_Device event-min-interval credit10ms:600
+attr CUL_MAX_Device event-on-change-reading credit10ms:600
+attr CUL_MAX_Device event-on-update-reading credit10ms:600
+attr CUL_MAX_Device fakeSCaddr 444444
+attr CUL_MAX_Device fakeWTaddr 333333
+attr CUL_MAX_Device group Interfaces
+attr CUL_MAX_Device icon cul_max
+attr CUL_MAX_Device room System
+
+
+
+define myLaCrosseGateway LaCrosseGateway 192.168.178.24:81
+setuuid myLaCrosseGateway 5c9a0e92-f33f-572c-6d60-ec1e39eaf5c3b25f
+attr myLaCrosseGateway alias LaCrosseGateway_01
+attr myLaCrosseGateway devStateIcon {my $text = ' FPM: '.ReadingsVal($name,"FramesPerMinute","unknown").sprintf("<br>RSSI: %.d", \
+ReadingsVal($name,"RSSI","unknown"));; \
+my $onl = ReadingsVal($name,"state","false") eq "initialized"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}
+attr myLaCrosseGateway group Interfaces
+attr myLaCrosseGateway icon it_router
+attr myLaCrosseGateway kvp readings
+attr myLaCrosseGateway mode WiFi
+attr myLaCrosseGateway ownSensors dispatch
+attr myLaCrosseGateway room System
+attr myLaCrosseGateway stateFormat {sprintf("Status: %s<br>RSSI: %.1f<br>Temperatur: %.1f°C<br>Luftdruck: %.1fhPa", ReadingsVal($name,"state",0), ReadingsVal($name,"RSSI",0), ReadingsVal($name,"temperature",0), ReadingsVal($name,"pressure",0))}
+attr myLaCrosseGateway timeout 60
+attr myLaCrosseGateway usbFlashCommand ./FHEM/firmware/esptool.py -b 921600 -p [PORT] write_flash -ff 80m -fm dio -fs 4MB-c1 0x00000 [BINFILE] > [LOGFILE]
+attr myLaCrosseGateway watchdog 300
+
+
+
+######################################## > Zeitstuerung < #########################################
+
+
+
+
+
+#define at_sunset_lamp_on at +*{sunset_rel(-6000)} set Switch_Lampe_Flur on
+#attr at_sunset_lamp_on room Flur
+##define at_sunrise_lamp_off at +*{sunrise_rel(3600)} set Switch_Lampe_Flur off
+#attr at_sunrise_lamp_off room Flur
+
+
+######################################## > Wohnzimmer < #########################################
+
+
+#09a805
+#attr 
+#Wohnzimmer userReadings temperature.av {movingAverage("Term_Wohnzimmer","temperature",86400)}
+
+define SVG_Term_Wohnzimmer SVG myDbLog:SVG_WOHNZIMMER:HISTORY
+setuuid SVG_Term_Wohnzimmer 5c9a0e93-f33f-572c-f3b0-a6ec8093fc8e4ba8
+attr SVG_Term_Wohnzimmer alias SVG Heizung Wohnzimmer
+attr SVG_Term_Wohnzimmer endPlotNow 1
+attr SVG_Term_Wohnzimmer group Heizung
+attr SVG_Term_Wohnzimmer label "Heizung Wohnzimmer [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Wohnzimmer plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=WT_Wohnzimmer ROOMTEMPDEVICE=WT_Wohnzimmer EXTERNALTEMPREADING=temperature ROOMVALVEDEVICE=PID_Fussbodenheizung
+attr SVG_Term_Wohnzimmer room Graphen,Wohnzimmer
+
+
+
+#attr Luftwerte valueFormat { if($READING eq "valveposition" && $VALUE ne "0"){$VALUE = int($VALUE/10)*10}}
+#attr Luftwerte valueStyle {if($READING eq "temperature"){my $t=$VALUE;;my $d=ReadingsVal($DEVICE,'desiredTemperature',0);;if($t-$d>=1){'style="color:rgb(251,63,11);;"'}elsif($t-$d<=-1){'style="color:rgb(79,58,251);;"'}else{'style="color:rgb(12,251,12);;"'}}}
+
+define WT_Wohnzimmer MAX WallMountedThermostat 09a805
+setuuid WT_Wohnzimmer 5e2808b8-f33f-572c-e7b0-eeb312f5d9733abf
+attr WT_Wohnzimmer userattr Thermostat Thermostat_map structexclude
+attr WT_Wohnzimmer CULdev CUL3
+attr WT_Wohnzimmer DbLogInclude temperature,desiredTemperature
+attr WT_Wohnzimmer IODev CUL_MAX_Device
+attr WT_Wohnzimmer alias Thermostat Wohnzimmer
+attr WT_Wohnzimmer event-min-interval temperature:60,desiredTemperature:600
+attr WT_Wohnzimmer event-on-change-reading temperature,desiredTemperature
+attr WT_Wohnzimmer event-on-update-reading temperature:60,desiredTemperature:600
+attr WT_Wohnzimmer group Heizung
+attr WT_Wohnzimmer icon hm-tc-it-wm-w-eu
+attr WT_Wohnzimmer model WallMountedThermostat
+attr WT_Wohnzimmer room Wohnzimmer
+attr WT_Wohnzimmer stateFormat {sprintf("Temperatur: %.1f °C", ReadingsVal($name,"temperature",0))}
+attr WT_Wohnzimmer suppressReading energy_EnergyCostDay energy_EnergyCostMeter energy_EnergyCostMonth energy_EnergyCostYear energy_FinanceReserve energy_WFRDayMax energy_WFRDayMin
+attr WT_Wohnzimmer userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}, energy integral {ReadingsVal($name,'valveposition',0)/360000}
+
+######################################## > Küche < #########################################
+define HZ_Kueche MAX HeatingThermostat 124186
+setuuid HZ_Kueche 5f84ba8b-f33f-c425-322c-720e0c98c40196da
+attr HZ_Kueche userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Kueche CULdev CUL3
+attr HZ_Kueche DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Kueche IODev CUL_MAX_Device
+attr HZ_Kueche alexaName Alle Heizungen
+attr HZ_Kueche alexaProactiveEvents 1
+attr HZ_Kueche alias Heizung Kueche
+attr HZ_Kueche event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Kueche event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Kueche event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Kueche group Heizung
+attr HZ_Kueche icon sani_heating
+attr HZ_Kueche model HeatingThermostat
+attr HZ_Kueche room Heizung,Kueche
+attr HZ_Kueche scanTemp 1
+attr HZ_Kueche stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Kueche suppressReading energy_EnergyCostDay energy_EnergyCostMeter energy_EnergyCostMonth energy_EnergyCostYear energy_FinanceReserve energy_WFRDayMax energy_WFRDayMin
+attr HZ_Kueche userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+define SVG_Term_Kueche SVG myDbLog:SVG_KUECHE:HISTORY
+setuuid SVG_Term_Kueche 5c9a0e93-f33f-572c-a342-38187e77bf2dd65e
+attr SVG_Term_Kueche alias SVG Heizung Kueche
+attr SVG_Term_Kueche endPlotNow 1
+attr SVG_Term_Kueche group Heizung
+attr SVG_Term_Kueche label "Heizung Küche [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Kueche plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=HZ_Kueche ROOMTEMPDEVICE=HZ_Kueche ROOMHUMIDITYDEVICE=HZ_Kueche EXTERNALTEMPREADING=temperature ROOMVALVEDEVICE=HZ_Kueche
+attr SVG_Term_Kueche room Graphen,Kueche
+
+
+
+######################################## > Schlafzimmer < #########################################
+
+define HZ_Schlafzimmer MAX HeatingThermostat 01ac10
+setuuid HZ_Schlafzimmer 5f48dd59-f33f-c425-d8b4-7647680f02eae65f
+attr HZ_Schlafzimmer userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Schlafzimmer CULdev CUL3
+attr HZ_Schlafzimmer DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Schlafzimmer IODev CUL_MAX_Device
+attr HZ_Schlafzimmer alexaName Alle Heizungen
+attr HZ_Schlafzimmer alexaProactiveEvents 1
+attr HZ_Schlafzimmer alias Heizung Schlafzimmer
+attr HZ_Schlafzimmer event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Schlafzimmer event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Schlafzimmer event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Schlafzimmer group Heizung
+attr HZ_Schlafzimmer icon sani_heating
+attr HZ_Schlafzimmer model HeatingThermostat
+attr HZ_Schlafzimmer room Heizung,Schlafzimmer
+attr HZ_Schlafzimmer scanTemp 1
+attr HZ_Schlafzimmer scnProcessByDesiChange 0
+attr HZ_Schlafzimmer stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Schlafzimmer suppressReading energy_EnergyCostDay energy_EnergyCostMeter energy_EnergyCostMonth energy_EnergyCostYear energy_FinanceReserve energy_WFRDayMax energy_WFRDayMin
+attr HZ_Schlafzimmer userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+#attr MAX_01ac10 userReadings valveposition.24h {movingAverage("Term_Schlafzimmer","valveposition",86400)},temperature.24h {movingAverage("Term_Schlafzimmer","temperature",86400)}
+
+define SVG_Term_Schlafzimmer SVG myDbLog:SVG_SCHLAFZIMMER:HISTORY
+setuuid SVG_Term_Schlafzimmer 5c9a0e93-f33f-572c-cee3-a5fbfbd431f3809f
+attr SVG_Term_Schlafzimmer alias SVG Heizung Schlafzimmer
+attr SVG_Term_Schlafzimmer endPlotNow 1
+attr SVG_Term_Schlafzimmer group Heizung
+attr SVG_Term_Schlafzimmer label "Heizung Schlafzimmer [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}] Feuchte [↓ $data{min4} ↑ $data{max4} Ø $data{avg4}]"
+attr SVG_Term_Schlafzimmer plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=HZ_Schlafzimmer ROOMTEMPDEVICE=LaCrosse_14 ROOMHUMIDITYDEVICE=LaCrosse_14 EXTERNALTEMPREADING=temperature ROOMVALVEDEVICE=HZ_Schlafzimmer
+attr SVG_Term_Schlafzimmer room Graphen,Schlafzimmer
+
+
+
+define LaCrosse_14 LaCrosse 32
+setuuid LaCrosse_14 5c9a0e93-f33f-572c-3464-30a0f89bd8856378
+attr LaCrosse_14 DbLogInclude humidity,temperature,dewpoint
+attr LaCrosse_14 IODev myLaCrosseGateway
+attr LaCrosse_14 alexaName Thermometer Schlafzimmer
+attr LaCrosse_14 alias Thermometer Schlafzimmer
+attr LaCrosse_14 doDewpoint 1
+attr LaCrosse_14 event-min-interval humidity:600,temperature:600,dewpoint:600
+attr LaCrosse_14 event-on-change-reading humidity,temperature,dewpoint
+attr LaCrosse_14 event-on-update-reading humidity:600,temperature:600,dewpoint:600
+attr LaCrosse_14 group Umwelt
+attr LaCrosse_14 icon temperature_humidity
+attr LaCrosse_14 room Schlafzimmer
+attr LaCrosse_14 stateFormat {sprintf("Temperatur: %.1f °C<br>Feuchte: %.1f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"humidity",0))}
+attr LaCrosse_14 userReadings trend {tendencyGet("LaCrosse_14", "statTemperatureTendency","1h")}
+
+######################################## > Badezimmer < #########################################
+define HZ_Kinderzimmer MAX HeatingThermostat 12419a
+setuuid HZ_Kinderzimmer 5f423e58-f33f-c425-9e16-28ea0f2d381655ec
+attr HZ_Kinderzimmer userattr scnProcessByDesiChange:0,1 scnShutterList scnModeHandling:NOCHANGE,AUTO,MANUAL
+attr HZ_Kinderzimmer CULdev CUL3
+attr HZ_Kinderzimmer DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Kinderzimmer IODev CUL_MAX_Device
+attr HZ_Kinderzimmer alias Heizung Kinderzimmer
+attr HZ_Kinderzimmer event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Kinderzimmer event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Kinderzimmer event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Kinderzimmer group Heizung
+attr HZ_Kinderzimmer icon sani_heating
+attr HZ_Kinderzimmer model HeatingThermostat
+attr HZ_Kinderzimmer room Heizung,Kinderzimmer
+attr HZ_Kinderzimmer scanTemp 1
+attr HZ_Kinderzimmer scnModeHandling NOCHANGE
+attr HZ_Kinderzimmer scnProcessByDesiChange 0
+attr HZ_Kinderzimmer stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Kinderzimmer userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+
+define HZ_Badezimmer_Fenster MAX HeatingThermostat 0ab6b1
+setuuid HZ_Badezimmer_Fenster 5f84bba5-f33f-c425-705f-f5addbe3f1a48e99
+attr HZ_Badezimmer_Fenster userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Badezimmer_Fenster CULdev CUL3
+attr HZ_Badezimmer_Fenster DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Badezimmer_Fenster IODev CUL_MAX_Device
+attr HZ_Badezimmer_Fenster Thermostat GR.HZ_Badezimmer
+attr HZ_Badezimmer_Fenster alias Heizung Badezimmer
+attr HZ_Badezimmer_Fenster debug 0
+attr HZ_Badezimmer_Fenster event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Badezimmer_Fenster event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Badezimmer_Fenster event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Badezimmer_Fenster externalSensor LaCrosse_01:temperature
+attr HZ_Badezimmer_Fenster group Heizung
+attr HZ_Badezimmer_Fenster icon sani_heating
+attr HZ_Badezimmer_Fenster model HeatingThermostat
+attr HZ_Badezimmer_Fenster room Badezimmer,Heizung
+attr HZ_Badezimmer_Fenster scanTemp 1
+attr HZ_Badezimmer_Fenster stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Badezimmer_Fenster userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+define SVG_Term_Badezimmer SVG myDbLog:SVG_BADEZIMMER:HISTORY
+setuuid SVG_Term_Badezimmer 5c9a0e94-f33f-572c-9990-e6dd329331c7eced
+attr SVG_Term_Badezimmer alias SVG Heizung Badezimmer
+attr SVG_Term_Badezimmer endPlotNow 1
+attr SVG_Term_Badezimmer group Heizung
+attr SVG_Term_Badezimmer label "Heizung Badezimmer [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Badezimmer plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=HZ_Badezimmer_Fenster ROOMTEMPDEVICE=LaCrosse_01 ROOMHUMIDITYDEVICE=LaCrosse_01 EXTERNALTEMPREADING=temperature ROOMVALVEDEVICE=HZ_Badezimmer_Fenster
+attr SVG_Term_Badezimmer room Badezimmer,Graphen
+
+
+define LaCrosse_01 LaCrosse 3C
+setuuid LaCrosse_01 5c9a0e94-f33f-572c-7afa-3cb1103a74bd0cd3
+attr LaCrosse_01 DbLogInclude humidity,temperature,dewpoint
+attr LaCrosse_01 IODev myLaCrosseGateway
+attr LaCrosse_01 alexaName Thermometer Badezimmer
+attr LaCrosse_01 alias Thermometer Badezimmer
+attr LaCrosse_01 doDewpoint 1
+attr LaCrosse_01 event-min-interval humidity:600,temperature:600,dewpoint:600
+attr LaCrosse_01 event-on-change-reading humidity,temperature,dewpoint
+attr LaCrosse_01 event-on-update-reading humidity:600,temperature:600,dewpoint:600
+attr LaCrosse_01 group Umwelt
+attr LaCrosse_01 icon temperature_humidity
+attr LaCrosse_01 room Badezimmer
+attr LaCrosse_01 stateFormat {sprintf("Temperatur: %.1f °C<br>Feuchte: %.1f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"humidity",0))}
+attr LaCrosse_01 userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+
+
+######################################## > Kinderzimmer < #########################################
+define HZ_Badezimmer_Handtuch MAX HeatingThermostat 1381c8
+setuuid HZ_Badezimmer_Handtuch 5f43414e-f33f-c425-c6b6-7cf7565efb22714c
+attr HZ_Badezimmer_Handtuch userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Badezimmer_Handtuch CULdev CUL3
+attr HZ_Badezimmer_Handtuch DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Badezimmer_Handtuch IODev CUL_MAX_Device
+attr HZ_Badezimmer_Handtuch Thermostat GR.HZ_Badezimmer
+attr HZ_Badezimmer_Handtuch alexaName Alle Heizungen
+attr HZ_Badezimmer_Handtuch alexaProactiveEvents 1
+attr HZ_Badezimmer_Handtuch alias Handtuchheizung Badezimmer
+attr HZ_Badezimmer_Handtuch event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Badezimmer_Handtuch event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Badezimmer_Handtuch event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Badezimmer_Handtuch externalSensor LaCrosse_01:temperature
+attr HZ_Badezimmer_Handtuch group Heizung
+attr HZ_Badezimmer_Handtuch icon sani_heating
+attr HZ_Badezimmer_Handtuch model HeatingThermostat
+attr HZ_Badezimmer_Handtuch room Badezimmer,Heizung
+attr HZ_Badezimmer_Handtuch scanTemp 1
+attr HZ_Badezimmer_Handtuch stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Badezimmer_Handtuch userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+#define Term_Kinderzimmer MAX HeatingThermostat 1241b6
+#setuuid Term_Kinderzimmer 5c9a0e94-f33f-572c-6384-3cbbcc9a3c2a372e
+#attr Term_Kinderzimmer userattr scnEnabled:0,1 scnProcessByDesiChange:0,1 scnShutterList scnModeHandling:NOCHANGE,AUTO,MANUAL
+#attr Term_Kinderzimmer IODev CUL_MAX_Device
+#attr Term_Kinderzimmer alias Thermostat Kinderzimmer
+#attr Term_Kinderzimmer event-min-interval valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_Kinderzimmer event-on-change-reading valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_Kinderzimmer event-on-update-reading valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_Kinderzimmer fp_Obergeschoss 108,1007,3,temperature,
+#attr Term_Kinderzimmer group Heizung
+#attr Term_Kinderzimmer icon scene_childs_room
+#attr Term_Kinderzimmer room Kinderzimmer
+#attr Term_Kinderzimmer scanTemp 0
+#attr Term_Kinderzimmer scnEnabled 0
+#attr Term_Kinderzimmer scnModeHandling NOCHANGE
+#attr Term_Kinderzimmer scnProcessByDesiChange 0
+#attr Term_Kinderzimmer userReadings onlyAutoMode { return "1";;}
+#attr Term_Kinderzimmer userReadings valveposition.24h {movingAverage("Term_Kinderzimmer","valveposition",86400)},temperature.24h {movingAverage("Term_Kinderzimmer","temperature",86400)}<
+
+define SVG_Term_Kinderzimmer SVG myDbLog:SVG_KINDERZIMMER:HISTORY
+setuuid SVG_Term_Kinderzimmer 5c9a0e94-f33f-572c-ef2b-28002756a6641db0
+attr SVG_Term_Kinderzimmer alias SVG Heizung Kinderzimmer
+attr SVG_Term_Kinderzimmer endPlotNow 1
+attr SVG_Term_Kinderzimmer group Heizung
+attr SVG_Term_Kinderzimmer label "Heizung Kinderzimmer [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Kinderzimmer plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=HZ_Kinderzimmer ROOMTEMPDEVICE=LaCrosse_22 ROOMHUMIDITYDEVICE=LaCrosse_22 EXTERNALTEMPREADING=temperature ROOMVALVEDEVICE=HZ_Kinderzimmer
+attr SVG_Term_Kinderzimmer room Graphen,Kinderzimmer
+
+
+
+######################################## > Flur < #########################################
+define HZ_Flur MAX HeatingThermostat 12de22
+setuuid HZ_Flur 5f3f9b2c-f33f-c425-c4e7-963ffb26ce43bb3f
+attr HZ_Flur userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Flur CULdev CUL3
+attr HZ_Flur DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Flur IODev CUL_MAX_Device
+attr HZ_Flur alexaName Alle Heizungen
+attr HZ_Flur alexaProactiveEvents 1
+attr HZ_Flur alias Heizung Flur
+attr HZ_Flur event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Flur event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Flur event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Flur group Heizung
+attr HZ_Flur icon sani_heating
+attr HZ_Flur model HeatingThermostat
+attr HZ_Flur room Flur,Heizung
+attr HZ_Flur scanTemp 1
+attr HZ_Flur stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Flur suppressReading energy_EnergyCostDay energy_EnergyCostMeter energy_EnergyCostMonth energy_EnergyCostYear energy_FinanceReserve energy_WFRDayMax energy_WFRDayMin
+attr HZ_Flur userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+
+
+######################################## > Treppenhaus < #########################################
+define HZ_Treppenhaus_Unten MAX HeatingThermostat 13811b
+setuuid HZ_Treppenhaus_Unten 5f84bdb2-f33f-c425-d131-b14df5204cdb58fe
+attr HZ_Treppenhaus_Unten userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Treppenhaus_Unten CULdev CUL3
+attr HZ_Treppenhaus_Unten DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Treppenhaus_Unten IODev CUL_MAX_Device
+attr HZ_Treppenhaus_Unten alias Heizung Treppenhaus Unten
+attr HZ_Treppenhaus_Unten event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Treppenhaus_Unten event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Treppenhaus_Unten event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Treppenhaus_Unten group Heizung
+attr HZ_Treppenhaus_Unten icon sani_heating
+attr HZ_Treppenhaus_Unten model HeatingThermostat
+attr HZ_Treppenhaus_Unten room Treppenhaus,Heizung
+attr HZ_Treppenhaus_Unten scanTemp 1
+attr HZ_Treppenhaus_Unten stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Treppenhaus_Unten userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+#define Term_TreppenhausOben MAX HeatingThermostat 01ac10
+#setuuid Term_TreppenhausOben 5c9a0e94-f33f-572c-8760-fcfffaae3d3cac49
+#attr Term_TreppenhausOben userattr scnEnabled:0,1 scnProcessByDesiChange:0,1 scnShutterList scnModeHandling:NOCHANGE,AUTO,MANUAL
+#attr Term_TreppenhausOben IODev CUL_MAX_Device
+#attr Term_TreppenhausOben alias Thermostat Küche
+#attr Term_TreppenhausOben event-min-interval valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_TreppenhausOben event-on-change-reading valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_TreppenhausOben event-on-update-reading valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_TreppenhausOben group Heizung
+#attr Term_TreppenhausOben icon scene_stairs
+#attr Term_TreppenhausOben room Kueche
+#attr Term_TreppenhausOben scanTemp 1
+#attr Term_TreppenhausOben scnEnabled 1
+#attr Term_TreppenhausOben scnModeHandling AUTO
+#attr Term_TreppenhausOben scnProcessByDesiChange 0
+#attr Term_TreppenhausOben userReadings onlyAutoMode { return "1";;}
+
+#define Term_TreppenhausUnten MAX HeatingThermostat 044afe
+#setuuid Term_TreppenhausUnten 5c9a0e94-f33f-572c-df11-529530c13b702d0a
+#attr Term_TreppenhausUnten userattr scnEnabled:0,1 scnProcessByDesiChange:0,1 scnShutterList scnModeHandling:NOCHANGE,AUTO,MANUAL
+#attr Term_TreppenhausUnten IODev CUL_MAX_Device
+#attr Term_TreppenhausUnten alias Thermostat Wohnzimmer
+#attr Term_TreppenhausUnten event-min-interval valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_TreppenhausUnten event-on-change-reading valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_TreppenhausUnten event-on-update-reading valveposition:600,temperature:600,desiredTemperature:600
+#attr Term_TreppenhausUnten group Heizung
+#attr Term_TreppenhausUnten icon scene_stairs
+#attr Term_TreppenhausUnten room Wohnzimmer
+#attr Term_TreppenhausUnten scanTemp 1
+#attr Term_TreppenhausUnten scnEnabled 0
+#attr Term_TreppenhausUnten scnModeHandling NOCHANGE
+#attr Term_TreppenhausUnten scnProcessByDesiChange 0
+#attr Term_TreppenhausUnten userReadings onlyAutoMode { return "1";;}
+
+
+######################################## > Gaestezimmer < #########################################
+
+######################################## > Arbeitszimmer < #########################################
+define HZ_Arbeitszimmer MAX HeatingThermostat 06ac44
+setuuid HZ_Arbeitszimmer 5f3f9b28-f33f-c425-4731-d966b607b68b9a6a
+attr HZ_Arbeitszimmer userattr Thermostat Thermostat_map scnModeHandling:NOCHANGE,AUTO,MANUAL scnProcessByDesiChange:0,1 scnShutterList structexclude
+attr HZ_Arbeitszimmer CULdev CUL3
+attr HZ_Arbeitszimmer DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Arbeitszimmer IODev CUL_MAX_Device
+attr HZ_Arbeitszimmer alias Heizung Arbeitszimmer
+attr HZ_Arbeitszimmer event-min-interval .*:600
+attr HZ_Arbeitszimmer event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Arbeitszimmer event-on-update-reading .*:600
+attr HZ_Arbeitszimmer group Heizung
+attr HZ_Arbeitszimmer icon sani_heating
+attr HZ_Arbeitszimmer model HeatingThermostat
+attr HZ_Arbeitszimmer room Arbeitszimmer,Heizung
+attr HZ_Arbeitszimmer scanTemp 1
+attr HZ_Arbeitszimmer skipDouble 0
+attr HZ_Arbeitszimmer stateFormat {sprintf("Temperatur: %.1f °C<br>Ventil: %.0f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"valveposition",0))}
+attr HZ_Arbeitszimmer suppressReading energy_EnergyCostDay energy_EnergyCostMeter energy_EnergyCostMonth energy_EnergyCostYear energy_FinanceReserve energy_WFRDayMax energy_WFRDayMin
+attr HZ_Arbeitszimmer userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+
+######################################## > Aussen < #########################################
+
+define LaCrosse_02 LaCrosse 0A
+setuuid LaCrosse_02 5c9a0e94-f33f-572c-7598-72e7003c660f68cb
+attr LaCrosse_02 DbLogInclude humidity,temperature,dewpoint
+attr LaCrosse_02 IODev myLaCrosseGateway
+attr LaCrosse_02 alexaName Thermometer Aussen
+attr LaCrosse_02 alias Aussenthermometer
+attr LaCrosse_02 doDewpoint 1
+attr LaCrosse_02 event-min-interval humidity:600,temperature:600,dewpoint:600
+attr LaCrosse_02 event-on-change-reading humidity,temperature,dewpoint
+attr LaCrosse_02 event-on-update-reading humidity:600,temperature:600,dewpoint:600
+attr LaCrosse_02 group Fühler
+attr LaCrosse_02 icon temperature_humidity
+attr LaCrosse_02 room Aussen
+attr LaCrosse_02 stateFormat {sprintf("Temperatur: %.1f °C<br>Luftfeuchtigkeit: %.1f %%", ReadingsVal($name,"temperature",0), ReadingsVal($name,"humidity",0))}
+attr LaCrosse_02 userReadings Temp_Diff differential {ReadingsVal("LaCrosse_02","temperature",0)},trend {tendencyGet("LaCrosse_02", "statTemperatureTendency","1h")}
+
+define SVG_Temperatur_Aussen SVG lp:SVG_AUSSEN:HISTORY
+setuuid SVG_Temperatur_Aussen 5c9a0e94-f33f-572c-19dc-83e7b717096fc06b
+attr SVG_Temperatur_Aussen endPlotToday 1
+attr SVG_Temperatur_Aussen fixedrange week
+attr SVG_Temperatur_Aussen group Historie Woche
+attr SVG_Temperatur_Aussen label "Aussenthermometer Temperatur [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}] Feuchte [↓ $data{min2} ↑ $data{max2} Ø $data{avg2}]"
+attr SVG_Temperatur_Aussen room Aussen
+
+define SVG_Temperatur_Aussen_Tag SVG lp:SVG_AUSSEN_TAG:HISTORY
+setuuid SVG_Temperatur_Aussen_Tag 5c9a0e94-f33f-572c-effb-5d62f604388d197c
+attr SVG_Temperatur_Aussen_Tag endPlotNow 1
+attr SVG_Temperatur_Aussen_Tag group Historie
+attr SVG_Temperatur_Aussen_Tag label "Aussenthermometer Temperatur [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}] Feuchte [↓ $data{min2} ↑ $data{max2} Ø $data{avg2}]"
+attr SVG_Temperatur_Aussen_Tag room Aussen
+
+define SVG_Temperatur_Aussen_Luftdruck SVG lp:SVG_Temperatur_Aussen_Luftdruck:HISTORY
+setuuid SVG_Temperatur_Aussen_Luftdruck 5c9a0e94-f33f-572c-9ee1-ecdd5b3db2442175
+attr SVG_Temperatur_Aussen_Luftdruck endPlotNow 1
+attr SVG_Temperatur_Aussen_Luftdruck endPlotToday 1
+attr SVG_Temperatur_Aussen_Luftdruck fixedrange week
+attr SVG_Temperatur_Aussen_Luftdruck group Historie Woche
+attr SVG_Temperatur_Aussen_Luftdruck label "Barometer Luftdruck [↓ $data{min2} ↑ $data{max2} Ø $data{avg2}]]"
+attr SVG_Temperatur_Aussen_Luftdruck room Aussen
+
+
+
+
+
+define Vacation dummy
+setuuid Vacation 5c9a0e94-f33f-572c-8144-4b0764ae58a342c9
+attr Vacation devStateIcon Urlaub:status_away_2 Anwesend:status_available Anwesend_ohne_Lia:status_available
+attr Vacation group Urlaub
+attr Vacation room Heizung
+attr Vacation setList state:Anwesend,Anwesend_HomeOffice,Urlaub,Anwesend_HomeOffice_ohne_Lia,Anwesend_ohne_Lia
+attr Vacation webCmd state
+
+define Vacation_notify_Urlaub notify Vacation:Urlaub set SCHED_Arbeitszimmer disable;;set SCHED_Arbeitszimmer_HomeOffice disable;;set SCHED_Arbeitszimmer_Urlaub enable;;\
+					set SCHED_Badezimmer disable;;set SCHED_Badezimmer_HomeOffice disable;;set SCHED_Badezimmer_Urlaub enable;;\
+					set SCHED_Flur disable;;set SCHED_Flur_HomeOffice disable;;set SCHED_Flur_Urlaub enable;;\
+					set SCHED_Kinderzimmer disable;;set SCHED_Kinderzimmer_Urlaub enable;;					\
+					set SCHED_Kueche disable;;set SCHED_Kueche_HomeOffice disable;;set SCHED_Kueche_Urlaub enable;;\
+					set SCHED_Schlafzimmer disable;; set SCHED_Schlafzimmer_Urlaub enable;;\
+					set SCHED_Treppenhaus enable;;\
+					set SCHED_Wohnzimmer disable;;set SCHED_Wohnzimmer_Urlaub enable;;\
+					set SCHED_Treppenhaus disable;;set SCHED_Treppenhaus_Urlaub enable;;\
+					save;;
+setuuid Vacation_notify_Urlaub 5c9a0e94-f33f-572c-91ad-6ee8baec7b7c3e9c
+attr Vacation_notify_Urlaub room hidden
+
+define Vacation_notify_Anwesend notify Vacation:Anwesend set SCHED_Arbeitszimmer enable;;set SCHED_Arbeitszimmer_HomeOffice disable;;set SCHED_Arbeitszimmer_Urlaub disable;;\
+					set SCHED_Badezimmer enable;;set SCHED_Badezimmer_HomeOffice disable;;set SCHED_Badezimmer_Urlaub disable;;\
+					set SCHED_Flur enable;;set SCHED_Flur_HomeOffice disable;;set SCHED_Flur_Urlaub disable;;\
+					set SCHED_Kinderzimmer enable;;set SCHED_Kinderzimmer_Urlaub disable;;					\
+					set SCHED_Kueche enable;;set SCHED_Kueche_HomeOffice enable;;set SCHED_Kueche_Urlaub disable;;\
+					set SCHED_Schlafzimmer enable;;set SCHED_Schlafzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;\
+					set SCHED_Wohnzimmer enable;;set SCHED_Wohnzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;set SCHED_Treppenhaus_Urlaub disable;;\
+					save;;
+setuuid Vacation_notify_Anwesend 5c9a0e94-f33f-572c-6266-f60bf9b74031286b
+attr Vacation_notify_Anwesend room hidden
+
+define Vacation_notify_Anwesend_ohne_Lia notify Vacation:Anwesend_ohne_Lia set SCHED_Arbeitszimmer enable;;set SCHED_Arbeitszimmer_HomeOffice disable;;set SCHED_Arbeitszimmer_Urlaub disable;;\
+					set SCHED_Badezimmer enable;;set SCHED_Badezimmer_HomeOffice disable;;set SCHED_Badezimmer_Urlaub disable;;\
+					set SCHED_Flur enable;;set SCHED_Flur_HomeOffice disable;;set SCHED_Flur_Urlaub disable;;\
+					set SCHED_Kinderzimmer disable;;set SCHED_Kinderzimmer_Urlaub enable;;					\
+					set SCHED_Kueche enable;;set SCHED_Kueche_HomeOffice enable;;set SCHED_Kueche_Urlaub disable;;\
+					set SCHED_Schlafzimmer enable;;set SCHED_Schlafzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;\
+					set SCHED_Wohnzimmer enable;;set SCHED_Wohnzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;set SCHED_Treppenhaus_Urlaub disable;;\
+					save;;
+setuuid Vacation_notify_Anwesend_ohne_Lia 5f9ffa17-f33f-c425-19cd-5b475133a50d8cad
+attr Vacation_notify_Anwesend_ohne_Lia room hidden
+
+define DayHome_notify_on notify DayHome:active set Term_.* desiredTemperature comfort
+setuuid DayHome_notify_on 5c9a0e94-f33f-572c-d845-5fd3c8fb2ffe7f2b
+attr DayHome_notify_on room hidden
+
+
+define DayOut_notify_on notify DayOut:active set Gesamte_Wohnung desiredTemperature eco
+setuuid DayOut_notify_on 5d9b262e-f33f-572c-523d-950e6cc9ceeebde4
+attr DayOut_notify_on room hidden
+
+
+
+define Heizungswerte readingsGroup <%icoTermHaus>,<Ventil>,<Soll>,<Ist>,<Trend>,<Mode>,<>,<Feuchte>,<RSSI>,<Komfort>,<ECO>\
+LaCrosse_02:,<>,<>,temperature,trend,<>,battery,humidity,<>,<>,<>\
+HZ_Arbeitszimmer:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+HZ_Badezimmer_Fenster:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+HZ_Badezimmer_Handtuch:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+LaCrosse_01:,<>,<>,temperature,trend,<>,battery,humidity,<>,<>,<>\
+HZ_Kinderzimmer:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature HZ_Flur:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+HZ_Kueche:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+HZ_Schlafzimmer:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+LaCrosse_14:,<>,<>,temperature,trend,<>,battery,humidity,<>,<>,<> \
+HZ_Treppenhaus_Unten:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+HZ_Treppenhaus_Oben:,valveposition,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature\
+WT_Wohnzimmer:,state@PumpeActor,desiredTemperature,temperature,trend,mode,battery,<>,RSSI,comfortTemperature,ecoTemperature
+setuuid Heizungswerte 5c9a0e94-f33f-572c-5611-078dee7baee75519
+attr Heizungswerte commands { 'desiredTemperature' => 'desiredTemperature:','ecoTemperature' => 'ecoTemperature:', 'comfortTemperature' => 'comfortTemperature:'}
+attr Heizungswerte room Haus
+attr Heizungswerte sortby 1
+attr Heizungswerte valueFormat { if($READING eq "valveposition" && $VALUE ne "0"){$VALUE = int($VALUE/10)*10}elsif($READING eq "trend" && $VALUE > 0.2){$VALUE = "˄"}elsif($READING eq "trend" && $VALUE < -0.2){$VALUE = "˅"}elsif($READING eq "trend" && $VALUE >= -0.2 && $VALUE <= 0.2){$VALUE = "="}}
+attr Heizungswerte valueIcon {'battery.ok' => 'batterie@lightgreen',\
+'battery.low' => 'batterie@red',\
+'mode.auto' => 'sani_heating_automatic@green',\
+'mode.manual' => 'sani_heating_manual@red',\
+'humidity'=>'humidity@6FD9FB',\
+'valveposition.0' => 'sani_heating_level_0@002AE0',\
+'valveposition.10' => 'sani_heating_level_10@F8D53D',\
+'valveposition.20' => 'sani_heating_level_20@FF9341',\
+'valveposition.30' => 'sani_heating_level_30@F17F3F',\
+'valveposition.40' => 'sani_heating_level_40@E46C3C',\
+'valveposition.50' => 'sani_heating_level_50@DE3B3A',\
+'valveposition.60' => 'sani_heating_level_60@A30D2D',\
+'valveposition.70' => 'sani_heating_level_70@B40A23',\
+'valveposition.80' => 'sani_heating_level_80@C40619',\
+'valveposition.90' => 'sani_heating_level_90@D4030F',\
+'valveposition.100' => 'sani_heating_level_100@E50005',\
+'state.0' => 'sani_heating_level_0@002AE0',\
+'state.10' => 'sani_heating_level_10@F8D53D',\
+'state.20' => 'sani_heating_level_20@FF9341',\
+'state.30' => 'sani_heating_level_30@F17F3F',\
+'state.40' => 'sani_heating_level_40@E46C3C',\
+'state.50' => 'sani_heating_level_50@DE3B3A',\
+'state.60' => 'sani_heating_level_60@A30D2D',\
+'state.70' => 'sani_heating_level_70@B40A23',\
+'state.80' => 'sani_heating_level_80@C40619',\
+'state.90' => 'sani_heating_level_90@D4030F',\
+'state.100' => 'sani_heating_level_100@E50005',\
+'valve.0' => 'sani_heating_level_0@002AE0',\
+'valve.10' => 'sani_heating_level_10@F8D53D',\
+'valve.20' => 'sani_heating_level_20@FF9341',\
+'valve.30' => 'sani_heating_level_30@F17F3F',\
+'valve.40' => 'sani_heating_level_40@E46C3C',\
+'valve.50' => 'sani_heating_level_50@DE3B3A',\
+'valve.60' => 'sani_heating_level_60@A30D2D',\
+'valve.70' => 'sani_heating_level_70@B40A23',\
+'valve.80' => 'sani_heating_level_80@C40619',\
+'valve.90' => 'sani_heating_level_90@D4030F',\
+'valve.100' => 'sani_heating_level_100@E50005',\
+'trend.steady' => 'message_tendency_steady',\
+'trend.down' => 'message_tendency_downward',\
+'trend.up' => 'message_tendency_upward'}
+attr Heizungswerte valueStyle {if($READING eq "temperature"){my $t=$VALUE;;my $d=ReadingsVal($DEVICE,'desiredTemperature',0);;if($t-$d>=1){'style="color:rgb(251,63,11);;"'}elsif($t-$d<=-1){'style="color:rgb(79,58,251);;"'}else{'style="color:rgb(12,251,12);;"'}}elsif($READING eq "trend"){if($VALUE>0.2){'style="color:rgb(251,63,11);;"'}elsif($VALUE<-0.2){'style="color:rgb(79,58,251);;"'}else{'style="color:rgb(190,190,190);;"'}}}
+attr Heizungswerte valueSuffix {"temperature"=>" °C", "state"=>" (".ReadingsVal($DEVICE,$READING,0)." %)", "valveposition"=>" (".ReadingsVal($DEVICE,$READING,0)." %)", "valve"=>" (".ReadingsVal($DEVICE,$READING,0)." %)", "humidity"=>" ".ReadingsVal($DEVICE,$READING,0)." % RH","gas1"=>" ".ReadingsVal($DEVICE,$READING,0)." ppm", "gas2"=>" ".ReadingsVal($DEVICE,$READING,0)." ppb"}
+
+
+define SVG_Heizung_Energie SVG myDbLog:SVG_HEIZUNG_ENERGIE:HISTORY
+setuuid SVG_Heizung_Energie 5c9a0e96-f33f-572c-55a3-50e90c737bdc0375
+attr SVG_Heizung_Energie alias SVG Historie Energie
+attr SVG_Heizung_Energie endPlotNow 1
+attr SVG_Heizung_Energie room hidden
+
+
+
+
+
+
+
+
+define SVG_Heizung_Temperatur SVG myDbLog:SVG_HEIZUNG_TEMPERATUR:HISTORY
+setuuid SVG_Heizung_Temperatur 5c9a0e96-f33f-572c-1338-6e8616e040ca9c3a
+attr SVG_Heizung_Temperatur alias SVG Historie Heizung Differenz
+attr SVG_Heizung_Temperatur endPlotNow 1
+attr SVG_Heizung_Temperatur room hidden
+
+
+
+
+
+	
+
+define lp logProxy
+setuuid lp 5c9a0e96-f33f-572c-49d9-adfde1d5468ab8fc
+attr lp room Log
+
+############################################## System Monitor ########################################
+
+# Log
+
+# Visualisierung: CPU-Temperatur
+#define wl_sysmon_temp SVG FileLog_sysmon:SM_CPUTemp:CURRENT
+#attr wl_sysmon_temp group Cubietruck
+#attr wl_sysmon_temp label "CPU Temperatur: Min $data{min2}, Max $data{max2}, Last $data{currval2}"
+#attr wl_sysmon_temp room System
+
+# Visualisierung: Netzwerk-Datenübertragung für eth0
+#define wl_sysmon_eth0 SVG FileLog_sysmon:SM_Network_eth0:CURRENT
+#attr wl_sysmon_eth0 group Cubietruck
+#attr wl_sysmon_eth0 label "Netzwerk-Traffic eth0: $data{min1}, Max: $data{max1}, Aktuell: $data{currval1}"
+#attr wl_sysmon_eth0 room System
+
+# Visualisierung: CPU-Auslastung (load average)
+#define wl_sysmon_load SVG FileLog_sysmon:SM_Load:CURRENT
+#attr wl_sysmon_load group Cubietruck
+#attr wl_sysmon_load label "Load Min: $data{min1}, Max: $data{max1}, Aktuell: $data{currval1}"
+#attr wl_sysmon_load room System
+
+# Visualisierung: RAM-Nutzung
+#define wl_sysmon_ram SVG FileLog_sysmon:SM_RAM:CURRENT
+#attr wl_sysmon_ram group Cubietruck
+#attr wl_sysmon_ram label "RAM-Nutzung Total: $data{max1}, Min: $data{min2}, Max: $data{max2}, Aktuell: $data{currval2}"
+#attr wl_sysmon_ram room System
+
+# Visualisierung: Dateisystem: Root-Partition
+#define wl_sysmon_fs_root SVG FileLog_sysmon:SM_FS_root:CURRENT
+#attr wl_sysmon_fs_root group Cubietruck
+#attr wl_sysmon_fs_root label "Root Partition Total: $data{max1}, Min: $data{min2}, Max: $data{max2}, Aktuell: $data{currval2}"
+#attr wl_sysmon_fs_root room System
+
+# Anzeige CPU Auslasung
+#define wl_sysmon_cpustatT SVG FileLog_sysmon:SM_CPUStatTotal:CURRENT
+#attr wl_sysmon_cpustatT group Cubietruck
+#attr wl_sysmon_cpustatT label "CPU-Auslastung"
+#attr wl_sysmon_cpustatT room System
+
+# Anzeige der Readings zum Einbinden in ein 'Raum'.
+#define SysValues weblink htmlCode {SYSMON_ShowValuesHTML('sysmon')}
+#attr SysValues group Cubietruck
+#attr SysValues room System
+
+
+# Anzeige Stromversorgung AC
+#define wl_sysmon_power_ac SVG FileLog_sysmon:SM_power_ac:CURRENT
+#attr wl_sysmon_power_ac group Cubietruck
+#attr wl_sysmon_power_ac label "Stromversorgung (ac) Spannung: $data{min1} - $data{max1} V,  Strom: $data{min2} - $data{max2} mA"
+#attr wl_sysmon_power_ac room System
+
+# Anzeige Stromversorgung Battery
+#define wl_sysmon_power_bat SVG FileLog_sysmon:SM_power_battery:CURRENT
+#attr wl_sysmon_power_bat group Cubietruck
+#attr wl_sysmon_power_bat label "Stromversorgung (bat) Spannung: $data{min1} - $data{max1} V,  Strom: $data{min2} - $data{max2} mA"
+#attr wl_sysmon_power_bat room System
+
+define SystemStatistics SYSSTAT 120 600
+setuuid SystemStatistics 5e2e8a35-f33f-572c-cca1-936b90eb901590d3
+attr SystemStatistics DbLogInclude iowait,user,system,idle
+attr SystemStatistics alias System Statistik
+attr SystemStatistics event-min-interval iowait:600,user:600,system:600,idle:600
+attr SystemStatistics event-on-change-reading iowait,user,system,idle
+attr SystemStatistics event-on-update-reading iowait:600,user:600,system:600,idle:600
+attr SystemStatistics filesystems /dev/sda1,/dev/mmcblk0p1
+attr SystemStatistics group Statistik
+attr SystemStatistics icon time_statistic
+attr SystemStatistics room System
+attr SystemStatistics showpercent 1
+attr SystemStatistics stat 1
+attr SystemStatistics verbose 1
+
+define SVG_SystemStatistics SVG myDbLog:SVG_SystemStatistics:HISTORY
+setuuid SVG_SystemStatistics 5e2eac7a-f33f-572c-108d-5bcb14e0de123ced
+attr SVG_SystemStatistics alias SVG System Auslastung
+attr SVG_SystemStatistics endPlotNow 1
+attr SVG_SystemStatistics group System
+attr SVG_SystemStatistics label "System Auslastung"
+attr SVG_SystemStatistics room System
+
+define SystemMonitor SYSMON 1 1 1 10
+setuuid SystemMonitor 5e2ed171-f33f-572c-e39f-de31c39d16643674
+attr SystemMonitor DbLogInclude cpu_temp_avg,cpu_freq
+attr SystemMonitor alias System Monitor
+attr SystemMonitor event-min-interval cpu_temp_avg:600,cpu_freq:600
+attr SystemMonitor event-on-change-reading cpu_temp_avg,cpu_freq
+attr SystemMonitor event-on-update-reading cpu_temp_avg:600,cpu_freq:600
+attr SystemMonitor filesystems fs_root:/:Root,fs_sd:/opt/SD:SD
+attr SystemMonitor group Statistik
+attr SystemMonitor icon it_memory
+attr SystemMonitor network-interfaces eth0:eth0:Ethernet
+attr SystemMonitor nonblocking 1
+attr SystemMonitor room System
+
+define wl_sysmon_temp SVG myDbLog:SM_CPUFreqTemp:HISTORY
+setuuid wl_sysmon_temp 5e2ed3ba-f33f-572c-f2f3-cd71f4b08493c98d
+attr wl_sysmon_temp alias SVG System Temperatur
+attr wl_sysmon_temp endPlotNow 1
+attr wl_sysmon_temp group System
+attr wl_sysmon_temp label "System Temperatur: $data{max1}, Min: $data{min2}, Max: $data{max2}, Aktuell: $data{currval2}"
+attr wl_sysmon_temp room System
+
+#define wl_sysmon_ram SVG myDbLog:SM_DB_RAM:HISTORY
+#setuuid wl_sysmon_ram 5e2ed5f0-f33f-572c-c861-7b560ee41ff46cc0
+#attr wl_sysmon_ram group System
+#attr wl_sysmon_ram label "RAM-Nutzung Total: $data{max1}, Min: $data{min2}, Max: $data{max2}, Aktuell: $data{currval2}"
+#attr wl_sysmon_ram room System
+
+#define wl_sysmon_power_ac SVG myDbLog:SM_power_ac:HISTORY
+#setuuid wl_sysmon_power_ac 5e2ed737-f33f-572c-e2da-af224d57c3d33bc2
+#attr wl_sysmon_power_ac group System
+#attr wl_sysmon_power_ac label "Stromversorgung (ac) Spannung: $data{min1} - $data{max1} V,  Strom: $data{min2} - $data{max2} mA"
+#attr wl_sysmon_power_ac room System
+
+#define wl_sysmon_power_bat SVG myDbLog:SM_power_battery:HISTORY
+#setuuid wl_sysmon_power_bat 5e2ede63-f33f-572c-171b-4c76cc8e9c85a4dc
+#attr wl_sysmon_power_bat group System
+#attr wl_sysmon_power_bat label "Stromversorgung (bat) Spannung: $data{min1} - $data{max1} V,  Strom: $data{min2} - $data{max2} mA"
+#attr wl_sysmon_power_bat room System
+
+#define SysValues weblink htmlCode {SYSMON_ShowValuesHTML('SystemMonitor')}
+#setuuid SysValues 5e2ee4d2-f33f-572c-ea8e-1b4e26c2d832bb61
+#attr SysValues group System
+#attr SysValues room System
+
+
+
+define anyViews Dashboard
+setuuid anyViews 5c9a0e96-f33f-572c-676c-c449f94e828c7d4b
+attr anyViews userattr dashboard_homeTab:1,2 dashboard_tab2backgroundimage dashboard_tab2colcount dashboard_tab2devices dashboard_tab2groups dashboard_tab2icon dashboard_tab2name dashboard_tab2rowcentercolwidth dashboard_tab2sorting dashboard_tab3backgroundimage dashboard_tab3colcount dashboard_tab3devices dashboard_tab3groups dashboard_tab3icon dashboard_tab3name dashboard_tab3rowcentercolwidth dashboard_tab3sorting dashboard_webRefresh:multiple-strict,WEB
+attr anyViews dashboard_showfullsize 0
+attr anyViews dashboard_tab1groups Temperaturen,Heizung,Fühler
+attr anyViews dashboard_tab1name Fühler
+attr anyViews dashboard_tab1sorting t0c0,Heizung,true,437,0,0,0:t0c0,Fühler,true,392,0,437,0:
+attr anyViews dashboard_tab2groups Historie
+attr anyViews dashboard_tab2name Historie
+attr anyViews room System
+
+
+
+define myDbLogRep DbRep Log.DB.Standby.Remote
+setuuid myDbLogRep 5c9a0e97-f33f-572c-de90-bcbcf36d063ca6ce
+attr myDbLogRep device DVES_CA5F28
+attr myDbLogRep dumpCompress 1
+attr myDbLogRep dumpDirLocal /opt/sd
+attr myDbLogRep executeAfterProc set myDbLog reopen
+attr myDbLogRep executeBeforeProc set myDbLog reopen 3600
+attr myDbLogRep optimizeTablesBeforeDump 1
+attr myDbLogRep reading energy
+attr myDbLogRep role Client
+attr myDbLogRep room Log
+attr myDbLogRep showSvrInfo %history%,%current%
+attr myDbLogRep showproctime 1
+attr myDbLogRep sqlResultFormat separated
+attr myDbLogRep verbose 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define SVG_GasSensor_AQI_CO2 SVG myDbLog:SVG_GasSensor_AQI_CO2:HISTORY
+setuuid SVG_GasSensor_AQI_CO2 5c9a0e97-f33f-572c-d609-a792752bea6a94c6
+attr SVG_GasSensor_AQI_CO2 alias SVG Luftgüte Schlafzimmer CO2
+attr SVG_GasSensor_AQI_CO2 endPlotNow 1
+attr SVG_GasSensor_AQI_CO2 group Luftgüte
+attr SVG_GasSensor_AQI_CO2 label "Luftgüte Schlafzimmer - CO2 [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_GasSensor_AQI_CO2 room ESPEasy,Graphen,Schlafzimmer
+
+#Source for VOC to AQI https://www.idt.com/document/whp/overview-tvoc-and-indoor-air-quality
+#IDT IAQ Rating |	Reference Level |	Air Information				|	Action 						|	TVOC (mg/m3)	|	Air Quality
+#-------------------------------------------------------------------------------------------------------------------------------
+# ≤ 1.99 		|	Level 1 		|	Clean Hygienic Air 			|	No action required. 		|	< 0.3 			|	Very Good
+#				|					|	(Target value)				|								|					|
+# 2.00 – 2.99 	|	Level 2 		|	Good Air Quality 			|	Ventilation recommended.	|	0.3 – 1.0 		|	Good
+#				|					|	(If no threshold			|								|					|
+#				|					|	value is exceeded)			|								|					|
+# 3.00 – 3.99 	|	Level 3 		|	Noticeable Comfort Concerns	| 	Ventilation required.  		|	1.0 – 3.0 		|	Medium
+#				|					|	(Not recommended for 		|	Identify sources.			|					|
+#				|					|	exposure > 12 months)		|								|					|
+# 4.00 – 4.99 	|	Level 4 		|	Significant Comfort Issues 	|	Refresh air when possible.  |	3.0 – 10.0 		|	Poor
+#				|					|	(Not recommended for 		|	Increase ventilation. 		|					|
+#				|					|	exposure > 1 month)			|	A search for sources is required.				|
+# ≥ 5.00 		|	Level 5 		|	Unacceptable Conditions  	|	Use only if unavoidable 	| 	> 10.0 			|	Bad
+#				|					|	(Not recommended)			|	and only for short periods.	|					|
+#Conversion from mg/m3 to ppm for most common TVOC is by the factor ca. 0.5; for example, 10mg/m3 equals ca. 5ppm.
+#Conversion from ppm to ppb is by the factor 1000; for example, 0.1ppm equals 100ppb.
+define SVG_GasSensor_AQI_VOC SVG myDbLog:SVG_GasSensor_AQI_VOC:HISTORY
+setuuid SVG_GasSensor_AQI_VOC 5c9a0e97-f33f-572c-7706-6103694a88c46df0
+attr SVG_GasSensor_AQI_VOC alias SVG Luftgüte Schlafzimmer tVOC
+attr SVG_GasSensor_AQI_VOC endPlotNow 1
+attr SVG_GasSensor_AQI_VOC group Luftgüte
+attr SVG_GasSensor_AQI_VOC label "Luftgüte Schlafzimmer - tVOC [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_GasSensor_AQI_VOC room ESPEasy,Graphen,Schlafzimmer
+
+
+
+
+
+
+
+
+define SVG_Luftdruck_VGL SVG myDbLog:SVG_LUFTDRUCK_VGL:HISTORY
+setuuid SVG_Luftdruck_VGL 5d36b1d0-f33f-572c-b0a9-ad25c4705dd6b9ab
+attr SVG_Luftdruck_VGL alias SVG Umwelt Luftdruck Vergleich
+attr SVG_Luftdruck_VGL endPlotNow 1
+attr SVG_Luftdruck_VGL endPlotToday 1
+attr SVG_Luftdruck_VGL fixedrange 120days
+attr SVG_Luftdruck_VGL group Umwelt
+attr SVG_Luftdruck_VGL label "Umwelt Luftdruck Vergleich"
+attr SVG_Luftdruck_VGL plotmode SVG
+define myStatDevice statistics LaCrosse.*|HZ_.*|WT.*|AZ_ESPEasy_ESP_Easy_3_Barometer
+setuuid myStatDevice 5d397b4d-f33f-572c-3878-bd72819926b024cf
+attr myStatDevice alias Umgebung Statistik MinMax
+attr myStatDevice group Statistik
+attr myStatDevice icon time_graph
+attr myStatDevice ignoreDefaultAssignments 1
+attr myStatDevice minAvgMaxReadings temperature,Temperature,humidity,Humidity,dewpoint,pressure-nn,pressure,Pressure,gas1,gas2
+attr myStatDevice room System
+
+
+#define SchlafzimmerFakeWT notify LaCrosse_14:temperature.* {MaxFakeWallThermostat("Term_Schlafzimmer",ReadingsVal("LaCrosse_14", "temperature", 0))}
+#setuuid SchlafzimmerFakeWT 5e4125b4-f33f-572c-1159-999fc4553f53af84
+#attr SchlafzimmerFakeWT room Schlafzimmer
+#define BadezimmerFakeWT notify LaCrosse_01:temperature.* {MaxFakeWallThermostat("Term_Badezimmer",ReadingsVal("LaCrosse_01", "temperature", 0))}
+#setuuid BadezimmerFakeWT 5e417019-f33f-572c-9b5a-c93a39fb0ca41354
+#attr BadezimmerFakeWT room Badezimmer
+#define WohnzimmerFakeWT notify myLaCrosseGateway:temperature.* {MaxFakeWallThermostat("Term_Wohnzimmer",ReadingsVal("myLaCrosseGateway", "temperature", 0))}
+#setuuid WohnzimmerFakeWT 5e4398c6-f33f-572c-8cbf-c9b946aa3d1b18f2
+#attr WohnzimmerFakeWT room Wohnzimmer
+define SVG_Leistung_Arbeitszimmer SVG myDbLog:SVG_Energy:HISTORY
+setuuid SVG_Leistung_Arbeitszimmer 5e44e218-f33f-572c-e8a9-ec6a26ce38275673
+attr SVG_Leistung_Arbeitszimmer alias SVG Leistung Arbeitszimmer
+attr SVG_Leistung_Arbeitszimmer endPlotNow 1
+attr SVG_Leistung_Arbeitszimmer group Leistung
+attr SVG_Leistung_Arbeitszimmer label "Leistung Arbeitszimmer"
+attr SVG_Leistung_Arbeitszimmer room Arbeitszimmer
+
+define SVG_Term_Treppenhaus_Unten SVG myDbLog:SVG_TREPPENHAUS_UNTEN:HISTORY
+setuuid SVG_Term_Treppenhaus_Unten 5f8eec74-f33f-c425-1918-834e503b49776457
+attr SVG_Term_Treppenhaus_Unten alias SVG Heizung Treppenhaus Unten
+attr SVG_Term_Treppenhaus_Unten endPlotNow 1
+attr SVG_Term_Treppenhaus_Unten group Heizung
+attr SVG_Term_Treppenhaus_Unten label "Heizung Treppenhaus Unten [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Treppenhaus_Unten room Graphen,Treppenhaus
+define SVG_Term_Flur SVG myDbLog:SVG_Heizung:HISTORY
+setuuid SVG_Term_Flur 5f8eedcc-f33f-c425-c82b-9ee35b423b97670c
+attr SVG_Term_Flur alias SVG Heizung Flur
+attr SVG_Term_Flur endPlotNow 1
+attr SVG_Term_Flur group Heizung
+attr SVG_Term_Flur label "Heizung Flur [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Flur plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=HZ_Flur ROOMTEMPDEVICE=HZ_Flur EXTERNALTEMPREADING=temperature ROOMVALVEDEVICE=HZ_Flur
+attr SVG_Term_Flur room Flur,Graphen
+define SVG_Term_Arbeitszimmer SVG myDbLog:SVG_ARBEITSZIMMER:HISTORY
+setuuid SVG_Term_Arbeitszimmer 5f8eee59-f33f-c425-f15e-d3f61469b32d253f
+attr SVG_Term_Arbeitszimmer alias SVG Heizung Arbeitszimmer
+attr SVG_Term_Arbeitszimmer endPlotNow 1
+attr SVG_Term_Arbeitszimmer group Heizung
+attr SVG_Term_Arbeitszimmer label "Heizung Arbeitszimmer [↓ $data{min1} ↑ $data{max1} Ø $data{avg1}]"
+attr SVG_Term_Arbeitszimmer plotReplace DBLogDevice=myDbLog ROOMHEATINGDEVICE=HZ_Arbeitszimmer ROOMTEMPDEVICE=AZ_ESPEasy_ESP_Easy_3_Barometer ROOMHUMIDITYDEVICE=LaCrosseGas EXTERNALTEMPREADING=Temperature ROOMVALVEDEVICE=HZ_Arbeitszimmer
+attr SVG_Term_Arbeitszimmer room Graphen,Arbeitszimmer
+define Steckdose_1 IT 0F0F00FFFF FF F0
+setuuid Steckdose_1 5f8f3ffd-f33f-c425-6a85-d0105d5ff5a9f017
+attr Steckdose_1 IODev MAPLECUL1_433
+attr Steckdose_1 ITclock 250
+attr Steckdose_1 ITrepetition 5
+attr Steckdose_1 alias Heizung Arbeitszimmer Lüfter
+attr Steckdose_1 icon Ventilator_fett
+attr Steckdose_1 model itswitch
+attr Steckdose_1 room Arbeitszimmer
+define Steckdose_2 IT 0F0F0F0FFF 0F F0
+setuuid Steckdose_2 5f8f4130-f33f-c425-b10e-c925895af3dee5b0
+attr Steckdose_2 IODev MAPLECUL1_433
+attr Steckdose_2 alias Steckdose Fernseher
+attr Steckdose_2 icon it_television
+attr Steckdose_2 room Schlafzimmer
+define MQTT2_FHEM_Server MQTT2_SERVER 1883 global
+setuuid MQTT2_FHEM_Server 5f904613-f33f-c425-6b49-2b09fd3fd9a4f2e6
+attr MQTT2_FHEM_Server alias MQTT Server
+attr MQTT2_FHEM_Server autocreate simple
+attr MQTT2_FHEM_Server devStateIcon {my $text = ' Clients: '.ReadingsVal($name,"nrclients","0");; \
+my $onl = ReadingsVal($name,"state","false") eq "Initialized"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}
+attr MQTT2_FHEM_Server group Interfaces
+attr MQTT2_FHEM_Server icon mqtt
+attr MQTT2_FHEM_Server room System
+define MQTT2_DVES_374D29 MQTT2_DEVICE DVES_374D29
+setuuid MQTT2_DVES_374D29 5f90464c-f33f-c425-4b4e-f359442e8fae4f66
+attr MQTT2_DVES_374D29 DbLogInclude state,energy,ENERGY_.*
+attr MQTT2_DVES_374D29 IODev MQTT2_FHEM_Server
+attr MQTT2_DVES_374D29 alias Strom Fussbodenheizung
+attr MQTT2_DVES_374D29 autocreate 0
+attr MQTT2_DVES_374D29 comment NOTE: For on-for-timer SetExtensions are used. You may add on-for-timer option running on the device. \
+The following is limited to 1h max duration, but will not affect future simple "on" commands:\
+<br>on-for-timer {my $duration = $EVTPART1*10;; 'cmnd/cmnd/tasmota_374D29/Backlog POWER1 1;; delay '.$duration.';; POWER1 0'}\
+<br>See the "Praxisbeispiele" in the wiki for "pulseTime1" alternative option and it's restrictions.
+attr MQTT2_DVES_374D29 devStateIcon {my $text = ' Aktuell: '.ReadingsVal($name,"ENERGY_Power","unknown").sprintf("W Heute: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Today","-1"));; \
+my $onl = ReadingsVal($name,"LWT","false") eq "Online"?"10px-kreis-gruen":"10px-kreis-rot";; \
+my $light = ReadingsVal($name,"state","off");;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($onl)."</a>\
+<a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($light)."</a>$text</div>"}
+attr MQTT2_DVES_374D29 event-min-interval state:600,ENERGY_Power:600,energy:3600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600
+attr MQTT2_DVES_374D29 event-on-change-reading state,ENERGY_Power,energy,ENERGY_Voltage,ENERGY_Yesterday,ENERGY_Today,ENERGY_Total
+attr MQTT2_DVES_374D29 event-on-update-reading state:600,energy:600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600,ENERGY_Power:600,ENERGY_Current:600,ENERGY_ApparentPower:600,ENERGY_ReactivePower:600
+attr MQTT2_DVES_374D29 genericDeviceType switch
+attr MQTT2_DVES_374D29 group Leistung
+attr MQTT2_DVES_374D29 icon hue_filled_outlet
+attr MQTT2_DVES_374D29 jsonMap POWER1:0 POWER2:0 POWER3:0 POWER4:0 Dimmer:0 Channel_0:0 Channel_1:0 Channel_2:0 Channel_3:0 Channel_4:0 HSBColor:0 Color:0
+attr MQTT2_DVES_374D29 model tasmota_POW
+attr MQTT2_DVES_374D29 readingList tele/tasmota_374D29/LWT:.* LWT\
+  tele/tasmota_374D29/STATE:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_374D29/SENSOR:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_374D29/INFO.:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_374D29/UPTIME:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  stat/tasmota_374D29/POWER1:.* state\
+  stat/tasmota_374D29/RESULT:.* { json2nameValue($EVENT,'',$JSONMAP) }
+attr MQTT2_DVES_374D29 room Energie,Wohnzimmer
+attr MQTT2_DVES_374D29 setExtensionsEvent 1
+attr MQTT2_DVES_374D29 setList off:noArg    cmnd/tasmota_374D29/POWER1 0\
+  on:noArg     cmnd/tasmota_374D29/POWER1 1\
+  toggle:noArg cmnd/tasmota_374D29/POWER1 2
+attr MQTT2_DVES_374D29 setStateList on off toggle
+attr MQTT2_DVES_374D29 stateFormat {sprintf("Aktuell: %.1f W Gesamt: %.1f kWh<br>Heute: %.1f kWh Gestern: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Power",0), \
+ReadingsVal($name,"ENERGY_Total",0), \
+ReadingsVal($name,"ENERGY_Today",0), \
+ReadingsVal($name,"ENERGY_Yesterday",0))}
+attr MQTT2_DVES_374D29 userReadings energy { ReadingsVal("MQTT2_DVES_374D29","ENERGY_Total",0) }
+attr MQTT2_DVES_374D29 verbose 3
+attr MQTT2_DVES_374D29 webCmd :
+define Notify_Fussbodenheizung notify WT_Wohnzimmer:desiredTemperature:.* set PID_Fussbodenheizung desired $EVTPART1
+setuuid Notify_Fussbodenheizung 5f91505f-f33f-c425-d175-3eaa9a2e2441f1d4
+attr Notify_Fussbodenheizung alias Nachricht Fussbodenheizung
+attr Notify_Fussbodenheizung group Steuerung
+attr Notify_Fussbodenheizung icon time_note
+attr Notify_Fussbodenheizung room Wohnzimmer
+attr Notify_Fussbodenheizung verbose 1
+define SVG_Leistung_Fussbodenheizung SVG myDbLog:SVG_Leistung_Fussbodenheizung:HISTORY
+setuuid SVG_Leistung_Fussbodenheizung 5f915b0b-f33f-c425-6fd9-b975d15dc490fcb6
+attr SVG_Leistung_Fussbodenheizung alias SVG Leistung Fussbodehnheizung
+attr SVG_Leistung_Fussbodenheizung endPlotNow 1
+attr SVG_Leistung_Fussbodenheizung group Leistung
+attr SVG_Leistung_Fussbodenheizung label "Leistung Fussbodehnheizung"
+attr SVG_Leistung_Fussbodenheizung room Wohnzimmer
+define LaCrosseXX LaCrosse 02 -3 0
+setuuid LaCrosseXX 5f928758-f33f-c425-16a7-8bfb788a307b0b78
+attr LaCrosseXX DbLogInclude temperature,pressure
+attr LaCrosseXX IODev myLaCrosseGateway
+attr LaCrosseXX alias Thermometer Arbeitszimmer
+attr LaCrosseXX event-min-interval temperature:600,pressure:3600
+attr LaCrosseXX event-on-change-reading pressure,temperature
+attr LaCrosseXX event-on-update-reading pressure,temperature
+attr LaCrosseXX icon temp_temperature
+attr LaCrosseXX room Arbeitszimmer
+attr LaCrosseXX stateFormat {sprintf("Temperatur: %.1f °C<br>Luftdruck: %d pm", ReadingsVal($name,"temperature",0), ReadingsVal($name,"pressure",0))}
+define SVG_Regler_PID SVG myDbLog:SVG_Pumpe_Fussboden_Log_1:HISTORY
+setuuid SVG_Regler_PID 5f9883d4-f33f-c425-748b-f4af3a20c5612fa1
+attr SVG_Regler_PID alias SVG Regler Wohnzimmer PID
+attr SVG_Regler_PID endPlotNow 1
+attr SVG_Regler_PID group Steuerung
+attr SVG_Regler_PID label "Regler Wohnzimmer PID"
+attr SVG_Regler_PID room hidden
+define ESP_Temp ESPEasy bridge 8383
+setuuid ESP_Temp 5fac57df-f33f-c425-55bd-9e5a20ee62fa2b5b
+attr ESP_Temp authentication 1
+attr ESP_Temp combineDevices 0
+attr ESP_Temp group ESPEasy Bridge
+attr ESP_Temp room ESPEasy
+define AtPumpe at +*01:00:00 {Regler_Fussbodenheizung_PWM("PID_Fussbodenheizung","MQTT2_DVES_374D29")}
+setuuid AtPumpe 5fae8946-f33f-c425-dac9-e034e7612f575e22
+attr AtPumpe alignTime 00:01
+attr AtPumpe group Steuerung
+attr AtPumpe icon time_timer
+attr AtPumpe room Wohnzimmer
+attr AtPumpe verbose 4
+define PumpeActor dummy
+setuuid PumpeActor 5fae8ad6-f33f-c425-cfbb-381170985f3fe675
+attr PumpeActor DbLogInclude energy_Energy.*,energy_Counter.*
+attr PumpeActor group Steuerung
+attr PumpeActor icon sani_pump
+attr PumpeActor room Wohnzimmer
+attr PumpeActor userReadings energy integral {ReadingsVal($name,'state',0)/360000}
+define SVG_Ligth_Sensor SVG myDbLog:SVG_Light:HISTORY
+setuuid SVG_Ligth_Sensor 5fb052bf-f33f-c425-5f7a-9892af3801188875
+attr SVG_Ligth_Sensor alias SVG Licht Arbeitszimmer
+attr SVG_Ligth_Sensor endPlotNow 1
+attr SVG_Ligth_Sensor group Licht
+attr SVG_Ligth_Sensor label "Licht Arbeitszimmer"
+attr SVG_Ligth_Sensor room Arbeitszimmer,ESPEasy
+define PID_Fussbodenheizung PID20 WT_Wohnzimmer:temperature PumpeActor
+setuuid PID_Fussbodenheizung 5fb7884b-f33f-c425-8a74-a3f862c34362d20b
+attr PID_Fussbodenheizung DbLogInclude actuation,actuationCalc,delta,desired,measured,p_d,p_p,p_i
+attr PID_Fussbodenheizung event-min-interval .*:100
+attr PID_Fussbodenheizung event-on-change-reading .*
+attr PID_Fussbodenheizung group Steuerung
+attr PID_Fussbodenheizung pidActorErrorAction errorPos
+attr PID_Fussbodenheizung pidActorLimitLower 0
+attr PID_Fussbodenheizung pidActorLimitUpper 100
+attr PID_Fussbodenheizung pidActorTreshold 1
+attr PID_Fussbodenheizung pidActorValueDecPlaces 0
+attr PID_Fussbodenheizung pidCalcInterval 600
+attr PID_Fussbodenheizung pidFactor_D 0
+attr PID_Fussbodenheizung pidFactor_I 1.0
+attr PID_Fussbodenheizung pidFactor_P 100
+attr PID_Fussbodenheizung pidUpdateInterval 300
+attr PID_Fussbodenheizung room Wohnzimmer
+define MAPLECUL1_433 CUL 192.168.178.22:2323 6543
+setuuid MAPLECUL1_433 5ffc7520-f33f-c425-e51f-98e37bc8890d3364
+attr MAPLECUL1_433 DbLogInclude credit10ms
+attr MAPLECUL1_433 connectCommand x09
+attr MAPLECUL1_433 devStateIcon {my $text = ' Credits: '.ReadingsVal($name,"credit10ms","0").sprintf(" RSSI: %d ", \
+InternalVal($name,"RSSI","-1"));; \
+my $onl = ReadingsVal($name,"state","false") eq "Initialized"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}\
+
+attr MAPLECUL1_433 event-min-interval credit10ms:600
+attr MAPLECUL1_433 event-on-change-reading credit10ms
+attr MAPLECUL1_433 event-on-update-reading credit10ms:600
+attr MAPLECUL1_433 group Interfaces
+attr MAPLECUL1_433 icon cul_cul
+attr MAPLECUL1_433 model CUN
+attr MAPLECUL1_433 rfmode SlowRF
+attr MAPLECUL1_433 room System
+attr MAPLECUL1_433 stateFormat {sprintf("Status: %s<br>Credit: %.1f", ReadingsVal($name,"state",0), ReadingsVal($name,"credit10ms",0))}
+define MAPLECUL1Stack STACKABLE MAPLECUL1_433
+setuuid MAPLECUL1Stack 5ffc754b-f33f-c425-9708-8db28de27d9dd015
+attr MAPLECUL1Stack group Interfaces
+attr MAPLECUL1Stack room System
+define MAPLECUL2_868 CUL FHEM:DEVIO:MAPLECUL1Stack:9600 0000
+setuuid MAPLECUL2_868 5ffc75d1-f33f-c425-90a8-8961dc8f9b8ef51a
+attr MAPLECUL2_868 DbLogInclude credit10ms
+attr MAPLECUL2_868 devStateIcon {my $text = ' Credits: '.ReadingsVal($name,"credit10ms","0").sprintf(" RSSI: %d ", \
+InternalVal($name,"RSSI","-1"));; \
+my $onl = ReadingsVal($name,"state","false") eq "Initialized"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}\
+
+attr MAPLECUL2_868 event-min-interval credit10ms:600
+attr MAPLECUL2_868 event-on-change-reading credit10ms
+attr MAPLECUL2_868 event-on-update-reading credit10ms:600
+attr MAPLECUL2_868 group Interfaces
+attr MAPLECUL2_868 icon cul_868
+attr MAPLECUL2_868 maxid 654321
+attr MAPLECUL2_868 rfmode WMBus_S
+attr MAPLECUL2_868 room System
+attr MAPLECUL2_868 stateFormat {sprintf("Status: %s<br>Credit: %.1f", ReadingsVal($name,"state",0), ReadingsVal($name,"credit10ms",0))}
+define MaxScanner MaxScanner
+setuuid MaxScanner 600e7362-f33f-c425-1e6e-ae2ed5fcdf179da8
+attr MaxScanner alias MAX Scanner
+attr MaxScanner devStateIcon {my $onl = ReadingsVal($name,"state","false") eq "processing"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a>"}
+attr MaxScanner disable 0
+attr MaxScanner group Statistik
+attr MaxScanner icon text_max
+attr MaxScanner room System
+attr MaxScanner scnMinInterval 30
+attr MaxScanner verbose 2
+define SCHED_Arbeitszimmer_HomeOffice WeekdayTimer HZ_Arbeitszimmer 00:10|eco 8|06:00|comfort 8|16:00|eco
+setuuid SCHED_Arbeitszimmer_HomeOffice 60223ff2-f33f-c425-3b12-01ebd4933028382f
+attr SCHED_Arbeitszimmer_HomeOffice commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Arbeitszimmer_HomeOffice disable 1
+attr SCHED_Arbeitszimmer_HomeOffice room Arbeitszimmer
+define GR.HZ_Badezimmer structure Thermostat HZ_Badezimmer_Fenster HZ_Badezimmer_Handtuch
+setuuid GR.HZ_Badezimmer 60239807-f33f-c425-d919-3b3546dbc790b14c
+attr GR.HZ_Badezimmer room Badezimmer
+define SCHED_Arbeitszimmer WeekdayTimer HZ_Arbeitszimmer 00:10|eco
+setuuid SCHED_Arbeitszimmer 6023df38-f33f-c425-d285-15db0d016474801c
+attr SCHED_Arbeitszimmer commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Arbeitszimmer disable 0
+attr SCHED_Arbeitszimmer room Arbeitszimmer
+define SCHED_Kinderzimmer WeekdayTimer HZ_Kinderzimmer 00:10|eco 8|05:00|comfort 7|06:00|comfort 8|07:15|eco 8|14:00|comfort 20:00|eco
+setuuid SCHED_Kinderzimmer 6023df9d-f33f-c425-0694-78e3fd1e1882f242
+attr SCHED_Kinderzimmer commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Kinderzimmer disable 0
+attr SCHED_Kinderzimmer room Kinderzimmer
+define SCHED_Badezimmer WeekdayTimer GR.HZ_Badezimmer 00:10|eco 8|05:00|comfort 8|07:30|eco 8|15:00|comfort 8|21:00|eco 7|05:30|comfort 7|20:00|eco
+setuuid SCHED_Badezimmer 6023e094-f33f-c425-d139-5412fc7492414205
+attr SCHED_Badezimmer commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Badezimmer disable 0
+attr SCHED_Badezimmer room Badezimmer
+define SCHED_Badezimmer_HomeOffice WeekdayTimer GR.HZ_Badezimmer 00:10|eco 8|05:00|comfort 8|08:00|20 8|18:00|comfort 8|21:00|eco 7|06:30|comfort 7|22:00|eco
+setuuid SCHED_Badezimmer_HomeOffice 6023e0fb-f33f-c425-c700-a9ba42e0b9cfe9f2
+attr SCHED_Badezimmer_HomeOffice commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Badezimmer_HomeOffice disable 1
+attr SCHED_Badezimmer_HomeOffice room Badezimmer
+define SCHED_Badezimmer_Urlaub WeekdayTimer GR.HZ_Badezimmer 00:15|15
+setuuid SCHED_Badezimmer_Urlaub 6023e159-f33f-c425-6634-3dbc31e9d723a619
+attr SCHED_Badezimmer_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Badezimmer_Urlaub disable 1
+attr SCHED_Badezimmer_Urlaub room Badezimmer
+define SCHED_Kinderzimmer_Urlaub WeekdayTimer HZ_Kinderzimmer 00:10|15.0
+setuuid SCHED_Kinderzimmer_Urlaub 6023e184-f33f-c425-fb74-5ea055e50f1637d1
+attr SCHED_Kinderzimmer_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Kinderzimmer_Urlaub disable 1
+attr SCHED_Kinderzimmer_Urlaub room Kinderzimmer
+define SCHED_Arbeitszimmer_Urlaub WeekdayTimer HZ_Arbeitszimmer 00:10|15
+setuuid SCHED_Arbeitszimmer_Urlaub 6023e1bf-f33f-c425-da4e-a1450dd780f71b02
+attr SCHED_Arbeitszimmer_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Arbeitszimmer_Urlaub disable 1
+attr SCHED_Arbeitszimmer_Urlaub room Arbeitszimmer
+define SCHED_Flur_Urlaub WeekdayTimer HZ_Flur 00:10|15
+setuuid SCHED_Flur_Urlaub 6023e284-f33f-c425-c0a5-a93065beb2afd594
+attr SCHED_Flur_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Flur_Urlaub disable 1
+attr SCHED_Flur_Urlaub room Flur
+define SCHED_Flur WeekdayTimer HZ_Flur 00:10|eco 8|05:30|comfort 8|07:30|eco 8|15:00|comfort 8|21:00|eco 7|06:30|comfort 7|23:00|eco
+setuuid SCHED_Flur 6023e2d6-f33f-c425-b69e-8407d7825b214ef1
+attr SCHED_Flur commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Flur disable 0
+attr SCHED_Flur room Flur
+define SCHED_Flur_HomeOffice WeekdayTimer HZ_Flur 00:10|eco 8|05:30|comfort 8|20:00|eco 7|06:30|comfort 7|20:00|eco
+setuuid SCHED_Flur_HomeOffice 6023e367-f33f-c425-1951-80b7157d68b9e417
+attr SCHED_Flur_HomeOffice commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Flur_HomeOffice disable 1
+attr SCHED_Flur_HomeOffice room Flur
+define SCHED_Kueche_HomeOffice WeekdayTimer HZ_Kueche 00:10|eco 8|05:30|comfort 8|20:00|eco 7|06:30|comfort 7|20:00|eco
+setuuid SCHED_Kueche_HomeOffice 6023e72d-f33f-c425-2426-058b7af8401bce4e
+attr SCHED_Kueche_HomeOffice commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Kueche_HomeOffice disable 0
+attr SCHED_Kueche_HomeOffice room Kueche
+define SCHED_Kueche WeekdayTimer HZ_Kueche 00:10|eco 8|05:30|comfort 8|07:30|eco 8|15:00|comfort 8|20:00|eco 7|06:30|comfort 7|20:00|eco
+setuuid SCHED_Kueche 6023e76e-f33f-c425-220d-7284b1fbd1e315df
+attr SCHED_Kueche commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Kueche disable 0
+attr SCHED_Kueche room Kueche
+define SCHED_Kueche_Urlaub WeekdayTimer HZ_Kueche 00:10|15
+setuuid SCHED_Kueche_Urlaub 6023e7ad-f33f-c425-1106-33f5f375a1647ffd
+attr SCHED_Kueche_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Kueche_Urlaub disable 1
+attr SCHED_Kueche_Urlaub room Kueche
+define SCHED_Schlafzimmer WeekdayTimer HZ_Schlafzimmer 00:10|comfort 07:00|eco 20:00|comfort
+setuuid SCHED_Schlafzimmer 6023e7de-f33f-c425-8bef-ba80346152143396
+attr SCHED_Schlafzimmer commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Schlafzimmer disable 0
+attr SCHED_Schlafzimmer room Schlafzimmer
+define SCHED_Wohnzimmer_Urlaub WeekdayTimer WT_Wohnzimmer 00:10|15.0
+setuuid SCHED_Wohnzimmer_Urlaub 6023e862-f33f-c425-3599-18ee612dad928701
+attr SCHED_Wohnzimmer_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Wohnzimmer_Urlaub disable 0
+attr SCHED_Wohnzimmer_Urlaub room Wohnzimmer
+define SCHED_Wohnzimmer WeekdayTimer WT_Wohnzimmer 00:10|eco Sa-Su|02:00|comfort 08:00|comfort 18:00|eco
+setuuid SCHED_Wohnzimmer 6023e9c6-f33f-c425-19c7-b87462c97e91d125
+attr SCHED_Wohnzimmer commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Wohnzimmer disable 1
+attr SCHED_Wohnzimmer room Wohnzimmer
+define SCHED_Treppenhaus WeekdayTimer HZ_Treppenhaus_.* 00:15|eco 06:00|comfort 20:00|eco
+setuuid SCHED_Treppenhaus 6023ea41-f33f-c425-72f7-977b91d3c0a4e6c5
+attr SCHED_Treppenhaus commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Treppenhaus disable 0
+attr SCHED_Treppenhaus room Treppenhaus
+define Vacation_notify_Anwesend_HomeOffice notify Vacation:Anwesend_HomeOffice set SCHED_Arbeitszimmer disable;;set SCHED_Arbeitszimmer_HomeOffice enable;;set SCHED_Arbeitszimmer_Urlaub disable;;\
+					set SCHED_Badezimmer disable;;set SCHED_Badezimmer_HomeOffice enable;;set SCHED_Badezimmer_Urlaub disable;;\
+					set SCHED_Flur disable;;set SCHED_Flur_HomeOffice enable;;set SCHED_Flur_Urlaub disable;;\
+					set SCHED_Kinderzimmer enable;;set SCHED_Kinderzimmer_Urlaub disable;;					\
+					set SCHED_Kueche disable;;set SCHED_Kueche_HomeOffice enable;;set SCHED_Kueche_Urlaub disable;;\
+					set SCHED_Schlafzimmer enable;;set SCHED_Schlafzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;\
+					set SCHED_Wohnzimmer enable;;set SCHED_Wohnzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;set SCHED_Treppenhaus_Urlaub disable;;\
+					save;;
+setuuid Vacation_notify_Anwesend_HomeOffice 6024f8e1-f33f-c425-ed84-6acd641c082c4ebb
+attr Vacation_notify_Anwesend_HomeOffice room hidden
+define Vacation_notify_Anwesend_HomeOffice_ohne_Lia notify Vacation:Anwesend_HomeOffice_ohne_Lia set SCHED_Arbeitszimmer disable;;set SCHED_Arbeitszimmer_HomeOffice enable;;set SCHED_Arbeitszimmer_Urlaub disable;;\
+					set SCHED_Badezimmer disable;;set SCHED_Badezimmer_HomeOffice enable;;set SCHED_Badezimmer_Urlaub disable;;\
+					set SCHED_Flur disable;;set SCHED_Flur_HomeOffice enable;;set SCHED_Flur_Urlaub disable;;\
+					set SCHED_Kinderzimmer disable;;set SCHED_Kinderzimmer_Urlaub enable;;					\
+					set SCHED_Kueche disable;;set SCHED_Kueche_HomeOffice enable;;set SCHED_Kueche_Urlaub disable;;\
+					set SCHED_Schlafzimmer enable;;set SCHED_Schlafzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;\
+					set SCHED_Wohnzimmer enable;;set SCHED_Wohnzimmer_Urlaub disable;;\
+					set SCHED_Treppenhaus enable;;set SCHED_Treppenhaus_Urlaub disable;;\
+					save;;
+setuuid Vacation_notify_Anwesend_HomeOffice_ohne_Lia 6024fbbe-f33f-c425-1db5-89a2840bcd9f9c39
+attr Vacation_notify_Anwesend_HomeOffice_ohne_Lia room hidden
+define TelegramPrinterBot TelegramBot
+setuuid TelegramPrinterBot 6058bdb3-f33f-c425-eb09-f5c93f130b8f2fa0
+attr TelegramPrinterBot defaultPeer David
+attr TelegramPrinterBot disable 0
+attr TelegramPrinterBot group Interfaces
+attr TelegramPrinterBot icon telegram
+attr TelegramPrinterBot room System
+define notifyCUL3 notify CUL3:DISCONNECTED {\
+	my $state = ReadingsVal($NAME, "state", 0);;;;\
+	fhem("set TelegramPrinterBot msg ⚠️WARNING⚠️: $NAME state changed to '$state'!");;\
+}
+setuuid notifyCUL3 6058f04f-f33f-c425-8a9f-ab4151669eb0964b
+attr notifyCUL3 room System
+define CUL3_notify_1 notify MAPLECUL2_868:DISCONNECTED {\
+	my $state = ReadingsVal($NAME, "state", 0);;;;\
+	fhem("set TelegramPrinterBot msg ⚠️WARNING⚠️: $NAME state changed to '$state'!");;\
+}
+setuuid CUL3_notify_1 6058f3c5-f33f-c425-ed40-1c1e4633547941fd
+attr CUL3_notify_1 room System
+define SVG_LaCrosseGas SVG myDbLog:SVG_LaCrosseGas:HISTORY
+setuuid SVG_LaCrosseGas 609be2d1-f33f-c425-b9d2-420ce45fc1e2ce56
+attr SVG_LaCrosseGas alias SVG Arbeitszimmer Luftgüte IAQ
+attr SVG_LaCrosseGas endPlotNow 1
+attr SVG_LaCrosseGas endPlotToday 1
+attr SVG_LaCrosseGas group Luftgüte
+attr SVG_LaCrosseGas label "Arbeitszimmer Luftgüte IAQ"
+attr SVG_LaCrosseGas room Arbeitszimmer
+define SVG_LaCrosseCO2 SVG myDbLog:SVG_LaCrosseCO2:HISTORY
+setuuid SVG_LaCrosseCO2 60a3595f-f33f-c425-d126-ba29a17b971d93e5
+attr SVG_LaCrosseCO2 alias SVG Luftgüte Arbeitszimmer IAQ CO2
+attr SVG_LaCrosseCO2 endPlotNow 1
+attr SVG_LaCrosseCO2 group Luftgüte
+attr SVG_LaCrosseCO2 label "Luftgüte Arbeitszimmer IAQ CO2"
+attr SVG_LaCrosseCO2 room Arbeitszimmer
+define SVG_LaCrosseGas_Temp SVG myDbLog:SVG_LaCrosseGas_Temp:HISTORY
+setuuid SVG_LaCrosseGas_Temp 60ae0dec-f33f-c425-4591-8bd251e782dda972
+attr SVG_LaCrosseGas_Temp alias SVG Luftgüte Temperatur - Feuchte
+attr SVG_LaCrosseGas_Temp endPlotNow 1
+attr SVG_LaCrosseGas_Temp group Luftgüte
+attr SVG_LaCrosseGas_Temp label "Luftgüte Temperatur - Feuchte"
+attr SVG_LaCrosseGas_Temp room Arbeitszimmer
+define TE.FolderSize CustomReadings
+setuuid TE.FolderSize 60b4a2df-f33f-c425-a0b4-6f3d0d4779e1360e
+attr TE.FolderSize DbLogInclude fhem_folder_size
+attr TE.FolderSize alias Größe FHEM
+attr TE.FolderSize event-min-interval backup_folder_size:3600
+attr TE.FolderSize icon it_hdd
+attr TE.FolderSize interval 43200
+attr TE.FolderSize readingDefinitions fhem_folder_size:qx(du -mc /opt/fhem | grep total | cut -d 't' -f1 2>&1)
+attr TE.FolderSize room System
+attr TE.FolderSize stateFormat fhem_folder_size MB
+define TE.Free CustomReadings
+setuuid TE.Free 60b4a587-f33f-c425-e7be-87104e8ba431ccc5
+attr TE.Free DbLogInclude fhem_folder_size
+attr TE.Free alias Freier Speicher
+attr TE.Free event-min-interval backup_folder_size:3600
+attr TE.Free icon it_hdd
+attr TE.Free interval 43200
+attr TE.Free readingDefinitions fhem_folder_size:qx(df / | grep /dev/mmcblk0p1 | tr -s ' ' | cut -d ' ' -f5 | sed 's/%//')
+attr TE.Free room System
+attr TE.Free stateFormat {sprintf("root: %.1f %", ReadingsVal($name,"fhem_folder_size","-1"))}
+define SCHED_Treppenhaus_Urlaub WeekdayTimer HZ_Treppenhaus_.* 00:10|eco
+setuuid SCHED_Treppenhaus_Urlaub 6196524a-f33f-c425-8902-64d3e8ea352403c8
+attr SCHED_Treppenhaus_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Treppenhaus_Urlaub disable 1
+attr SCHED_Treppenhaus_Urlaub room Treppenhaus
+define SVG_Leistung_Fussbodenheizung_Tag SVG myDbLog:SVG_Leistung_Fussbodenheizung_Tag:HISTORY
+setuuid SVG_Leistung_Fussbodenheizung_Tag 624d5d2e-f33f-c425-ed00-5958b8082981e313
+attr SVG_Leistung_Fussbodenheizung_Tag alias Tageserzeugung Fussbodenheizung
+attr SVG_Leistung_Fussbodenheizung_Tag fixedrange 30days
+attr SVG_Leistung_Fussbodenheizung_Tag group Energie Tag
+attr SVG_Leistung_Fussbodenheizung_Tag label "Leistung Wohnzimmer Tag"
+attr SVG_Leistung_Fussbodenheizung_Tag room Energie,Wohnzimmer
+define AtCUL at +*00:10:00 get MAPLECUL1_433 credit10ms
+setuuid AtCUL 62875683-f33f-c425-0c70-891e8bc45c454827
+attr AtCUL alias CUL1 State
+attr AtCUL group AT
+attr AtCUL room System
+define AtCUL2 at +*00:10:00 get MAPLECUL2_868 credit10ms
+setuuid AtCUL2 62875c11-f33f-c425-a5d2-151f6618b2f87c7e
+attr AtCUL2 alias CUL2 State
+attr AtCUL2 group AT
+attr AtCUL2 room System
+define AtCUL3 at +*00:10:00 get CUL3 credit10ms
+setuuid AtCUL3 62875c1e-f33f-c425-b079-b494201742ba76b7
+attr AtCUL3 alias CUL3 State
+attr AtCUL3 group AT
+attr AtCUL3 room System
+define Strom_Balkonkraftwerk MQTT2_DEVICE DVES_301465
+setuuid Strom_Balkonkraftwerk 6288f231-f33f-c425-5f5f-a8d7ae6de71dc352
+attr Strom_Balkonkraftwerk DbLogInclude state,energy,ENERGY_.*
+attr Strom_Balkonkraftwerk alias Strom Balkonkraftwerk
+attr Strom_Balkonkraftwerk autocreate 0
+attr Strom_Balkonkraftwerk comment NOTE: For on-for-timer SetExtensions are used. You may add on-for-timer option running on the device. The following is limited to 1h max duration, but will not affect future simple "on" commands:<br>on-for-timer {my $duration = $EVTPART1*10;; 'cmnd/cmnd/tasmota_301465/Backlog POWER1 1;; delay '.$duration.';; POWER1 0'}<br>See the "Praxisbeispiele" in the wiki for "pulseTime1" alternative option and it's restrictions.
+attr Strom_Balkonkraftwerk devStateIcon {my $text = ' Aktuell: '.ReadingsVal($name,"ENERGY_Power","unknown").sprintf("W Heute: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Today","-1"));; \
+my $onl = ReadingsVal($name,"LWT","false") eq "Online"?"10px-kreis-gruen":"10px-kreis-rot";; \
+my $light = ReadingsVal($name,"state","off");;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($onl)."</a>\
+<a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($light)."</a>$text</div>"}
+attr Strom_Balkonkraftwerk event-min-interval state:600,ENERGY_Power:600,energy:3600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600
+attr Strom_Balkonkraftwerk event-on-change-reading state,ENERGY_Power,energy,ENERGY_Voltage,ENERGY_Yesterday,ENERGY_Today,ENERGY_Total
+attr Strom_Balkonkraftwerk event-on-update-reading state:600,energy:600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600,ENERGY_Power:600,ENERGY_Current:600,ENERGY_ApparentPower:600,ENERGY_ReactivePower:600
+attr Strom_Balkonkraftwerk group Leistung
+attr Strom_Balkonkraftwerk icon hue_filled_outlet
+attr Strom_Balkonkraftwerk jsonMap POWER1:0 POWER2:0 POWER3:0 POWER4:0 Dimmer:0 Channel_0:0 Channel_1:0 Channel_2:0 Channel_3:0 Channel_4:0 Channel_5:0 HSBColor:0 Color:0
+attr Strom_Balkonkraftwerk model tasmota_POW
+attr Strom_Balkonkraftwerk readingList tele/tasmota_301465/LWT:.* LWT\
+  tele/tasmota_301465/STATE:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_301465/SENSOR:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_301465/INFO.:.* { $EVENT =~ m,^..Info[1-3]..(.+).$, ?  json2nameValue($1,'',$JSONMAP) : json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_301465/UPTIME:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  stat/tasmota_301465/POWER1:.* state\
+  stat/tasmota_301465/RESULT:.* { json2nameValue($EVENT,'',$JSONMAP) }
+attr Strom_Balkonkraftwerk room Energie
+attr Strom_Balkonkraftwerk setList off:noArg    cmnd/tasmota_301465/POWER1 0\
+  on:noArg     cmnd/tasmota_301465/POWER1 1\
+  toggle:noArg cmnd/tasmota_301465/POWER1 2
+attr Strom_Balkonkraftwerk setStateList on off toggle
+attr Strom_Balkonkraftwerk stateFormat {sprintf("aktuell: %.1f W Tag: %.2f kWh Gestern: %.3f kWh Gesamt: %.4f kWh", ReadingsVal($name,"ENERGY_Power","-1"), ReadingsVal($name,"ENERGY_Today","-1"), ReadingsVal($name,"ENERGY_Yesterday","-1"), ReadingsVal($name,"ENERGY_Total","-1"))}
+attr Strom_Balkonkraftwerk userReadings energy { ReadingsVal("Strom_Balkonkraftwerk","ENERGY_Total",0) }
+attr Strom_Balkonkraftwerk webCmd :
+define MQTT2_DVES_6886B0 MQTT2_DEVICE DVES_6886B0
+setuuid MQTT2_DVES_6886B0 6288f835-f33f-c425-0b9d-2acafdc1cda2c178
+attr MQTT2_DVES_6886B0 DbLogInclude state,energy,ENERGY_.*
+attr MQTT2_DVES_6886B0 alias Strom Fernseher
+attr MQTT2_DVES_6886B0 autocreate 0
+attr MQTT2_DVES_6886B0 comment NOTE: For on-for-timer SetExtensions are used. You may add on-for-timer option running on the device. The following is limited to 1h max duration, but will not affect future simple "on" commands:<br>on-for-timer {my $duration = $EVTPART1*10;; 'cmnd/cmnd/tasmota_6886B0/Backlog POWER1 1;; delay '.$duration.';; POWER1 0'}<br>See the "Praxisbeispiele" in the wiki for "pulseTime1" alternative option and it's restrictions.
+attr MQTT2_DVES_6886B0 devStateIcon {my $text = ' Aktuell: '.ReadingsVal($name,"ENERGY_Power","unknown").sprintf("W Heute: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Today","-1"));; \
+my $onl = ReadingsVal($name,"LWT","false") eq "Online"?"10px-kreis-gruen":"10px-kreis-rot";; \
+my $light = ReadingsVal($name,"state","off");;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($onl)."</a>\
+<a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($light)."</a>$text</div>"}
+attr MQTT2_DVES_6886B0 event-min-interval state:600,ENERGY_Power:600,energy:3600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600
+attr MQTT2_DVES_6886B0 event-on-change-reading state,ENERGY_Power,energy,ENERGY_Voltage,ENERGY_Yesterday,ENERGY_Today,ENERGY_Total
+attr MQTT2_DVES_6886B0 event-on-update-reading state:600,energy:600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600,ENERGY_Power:600,ENERGY_Current:600,ENERGY_ApparentPower:600,ENERGY_ReactivePower:600
+attr MQTT2_DVES_6886B0 group Leistung
+attr MQTT2_DVES_6886B0 icon hue_filled_outlet
+attr MQTT2_DVES_6886B0 jsonMap POWER1:0 POWER2:0 POWER3:0 POWER4:0 Dimmer:0 Channel_0:0 Channel_1:0 Channel_2:0 Channel_3:0 Channel_4:0 Channel_5:0 HSBColor:0 Color:0
+attr MQTT2_DVES_6886B0 model tasmota_POW
+attr MQTT2_DVES_6886B0 readingList tele/tasmota_6886B0/LWT:.* LWT\
+  tele/tasmota_6886B0/STATE:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_6886B0/SENSOR:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_6886B0/INFO.:.* { $EVENT =~ m,^..Info[1-3]..(.+).$, ?  json2nameValue($1,'',$JSONMAP) : json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_6886B0/UPTIME:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  stat/tasmota_6886B0/POWER1:.* state\
+  stat/tasmota_6886B0/RESULT:.* { json2nameValue($EVENT,'',$JSONMAP) }
+attr MQTT2_DVES_6886B0 room Energie,Wohnzimmer
+attr MQTT2_DVES_6886B0 setList off:noArg    cmnd/tasmota_6886B0/POWER1 0\
+  on:noArg     cmnd/tasmota_6886B0/POWER1 1\
+  toggle:noArg cmnd/tasmota_6886B0/POWER1 2
+attr MQTT2_DVES_6886B0 setStateList on off toggle
+attr MQTT2_DVES_6886B0 stateFormat {sprintf("aktuell: %.1f W Tag: %.2f kWh Gestern: %.3f kWh Gesamt: %.4f kWh", ReadingsVal($name,"ENERGY_Power","-1"), ReadingsVal($name,"ENERGY_Today","-1"), ReadingsVal($name,"ENERGY_Yesterday","-1"), ReadingsVal($name,"ENERGY_Total","-1"))}
+attr MQTT2_DVES_6886B0 userReadings energy { ReadingsVal("MQTT2_DVES_6886B0","ENERGY_Total",0) }
+attr MQTT2_DVES_6886B0 webCmd :
+define SVG_Leistung_Balkonkraftwerk SVG myDbLog:SVG_Leistung_Balkonkraftwerk:HISTORY
+setuuid SVG_Leistung_Balkonkraftwerk 62892bf2-f33f-c425-1449-408ed2b75f7d6317
+attr SVG_Leistung_Balkonkraftwerk alias SVG Leistung Balkonkraftwerk
+attr SVG_Leistung_Balkonkraftwerk endPlotNow 1
+attr SVG_Leistung_Balkonkraftwerk group Leistung
+attr SVG_Leistung_Balkonkraftwerk label "Leistung Balkonkraftwerk ^ $data{max1} W Ø $data{avg1} W]"
+attr SVG_Leistung_Balkonkraftwerk nrAxis 1,2
+attr SVG_Leistung_Balkonkraftwerk room Energie,Solar
+define SVG_Leistung_Fernseher SVG myDbLog:SVG_Leistung_Fernseher:HISTORY
+setuuid SVG_Leistung_Fernseher 62892d44-f33f-c425-0b54-0272af5f2084c9b8
+attr SVG_Leistung_Fernseher alias SVG Leistung Fernseher
+attr SVG_Leistung_Fernseher endPlotNow 1
+attr SVG_Leistung_Fernseher group Leistung
+attr SVG_Leistung_Fernseher label "Leistung Fernseher"
+attr SVG_Leistung_Fernseher room Wohnzimmer
+define SVG_Leistung_Waschmaschiene_Tag SVG myDbLog:SVG_Leistung_Waschmaschiene_Tag:HISTORY
+setuuid SVG_Leistung_Waschmaschiene_Tag 628b2a29-f33f-c425-9c2b-c415cfc694063adf
+attr SVG_Leistung_Waschmaschiene_Tag alias Tageserzeugung Balkonkraftwerk
+attr SVG_Leistung_Waschmaschiene_Tag fixedrange 30days
+attr SVG_Leistung_Waschmaschiene_Tag group Energie Tag
+attr SVG_Leistung_Waschmaschiene_Tag label "Tageserzeugung Balkonkraftwerk"
+attr SVG_Leistung_Waschmaschiene_Tag room Energie,Solar
+define Stromverbrauch readingsGroup <%icoBlitz>,<Leistung>,<Strom>,<Spannung>,<heute>,<gestern>,<Monat>,<letzter Monat>,<Jahr>,<letztes Jahr>,<Energie<br>gesamt>,<>\
+NAME=MQTT2_shellyem3_244CAB432745:power,current,emeter_0_voltage,energy_EnergyDay,energy_EnergyDayLast,energy_EnergyMonth,energy_EnergyMonthLast,energy_EnergyYear,energy_EnergyYearLast,energy,<>\
+NAME=MQTT2_DVES_.*:ENERGY_Power,ENERGY_Current,ENERGY_Voltage,ENERGY_Today,ENERGY_Yesterday,energy_EnergyMonth,energy_EnergyMonthLast,energy_EnergyYear,energy_EnergyYearLast,ENERGY_Total,state\
+NAME=DVES_.*:ENERGY_Power,ENERGY_Current,ENERGY_Voltage,ENERGY_Today,ENERGY_Yesterday,energy_EnergyMonth,energy_EnergyMonthLast,energy_EnergyYear,energy_EnergyYearLast,ENERGY_Total,state\
+Strom_Balkonkraftwerk:ENERGY_Power,ENERGY_Current,ENERGY_Voltage,ENERGY_Today,ENERGY_Yesterday,energy_EnergyMonth,energy_EnergyMonthLast,energy_EnergyYear,energy_EnergyYearLast,ENERGY_Total,state\
+BKW_Einspeisung:<>,<>,<>,energy_EnergyDay,energy_EnergyDayLast,energy_EnergyMonth,energy_EnergyMonthLast,energy_EnergyYear,energy_EnergyYearLast,energy_CounterCurrent,<>\
+BKW_Nutzung:<>,<>,<>,energy_EnergyDay,energy_EnergyDayLast,energy_EnergyMonth,energy_EnergyMonthLast,energy_EnergyYear,energy_EnergyYearLast,energy_CounterCurrent,<>
+setuuid Stromverbrauch 628b817e-f33f-c425-b353-883184c4cf20217b
+attr Stromverbrauch cellStyle { "c:1" => 'style="text-align:right"', "c:2" => 'style="text-align:right"', "c:3" => 'style="text-align:right"', "c:4" => 'style="text-align:right"', "c:5" => 'style="text-align:right"', "c:6" => 'style="text-align:right"', "c:7" => 'style="text-align:right"', "c:8" => 'style="text-align:right"' }
+attr Stromverbrauch commands { 'state.on' => 'set $DEVICE off', 'state.off' => 'set $DEVICE on'}
+attr Stromverbrauch room Haus
+attr Stromverbrauch valueFormat {'ENERGY_Power' => "%.0f W", \
+'ENERGY_Current' => "%.1f A", \
+'ENERGY_Voltage' =>"%3.0f V", \
+'ENERGY_Today' =>"%.1f kWh",\
+'Energy_MonthLast' =>"%.0f kWh", \
+'ENERGY_Total' =>"%.0f kWh", \
+'ENERGY_Yesterday' =>"%.1f kWh",\
+'power' => "%.0f W", \
+'voltage' =>"%.0f V",\
+'emeter_0_voltage' =>"%.0f V", \
+'energy_EnergyDayLast' =>"%.1f kWh",\
+'energy_EnergyMonth'=>"%.0f kWh",\
+'energy_EnergyMonthLast'=>"%.0f kWh",\
+'energy_EnergyYear'=>"%.0f kWh", \
+'energy_EnergyYearLast'=>"%.0f kWh", \
+'energy_EnergyDay' =>"%.1f kWh",\
+'energy_CounterCurrent' =>"%.1f kWh",\
+'energy' =>"%.0f kWh", \
+'energy_returned' =>"%.1f kWh",\
+'current' => "%.1f A"}
+attr Stromverbrauch valueIcon {'state.on' => 'hue_filled_outlet@orange',\
+'state.off' => 'hue_filled_outlet',\
+'state.set_on' => 'hue_filled_outlet@yellow',\
+'state.set_off' => 'hue_filled_outlet@yellow'}
+define SVG_System_Folder SVG myDbLog:SVG_System_Folder:HISTORY
+setuuid SVG_System_Folder 628dc79f-f33f-c425-c962-e1c7de7c6beaf269
+attr SVG_System_Folder alias SVG System Foldersize
+attr SVG_System_Folder fixedrange 120days
+attr SVG_System_Folder group System
+attr SVG_System_Folder label "Foldersize"
+attr SVG_System_Folder room System
+define SVG_Leistung_Fernseher_Tag SVG myDbLog:SVG_Leistung_Fernseher_Tag:HISTORY
+setuuid SVG_Leistung_Fernseher_Tag 62da38d5-f33f-c425-8065-181d30c14e780582
+attr SVG_Leistung_Fernseher_Tag alias Tageserzeugung Fernseher
+attr SVG_Leistung_Fernseher_Tag fixedrange 30days
+attr SVG_Leistung_Fernseher_Tag group Energie Tag
+attr SVG_Leistung_Fernseher_Tag label "Tageserzeugung Fernseher"
+attr SVG_Leistung_Fernseher_Tag room Energie,Wohnzimmer
+define SVG_Fussbodenheizung_PID SVG myDbLog:SVG_Fussbodenheizung_PID:HISTORY
+setuuid SVG_Fussbodenheizung_PID 62e26931-f33f-c425-9559-4d2db6404b1afdde
+attr SVG_Fussbodenheizung_PID alias SVG PID Regler
+attr SVG_Fussbodenheizung_PID endPlotNow 1
+attr SVG_Fussbodenheizung_PID endPlotToday 1
+attr SVG_Fussbodenheizung_PID room Wohnzimmer
+define Rep.MySQL.backup DbRep myDbLog
+setuuid Rep.MySQL.backup 632960ce-f33f-c425-3286-4b9720cac77f8a5a
+attr Rep.MySQL.backup dumpCompress 1
+attr Rep.MySQL.backup dumpDirLocal /opt/sd/
+attr Rep.MySQL.backup dumpDirRemote /opt/SD/mysql
+attr Rep.MySQL.backup dumpFilesKeep 10
+attr Rep.MySQL.backup executeAfterProc set myDbLog reopen
+attr Rep.MySQL.backup executeBeforeProc set myDbLog reopen 3600
+attr Rep.MySQL.backup optimizeTablesBeforeDump 1
+attr Rep.MySQL.backup room Log
+attr Rep.MySQL.backup showproctime 1
+define At.MySQL.Dump at *03:00:00 set Rep.MySQL.backup dumpMySQL clientSide
+setuuid At.MySQL.Dump 63296115-f33f-c425-9da1-1532147ffecb1437
+attr At.MySQL.Dump room Log
+define Rep.MySQL.size DbRep myDbLog
+setuuid Rep.MySQL.size 632963f0-f33f-c425-c293-48be548f60cba0e1
+attr Rep.MySQL.size DbLogInclude INFO_history.data_index_length_MB,INFO_history.index_length_MB
+attr Rep.MySQL.size event-min-interval INFO_history.data_index_length_MB:3600,INFO_history.index_length_MB:3600
+attr Rep.MySQL.size room Log
+attr Rep.MySQL.size showTableInfo history
+define SVG_Datenbank SVG myDbLog:SVG_Datenbank:HISTORY
+setuuid SVG_Datenbank 632965a2-f33f-c425-9990-5450d571b64f4d58
+attr SVG_Datenbank alias Datenbank Größe
+attr SVG_Datenbank captionPos left
+attr SVG_Datenbank endPlotNow 1
+attr SVG_Datenbank endPlotToday 1
+attr SVG_Datenbank fixedrange year
+attr SVG_Datenbank label "Datenbank Größe"
+attr SVG_Datenbank plotmode SVG
+attr SVG_Datenbank room Log
+define At.MySQL.Size at +*01:00:00 get Rep.MySQL.size tableinfo
+setuuid At.MySQL.Size 6329672d-f33f-c425-4469-8cf4a1066519ab76
+attr At.MySQL.Size room Log
+define Rep.MySQL.delDoup DbRep myDbLog
+setuuid Rep.MySQL.delDoup 632a9e30-f33f-c425-57db-b3c668a42a1a91bb
+attr Rep.MySQL.delDoup aggregation hour
+attr Rep.MySQL.delDoup disable 0
+attr Rep.MySQL.delDoup room Log
+attr Rep.MySQL.delDoup showproctime 1
+attr Rep.MySQL.delDoup timeOlderThan d:7
+define At.MySQL.DelDup at *00:00:00 set Rep.MySQL.delDoup delSeqDoublets delete
+setuuid At.MySQL.DelDup 632a9ec7-f33f-c425-bb8a-8ee2efdb16a77cad
+attr At.MySQL.DelDup disable 1
+attr At.MySQL.DelDup room Log
+define Rep.MySQL.statistic.Energie_Arbeitszimmer DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.Energie_Arbeitszimmer 632d6cd4-f33f-c425-df92-c59284e768aecee6
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer aggregation month
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer alias Strom Statistik Arbeitszimmer Monat
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer device MQTT2_DVES_91D247
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer executeAfterProc set Rep.MySQL.statistic.Energie_Arbeitszimmer.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer fastStart 1
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer numDecimalPlaces 1
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer reading ENERGY_Total
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer room Log
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer showproctime 1
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define SVG_Leistung_Arbeitzimmer_Monat SVG myDbLog:SVG_Leistung_Arbeitzimmer_Monat:HISTORY
+setuuid SVG_Leistung_Arbeitzimmer_Monat 632d78fc-f33f-c425-6242-2374195fa7c74e2a
+attr SVG_Leistung_Arbeitzimmer_Monat alias Monatserzeugung Arbeitszimmer
+attr SVG_Leistung_Arbeitzimmer_Monat endPlotToday 1
+attr SVG_Leistung_Arbeitzimmer_Monat fixedrange 2years
+attr SVG_Leistung_Arbeitzimmer_Monat group Energie Monat
+attr SVG_Leistung_Arbeitzimmer_Monat label "Monatserzeugung Arbeitszimmer"
+attr SVG_Leistung_Arbeitzimmer_Monat room Energie
+define Rep.MySQL.statistic.MQTT2_DVES_6886B0 DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.MQTT2_DVES_6886B0 632d7c1c-f33f-c425-8802-1fbfdff4c4c1cf86
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 aggregation month
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 alias Strom Statistik Fernseher Monat
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 device MQTT2_DVES_6886B0
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 executeAfterProc set Rep.MySQL.statistic.MQTT2_DVES_6886B0.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 fastStart 1
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 numDecimalPlaces 1
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 reading ENERGY_Total
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 room Log
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0 userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define SVG_Leistung_Fernseher_Monat SVG myDbLog:SVG_Leistung_Fernseher_Monat:HISTORY
+setuuid SVG_Leistung_Fernseher_Monat 632d7cf7-f33f-c425-5fcd-2d6c3ded56e6df73
+attr SVG_Leistung_Fernseher_Monat alias Monatserzeugung Fernseher
+attr SVG_Leistung_Fernseher_Monat endPlotToday 1
+attr SVG_Leistung_Fernseher_Monat fixedrange 2years
+attr SVG_Leistung_Fernseher_Monat group Energie Monat
+attr SVG_Leistung_Fernseher_Monat label "Monatserzeugung Fernseher"
+attr SVG_Leistung_Fernseher_Monat room Energie
+define Rep.MySQL.statistic.MQTT2_DVES_301465 DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.MQTT2_DVES_301465 632d7ecc-f33f-c425-dd84-6fab930df27a028a
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 aggregation month
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 alias Strom Statistik Balkonkraftwerk Monat
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 autoForward {\
+  ".*Monatserzeugung_kWh.*"        => "Strom_Balkonkraftwerk"\
+}
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 device Strom_Balkonkraftwerk
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 executeAfterProc set Rep.MySQL.statistic.MQTT2_DVES_301465.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 numDecimalPlaces 1
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 reading energy
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 room Log
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 showproctime 1
+attr Rep.MySQL.statistic.MQTT2_DVES_301465 userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define SVG_Leistung_Balkonkraftwerk_Monat SVG myDbLog:SVG_Leistung_Balkonkraftwerk_Monat:HISTORY
+setuuid SVG_Leistung_Balkonkraftwerk_Monat 632d7efd-f33f-c425-3169-f78a8509c593c764
+attr SVG_Leistung_Balkonkraftwerk_Monat alias Monatserzeugung Balkonkraftwerk
+attr SVG_Leistung_Balkonkraftwerk_Monat endPlotToday 1
+attr SVG_Leistung_Balkonkraftwerk_Monat fixedrange 2years
+attr SVG_Leistung_Balkonkraftwerk_Monat group Energie Monat
+attr SVG_Leistung_Balkonkraftwerk_Monat label "Monatserzeugung Balkonkraftwerk"
+attr SVG_Leistung_Balkonkraftwerk_Monat room Energie
+define Rep.MySQL.statistic.MQTT2_DVES_374D29 DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.MQTT2_DVES_374D29 632d8119-f33f-c425-8203-2e7e742b2d31324c
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 aggregation month
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 alias Strom Statistik Fussbodenheizung Monat
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 device MQTT2_DVES_374D29
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 executeAfterProc set Rep.MySQL.statistic.MQTT2_DVES_374D29.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 numDecimalPlaces 1
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 reading ENERGY_Total
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 room Log
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29 userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define SVG_Leistung_Fussbodenheizung_Monat SVG myDbLog:SVG_Leistung_Fussbodenheizung_Monat:HISTORY
+setuuid SVG_Leistung_Fussbodenheizung_Monat 632d8143-f33f-c425-cb47-86872e01c5f95c9a
+attr SVG_Leistung_Fussbodenheizung_Monat alias Monatserzeugung Fussbodenheizung
+attr SVG_Leistung_Fussbodenheizung_Monat endPlotToday 1
+attr SVG_Leistung_Fussbodenheizung_Monat fixedrange 2years
+attr SVG_Leistung_Fussbodenheizung_Monat group Energie Monat
+attr SVG_Leistung_Fussbodenheizung_Monat label "Monatserzeugung Fussbodenheizung"
+attr SVG_Leistung_Fussbodenheizung_Monat room Energie
+define Rep.MySQL.statistic.delete DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.delete 632d91cf-f33f-c425-0baf-b80cc644ce3be5f1
+attr Rep.MySQL.statistic.delete executeAfterProc set Rep.MySQL.statistic.MQTT2_DVES_301465 diffValue writeToDB;;
+attr Rep.MySQL.statistic.delete reading %Monatserzeugung%
+attr Rep.MySQL.statistic.delete room Log
+attr Rep.MySQL.statistic.delete showproctime 1
+define At.MySQL.statistics.clear at *00:00:00 set Rep.MySQL.statistic.delete delEntries
+setuuid At.MySQL.statistics.clear 632d998b-f33f-c425-0fd4-592440bf4e0543e5
+attr At.MySQL.statistics.clear room Log
+define Rep.MySQL.shrink DbRep myDbLog
+setuuid Rep.MySQL.shrink 632dbe51-f33f-c425-4ff3-f6df5a9b625c89c5
+attr Rep.MySQL.shrink aggregation hour
+attr Rep.MySQL.shrink disable 0
+attr Rep.MySQL.shrink executeAfterProc set myDbLog reopen
+attr Rep.MySQL.shrink executeBeforeProc set myDbLog reopen 3600
+attr Rep.MySQL.shrink room Log
+attr Rep.MySQL.shrink timeOlderThan d:7
+define At.MySQL.shrink at *01:00:00 { if ($wday == 0) { fhem ("set Rep.MySQL.shrink reduceLog average ") } }
+setuuid At.MySQL.shrink 632dbf12-f33f-c425-a720-8eeef089931d8f9c
+attr At.MySQL.shrink disable 0
+attr At.MySQL.shrink room Log
+define TE.FolderSize.Backup CustomReadings
+setuuid TE.FolderSize.Backup 63314101-f33f-c425-f8a3-e639da86f90c738f
+attr TE.FolderSize.Backup DbLogInclude fhem_folder_size
+attr TE.FolderSize.Backup alias Größe Backup
+attr TE.FolderSize.Backup event-min-interval backup_folder_size:3600
+attr TE.FolderSize.Backup icon it_hdd
+attr TE.FolderSize.Backup interval 43200
+attr TE.FolderSize.Backup readingDefinitions fhem_folder_size:qx(du -mc /opt/sd | grep total | cut -d 't' -f1 2>&1)
+attr TE.FolderSize.Backup room System
+attr TE.FolderSize.Backup stateFormat fhem_folder_size MB
+define TE.Free.SD CustomReadings
+setuuid TE.Free.SD 63314134-f33f-c425-8b33-a85809c0cba11ad8
+attr TE.Free.SD DbLogInclude backup_folder_size
+attr TE.Free.SD alias Freier Speicher
+attr TE.Free.SD event-min-interval backup_folder_size:3600
+attr TE.Free.SD icon it_hdd
+attr TE.Free.SD interval 43200
+attr TE.Free.SD readingDefinitions backup_folder_size:qx(df /opt/sd | grep /dev/mmcblk2p1 | tr -s ' ' | cut -d ' ' -f5 | sed 's/%//')
+attr TE.Free.SD room System
+attr TE.Free.SD stateFormat {sprintf("SD: %.1f % ", ReadingsVal($name,"backup_folder_size","-1"))}
+define SVG_Leistung_Wohnung SVG myDbLog:SVG_Leistung_Wohnung:HISTORY
+setuuid SVG_Leistung_Wohnung 633752c0-f33f-c425-fa10-a5714339dd600ec3
+attr SVG_Leistung_Wohnung alias Stromzähler Tag
+attr SVG_Leistung_Wohnung endPlotNow 1
+attr SVG_Leistung_Wohnung fixedrange 1day
+attr SVG_Leistung_Wohnung group Leistung
+attr SVG_Leistung_Wohnung label "Stromzähler Tag"
+attr SVG_Leistung_Wohnung room Energie
+define MQTT2_shellyem3_244CAB432745 MQTT2_DEVICE shellyem3_244CAB432745
+setuuid MQTT2_shellyem3_244CAB432745 633757f6-f33f-c425-15a7-2755e7f2a04f723a
+attr MQTT2_shellyem3_244CAB432745 DbLogInclude energy,power,emeter_0_power,emeter_1_power,emeter_2_power,energy_returned
+attr MQTT2_shellyem3_244CAB432745 alias Stromzähler
+attr MQTT2_shellyem3_244CAB432745 devStateIcon {my $text = ' Aktuell: '.sprintf("%.1f W Gesamt: %.1f kWh<br>Heute: %.1f kWh Gestern: %.1f kWh", \
+ReadingsVal($name,"power","unknown"), \
+ReadingsVal($name,"energy","-1"), \
+ReadingsVal($name,"energy_EnergyDay","-1"), \
+ReadingsVal($name,"energy_EnergyDayLast","-1"));; \
+my $onl = ReadingsVal($name,"online","false") eq "true"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}
+attr MQTT2_shellyem3_244CAB432745 event-min-interval energy:60,power:60,emeter_0_power:60,emeter_1_power:60,emeter_2_power:60,energy_returned:60
+attr MQTT2_shellyem3_244CAB432745 event-on-change-reading energy,power,emeter_0_power,emeter_1_power,emeter_2_power,energy_returned
+attr MQTT2_shellyem3_244CAB432745 event-on-update-reading energy:60,power:60,emeter_0_power:60,emeter_1_power:60,emeter_2_power:60,energy_returned:60
+attr MQTT2_shellyem3_244CAB432745 group Leistung
+attr MQTT2_shellyem3_244CAB432745 icon stromzaehler_icon
+attr MQTT2_shellyem3_244CAB432745 readingList shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/online:.* online\
+shellyem3_244CAB432745:shellies/announce:.* { json2nameValue($EVENT) }\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/announce:.* { json2nameValue($EVENT) }\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/info:.* { json2nameValue($EVENT) }\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/relay/0:.* relay_0\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/power:.* emeter_0_power\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/pf:.* emeter_0_pf\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/current:.* emeter_0_current\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/voltage:.* emeter_0_voltage\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/total:.* emeter_0_total\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/total_returned:.* emeter_0_total_returned\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/power:.* emeter_1_power\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/pf:.* emeter_1_pf\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/current:.* emeter_1_current\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/voltage:.* emeter_1_voltage\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/total:.* emeter_1_total\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/total_returned:.* emeter_1_total_returned\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/power:.* emeter_2_power\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/pf:.* emeter_2_pf\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/current:.* emeter_2_current\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/voltage:.* emeter_2_voltage\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/total:.* emeter_2_total\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/total_returned:.* emeter_2_total_returned\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/energy:.* emeter_0_energy\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/0/returned_energy:.* emeter_0_returned_energy\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/energy:.* emeter_1_energy\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/1/returned_energy:.* emeter_1_returned_energy\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/energy:.* emeter_2_energy\
+shellyem3_244CAB432745:shellies/shellyem3-244CAB432745/emeter/2/returned_energy:.* emeter_2_returned_energy
+attr MQTT2_shellyem3_244CAB432745 room Energie
+attr MQTT2_shellyem3_244CAB432745 stateFormat {sprintf("Aktuell: %.1f W Gesamt: %.1f kWh<br>Heute: %.1f kWh Gestern: %.1f kWh<br>Phasen 1: %.1f W 2: %.1f W 3: %.1f W", \
+ReadingsVal($name,"power",0), \
+ReadingsVal($name,"energy",0), \
+ReadingsVal($name,"energy_EnergyDay",0), \
+ReadingsVal($name,"energy_EnergyDayLast",0),\
+ReadingsVal($name,"emeter_0_power",0),\
+ReadingsVal($name,"emeter_1_power",0),\
+ReadingsVal($name,"emeter_2_power",0))}
+attr MQTT2_shellyem3_244CAB432745 suppressReading emeters_.*,emeter_n.*,relays_1.*
+attr MQTT2_shellyem3_244CAB432745 userReadings energy { (ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_0_total",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_1_total",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_2_total",0))/1000}, \
+power { ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_0_power",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_1_power",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_2_power",0)},\
+current { ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_0_current",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_1_current",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_2_current",0)},\
+energy_returned { (ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_0_total_returned",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_1_total_returned",0) \
+	+ ReadingsVal("MQTT2_shellyem3_244CAB432745","emeter_2_total_returned",0))/1000}
+define SVG_Leistung_Wohnung_Monat SVG myDbLog:SVG_Leistung_Wohnung_Monat:HISTORY
+setuuid SVG_Leistung_Wohnung_Monat 6339c644-f33f-c425-3a9d-ace0a3bd67d77091
+attr SVG_Leistung_Wohnung_Monat alias Monatserzeugung Wohnung
+attr SVG_Leistung_Wohnung_Monat endPlotNow 1
+attr SVG_Leistung_Wohnung_Monat endPlotToday 1
+attr SVG_Leistung_Wohnung_Monat fixedrange 2years
+attr SVG_Leistung_Wohnung_Monat group Energie Monat
+attr SVG_Leistung_Wohnung_Monat label "Monatserzeugung Wohnung"
+attr SVG_Leistung_Wohnung_Monat room Energie
+define Rep.MySQL.statistic.shellyem3_244CAB432745 DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.shellyem3_244CAB432745 633c8a8c-f33f-c425-44fe-28ec04306ee485ca
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 aggregation month
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 alias Strom Statistik Gesamt Monat
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 device MQTT2_shellyem3_244CAB432745
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 executeAfterProc set Rep.MySQL.statistic.shellyem3_244CAB432745.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 fastStart 1
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 numDecimalPlaces 1
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 reading energy
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 room Log
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 showproctime 1
+attr Rep.MySQL.statistic.shellyem3_244CAB432745 userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define Rep.Log.DB.Standby.Remote DbRep Log.DB.Standby.Remote
+setuuid Rep.Log.DB.Standby.Remote 633e7dab-f33f-c425-16b1-4e413727203bd2f9
+attr Rep.Log.DB.Standby.Remote dumpCompress 1
+attr Rep.Log.DB.Standby.Remote dumpDirLocal /opt/sd
+attr Rep.Log.DB.Standby.Remote fastStart 1
+attr Rep.Log.DB.Standby.Remote optimizeTablesBeforeDump 1
+attr Rep.Log.DB.Standby.Remote room Log
+attr Rep.Log.DB.Standby.Remote showSvrInfo %history%,%current%
+attr Rep.Log.DB.Standby.Remote showproctime 1
+attr Rep.Log.DB.Standby.Remote sqlResultFormat separated
+define Rep.Log.DB.Standby.Remote.Backup DbRep Log.DB.Standby.Remote
+setuuid Rep.Log.DB.Standby.Remote.Backup 633ec9d9-f33f-c425-6a49-781877f6db9692fc
+attr Rep.Log.DB.Standby.Remote.Backup aggregation no
+attr Rep.Log.DB.Standby.Remote.Backup device shellyem3_244CAB432745,MQTT2_DVES_.*
+attr Rep.Log.DB.Standby.Remote.Backup dumpCompress 1
+attr Rep.Log.DB.Standby.Remote.Backup dumpDirRemote /opt/fhem/backup
+attr Rep.Log.DB.Standby.Remote.Backup dumpFilesKeep 2
+attr Rep.Log.DB.Standby.Remote.Backup fastStart 1
+attr Rep.Log.DB.Standby.Remote.Backup optimizeTablesBeforeDump 1
+attr Rep.Log.DB.Standby.Remote.Backup role Client
+attr Rep.Log.DB.Standby.Remote.Backup room Log
+attr Rep.Log.DB.Standby.Remote.Backup showSvrInfo %history%,%current%
+attr Rep.Log.DB.Standby.Remote.Backup showproctime 1
+attr Rep.Log.DB.Standby.Remote.Backup sqlResultFormat separated
+define Rep.Log.DB.active.syncStandby DbRep myDbLog
+setuuid Rep.Log.DB.active.syncStandby 633f07cd-f33f-c425-d1e2-39033004e5f0542a
+attr Rep.Log.DB.active.syncStandby dumpCompress 1
+attr Rep.Log.DB.active.syncStandby dumpDirLocal /opt/sd
+attr Rep.Log.DB.active.syncStandby executeAfterProc set myDbLog reopen
+attr Rep.Log.DB.active.syncStandby executeBeforeProc set myDbLog reopen 3600
+attr Rep.Log.DB.active.syncStandby optimizeTablesBeforeDump 1
+attr Rep.Log.DB.active.syncStandby role Client
+attr Rep.Log.DB.active.syncStandby room Log
+attr Rep.Log.DB.active.syncStandby showSvrInfo %history%,%current%
+attr Rep.Log.DB.active.syncStandby showproctime 1
+attr Rep.Log.DB.active.syncStandby sqlResultFormat separated
+attr Rep.Log.DB.active.syncStandby timeDiffToNow d:2 FullDay
+attr Rep.Log.DB.active.syncStandby useAdminCredentials 1
+attr Rep.Log.DB.active.syncStandby verbose 3
+define At.Rep.Log.DB.active.syncStandby at *02:00:00 { fhem ("set Rep.Log.DB.active.syncStandby syncStandby Log.DB.Standby.Remote")  }
+setuuid At.Rep.Log.DB.active.syncStandby 633f07fb-f33f-c425-1628-a9e568b95f0a50db
+attr At.Rep.Log.DB.active.syncStandby disable 0
+attr At.Rep.Log.DB.active.syncStandby room Log
+define At.Rep.Log.DB.Standby.Remote.backup at *2:00:00 { fhem ("set Rep.Log.DB.Standby.Remote.Backup dumpMySQL serverSide") }
+setuuid At.Rep.Log.DB.Standby.Remote.backup 633f0a4c-f33f-c425-9c8b-e9f13e480fde299f
+attr At.Rep.Log.DB.Standby.Remote.backup disable 1
+attr At.Rep.Log.DB.Standby.Remote.backup room Log
+define NT_Stromzaehler_OLED notify MQTT2_shellyem3_244CAB432745:power:.* set AZ_ESPEasy_ESP_Easy_3_Barometer oled 6 1 Strom: $EVTPART1 W
+setuuid NT_Stromzaehler_OLED 6343d272-f33f-c425-7c32-bbddd687501e8313
+attr NT_Stromzaehler_OLED disable 0
+attr NT_Stromzaehler_OLED disabledAfterTrigger 30
+attr NT_Stromzaehler_OLED room Energie
+define Rep.Log.DB.active.syncStandby.Local DbRep Log.DB.Standby.Remote
+setuuid Rep.Log.DB.active.syncStandby.Local 63442ea7-f33f-c425-cf30-9bbe4b22267cbc25
+attr Rep.Log.DB.active.syncStandby.Local dumpCompress 1
+attr Rep.Log.DB.active.syncStandby.Local dumpDirLocal /opt/sd
+attr Rep.Log.DB.active.syncStandby.Local executeAfterProc set Log.DB.Standby.Remote reopen
+attr Rep.Log.DB.active.syncStandby.Local executeBeforeProc set Log.DB.Standby.Remote reopen 3600
+attr Rep.Log.DB.active.syncStandby.Local optimizeTablesBeforeDump 1
+attr Rep.Log.DB.active.syncStandby.Local role Client
+attr Rep.Log.DB.active.syncStandby.Local room Log
+attr Rep.Log.DB.active.syncStandby.Local showSvrInfo %history%,%current%
+attr Rep.Log.DB.active.syncStandby.Local showproctime 1
+attr Rep.Log.DB.active.syncStandby.Local sqlResultFormat separated
+attr Rep.Log.DB.active.syncStandby.Local verbose 3
+define At.Rep.Log.DB.active.syncStandby.Local at *04:00:00 { fhem ("set Rep.Log.DB.active.syncStandby.Local syncStandby Log.DB.Standby.Local")  }
+setuuid At.Rep.Log.DB.active.syncStandby.Local 634503b3-f33f-c425-b4dc-b8a655b41a22131a
+attr At.Rep.Log.DB.active.syncStandby.Local disable 1
+attr At.Rep.Log.DB.active.syncStandby.Local room Log
+define SVG_Leistung_Wohnung_Tag SVG myDbLog:SVG_Leistung_Wohnung_Tag:HISTORY
+setuuid SVG_Leistung_Wohnung_Tag 63452245-f33f-c425-d360-3354a425ed479dd0
+attr SVG_Leistung_Wohnung_Tag alias Tageserzeugung Wohnung
+attr SVG_Leistung_Wohnung_Tag endPlotNow 1
+attr SVG_Leistung_Wohnung_Tag fixedrange 30days
+attr SVG_Leistung_Wohnung_Tag group Energie Tag
+attr SVG_Leistung_Wohnung_Tag label "Tageserzeugung Wohnung"
+attr SVG_Leistung_Wohnung_Tag room Energie
+define StatDeviceTrend statistics LaCrosse.*|HZ_.*|WT.*|AZ_ESPEasy_ESP_Easy_3_Barometer
+setuuid StatDeviceTrend 6346b954-f33f-c425-420d-cdb246baba36eb73
+attr StatDeviceTrend alias Umgebung Statistik Trend
+attr StatDeviceTrend group Statistik
+attr StatDeviceTrend icon time_graph
+attr StatDeviceTrend ignoreDefaultAssignments 1
+attr StatDeviceTrend room System
+attr StatDeviceTrend tendencyReadings temperature,Temperature,humidity,Humidity,dewpoint,pressure-nn,pressure,Pressure,gas1,gas2
+define Wetter readingsGroup <%icoBlitz>,<Luftdruck>,<Tendenz<br>1h>,<Tendenz<br>2h>,<Tendenz<br>3h>,<Tendenz<br>6h>\
+NAME=LaCrosseXX:pressure,trendPressure1h,trendPressure2h,trendPressure3h,trendPressure6h\
+NAME=LaCrosseGas:pressure,trendPressure1h,trendPressure2h,trendPressure3h,trendPressure6h\
+NAME=AZ_ESPEasy_ESP_Easy_3_Barometer:Pressure,trendPressure1h,trendPressure2h,trendPressure3h,trendPressure6h
+setuuid Wetter 6347d01c-f33f-c425-c399-fe92852d112d05eb
+attr Wetter room Haus
+attr Wetter valueIcon {\
+	if($READING eq "trendPressure1h"){\
+		my $t=$VALUE;;\
+		if($t>=1){'weather_sun'}\
+		elsif($t<=-1){'weather_rain_light'}\
+		else{'weather_cloudy_light'}\
+	}\
+	elsif($READING eq "trendPressure2h"){\
+		my $t=$VALUE;;\
+		if($t>=1){'weather_sun'}\
+		elsif($t<=-1){'weather_rain_light'}\
+		else{'weather_cloudy_light'}\
+	}\
+	elsif($READING eq "trendPressure3h"){\
+		my $t=$VALUE;;\
+		if($t>=1){'weather_sun'}\
+		elsif($t<=-1){'weather_rain_light'}\
+		else{'weather_cloudy_light'}\
+	}\
+	elsif($READING eq "trendPressure6h"){\
+		my $t=$VALUE;;\
+		if($t>=1){'weather_sun'}\
+		elsif($t<=-1){'weather_rain_light'}\
+		else{'weather_cloudy_light'}\
+	}\
+#elsif($READING eq "trend"){if($VALUE>0.2){'style="color:rgb(251,63,11);;"'}elsif($VALUE<-0.2){'style="color:rgb(79,58,251);;"'}else{'style="color:rgb(190,190,190);;"'}}\
+}
+define Rep.MySQL.statistic.shellyem3_244CAB432745.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.shellyem3_244CAB432745.day 635b91d2-f33f-c425-6be0-c62d0381cdff563c
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day aggregation day
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day alias Strom Statistik Gesamt Tag
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day device MQTT2_shellyem3_244CAB432745
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day executeAfterProc set Rep.MySQL.statistic.DVES_CA5F28 diffValue writeToDB;;
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day fastStart 1
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day reading energy
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day room Log
+attr Rep.MySQL.statistic.shellyem3_244CAB432745.day showproctime 1
+define Rep.MySQL.statistic.Energie_Arbeitszimmer.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.Energie_Arbeitszimmer.day 635ba0c5-f33f-c425-9ca4-e09431ad08f132d7
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day aggregation day
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day alias Strom Statistik Arbeitszimmer Tag
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day device MQTT2_DVES_91D247
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day executeAfterProc set Rep.MySQL.statistic.shellyem3_244CAB432745 diffValue writeToDB;;
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day fastStart 1
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day reading ENERGY_Total
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day room Log
+attr Rep.MySQL.statistic.Energie_Arbeitszimmer.day showproctime 1
+define Rep.MySQL.statistic.MQTT2_DVES_301465.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.MQTT2_DVES_301465.day 636cb940-f33f-c425-10ed-1781de1216ab7a3f
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day aggregation day
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day alias Strom Statistik Balkonkraftwerk Tag
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day device Strom_Balkonkraftwerk
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day executeAfterProc set Rep.MySQL.statistic.MQTT2_DVES_374D29 diffValue writeToDB;;
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day reading energy
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day room Log
+attr Rep.MySQL.statistic.MQTT2_DVES_301465.day showproctime 1
+define Rep.MySQL.statistic.MQTT2_DVES_374D29.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.MQTT2_DVES_374D29.day 636cb9f9-f33f-c425-db4c-e2aab72e264b8549
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day aggregation day
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day alias Strom Statistik Fussbodenheizung Tag
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day device MQTT2_DVES_374D29
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day executeAfterProc set Rep.MySQL.statistic.MQTT2_DVES_6886B0 diffValue writeToDB;;
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day reading energy
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day room Log
+attr Rep.MySQL.statistic.MQTT2_DVES_374D29.day showproctime 1
+define Rep.MySQL.statistic.MQTT2_DVES_6886B0.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.MQTT2_DVES_6886B0.day 636cba6f-f33f-c425-82db-4cec70aa001f8c1f
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day aggregation day
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day alias Strom Statistik Fernseher Tag
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day device MQTT2_DVES_6886B0
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day executeAfterProc set Rep.MySQL.statistic.Energie_Arbeitszimmer diffValue writeToDB;;
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day fastStart 1
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day reading energy
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day room Log
+attr Rep.MySQL.statistic.MQTT2_DVES_6886B0.day showproctime 1
+define SCHED_Schlafzimmer_Urlaub WeekdayTimer HZ_Schlafzimmer 00:10|15
+setuuid SCHED_Schlafzimmer_Urlaub 639c94c7-f33f-c425-4e50-68623f4d87c16691
+attr SCHED_Schlafzimmer_Urlaub commandTemplate set $NAME desiredTemperature $EVENT
+attr SCHED_Schlafzimmer_Urlaub disable 1
+attr SCHED_Schlafzimmer_Urlaub room Schlafzimmer
+define counterPumpeFussbodenheizung ElectricityCalculator MQTT2_DVES_374D29:energy.*
+setuuid counterPumpeFussbodenheizung 63b3c950-f33f-c425-2774-41578047afd2e4ba
+attr counterPumpeFussbodenheizung BasicPricePerAnnum 0
+attr counterPumpeFussbodenheizung Currency &#8364;;
+attr counterPumpeFussbodenheizung DecimalPlace 3
+attr counterPumpeFussbodenheizung ElectricityCounterOffset 0
+attr counterPumpeFussbodenheizung ElectricityKwhPerCounts 1
+attr counterPumpeFussbodenheizung ElectricityPricePerKWh 0.3173
+attr counterPumpeFussbodenheizung MonthOfAnnualReading 5
+attr counterPumpeFussbodenheizung MonthlyPayment 0
+attr counterPumpeFussbodenheizung ReadingDestination CounterDevice
+attr counterPumpeFussbodenheizung SiPrefixPower kW
+attr counterPumpeFussbodenheizung group Leistung
+attr counterPumpeFussbodenheizung room Log
+define EC_Fernseher ElectricityCalculator MQTT2_DVES_6886B0:energy.*
+setuuid EC_Fernseher 63b3ca40-f33f-c425-efc5-c8579320cb5e3333
+attr EC_Fernseher BasicPricePerAnnum 0
+attr EC_Fernseher Currency &#8364;;
+attr EC_Fernseher DecimalPlace 3
+attr EC_Fernseher ElectricityCounterOffset 0
+attr EC_Fernseher ElectricityKwhPerCounts 1
+attr EC_Fernseher ElectricityPricePerKWh 0.3173
+attr EC_Fernseher MonthOfAnnualReading 5
+attr EC_Fernseher MonthlyPayment 0
+attr EC_Fernseher ReadingDestination CounterDevice
+attr EC_Fernseher SiPrefixPower kW
+attr EC_Fernseher group Leistung
+attr EC_Fernseher room Log
+define EC_Balkonkraftwerk ElectricityCalculator Strom_Balkonkraftwerk.energy.*
+setuuid EC_Balkonkraftwerk 63b3caa0-f33f-c425-6ed8-2e763909e50fabf0
+attr EC_Balkonkraftwerk BasicPricePerAnnum 0
+attr EC_Balkonkraftwerk Currency &#8364;;
+attr EC_Balkonkraftwerk DecimalPlace 3
+attr EC_Balkonkraftwerk ElectricityCounterOffset 0
+attr EC_Balkonkraftwerk ElectricityKwhPerCounts 1
+attr EC_Balkonkraftwerk ElectricityPricePerKWh 0.3173
+attr EC_Balkonkraftwerk MonthOfAnnualReading 5
+attr EC_Balkonkraftwerk MonthlyPayment 0
+attr EC_Balkonkraftwerk ReadingDestination CounterDevice
+attr EC_Balkonkraftwerk SiPrefixPower kW
+attr EC_Balkonkraftwerk group Leistung
+attr EC_Balkonkraftwerk room Log
+define EC_Stromzaehler ElectricityCalculator MQTT2_shellyem3_244CAB432745:energy.*
+setuuid EC_Stromzaehler 63b3caf3-f33f-c425-c718-21eb554df8953199
+attr EC_Stromzaehler BasicPricePerAnnum 0
+attr EC_Stromzaehler Currency &#8364;;
+attr EC_Stromzaehler DecimalPlace 3
+attr EC_Stromzaehler ElectricityCounterOffset 0
+attr EC_Stromzaehler ElectricityKwhPerCounts 1
+attr EC_Stromzaehler ElectricityPricePerKWh 0.3173
+attr EC_Stromzaehler MonthOfAnnualReading 5
+attr EC_Stromzaehler MonthlyPayment 0
+attr EC_Stromzaehler ReadingDestination CounterDevice
+attr EC_Stromzaehler SiPrefixPower kW
+attr EC_Stromzaehler group Leistung
+attr EC_Stromzaehler room Log
+define HZ_Treppenhaus_Oben MAX HeatingThermostat 044afe
+setuuid HZ_Treppenhaus_Oben 63ca9a43-f33f-c425-2ba5-6f5aa9e5001209a7
+attr HZ_Treppenhaus_Oben userattr scnProcessByDesiChange:0,1 scnShutterList scnModeHandling:NOCHANGE,AUTO,MANUAL
+attr HZ_Treppenhaus_Oben CULdev CUL3
+attr HZ_Treppenhaus_Oben DbLogInclude temperature,valveposition,desiredTemperature
+attr HZ_Treppenhaus_Oben IODev CUL_MAX_Device
+attr HZ_Treppenhaus_Oben actCycle 1:0
+attr HZ_Treppenhaus_Oben alias Heizung Treppenhaus Oben
+attr HZ_Treppenhaus_Oben autosaveConfig 1
+attr HZ_Treppenhaus_Oben comment Configured using template MAX_HeatingThermostat_dark
+attr HZ_Treppenhaus_Oben debug 1
+attr HZ_Treppenhaus_Oben devStateIcon auto:sani_heating_automatic@lightgray manual:sani_heating_manual@yellow boost:sani_heating_boost@yellow temporary:sani_heating_timer@red ok:measure_battery_100@green low:measure_battery_0@red (0|alive):10px-kreis-gruen (1|dead):10px-kreis-rot timeout:10px-kreis-gelb
+attr HZ_Treppenhaus_Oben event-min-interval temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Treppenhaus_Oben event-on-change-reading temperature,valveposition,desiredTemperature
+attr HZ_Treppenhaus_Oben event-on-update-reading temperature:600,valveposition:600,desiredTemperature:600
+attr HZ_Treppenhaus_Oben group Heizung
+attr HZ_Treppenhaus_Oben icon sani_heating
+attr HZ_Treppenhaus_Oben model HeatingThermostat
+attr HZ_Treppenhaus_Oben room Treppenhaus
+attr HZ_Treppenhaus_Oben scanTemp 1
+attr HZ_Treppenhaus_Oben stateFormat mode\
+battery\
+rferror\
+Activity
+attr HZ_Treppenhaus_Oben userReadings trend {tendencyGet($name, "statTemperatureTendency","1h")}
+attr HZ_Treppenhaus_Oben webCmd temperature:desiredTemperature:valveposition
+attr HZ_Treppenhaus_Oben webCmdLabel LABEL
+attr HZ_Treppenhaus_Oben widgetOverride valveposition:slider,0,1,100 temperature:selectnumbers,15,0.1,29,1,lin
+define StromzaehlerAuswertungTag DbRep Log.DB.Standby.Remote
+setuuid StromzaehlerAuswertungTag 6503f298-f33f-c425-d95b-2846e9bf2492e8ae
+attr StromzaehlerAuswertungTag aggregation day
+attr StromzaehlerAuswertungTag device MQTT2_shellyem3_244CAB432745
+attr StromzaehlerAuswertungTag numDecimalPlaces 1
+attr StromzaehlerAuswertungTag reading energy
+attr StromzaehlerAuswertungTag readingNameMap Tageserzeugung
+attr StromzaehlerAuswertungTag role Client
+attr StromzaehlerAuswertungTag room Log
+attr StromzaehlerAuswertungTag showSvrInfo %history%,%current%
+attr StromzaehlerAuswertungTag sqlResultFormat table
+attr StromzaehlerAuswertungTag timeDiffToNow d:470
+define SVG_Leistung_Wohnung_3_Phasen SVG myDbLog:SVG_Leistung_Wohnung_3_Phasen:HISTORY
+setuuid SVG_Leistung_Wohnung_3_Phasen 650bddc0-f33f-c425-3796-a1b290fa575c2fa4
+attr SVG_Leistung_Wohnung_3_Phasen alias Stromzähler Tag 3 Phasen
+attr SVG_Leistung_Wohnung_3_Phasen endPlotNow 1
+attr SVG_Leistung_Wohnung_3_Phasen fixedrange 1day
+attr SVG_Leistung_Wohnung_3_Phasen group Leistung
+attr SVG_Leistung_Wohnung_3_Phasen label "Stromzähler Tag 3 Phasen"
+attr SVG_Leistung_Wohnung_3_Phasen room Energie
+define MQTT2_DVES_91D247 MQTT2_DEVICE DVES_91D247
+setuuid MQTT2_DVES_91D247 6526b73f-f33f-c425-955c-b13fafd50a02df10
+attr MQTT2_DVES_91D247 DbLogInclude state,energy,ENERGY_.*
+attr MQTT2_DVES_91D247 alias Strom Arbeitszimmer
+attr MQTT2_DVES_91D247 autocreate 0
+attr MQTT2_DVES_91D247 comment NOTE: For on-for-timer SetExtensions are used. You may add on-for-timer option running on the device. The following is limited to 1h max duration, but will not affect future simple "on" commands:<br>on-for-timer {my $duration = $EVTPART1*10;; 'cmnd/cmnd/tasmota_91D247/Backlog POWER1 1;; delay '.$duration.';; POWER1 0'}<br>See the "Praxisbeispiele" in the wiki for "pulseTime1" alternative option and it's restrictions.
+attr MQTT2_DVES_91D247 devStateIcon {my $text = ' Aktuell: '.ReadingsVal($name,"ENERGY_Power","unknown").sprintf("W Heute: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Today","-1"));; \
+my $onl = ReadingsVal($name,"LWT","false") eq "Online"?"10px-kreis-gruen":"10px-kreis-rot";; \
+my $light = ReadingsVal($name,"state","off");;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($onl)."</a>\
+<a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($light)."</a>$text</div>"}
+attr MQTT2_DVES_91D247 event-min-interval state:600,ENERGY_Power:600,energy:3600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600
+attr MQTT2_DVES_91D247 event-on-change-reading state,ENERGY_Power,energy,ENERGY_Voltage,ENERGY_Yesterday,ENERGY_Today,ENERGY_Total
+attr MQTT2_DVES_91D247 event-on-update-reading state:600,energy:600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600,ENERGY_Power:600,ENERGY_Current:600,ENERGY_ApparentPower:600,ENERGY_ReactivePower:600
+attr MQTT2_DVES_91D247 group Leistung
+attr MQTT2_DVES_91D247 icon hue_filled_outlet
+attr MQTT2_DVES_91D247 jsonMap POWER1:0 POWER2:0 POWER3:0 POWER4:0 Dimmer:0 Channel_0:0 Channel_1:0 Channel_2:0 Channel_3:0 Channel_4:0 Channel_5:0 HSBColor:0 Color:0
+attr MQTT2_DVES_91D247 model tasmota_POW
+attr MQTT2_DVES_91D247 readingList tele/tasmota_91D247/LWT:.* LWT\
+  tele/tasmota_91D247/STATE:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_91D247/SENSOR:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_91D247/INFO.:.* { $EVENT =~ m,^..Info[1-3]..(.+).$, ?  json2nameValue($1,'',$JSONMAP) : json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_91D247/UPTIME:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  stat/tasmota_91D247/POWER1:.* state\
+  stat/tasmota_91D247/RESULT:.* { json2nameValue($EVENT,'',$JSONMAP) }
+attr MQTT2_DVES_91D247 room Arbeitszimmer,Energie
+attr MQTT2_DVES_91D247 setList off:noArg    cmnd/tasmota_91D247/POWER1 0\
+  on:noArg     cmnd/tasmota_91D247/POWER1 1\
+  toggle:noArg cmnd/tasmota_91D247/POWER1 2
+attr MQTT2_DVES_91D247 setStateList on off toggle
+attr MQTT2_DVES_91D247 stateFormat {sprintf("aktuell: %.1f W Tag: %.2f kWh Gestern: %.3f kWh Gesamt: %.4f kWh", ReadingsVal($name,"ENERGY_Power","-1"), ReadingsVal($name,"ENERGY_Today","-1"), ReadingsVal($name,"ENERGY_Yesterday","-1"), ReadingsVal($name,"ENERGY_Total","-1"))}
+attr MQTT2_DVES_91D247 userReadings energy { ReadingsVal("MQTT2_DVES_91D247","ENERGY_Total",0) }
+attr MQTT2_DVES_91D247 webCmd :
+define EC_Arbeitszimmer ElectricityCalculator MQTT2_DVES_91D247:energy.*
+setuuid EC_Arbeitszimmer 6528ddf6-f33f-c425-c73e-e3f0f4d359f5a8f0
+attr EC_Arbeitszimmer BasicPricePerAnnum 0
+attr EC_Arbeitszimmer Currency &#8364;;
+attr EC_Arbeitszimmer DecimalPlace 3
+attr EC_Arbeitszimmer ElectricityCounterOffset 0
+attr EC_Arbeitszimmer ElectricityKwhPerCounts 1
+attr EC_Arbeitszimmer ElectricityPricePerKWh 0.3173
+attr EC_Arbeitszimmer MonthOfAnnualReading 5
+attr EC_Arbeitszimmer MonthlyPayment 0
+attr EC_Arbeitszimmer ReadingDestination CounterDevice
+attr EC_Arbeitszimmer SiPrefixPower kW
+attr EC_Arbeitszimmer group Leistung
+attr EC_Arbeitszimmer room Log
+define ESPEasy_ESPEasy_1_Gas ESPEasy 192.168.178.65 80 ESP_Temp ESPEasy_1_Gas
+setuuid ESPEasy_ESPEasy_1_Gas 675818c9-f33f-c425-063d-e3f05cad58422c62
+attr ESPEasy_ESPEasy_1_Gas Interval 300
+attr ESPEasy_ESPEasy_1_Gas group ESPEasy Device
+attr ESPEasy_ESPEasy_1_Gas presenceCheck 1
+attr ESPEasy_ESPEasy_1_Gas readingSwitchText 1
+attr ESPEasy_ESPEasy_1_Gas room ESPEasy
+attr ESPEasy_ESPEasy_1_Gas setState 3
+define ESPEasy_ESPEasy_1_System ESPEasy 192.168.178.65 80 ESP_Temp ESPEasy_1_System
+setuuid ESPEasy_ESPEasy_1_System 675818c9-f33f-c425-3401-15605c4688ae98b8
+attr ESPEasy_ESPEasy_1_System Interval 300
+attr ESPEasy_ESPEasy_1_System group ESPEasy Device
+attr ESPEasy_ESPEasy_1_System presenceCheck 1
+attr ESPEasy_ESPEasy_1_System readingSwitchText 1
+attr ESPEasy_ESPEasy_1_System room ESPEasy
+attr ESPEasy_ESPEasy_1_System setState 3
+define ESPEasy_ESPEasy_0_System ESPEasy 192.168.178.66 80 ESP_Temp ESPEasy_0_System
+setuuid ESPEasy_ESPEasy_0_System 675818cc-f33f-c425-4485-99be7d996cef69a7
+attr ESPEasy_ESPEasy_0_System Interval 300
+attr ESPEasy_ESPEasy_0_System group ESPEasy Device
+attr ESPEasy_ESPEasy_0_System presenceCheck 1
+attr ESPEasy_ESPEasy_0_System readingSwitchText 1
+attr ESPEasy_ESPEasy_0_System room ESPEasy
+attr ESPEasy_ESPEasy_0_System setState 3
+define ESPEasy_ESPEasy_0_Gas ESPEasy 192.168.178.66 80 ESP_Temp ESPEasy_0_Gas
+setuuid ESPEasy_ESPEasy_0_Gas 675818d1-f33f-c425-5ccc-53133e60d6319991
+attr ESPEasy_ESPEasy_0_Gas Interval 300
+attr ESPEasy_ESPEasy_0_Gas group ESPEasy Device
+attr ESPEasy_ESPEasy_0_Gas presenceCheck 1
+attr ESPEasy_ESPEasy_0_Gas readingSwitchText 1
+attr ESPEasy_ESPEasy_0_Gas room ESPEasy
+attr ESPEasy_ESPEasy_0_Gas setState 3
+define atHeizungAZ at +*00:01:00 {Reg_Heizung_Lueftung("HZ_Arbeitszimmer","Steckdose_1")}
+setuuid atHeizungAZ 6777f3be-f33f-c425-a515-b71a5861215bddb3
+attr atHeizungAZ alignTime 00:01
+attr atHeizungAZ group Steuerung
+attr atHeizungAZ icon time_timer
+attr atHeizungAZ room Arbeitszimmer
+attr atHeizungAZ verbose 4
+define WP weekprofile HZ_Badezimmer_Handtuch
+setuuid WP 678ffb42-f33f-c425-7709-3d9e6a7188c8e98f
+define DVES_CA5514 MQTT2_DEVICE DVES_CA5514
+setuuid DVES_CA5514 679ce647-f33f-c425-d6fc-1c3b713221e52516
+attr DVES_CA5514 DbLogInclude state,energy,ENERGY_.*
+attr DVES_CA5514 alias Strom Kühlschrank
+attr DVES_CA5514 autocreate 0
+attr DVES_CA5514 comment NOTE: For on-for-timer SetExtensions are used. You may add on-for-timer option running on the device. The following is limited to 1h max duration, but will not affect future simple "on" commands:<br>on-for-timer {my $duration = $EVTPART1*10;; 'cmnd/cmnd/tasmota_CA5514/Backlog POWER1 1;; delay '.$duration.';; POWER1 0'}<br>See the "Praxisbeispiele" in the wiki for "pulseTime1" alternative option and it's restrictions.
+attr DVES_CA5514 devStateIcon {my $text = ' Aktuell: '.ReadingsVal($name,"ENERGY_Power","unknown").sprintf("W Heute: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Today","-1"));; \
+my $onl = ReadingsVal($name,"LWT","false") eq "Online"?"10px-kreis-gruen":"10px-kreis-rot";; \
+my $light = ReadingsVal($name,"state","off");;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($onl)."</a>\
+<a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($light)."</a>$text</div>"}
+attr DVES_CA5514 event-min-interval state:600,ENERGY_Power:600,energy:3600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600
+attr DVES_CA5514 event-on-change-reading state,ENERGY_Power,energy,ENERGY_Voltage,ENERGY_Yesterday,ENERGY_Today,ENERGY_Total
+attr DVES_CA5514 event-on-update-reading state:600,energy:600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600,ENERGY_Power:600,ENERGY_Current:600,ENERGY_ApparentPower:600,ENERGY_ReactivePower:600
+attr DVES_CA5514 group Leistung
+attr DVES_CA5514 icon hue_filled_outlet
+attr DVES_CA5514 jsonMap POWER1:0 POWER2:0 POWER3:0 POWER4:0 Dimmer:0 Channel_0:0 Channel_1:0 Channel_2:0 Channel_3:0 Channel_4:0 Channel_5:0 HSBColor:0 Color:0
+attr DVES_CA5514 model tasmota_POW
+attr DVES_CA5514 readingList tele/tasmota_CA5514/LWT:.* LWT\
+  tele/tasmota_CA5514/STATE:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_CA5514/SENSOR:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_CA5514/INFO.:.* { $EVENT =~ m,^..Info[1-3]..(.+).$, ?  json2nameValue($1,'',$JSONMAP) : json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_CA5514/UPTIME:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  stat/tasmota_CA5514/POWER1:.* state\
+  stat/tasmota_CA5514/RESULT:.* { json2nameValue($EVENT,'',$JSONMAP) }
+attr DVES_CA5514 room Energie,Kueche
+attr DVES_CA5514 setList off:noArg    cmnd/tasmota_CA5514/POWER1 0\
+  on:noArg     cmnd/tasmota_CA5514/POWER1 1\
+  toggle:noArg cmnd/tasmota_CA5514/POWER1 2
+attr DVES_CA5514 setStateList on off toggle
+attr DVES_CA5514 stateFormat {sprintf("Aktuell: %.1f W Gesamt: %.1f kWh<br>Heute: %.1f kWh Gestern: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Power",0), \
+ReadingsVal($name,"ENERGY_Total",0), \
+ReadingsVal($name,"ENERGY_Today",0), \
+ReadingsVal($name,"ENERGY_Yesterday",0))}
+attr DVES_CA5514 userReadings energy { ReadingsVal("DVES_CA5514","ENERGY_Total",0) }
+attr DVES_CA5514 webCmd :
+define EC_Kuehlschrank ElectricityCalculator DVES_CA5F28:energy.*
+setuuid EC_Kuehlschrank 679ceb8c-f33f-c425-2c02-ba6494a03b4ba978
+attr EC_Kuehlschrank BasicPricePerAnnum 0
+attr EC_Kuehlschrank Currency &#8364;;
+attr EC_Kuehlschrank DecimalPlace 3
+attr EC_Kuehlschrank ElectricityCounterOffset 0
+attr EC_Kuehlschrank ElectricityKwhPerCounts 1
+attr EC_Kuehlschrank ElectricityPricePerKWh 0.3173
+attr EC_Kuehlschrank MonthOfAnnualReading 5
+attr EC_Kuehlschrank MonthlyPayment 0
+attr EC_Kuehlschrank ReadingDestination CounterDevice
+attr EC_Kuehlschrank SiPrefixPower W
+attr EC_Kuehlschrank room Log
+define EC_Aquarium ElectricityCalculator DVES_CA5514:energy.*
+setuuid EC_Aquarium 679cf48d-f33f-c425-5cee-534604d702872173
+attr EC_Aquarium BasicPricePerAnnum 0
+attr EC_Aquarium Currency &#8364;;
+attr EC_Aquarium DecimalPlace 3
+attr EC_Aquarium ElectricityCounterOffset 0
+attr EC_Aquarium ElectricityKwhPerCounts 1
+attr EC_Aquarium ElectricityPricePerKWh 0.3173
+attr EC_Aquarium MonthOfAnnualReading 5
+attr EC_Aquarium MonthlyPayment 0
+attr EC_Aquarium ReadingDestination CounterDevice
+attr EC_Aquarium SiPrefixPower W
+attr EC_Aquarium room Log
+define DVES_CA5F28 MQTT2_DEVICE DVES_CA5F28
+setuuid DVES_CA5F28 679d1873-f33f-c425-e6e6-4096b52b39cbdccc
+attr DVES_CA5F28 DbLogInclude state,energy,ENERGY_.*
+attr DVES_CA5F28 alias Strom Aquarium
+attr DVES_CA5F28 devStateIcon {my $text = ' Aktuell: '.ReadingsVal($name,"ENERGY_Power","unknown").sprintf("W Heute: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Today","-1"));; \
+my $onl = ReadingsVal($name,"LWT","false") eq "Online"?"10px-kreis-gruen":"10px-kreis-rot";; \
+my $light = ReadingsVal($name,"state","off");;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($onl)."</a>\
+<a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($light)."</a>$text</div>"}
+attr DVES_CA5F28 event-min-interval state:600,ENERGY_Power:600,energy:3600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600
+attr DVES_CA5F28 event-on-change-reading state,ENERGY_Power,energy,ENERGY_Voltage,ENERGY_Yesterday,ENERGY_Today,ENERGY_Total
+attr DVES_CA5F28 event-on-update-reading state:600,energy:600,ENERGY_Voltage:600,ENERGY_Yesterday:3600,ENERGY_Today:3600,ENERGY_Total:3600,ENERGY_Power:600,ENERGY_Current:600,ENERGY_ApparentPower:600,ENERGY_ReactivePower:600
+attr DVES_CA5F28 genericDeviceType switch
+attr DVES_CA5F28 group Leistung
+attr DVES_CA5F28 icon hue_filled_outlet
+attr DVES_CA5F28 jsonMap POWER1:0 POWER2:0 POWER3:0 POWER4:0 Dimmer:0 Channel_0:0 Channel_1:0 Channel_2:0 Channel_3:0 Channel_4:0 Channel_5:0 HSBColor:0 Color:0
+attr DVES_CA5F28 model tasmota_POW
+attr DVES_CA5F28 readingList tele/tasmota_CA5F28/LWT:.* LWT\
+  tele/tasmota_CA5F28/STATE:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_CA5F28/SENSOR:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_CA5F28/INFO.:.* { $EVENT =~ m,^..Info[1-3]..(.+).$, ?  json2nameValue($1,'',$JSONMAP) : json2nameValue($EVENT,'',$JSONMAP) }\
+  tele/tasmota_CA5F28/UPTIME:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+  stat/tasmota_CA5F28/POWER1:.* state\
+  stat/tasmota_CA5F28/RESULT:.* { json2nameValue($EVENT,'',$JSONMAP) }\
+DVES_CA5F28:stat/tasmota_CA5F28/LOGGING:.* LOGGING\
+DVES_CA5F28:cmnd/tasmota_CA5F28/POWER:.* POWER\
+DVES_CA5F28:tasmota/discovery/CC8DA2CA5F28/config:.* { json2nameValue($EVENT) }\
+DVES_CA5F28:tasmota/discovery/CC8DA2CA5F28/sensors:.* { json2nameValue($EVENT) }\
+DVES_CA5F28:stat/tasmota_CA5F28/UPGRADE:.* { json2nameValue($EVENT) }
+attr DVES_CA5F28 room Energie,Kinderzimmer
+attr DVES_CA5F28 setList off:noArg    cmnd/tasmota_CA5F28/POWER1 0\
+  on:noArg     cmnd/tasmota_CA5F28/POWER1 1\
+  toggle:noArg cmnd/tasmota_CA5F28/POWER1 2
+attr DVES_CA5F28 stateFormat {sprintf("Aktuell: %.1f W Gesamt: %.1f kWh<br>Heute: %.1f kWh Gestern: %.1f kWh", \
+ReadingsVal($name,"ENERGY_Power",0), \
+ReadingsVal($name,"ENERGY_Total",0), \
+ReadingsVal($name,"ENERGY_Today",0), \
+ReadingsVal($name,"ENERGY_Yesterday",0))}
+attr DVES_CA5F28 userReadings energy { ReadingsVal("DVES_CA5F28","ENERGY_Total",0) }
+attr DVES_CA5F28 webCmd :
+define SVG_Leistung_Aquarium SVG myDbLog:SVG_Leistung_Aquarium:HISTORY
+setuuid SVG_Leistung_Aquarium 679e925d-f33f-c425-f482-06daabac80848c80
+attr SVG_Leistung_Aquarium alias SVG Leistung Aquarium
+attr SVG_Leistung_Aquarium endPlotNow 1
+attr SVG_Leistung_Aquarium group Leistung
+attr SVG_Leistung_Aquarium label "Leistung Aquarium"
+attr SVG_Leistung_Aquarium nrAxis 1,2
+attr SVG_Leistung_Aquarium room Kinderzimmer
+define SVG_Leistung_Kuehlschrank SVG myDbLog:SVG_Leistung_Kuehlschrank:HISTORY
+setuuid SVG_Leistung_Kuehlschrank 679e93ab-f33f-c425-373f-a295f1cb08920003
+attr SVG_Leistung_Kuehlschrank alias SVG Leistung Kühlschrank
+attr SVG_Leistung_Kuehlschrank endPlotNow 1
+attr SVG_Leistung_Kuehlschrank group Leistung
+attr SVG_Leistung_Kuehlschrank label "Leistung Kühlschrank"
+attr SVG_Leistung_Kuehlschrank nrAxis 1,2
+attr SVG_Leistung_Kuehlschrank room Kueche
+define Rep.MySQL.statistic.DVES_CA5F28.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.DVES_CA5F28.day 6807caaf-f33f-c425-5ebe-ee90696cfef18808
+attr Rep.MySQL.statistic.DVES_CA5F28.day aggregation day
+attr Rep.MySQL.statistic.DVES_CA5F28.day alias Strom Statistik Aquarium Tag
+attr Rep.MySQL.statistic.DVES_CA5F28.day device DVES_CA5F28
+attr Rep.MySQL.statistic.DVES_CA5F28.day executeAfterProc set Rep.MySQL.statistic.DVES_CA5514 diffValue writeToDB;;
+attr Rep.MySQL.statistic.DVES_CA5F28.day fastStart 1
+attr Rep.MySQL.statistic.DVES_CA5F28.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.DVES_CA5F28.day reading energy
+attr Rep.MySQL.statistic.DVES_CA5F28.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.DVES_CA5F28.day room Log
+attr Rep.MySQL.statistic.DVES_CA5F28.day showproctime 1
+define Rep.MySQL.statistic.DVES_CA5F28 DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.DVES_CA5F28 6807cb14-f33f-c425-a522-3f89f878ecc07d06
+attr Rep.MySQL.statistic.DVES_CA5F28 aggregation month
+attr Rep.MySQL.statistic.DVES_CA5F28 alias Strom Statistik Aquarium Monat
+attr Rep.MySQL.statistic.DVES_CA5F28 device DVES_CA5F28
+attr Rep.MySQL.statistic.DVES_CA5F28 executeAfterProc set Rep.MySQL.statistic.DVES_CA5F28.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.DVES_CA5F28 fastStart 1
+attr Rep.MySQL.statistic.DVES_CA5F28 numDecimalPlaces 1
+attr Rep.MySQL.statistic.DVES_CA5F28 reading ENERGY_Total
+attr Rep.MySQL.statistic.DVES_CA5F28 readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.DVES_CA5F28 room Log
+attr Rep.MySQL.statistic.DVES_CA5F28 showproctime 1
+attr Rep.MySQL.statistic.DVES_CA5F28 userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define Rep.MySQL.statistic.DVES_CA5514 DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.DVES_CA5514 6807cbd5-f33f-c425-d465-f55a4eb7670777c6
+attr Rep.MySQL.statistic.DVES_CA5514 aggregation month
+attr Rep.MySQL.statistic.DVES_CA5514 alias Strom Statistik Kühlschrank Monat
+attr Rep.MySQL.statistic.DVES_CA5514 device DVES_CA5514
+attr Rep.MySQL.statistic.DVES_CA5514 executeAfterProc set Rep.MySQL.statistic.DVES_CA5514.day diffValue writeToDB;;
+attr Rep.MySQL.statistic.DVES_CA5514 fastStart 1
+attr Rep.MySQL.statistic.DVES_CA5514 numDecimalPlaces 1
+attr Rep.MySQL.statistic.DVES_CA5514 reading ENERGY_Total
+attr Rep.MySQL.statistic.DVES_CA5514 readingNameMap Monatserzeugung_kWh
+attr Rep.MySQL.statistic.DVES_CA5514 room Log
+attr Rep.MySQL.statistic.DVES_CA5514 showproctime 1
+attr Rep.MySQL.statistic.DVES_CA5514 userExitFn {\
+ my $hash = $defs{$name};;\
+ my $device  = AttrVal($NAME, 'device', '0');;\
+ my $hashtarget = $defs{$device};;\
+ my $fmtDateTime = FmtDateTime(gettimeofday());;\
+ if($READING =~ /^.*Monatserzeugung_kWh.*$/) {\
+     $READING =~ /^(\d+)-(\d+)-(\d+)_(\d+)-(\d+)-(\d+)_.*$/;;\
+	 setReadingsVal($hashtarget,"Energy_MonthLast",$VALUE,$fmtDateTime);;\
+ }\
+return;;\
+}
+define Rep.MySQL.statistic.DVES_CA5514.day DbRep Log.DB.Standby.Remote
+setuuid Rep.MySQL.statistic.DVES_CA5514.day 6807cc19-f33f-c425-61da-69f2a67e156b50a7
+attr Rep.MySQL.statistic.DVES_CA5514.day aggregation day
+attr Rep.MySQL.statistic.DVES_CA5514.day alias Strom Statistik Kühlschrank Tag
+attr Rep.MySQL.statistic.DVES_CA5514.day device DVES_CA5514
+attr Rep.MySQL.statistic.DVES_CA5514.day fastStart 1
+attr Rep.MySQL.statistic.DVES_CA5514.day numDecimalPlaces 2
+attr Rep.MySQL.statistic.DVES_CA5514.day reading energy
+attr Rep.MySQL.statistic.DVES_CA5514.day readingNameMap Tageserzeugung_kWh
+attr Rep.MySQL.statistic.DVES_CA5514.day room Log
+attr Rep.MySQL.statistic.DVES_CA5514.day showproctime 1
+define SVG_Leistung_Aquarium_Tag SVG myDbLog:SVG_Leistung_Aquarium_Tag:HISTORY
+setuuid SVG_Leistung_Aquarium_Tag 6807d0c7-f33f-c425-23f8-0d603004b6e9696f
+attr SVG_Leistung_Aquarium_Tag alias Tageserzeugung Fernseher
+attr SVG_Leistung_Aquarium_Tag endPlotToday 1
+attr SVG_Leistung_Aquarium_Tag fixedrange 30days
+attr SVG_Leistung_Aquarium_Tag group Energie Tag
+attr SVG_Leistung_Aquarium_Tag label "Tageserzeugung Aquarium"
+attr SVG_Leistung_Aquarium_Tag room Energie,Kinderzimmer
+define SVG_Leistung_Kuehlschrank_Tag SVG myDbLog:SVG_Leistung_Kuehlschrank_Tag:HISTORY
+setuuid SVG_Leistung_Kuehlschrank_Tag 6807d14e-f33f-c425-bcb4-300fae76232e2129
+attr SVG_Leistung_Kuehlschrank_Tag alias Tageserzeugung Fernseher
+attr SVG_Leistung_Kuehlschrank_Tag fixedrange 30days
+attr SVG_Leistung_Kuehlschrank_Tag group Energie Tag
+attr SVG_Leistung_Kuehlschrank_Tag label "Tageserzeugung Kühlschrank"
+attr SVG_Leistung_Kuehlschrank_Tag room Energie,Kueche
+define Balkonkraftwerk SolarForecast
+setuuid Balkonkraftwerk 6808a1bb-f33f-c425-ff65-3f7d2f8c0a328782
+attr Balkonkraftwerk consumer01 DVES_CA5F28 type=heater power=60 pcurr=ENERGY_Power etotal=ENERGY_Total:kWh icon=Icon_Fisch mode=must
+attr Balkonkraftwerk consumer02 DVES_CA5514 type=noSchedule power=90 pcurr=ENERGY_Power etotal=ENERGY_Total icon=gefrierschrank
+attr Balkonkraftwerk consumer03 MQTT2_DVES_91D247 type=noSchedule power=500 pcurr=ENERGY_Power etotal=ENERGY_Total icon=it_pc
+attr Balkonkraftwerk consumer04 MQTT2_DVES_6886B0 type=noSchedule power=100 pcurr=ENERGY_Power etotal=ENERGY_Total icon=it_television
+attr Balkonkraftwerk consumer05 MQTT2_DVES_374D29 type=noSchedule power=90 pcurr=ENERGY_Power etotal=ENERGY_Total icon=sani_pump
+attr Balkonkraftwerk ctrlLanguage DE
+attr Balkonkraftwerk event-on-change-reading .*
+attr Balkonkraftwerk graphicBeam1Content pvReal
+attr Balkonkraftwerk graphicBeam2Content pvForecast
+attr Balkonkraftwerk graphicBeam3Content consumption
+attr Balkonkraftwerk graphicBeam4Color FF6685
+attr Balkonkraftwerk graphicBeam4Content gridconsumption
+attr Balkonkraftwerk graphicBeam5Content consumption
+attr Balkonkraftwerk graphicBeam6Content consumptionForecast
+attr Balkonkraftwerk graphicControl hourCount=24 headerDetail=all,co,pv,own,status layoutType=double
+attr Balkonkraftwerk graphicHeaderOwnspec #\
+AutarkyRate:Current_AutarkyRate\
+Surplus:Current_Surplus\
+current&nbsp;;Gridconsumption:Current_GridConsumption
+attr Balkonkraftwerk graphicHistoryHour 12
+attr Balkonkraftwerk graphicShowNight 01
+attr Balkonkraftwerk graphicShowWeather 1
+attr Balkonkraftwerk plantControl showLink=1 consForecastIdentWeekdays=1 genPVdeviation=continuously genPVforecastsToEvent=adapt4Steps
+attr Balkonkraftwerk room Solar
+attr Balkonkraftwerk setupInverterDev01 Strom_Balkonkraftwerk asynchron=1 capacity=800 strings=Sueddach pvOut=ENERGY_Power:W etotal=ENERGY_Total:kWh
+attr Balkonkraftwerk setupInverterStrings Sueddach
+attr Balkonkraftwerk setupMeterDev MQTT2_shellyem3_244CAB432745 gcon=power:W contotal=energy:kWh gfeedin=-gcon feedtotal=energy_returned:kWh
+attr Balkonkraftwerk setupRadiationAPI OpenMeteoDWD-API
+attr Balkonkraftwerk setupStringAzimuth Sueddach=-5
+attr Balkonkraftwerk setupStringDeclination Sueddach=45
+attr Balkonkraftwerk setupStringPeak Sueddach=1.0
+attr Balkonkraftwerk setupWeatherDev1 DWD_OpenData
+define Tageslicht Twilight
+setuuid Tageslicht 6808ad5e-f33f-c425-af01-5c916c8792d0dfde
+attr Tageslicht DbLogInclude elevation,light,horizon,twilight,twilight_weather
+attr Tageslicht event-min-interval elevation:300,light:300,horizon:300,twilight:300,twilight_weather:300
+attr Tageslicht event-on-change-reading elevation,light,horizon,twilight,twilight_weather
+attr Tageslicht event-on-update-reading elevation:300,light:300,horizon:300,twilight:300,twilight_weather:300
+define Tageslicht_BS Twilight 52.269167 10.521111
+setuuid Tageslicht_BS 6808affd-f33f-c425-781a-8e6e940baa964cb1
+attr Tageslicht_BS DbLogInclude elevation,light,horizon,twilight,twilight_weather
+attr Tageslicht_BS event-min-interval elevation:300,light:300,horizon:300,twilight:300,twilight_weather:300
+attr Tageslicht_BS event-on-change-reading elevation,light,horizon,twilight,twilight_weather
+attr Tageslicht_BS event-on-update-reading elevation:300,light:300,horizon:300,twilight:300,twilight_weather:300
+define BKW_Einspeisung dummy
+setuuid BKW_Einspeisung 6818a805-f33f-c425-7146-80042fa74d05f104
+attr BKW_Einspeisung DbLogInclude energy
+attr BKW_Einspeisung alias Balkonkraftwerk Einspeisung
+attr BKW_Einspeisung event-min-interval energy:600
+attr BKW_Einspeisung event-on-change-reading energy
+attr BKW_Einspeisung event-on-update-reading energy:600
+attr BKW_Einspeisung group Leistung
+attr BKW_Einspeisung icon solar_to_grid
+attr BKW_Einspeisung room Energie,Solar
+attr BKW_Einspeisung stateFormat {sprintf("Gesamt: %.1f kWh<br>Heute: %.1f kWh Gestern: %.1f kWh", \
+ReadingsVal($name,"energy",0), \
+ReadingsVal($name,"energy_EnergyDay",0), \
+ReadingsVal($name,"energy_EnergyDayLast",0))}
+attr BKW_Einspeisung userReadings energy { ReadingsVal("MQTT2_shellyem3_244CAB432745","energy_returned",0) }
+define BKW_Nutzung dummy
+setuuid BKW_Nutzung 6818a88e-f33f-c425-ba44-aec74fc4f96eb80a
+attr BKW_Nutzung DbLogInclude energy
+attr BKW_Nutzung alias Balkonkraftwerk Eigennutzung
+attr BKW_Nutzung event-min-interval energy:600
+attr BKW_Nutzung event-on-change-reading energy
+attr BKW_Nutzung event-on-update-reading energy:600
+attr BKW_Nutzung group Leistung
+attr BKW_Nutzung icon solar_to_home
+attr BKW_Nutzung room Energie,Solar
+attr BKW_Nutzung stateFormat {sprintf("Gesamt: %.1f kWh<br>Heute: %.1f kWh (%d%%) Gestern: %.1f kWh (%d%%)", \
+ReadingsVal($name,"energy",0), \
+ReadingsVal($name,"energy_EnergyDay",0), \
+ReadingsVal($name,"energy_EnergyDay_ratio",0), \
+ReadingsVal($name,"energy_EnergyDayLast",0), \
+ReadingsVal($name,"energy_EnergyDayLast_ratio",0))}
+attr BKW_Nutzung userReadings energy { (ReadingsVal("Strom_Balkonkraftwerk","energy",0) - ReadingsVal("MQTT2_shellyem3_244CAB432745","energy_returned",0)) },\
+energy_EnergyDay_total {(ReadingsVal("BKW_Nutzung","energy_EnergyDay",0) + ReadingsVal("MQTT2_shellyem3_244CAB432745","energy_EnergyDay",0))},\
+energy_EnergyDay_ratio {(ReadingsVal("BKW_Nutzung","energy_EnergyDay",0) / ReadingsVal("BKW_Nutzung","energy_EnergyDay_total",0))*100;;;;},\
+energy_EnergyDayLast_total {(ReadingsVal("BKW_Nutzung","energy_EnergyDayLast",0) + ReadingsVal("MQTT2_shellyem3_244CAB432745","energy_EnergyDayLast",0))},\
+energy_EnergyDayLast_ratio {(ReadingsVal("BKW_Nutzung","energy_EnergyDayLast",0) / ReadingsVal("BKW_Nutzung","energy_EnergyDayLast_total",0))*100;;;;},\
+energy_EnergyMonth_total {(ReadingsVal("BKW_Nutzung","energy_EnergyMonth",0) + ReadingsVal("MQTT2_shellyem3_244CAB432745","energy_EnergyMonth",0))},\
+energy_EnergyMonth_ratio {(ReadingsVal("BKW_Nutzung","energy_EnergyMonth",0) / ReadingsVal("BKW_Nutzung","energy_EnergyMonth_total",0))*100;;;;},\
+energy_EnergyMonthLast_total {(ReadingsVal("BKW_Nutzung","energy_EnergyMonthLast",0) + ReadingsVal("MQTT2_shellyem3_244CAB432745","energy_EnergyMonthLast",0))},\
+energy_EnergyMonthLast_ratio {(ReadingsVal("BKW_Nutzung","energy_EnergyMonthLast",0) / ReadingsVal("BKW_Nutzung","energy_EnergyMonthLast_total",0))*100;;;;}
+define atBKWEinspeisung at +*00:01:00 set BKW_Einspeisung 1\
+
+setuuid atBKWEinspeisung 6819a4cb-f33f-c425-321b-4bdab4782cd79922
+define atBKWNutzung at +*00:01:00 set BKW_Nutzung 1
+setuuid atBKWNutzung 6819a506-f33f-c425-5ce6-1a9cdabe81520e37
+define EC_BKWNutzung ElectricityCalculator BKW_Nutzung:energy.*
+setuuid EC_BKWNutzung 681b2252-f33f-c425-6aa2-11cca5705948ac44
+attr EC_BKWNutzung BasicPricePerAnnum 0
+attr EC_BKWNutzung Currency &#8364;;
+attr EC_BKWNutzung DecimalPlace 3
+attr EC_BKWNutzung ElectricityCounterOffset 0
+attr EC_BKWNutzung ElectricityKwhPerCounts 1
+attr EC_BKWNutzung ElectricityPricePerKWh 0.3173
+attr EC_BKWNutzung MonthOfAnnualReading 5
+attr EC_BKWNutzung MonthlyPayment 0
+attr EC_BKWNutzung ReadingDestination CounterDevice
+attr EC_BKWNutzung SiPrefixPower kW
+attr EC_BKWNutzung room Electric Energy Counter
+define EC_BKWEinspeisung ElectricityCalculator BKW_Einspeisung:energy.*
+setuuid EC_BKWEinspeisung 681b6299-f33f-c425-0349-25e2ccadd86683ac
+attr EC_BKWEinspeisung BasicPricePerAnnum 0
+attr EC_BKWEinspeisung Currency &#8364;;
+attr EC_BKWEinspeisung DecimalPlace 3
+attr EC_BKWEinspeisung ElectricityCounterOffset 0
+attr EC_BKWEinspeisung ElectricityKwhPerCounts 1
+attr EC_BKWEinspeisung ElectricityPricePerKWh 0.3173
+attr EC_BKWEinspeisung MonthOfAnnualReading 5
+attr EC_BKWEinspeisung MonthlyPayment 0
+attr EC_BKWEinspeisung ReadingDestination CounterDevice
+attr EC_BKWEinspeisung SiPrefixPower kW
+attr EC_BKWEinspeisung room Electric Energy Counter
+define At.LaCrosse.Restart at *05:00:00 set myLaCrosseGateway reboot
+setuuid At.LaCrosse.Restart 6821988b-f33f-c425-3ae2-4555cf81a1ef47ec
+attr At.LaCrosse.Restart disable 0
+attr At.LaCrosse.Restart room System
+define DWD_OpenData DWD_OpenData
+setuuid DWD_OpenData 6825b13a-f33f-c425-3888-93ae5b8e1a137aca
+attr DWD_OpenData forecastDays 7
+attr DWD_OpenData forecastProperties FF,TTT,Neff,RR1c,ww,SunUp,SunRise,SunSet
+attr DWD_OpenData forecastResolution 1
+attr DWD_OpenData forecastStation 10348
+attr DWD_OpenData room Solar
+attr DWD_OpenData timezone Europe/Berlin
+define SVG_Wettervorhersage SVG myDbLog:SVG_Wettervorhersage:HISTORY
+setuuid SVG_Wettervorhersage 6825e683-f33f-c425-3243-d9bdaa858bb03a6c
+attr SVG_Wettervorhersage alias Datenbank Größe
+attr SVG_Wettervorhersage captionPos left
+attr SVG_Wettervorhersage fixedoffset 6
+attr SVG_Wettervorhersage fixedrange 7days
+attr SVG_Wettervorhersage label "Datenbank Größe"
+attr SVG_Wettervorhersage nrAxis 1,2
+attr SVG_Wettervorhersage plotmode SVG
+attr SVG_Wettervorhersage room Solar
+define At.LaCrosse.Reconnect at *05:01:00 set myLaCrosseGateway connect
+setuuid At.LaCrosse.Reconnect 68d261f2-f33f-c425-5bf1-029cb7e6dc8236f6
+attr At.LaCrosse.Reconnect disable 0
+attr At.LaCrosse.Reconnect room System
+define Shelly3EM Shelly 192.168.178.29
+setuuid Shelly3EM 68f8a1f0-f33f-c425-97ce-8f3b5b9530b95276
+attr Shelly3EM model shelly3em
+attr Shelly3EM shellyuser david
+define rgShellyDevice readingsGroup <Name>,<Definition>,<MAC>,<Model-ID>,<Shelly-ID>,<Model-Name>,<Function>,<Family>,<ShellyName>,<?ModelAttr>,<UptimeHrs>,<Units>,<Verbose>,<Subtype>\
+                            .*:FILTER=TYPE=Shelly:+DEF,mac,model_ID,+SHELLYID,model_name,model_function,model_family,name,?model,uptime,+units,?verbose,+SUBTYPE
+setuuid rgShellyDevice 68f8a345-f33f-c425-45fc-8edb311d4f8c3953
+attr rgShellyDevice room Shelly->Device
+attr rgShellyDevice sortColumn 0
+attr rgShellyDevice valueColumn { DEF=>1, model_name=>5, model_function=>6, model_family=>7, name=>8, model=>9, uptime=>10, SUBTYPE=>13 }
+attr rgShellyDevice valueFormat { $READING eq 'uptime'?int(ReadingsNum($DEVICE,$READING,0)/3600):$VALUE }
+define rgShellyStatus readingsGroup <Name>,<Definition>,<mode>,<Interv>,<interv>,<State>,<Relay>,<Volt>,<intTemp>,<intTempStatus>,<InputMode> \
+                            .*:FILTER=TYPE=Shelly:+DEF,?mode,?interval,+INTERVAL,state,relay,voltage,inttemp,inttempStatus,input_mode
+setuuid rgShellyStatus 68f8a369-f33f-c425-de78-dc97fecb10ab6b5e
+attr rgShellyStatus room Shelly->Status
+attr rgShellyStatus sortColumn 0
+attr rgShellyStatus valueColumn { DEF=>1, mode=>2, interval=>3, INTERVAL=>4, state=>5, relay=>6, voltage=>7,inttemp=>8, inttempStatus=>9, input_mode=>10 }
+define rgShellyNetwork readingsGroup <Name>,<Definition>,<MAC>,<Connection>,<Host>,<SSID>,<RSSI>,<Roaming>,<COIOT>,<BT>,<Cloud>,<AP>,<Clients>,<Disconn>,<DNS_name>,<Webhook> \
+                            .*:FILTER=TYPE=Shelly:+DEF,mac,network_connection,network_host,network_ssid,network_rssi,network_wifi_roaming,coiot,ble,cloud,ap,ap_clients,network_disconnects,network_DNS,?webhook
+setuuid rgShellyNetwork 68f8a383-f33f-c425-b0e7-6a443545fdb05861
+attr rgShellyNetwork commands {}
+attr rgShellyNetwork room Shelly->Network
+attr rgShellyNetwork valueColumn { DEF=>1, network_connection=>3,network_host=>4,network_ssid=>5,network_rssi=>6,network_wifi_roaming=>7, coiot=>8,ble=>9,cloud=>10,ap=>11,ap_clients=>12,network_disconnects=>13,network_DNS=>14 }
+attr rgShellyNetwork valueFormat { DEF=>'<a href="http://$VALUE">$VALUE</a>' }
+attr rgShellyNetwork valueIcon { "network_connection.offline" => "15px-red",\
+             "network_connection.online"  => "it_wifi\@green",\
+             "network_connection.online (Wifi)"  => "it_wifi\@black",\
+             "network_connection.online (LAN)"   => "it_network\@black",\
+             "network_connection.remote"         => "it_wifi\@orange",\
+             "ble.enabled"    => "bluetooth\@blue",\
+             "ble.disabled"   => "15px-red",\
+             "cloud.enabled(connected)"  => "it_i-net",\
+             "cloud.enabled(not connected)"  => "it_i-net\@red",\
+             "cloud.disabled"   => "15px-red",\
+             "coiot.enabled"    => "15px-green",\
+             "coiot.disabled"   => "15px-red",\
+             "ap.disabled open" => "15px-red",\
+             "ap.enabled open"  => "15px-blue",\
+             "ap.enabled password" => "15px-green",\
+             "ap_clients.disabled" => "-"\
+             }
+define DVES_0E39B6 MQTT2_DEVICE DVES_0E39B6
+setuuid DVES_0E39B6 68f8add3-f33f-c425-5e25-974a78507bf26435
+attr DVES_0E39B6 DbLogInclude WAERME_Energie
+attr DVES_0E39B6 event-min-interval WAERME_Energie:600
+attr DVES_0E39B6 event-on-change-reading WAERME_Energie
+attr DVES_0E39B6 event-on-update-reading WAERME_Energie:600
+attr DVES_0E39B6 readingList DVES_0E39B6:tele/tasmota_0E39B6/LWT:.* LWT\
+DVES_0E39B6:cmnd/tasmota_0E39B6/POWER:.* POWER\
+DVES_0E39B6:tele/tasmota_0E39B6/INFO1:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:tele/tasmota_0E39B6/INFO2:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:tele/tasmota_0E39B6/INFO3:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:stat/tasmota_0E39B6/RESULT:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:stat/tasmota_0E39B6/POWER:.* POWER\
+DVES_0E39B6:tele/tasmota_0E39B6/STATE:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:tele/tasmota_0E39B6/SENSOR:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:tasmota/discovery/C8C9A30E39B6/config:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:tasmota/discovery/C8C9A30E39B6/sensors:.* { json2nameValue($EVENT) }\
+DVES_0E39B6:stat/tasmota_0E39B6/UPGRADE:.* { json2nameValue($EVENT) }
+attr DVES_0E39B6 room Heizung
+attr DVES_0E39B6 stateFormat {sprintf("Gesamt: %.3f MWh", \
+\
+ReadingsVal($name,"WAERME_Energie",0))}
+attr DVES_0E39B6 suppressReading sn_.*
+define ESP8266Client_BME680 MQTT2_DEVICE ESP8266Client_BME680
+setuuid ESP8266Client_BME680 697f87e2-f33f-c425-b5a0-d322fca1153e9cda
+attr ESP8266Client_BME680 DbLogInclude CO2,GasPercentage,Humidity,IAQ,IAQ_accuracy,Pressure,RunIn,Stabilization,bVOC,StaticIAQ
+attr ESP8266Client_BME680 alias Gas Sensor Arbeitszimmer
+attr ESP8266Client_BME680 devStateIcon {my $text = ' IAQ: '.ReadingsVal($name,"IAQ","unknown").sprintf(" bVOC: %.1f ", \
+ReadingsVal($name,"bVOC","-1"));; \
+my $state = ReadingsVal($name,"RunIn","false") eq "1"?"10px-kreis-gruen":"10px-kreis-gelb";;\
+return "<div><a href=\"/fhem?cmd.".$name."=set ".$name." toggle\">".FW_makeImage($state)."</a>$text</div>"}
+attr ESP8266Client_BME680 event-min-interval .*:600
+attr ESP8266Client_BME680 event-on-change-reading CO2,GasPercentage,CompensatedHumidity,IAQ,IAQ_accuracy,Pressure,RunIn,Stabilization,bVOC,CompensatedTemperature,StaticIAQ
+attr ESP8266Client_BME680 event-on-update-reading CO2:60,GasPercentage:60,CompensatedTemperature:60,IAQ:60,IAQ_accuracy:600,Pressure:600,RunIn:600,Stabilization:600,bVOC:60,CompensatedHumidity:600,StaticIAQ:60
+attr ESP8266Client_BME680 group Luftgüte
+attr ESP8266Client_BME680 icon general_co2
+attr ESP8266Client_BME680 readingList ESP8266Client_BME680:IP:.* IP\
+ESP8266Client_BME680:IAQ:.* IAQ\
+ESP8266Client_BME680:IAQ_accuracy:.* IAQ_accuracy\
+ESP8266Client_BME680:StaticIAQ:.* StaticIAQ\
+ESP8266Client_BME680:CO2:.* CO2\
+ESP8266Client_BME680:bVOC:.* bVOC\
+ESP8266Client_BME680:Temperature:.* Temperature\
+ESP8266Client_BME680:Pressure:.* Pressure\
+ESP8266Client_BME680:Humidity:.* Humidity\
+ESP8266Client_BME680:GasResistance:.* GasResistance\
+ESP8266Client_BME680:Stabilization:.* Stabilization\
+ESP8266Client_BME680:RunIn:.* RunIn\
+ESP8266Client_BME680:CompensatedTemperature:.* CompensatedTemperature\
+ESP8266Client_BME680:CompensatedHumidity:.* CompensatedHumidity\
+ESP8266Client_BME680:CompensatedGas:.* CompensatedGas\
+ESP8266Client_BME680:GasPercentage:.* GasPercentage\
+ESP8266Client_BME680:TVOC:.* TVOC\
+ESP8266Client_BME680:BsecError:.* BsecError\
+ESP8266Client_BME680:Bme680Error:.* Bme680Error\
+ESP8266Client_BME680:Timestamp:.* Timestamp\
+ESP8266Client_BME680:ESPTimestamp:.* ESPTimestamp\
+ESP8266Client_BME680:LastUpdateSaved:.* LastUpdateSaved
+attr ESP8266Client_BME680 room Arbeitszimmer
+attr ESP8266Client_BME680 setList on BME680MQTT on
+define LGW_02 LaCrosseGateway 192.168.178.66:81
+setuuid LGW_02 698b08fa-f33f-c425-79b6-32fa19805d05b9f5
+attr LGW_02 alias LaCrosseGateway_02
+attr LGW_02 devStateIcon {my $text = ' FPM: '.ReadingsVal($name,"FramesPerMinute","unknown").sprintf("<br>RSSI: %.d", \
+ReadingsVal($name,"RSSI","unknown"));; \
+my $onl = ReadingsVal($name,"state","false") eq "initialized"?"10px-kreis-gruen":"10px-kreis-rot";;\
+"<div><table><tr><td><a href=\"http://".ReadingsVal($name,"IPAddress","none")." \"target=\"_blank\">".FW_makeImage($onl)."</a></td><td>$text<b></b></td></tr></table>"}
+attr LGW_02 group Interfaces
+attr LGW_02 icon it_router
+attr LGW_02 kvp readings
+attr LGW_02 mode WiFi
+attr LGW_02 ownSensors dispatch
+attr LGW_02 room System
+attr LGW_02 stateFormat {sprintf("Status: %s<br>RSSI: %.1f<br>Temperatur: %.1f°C<br>Luftdruck: %.1fhPa", ReadingsVal($name,"state",0), ReadingsVal($name,"RSSI",0), ReadingsVal($name,"temperature",0), ReadingsVal($name,"pressure",0))}
+attr LGW_02 timeout 60
+attr LGW_02 usbFlashCommand ./FHEM/firmware/esptool.py -b 921600 -p [PORT] write_flash -ff 80m -fm dio -fs 4MB-c1 0x00000 [BINFILE] > [LOGFILE]
+attr LGW_02 watchdog 300
+define StromDisplay notify MQTT2_shellyem3_244CAB432745:power.*|MQTT2_shellyem3_244CAB432745:power:.* set LGW_02 raw "OLED show=Strom $EVTPART1 kWh"
+setuuid StromDisplay 698b617b-f33f-c425-bd77-e7abfc95115ca4ba
+define Fritzbox FBAHAHTTP fritz.box
+setuuid Fritzbox 699567cf-f33f-c425-5d0b-90b5ca1b3c8d1192
+attr Fritzbox fritzbox-user fhem

@@ -1,0 +1,2081 @@
+425 Alarm off
+376 Alarm on
+55 Alarm on-for-timer .*
+819 AllLights LastDevice: Alarm
+26 AllLights LastDevice: Livingroom
+26 AllLights LastDevice: Office
+20 AllLights LastDevice: Outdoor
+819 AllLights LastDevice_Abs: Alarm
+26 AllLights LastDevice_Abs: Livingroom
+26 AllLights LastDevice_Abs: Office
+20 AllLights LastDevice_Abs: Outdoor
+426 AllLights off
+33 AllLights on
+477 AllLights undefined
+126 At.MySQL.Size state: Next: .*
+760 AtCUL state: Next: .*
+760 AtCUL2 state: Next: .*
+760 AtCUL3 state: Next: .*
+126 AtPumpe state: Next: .*
+1412 BKW_Einspeisung energy: .*
+3254 BKW_Nutzung energy: .*
+361 Balkonkraftwerk AllPVforecastsToEvent: .* Wh
+13167 Balkonkraftwerk Current_AutarkyRate: .* %
+22656 Balkonkraftwerk Current_Consumption: .* W
+18234 Balkonkraftwerk Current_GridConsumption: .* W
+1723 Balkonkraftwerk Current_GridFeedIn: .* W
+14542 Balkonkraftwerk Current_PV: .* W
+14788 Balkonkraftwerk Current_SelfConsumption: .* W
+2032 Balkonkraftwerk Current_SelfConsumptionRate: .* %
+1723 Balkonkraftwerk Current_Surplus: .* W
+131 Balkonkraftwerk LastHourGridconsumptionReal: .* Wh
+78 Balkonkraftwerk LastHourPVforecast: .* Wh
+71 Balkonkraftwerk LastHourPVreal: .* Wh
+2724 Balkonkraftwerk NextHours_Sum01_PVforecast: .* Wh
+3074 Balkonkraftwerk NextHours_Sum02_PVforecast: .* Wh
+3496 Balkonkraftwerk NextHours_Sum03_PVforecast: .* Wh
+5682 Balkonkraftwerk NextHours_Sum04_ConsumptionForecast: .* Wh
+3736 Balkonkraftwerk NextHours_Sum04_PVforecast: .* Wh
+7531 Balkonkraftwerk RestOfDayConsumptionForecast: .* Wh
+2833 Balkonkraftwerk RestOfDayPVforecast: .* Wh
+2567 Balkonkraftwerk Today_CONdeviation: -.* %
+3039 Balkonkraftwerk Today_CONdeviation: .* %
+551 Balkonkraftwerk Today_CONforecast: .* Wh
+8985 Balkonkraftwerk Today_CONreal: .* Wh
+263 Balkonkraftwerk Today_Hour01_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour01_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour01_PVreal: .* Wh
+268 Balkonkraftwerk Today_Hour02_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour02_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour02_PVreal: .* Wh
+259 Balkonkraftwerk Today_Hour03_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour03_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour03_PVreal: .* Wh
+266 Balkonkraftwerk Today_Hour04_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour04_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour04_PVreal: .* Wh
+262 Balkonkraftwerk Today_Hour05_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour05_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour05_PVreal: .* Wh
+263 Balkonkraftwerk Today_Hour06_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour06_GridFeedIn: .* Wh
+15 Balkonkraftwerk Today_Hour06_PVforecast: .* Wh
+5 Balkonkraftwerk Today_Hour06_PVreal: .* Wh
+278 Balkonkraftwerk Today_Hour07_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour07_GridFeedIn: .* Wh
+23 Balkonkraftwerk Today_Hour07_PVforecast: .* Wh
+5 Balkonkraftwerk Today_Hour07_PVreal: .* Wh
+291 Balkonkraftwerk Today_Hour08_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour08_GridFeedIn: .* Wh
+40 Balkonkraftwerk Today_Hour08_PVforecast: .* Wh
+14 Balkonkraftwerk Today_Hour08_PVreal: .* Wh
+299 Balkonkraftwerk Today_Hour09_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour09_GridFeedIn: .* Wh
+38 Balkonkraftwerk Today_Hour09_PVforecast: .* Wh
+148 Balkonkraftwerk Today_Hour09_PVreal: .* Wh
+291 Balkonkraftwerk Today_Hour10_GridConsumption: .* Wh
+20 Balkonkraftwerk Today_Hour10_GridFeedIn: .* Wh
+44 Balkonkraftwerk Today_Hour10_PVforecast: .* Wh
+318 Balkonkraftwerk Today_Hour10_PVreal: .* Wh
+295 Balkonkraftwerk Today_Hour11_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour11_GridFeedIn: .* Wh
+43 Balkonkraftwerk Today_Hour11_PVforecast: .* Wh
+277 Balkonkraftwerk Today_Hour11_PVreal: .* Wh
+280 Balkonkraftwerk Today_Hour12_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour12_GridFeedIn: .* Wh
+40 Balkonkraftwerk Today_Hour12_PVforecast: .* Wh
+295 Balkonkraftwerk Today_Hour12_PVreal: .* Wh
+256 Balkonkraftwerk Today_Hour13_GridConsumption: .* Wh
+24 Balkonkraftwerk Today_Hour13_GridFeedIn: .* Wh
+56 Balkonkraftwerk Today_Hour13_PVforecast: .* Wh
+324 Balkonkraftwerk Today_Hour13_PVreal: .* Wh
+342 Balkonkraftwerk Today_Hour14_GridConsumption: .* Wh
+13 Balkonkraftwerk Today_Hour14_GridFeedIn: .* Wh
+55 Balkonkraftwerk Today_Hour14_PVforecast: .* Wh
+359 Balkonkraftwerk Today_Hour14_PVreal: .* Wh
+321 Balkonkraftwerk Today_Hour15_GridConsumption: .* Wh
+56 Balkonkraftwerk Today_Hour15_GridFeedIn: .* Wh
+54 Balkonkraftwerk Today_Hour15_PVforecast: .* Wh
+379 Balkonkraftwerk Today_Hour15_PVreal: .* Wh
+260 Balkonkraftwerk Today_Hour16_GridConsumption: .* Wh
+186 Balkonkraftwerk Today_Hour16_GridFeedIn: .* Wh
+67 Balkonkraftwerk Today_Hour16_PVforecast: .* Wh
+557 Balkonkraftwerk Today_Hour16_PVreal: .* Wh
+280 Balkonkraftwerk Today_Hour17_GridConsumption: .* Wh
+186 Balkonkraftwerk Today_Hour17_GridFeedIn: .* Wh
+65 Balkonkraftwerk Today_Hour17_PVforecast: .* Wh
+422 Balkonkraftwerk Today_Hour17_PVreal: .* Wh
+320 Balkonkraftwerk Today_Hour18_GridConsumption: .* Wh
+90 Balkonkraftwerk Today_Hour18_GridFeedIn: .* Wh
+6 Balkonkraftwerk Today_Hour18_PVforecast: .* Wh
+282 Balkonkraftwerk Today_Hour18_PVreal: .* Wh
+343 Balkonkraftwerk Today_Hour19_GridConsumption: .* Wh
+13 Balkonkraftwerk Today_Hour19_GridFeedIn: .* Wh
+8 Balkonkraftwerk Today_Hour19_PVforecast: .* Wh
+60 Balkonkraftwerk Today_Hour19_PVreal: .* Wh
+325 Balkonkraftwerk Today_Hour20_GridConsumption: .* Wh
+6 Balkonkraftwerk Today_Hour20_GridFeedIn: .* Wh
+6 Balkonkraftwerk Today_Hour20_PVreal: .* Wh
+271 Balkonkraftwerk Today_Hour21_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour21_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour21_PVreal: .* Wh
+277 Balkonkraftwerk Today_Hour22_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour22_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour22_PVreal: .* Wh
+279 Balkonkraftwerk Today_Hour23_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour23_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour23_PVreal: .* Wh
+271 Balkonkraftwerk Today_Hour24_GridConsumption: .* Wh
+5 Balkonkraftwerk Today_Hour24_GridFeedIn: .* Wh
+5 Balkonkraftwerk Today_Hour24_PVreal: .* Wh
+47 Balkonkraftwerk Today_MaxPVforecast: .* Wh
+41 Balkonkraftwerk Today_MaxPVforecastTime: .*
+187 Balkonkraftwerk Today_PVdeviation: -.* %
+2216 Balkonkraftwerk Today_PVdeviation: .* %
+119 Balkonkraftwerk Today_PVforecast: .* Wh
+3376 Balkonkraftwerk Today_PVreal: .* Wh
+5 Balkonkraftwerk Today_SunRise: .*
+5 Balkonkraftwerk Today_SunSet: .*
+402 Balkonkraftwerk Tomorrow_CONforecast: .* Wh
+147 Balkonkraftwerk Tomorrow_PVforecast: .* Wh
+5 Balkonkraftwerk Tomorrow_SunRise: .*
+5 Balkonkraftwerk Tomorrow_SunSet: .*
+1 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='planned'
+5 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='started'
+1 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='unknown'
+533 Balkonkraftwerk consumer01_currentPower: .* W
+13 Balkonkraftwerk consumer01_planned_start: .*
+18 Balkonkraftwerk consumer01_planned_stop: .*
+5610 Balkonkraftwerk consumer02_currentPower: .* W
+14012 Balkonkraftwerk consumer03_currentPower: .* W
+411 Balkonkraftwerk consumer04_currentPower: .* W
+5 Balkonkraftwerk consumer05_currentPower: .* W
+358 Balkonkraftwerk consumer06_currentPower: .* W
+22 Balkonkraftwerk consumer06_planned_start: .*
+27 Balkonkraftwerk consumer06_planned_stop: .*
+6513 Balkonkraftwerk nextCycletime: .*
+506 Balkonkraftwerk nextRadiationAPICall: nach .*
+5 Balkonkraftwerk state: Consumer 'Strom Aquarium' switched off
+5 Balkonkraftwerk state: Consumer 'Strom Aquarium' switched on
+26335 Balkonkraftwerk state: updated
+1 CUL3 CONNECTED
+491 CUL3 credit10ms: .*
+406 CUL_0 TRANSMIT LIMIT EXCEEDED
+3593 CUL_MAX_Device RSSI: -.*
+11 CeilingLight dim0%
+19 CeilingLight dim37%
+33 CeilingLight off
+7919 DVES_CA5514 ENERGY_Power: .*
+7228 DVES_CA5514 ENERGY_Today: .*
+7074 DVES_CA5514 ENERGY_Total: .*
+5276 DVES_CA5514 ENERGY_Voltage: .*
+127 DVES_CA5514 ENERGY_Yesterday: .*
+7075 DVES_CA5514 energy: .*
+1 DVES_CA5514 state: on
+1368 DVES_CA5F28 ENERGY_Power: .*
+934 DVES_CA5F28 ENERGY_Today: .*
+933 DVES_CA5F28 ENERGY_Total: .*
+4900 DVES_CA5F28 ENERGY_Voltage: .*
+127 DVES_CA5F28 ENERGY_Yesterday: .*
+935 DVES_CA5F28 energy: .*
+6 DVES_CA5F28 state: off
+5 DVES_CA5F28 state: on
+1 DWD_OpenData fc0_13_FF: .*
+1 DWD_OpenData fc0_13_Neff: .*
+1 DWD_OpenData fc0_13_RR1c: .*
+1 DWD_OpenData fc0_13_SunUp: .*
+1 DWD_OpenData fc0_13_TTT: .*
+1 DWD_OpenData fc0_13_time: .*
+1 DWD_OpenData fc0_13_ww: .*
+1 DWD_OpenData fc0_14_FF: .*
+1 DWD_OpenData fc0_14_Neff: .*
+1 DWD_OpenData fc0_14_RR1c: .*
+1 DWD_OpenData fc0_14_SunUp: .*
+1 DWD_OpenData fc0_14_TTT: .*
+1 DWD_OpenData fc0_14_time: .*
+1 DWD_OpenData fc0_14_ww: .*
+1 DWD_OpenData fc0_15_FF: .*
+1 DWD_OpenData fc0_15_Neff: .*
+1 DWD_OpenData fc0_15_RR1c: .*
+1 DWD_OpenData fc0_15_SunUp: .*
+1 DWD_OpenData fc0_15_TTT: .*
+1 DWD_OpenData fc0_15_time: .*
+1 DWD_OpenData fc0_15_ww: .*
+1 DWD_OpenData fc0_16_FF: .*
+1 DWD_OpenData fc0_16_Neff: .*
+1 DWD_OpenData fc0_16_RR1c: .*
+1 DWD_OpenData fc0_16_SunUp: .*
+1 DWD_OpenData fc0_16_TTT: .*
+1 DWD_OpenData fc0_16_time: .*
+1 DWD_OpenData fc0_16_ww: .*
+1 DWD_OpenData fc0_17_FF: .*
+1 DWD_OpenData fc0_17_Neff: .*
+1 DWD_OpenData fc0_17_RR1c: .*
+1 DWD_OpenData fc0_17_SunUp: .*
+1 DWD_OpenData fc0_17_TTT: .*
+1 DWD_OpenData fc0_17_time: .*
+1 DWD_OpenData fc0_17_ww: .*
+1 DWD_OpenData fc0_18_FF: .*
+1 DWD_OpenData fc0_18_Neff: .*
+1 DWD_OpenData fc0_18_RR1c: .*
+1 DWD_OpenData fc0_18_SunUp: .*
+1 DWD_OpenData fc0_18_TTT: .*
+1 DWD_OpenData fc0_18_time: .*
+1 DWD_OpenData fc0_18_ww: .*
+1 DWD_OpenData fc0_19_FF: .*
+1 DWD_OpenData fc0_19_Neff: .*
+1 DWD_OpenData fc0_19_RR1c: .*
+1 DWD_OpenData fc0_19_SunUp: .*
+1 DWD_OpenData fc0_19_TTT: .*
+1 DWD_OpenData fc0_19_time: .*
+1 DWD_OpenData fc0_19_ww: .*
+1 DWD_OpenData fc0_20_FF: .*
+1 DWD_OpenData fc0_20_Neff: .*
+1 DWD_OpenData fc0_20_RR1c: .*
+1 DWD_OpenData fc0_20_SunUp: .*
+1 DWD_OpenData fc0_20_TTT: .*
+1 DWD_OpenData fc0_20_time: .*
+1 DWD_OpenData fc0_20_ww: .*
+1 DWD_OpenData fc0_21_FF: .*
+1 DWD_OpenData fc0_21_Neff: .*
+1 DWD_OpenData fc0_21_RR1c: .*
+1 DWD_OpenData fc0_21_SunUp: .*
+1 DWD_OpenData fc0_21_TTT: .*
+1 DWD_OpenData fc0_21_time: .*
+1 DWD_OpenData fc0_21_ww: .*
+1 DWD_OpenData fc0_22_FF: .*
+1 DWD_OpenData fc0_22_Neff: .*
+1 DWD_OpenData fc0_22_RR1c: .*
+1 DWD_OpenData fc0_22_SunUp: .*
+1 DWD_OpenData fc0_22_TTT: .*
+1 DWD_OpenData fc0_22_time: .*
+1 DWD_OpenData fc0_22_ww: .*
+1 DWD_OpenData fc0_23_FF: .*
+1 DWD_OpenData fc0_23_Neff: .*
+1 DWD_OpenData fc0_23_RR1c: .*
+1 DWD_OpenData fc0_23_SunUp: .*
+1 DWD_OpenData fc0_23_TTT: .*
+1 DWD_OpenData fc0_23_time: .*
+1 DWD_OpenData fc0_23_ww: .*
+1 DWD_OpenData fc0_SunRise: .*
+1 DWD_OpenData fc0_SunSet: .*
+1 DWD_OpenData fc0_date: .*
+1 DWD_OpenData fc0_weekday: Sun
+1 DWD_OpenData fc1_0_FF: .*
+1 DWD_OpenData fc1_0_Neff: .*
+1 DWD_OpenData fc1_0_RR1c: .*
+1 DWD_OpenData fc1_0_SunUp: .*
+1 DWD_OpenData fc1_0_TTT: .*
+1 DWD_OpenData fc1_0_time: .*
+1 DWD_OpenData fc1_0_ww: .*
+1 DWD_OpenData fc1_10_FF: .*
+1 DWD_OpenData fc1_10_Neff: .*
+1 DWD_OpenData fc1_10_RR1c: .*
+1 DWD_OpenData fc1_10_SunUp: .*
+1 DWD_OpenData fc1_10_TTT: .*
+1 DWD_OpenData fc1_10_time: .*
+1 DWD_OpenData fc1_10_ww: .*
+1 DWD_OpenData fc1_11_FF: .*
+1 DWD_OpenData fc1_11_Neff: .*
+1 DWD_OpenData fc1_11_RR1c: .*
+1 DWD_OpenData fc1_11_SunUp: .*
+1 DWD_OpenData fc1_11_TTT: .*
+1 DWD_OpenData fc1_11_time: .*
+1 DWD_OpenData fc1_11_ww: .*
+1 DWD_OpenData fc1_12_FF: .*
+1 DWD_OpenData fc1_12_Neff: .*
+1 DWD_OpenData fc1_12_RR1c: .*
+1 DWD_OpenData fc1_12_SunUp: .*
+1 DWD_OpenData fc1_12_TTT: .*
+1 DWD_OpenData fc1_12_time: .*
+1 DWD_OpenData fc1_12_ww: .*
+1 DWD_OpenData fc1_13_FF: .*
+1 DWD_OpenData fc1_13_Neff: .*
+1 DWD_OpenData fc1_13_RR1c: .*
+1 DWD_OpenData fc1_13_SunUp: .*
+1 DWD_OpenData fc1_13_TTT: .*
+1 DWD_OpenData fc1_13_time: .*
+1 DWD_OpenData fc1_13_ww: .*
+1 DWD_OpenData fc1_14_FF: .*
+1 DWD_OpenData fc1_14_Neff: .*
+1 DWD_OpenData fc1_14_RR1c: .*
+1 DWD_OpenData fc1_14_SunUp: .*
+1 DWD_OpenData fc1_14_TTT: .*
+1 DWD_OpenData fc1_14_time: .*
+1 DWD_OpenData fc1_14_ww: .*
+1 DWD_OpenData fc1_15_FF: .*
+1 DWD_OpenData fc1_15_Neff: .*
+1 DWD_OpenData fc1_15_RR1c: .*
+1 DWD_OpenData fc1_15_SunUp: .*
+1 DWD_OpenData fc1_15_TTT: .*
+1 DWD_OpenData fc1_15_time: .*
+1 DWD_OpenData fc1_15_ww: .*
+1 DWD_OpenData fc1_16_FF: .*
+1 DWD_OpenData fc1_16_Neff: .*
+1 DWD_OpenData fc1_16_RR1c: .*
+1 DWD_OpenData fc1_16_SunUp: .*
+1 DWD_OpenData fc1_16_TTT: .*
+1 DWD_OpenData fc1_16_time: .*
+1 DWD_OpenData fc1_16_ww: .*
+1 DWD_OpenData fc1_17_FF: .*
+1 DWD_OpenData fc1_17_Neff: .*
+1 DWD_OpenData fc1_17_RR1c: .*
+1 DWD_OpenData fc1_17_SunUp: .*
+1 DWD_OpenData fc1_17_TTT: .*
+1 DWD_OpenData fc1_17_time: .*
+1 DWD_OpenData fc1_17_ww: .*
+1 DWD_OpenData fc1_18_FF: .*
+1 DWD_OpenData fc1_18_Neff: .*
+1 DWD_OpenData fc1_18_RR1c: .*
+1 DWD_OpenData fc1_18_SunUp: .*
+1 DWD_OpenData fc1_18_TTT: .*
+1 DWD_OpenData fc1_18_time: .*
+1 DWD_OpenData fc1_18_ww: .*
+1 DWD_OpenData fc1_19_FF: .*
+1 DWD_OpenData fc1_19_Neff: .*
+1 DWD_OpenData fc1_19_RR1c: .*
+1 DWD_OpenData fc1_19_SunUp: .*
+1 DWD_OpenData fc1_19_TTT: .*
+1 DWD_OpenData fc1_19_time: .*
+1 DWD_OpenData fc1_19_ww: .*
+1 DWD_OpenData fc1_1_FF: .*
+1 DWD_OpenData fc1_1_Neff: .*
+1 DWD_OpenData fc1_1_RR1c: .*
+1 DWD_OpenData fc1_1_SunUp: .*
+1 DWD_OpenData fc1_1_TTT: .*
+1 DWD_OpenData fc1_1_time: .*
+1 DWD_OpenData fc1_1_ww: .*
+1 DWD_OpenData fc1_20_FF: .*
+1 DWD_OpenData fc1_20_Neff: .*
+1 DWD_OpenData fc1_20_RR1c: .*
+1 DWD_OpenData fc1_20_SunUp: .*
+1 DWD_OpenData fc1_20_TTT: .*
+1 DWD_OpenData fc1_20_time: .*
+1 DWD_OpenData fc1_20_ww: .*
+1 DWD_OpenData fc1_21_FF: .*
+1 DWD_OpenData fc1_21_Neff: .*
+1 DWD_OpenData fc1_21_RR1c: .*
+1 DWD_OpenData fc1_21_SunUp: .*
+1 DWD_OpenData fc1_21_TTT: .*
+1 DWD_OpenData fc1_21_time: .*
+1 DWD_OpenData fc1_21_ww: .*
+1 DWD_OpenData fc1_22_FF: .*
+1 DWD_OpenData fc1_22_Neff: .*
+1 DWD_OpenData fc1_22_RR1c: .*
+1 DWD_OpenData fc1_22_SunUp: .*
+1 DWD_OpenData fc1_22_TTT: .*
+1 DWD_OpenData fc1_22_time: .*
+1 DWD_OpenData fc1_22_ww: .*
+1 DWD_OpenData fc1_23_FF: .*
+1 DWD_OpenData fc1_23_Neff: .*
+1 DWD_OpenData fc1_23_RR1c: .*
+1 DWD_OpenData fc1_23_SunUp: .*
+1 DWD_OpenData fc1_23_TTT: .*
+1 DWD_OpenData fc1_23_time: .*
+1 DWD_OpenData fc1_23_ww: .*
+1 DWD_OpenData fc1_2_FF: .*
+1 DWD_OpenData fc1_2_Neff: .*
+1 DWD_OpenData fc1_2_RR1c: .*
+1 DWD_OpenData fc1_2_SunUp: .*
+1 DWD_OpenData fc1_2_TTT: .*
+1 DWD_OpenData fc1_2_time: .*
+1 DWD_OpenData fc1_2_ww: .*
+1 DWD_OpenData fc1_3_FF: .*
+1 DWD_OpenData fc1_3_Neff: .*
+1 DWD_OpenData fc1_3_RR1c: .*
+1 DWD_OpenData fc1_3_SunUp: .*
+1 DWD_OpenData fc1_3_TTT: .*
+1 DWD_OpenData fc1_3_time: .*
+1 DWD_OpenData fc1_3_ww: .*
+1 DWD_OpenData fc1_4_FF: .*
+1 DWD_OpenData fc1_4_Neff: .*
+1 DWD_OpenData fc1_4_RR1c: .*
+1 DWD_OpenData fc1_4_SunUp: .*
+1 DWD_OpenData fc1_4_TTT: .*
+1 DWD_OpenData fc1_4_time: .*
+1 DWD_OpenData fc1_4_ww: .*
+1 DWD_OpenData fc1_5_FF: .*
+1 DWD_OpenData fc1_5_Neff: .*
+1 DWD_OpenData fc1_5_RR1c: .*
+1 DWD_OpenData fc1_5_SunUp: .*
+1 DWD_OpenData fc1_5_TTT: .*
+1 DWD_OpenData fc1_5_time: .*
+1 DWD_OpenData fc1_5_ww: .*
+1 DWD_OpenData fc1_6_FF: .*
+1 DWD_OpenData fc1_6_Neff: .*
+1 DWD_OpenData fc1_6_RR1c: .*
+1 DWD_OpenData fc1_6_SunUp: .*
+1 DWD_OpenData fc1_6_TTT: .*
+1 DWD_OpenData fc1_6_time: .*
+1 DWD_OpenData fc1_6_ww: .*
+1 DWD_OpenData fc1_7_FF: .*
+1 DWD_OpenData fc1_7_Neff: .*
+1 DWD_OpenData fc1_7_RR1c: .*
+1 DWD_OpenData fc1_7_SunUp: .*
+1 DWD_OpenData fc1_7_TTT: .*
+1 DWD_OpenData fc1_7_time: .*
+1 DWD_OpenData fc1_7_ww: .*
+1 DWD_OpenData fc1_8_FF: .*
+1 DWD_OpenData fc1_8_Neff: .*
+1 DWD_OpenData fc1_8_RR1c: .*
+1 DWD_OpenData fc1_8_SunUp: .*
+1 DWD_OpenData fc1_8_TTT: .*
+1 DWD_OpenData fc1_8_time: .*
+1 DWD_OpenData fc1_8_ww: .*
+1 DWD_OpenData fc1_9_FF: .*
+1 DWD_OpenData fc1_9_Neff: .*
+1 DWD_OpenData fc1_9_RR1c: .*
+1 DWD_OpenData fc1_9_SunUp: .*
+1 DWD_OpenData fc1_9_TTT: .*
+1 DWD_OpenData fc1_9_time: .*
+1 DWD_OpenData fc1_9_ww: .*
+1 DWD_OpenData fc1_SunRise: .*
+1 DWD_OpenData fc1_SunSet: .*
+1 DWD_OpenData fc1_date: .*
+1 DWD_OpenData fc1_weekday: Mon
+1 DWD_OpenData fc2_0_FF: .*
+1 DWD_OpenData fc2_0_Neff: .*
+1 DWD_OpenData fc2_0_RR1c: .*
+1 DWD_OpenData fc2_0_SunUp: .*
+1 DWD_OpenData fc2_0_TTT: .*
+1 DWD_OpenData fc2_0_time: .*
+1 DWD_OpenData fc2_0_ww: .*
+1 DWD_OpenData fc2_10_FF: .*
+1 DWD_OpenData fc2_10_Neff: .*
+1 DWD_OpenData fc2_10_RR1c: .*
+1 DWD_OpenData fc2_10_SunUp: .*
+1 DWD_OpenData fc2_10_TTT: .*
+1 DWD_OpenData fc2_10_time: .*
+1 DWD_OpenData fc2_10_ww: .*
+1 DWD_OpenData fc2_11_FF: .*
+1 DWD_OpenData fc2_11_Neff: .*
+1 DWD_OpenData fc2_11_RR1c: .*
+1 DWD_OpenData fc2_11_SunUp: .*
+1 DWD_OpenData fc2_11_TTT: .*
+1 DWD_OpenData fc2_11_time: .*
+1 DWD_OpenData fc2_11_ww: .*
+1 DWD_OpenData fc2_12_FF: .*
+1 DWD_OpenData fc2_12_Neff: .*
+1 DWD_OpenData fc2_12_RR1c: .*
+1 DWD_OpenData fc2_12_SunUp: .*
+1 DWD_OpenData fc2_12_TTT: .*
+1 DWD_OpenData fc2_12_time: .*
+1 DWD_OpenData fc2_12_ww: .*
+1 DWD_OpenData fc2_13_FF: .*
+1 DWD_OpenData fc2_13_Neff: .*
+1 DWD_OpenData fc2_13_RR1c: .*
+1 DWD_OpenData fc2_13_SunUp: .*
+1 DWD_OpenData fc2_13_TTT: .*
+1 DWD_OpenData fc2_13_time: .*
+1 DWD_OpenData fc2_13_ww: .*
+1 DWD_OpenData fc2_14_FF: .*
+1 DWD_OpenData fc2_14_Neff: .*
+1 DWD_OpenData fc2_14_RR1c: .*
+1 DWD_OpenData fc2_14_SunUp: .*
+1 DWD_OpenData fc2_14_TTT: .*
+1 DWD_OpenData fc2_14_time: .*
+1 DWD_OpenData fc2_14_ww: .*
+1 DWD_OpenData fc2_15_FF: .*
+1 DWD_OpenData fc2_15_Neff: .*
+1 DWD_OpenData fc2_15_RR1c: .*
+1 DWD_OpenData fc2_15_SunUp: .*
+1 DWD_OpenData fc2_15_TTT: .*
+1 DWD_OpenData fc2_15_time: .*
+1 DWD_OpenData fc2_15_ww: .*
+1 DWD_OpenData fc2_16_FF: .*
+1 DWD_OpenData fc2_16_Neff: .*
+1 DWD_OpenData fc2_16_RR1c: .*
+1 DWD_OpenData fc2_16_SunUp: .*
+1 DWD_OpenData fc2_16_TTT: .*
+1 DWD_OpenData fc2_16_time: .*
+1 DWD_OpenData fc2_16_ww: .*
+1 DWD_OpenData fc2_17_FF: .*
+1 DWD_OpenData fc2_17_Neff: .*
+1 DWD_OpenData fc2_17_RR1c: .*
+1 DWD_OpenData fc2_17_SunUp: .*
+1 DWD_OpenData fc2_17_TTT: .*
+1 DWD_OpenData fc2_17_time: .*
+1 DWD_OpenData fc2_17_ww: .*
+1 DWD_OpenData fc2_18_FF: .*
+1 DWD_OpenData fc2_18_Neff: .*
+1 DWD_OpenData fc2_18_RR1c: .*
+1 DWD_OpenData fc2_18_SunUp: .*
+1 DWD_OpenData fc2_18_TTT: .*
+1 DWD_OpenData fc2_18_time: .*
+1 DWD_OpenData fc2_18_ww: .*
+1 DWD_OpenData fc2_19_FF: .*
+1 DWD_OpenData fc2_19_Neff: .*
+1 DWD_OpenData fc2_19_RR1c: .*
+1 DWD_OpenData fc2_19_SunUp: .*
+1 DWD_OpenData fc2_19_TTT: .*
+1 DWD_OpenData fc2_19_time: .*
+1 DWD_OpenData fc2_19_ww: .*
+1 DWD_OpenData fc2_1_FF: .*
+1 DWD_OpenData fc2_1_Neff: .*
+1 DWD_OpenData fc2_1_RR1c: .*
+1 DWD_OpenData fc2_1_SunUp: .*
+1 DWD_OpenData fc2_1_TTT: .*
+1 DWD_OpenData fc2_1_time: .*
+1 DWD_OpenData fc2_1_ww: .*
+1 DWD_OpenData fc2_20_FF: .*
+1 DWD_OpenData fc2_20_Neff: .*
+1 DWD_OpenData fc2_20_RR1c: .*
+1 DWD_OpenData fc2_20_SunUp: .*
+1 DWD_OpenData fc2_20_TTT: .*
+1 DWD_OpenData fc2_20_time: .*
+1 DWD_OpenData fc2_20_ww: .*
+1 DWD_OpenData fc2_21_FF: .*
+1 DWD_OpenData fc2_21_Neff: .*
+1 DWD_OpenData fc2_21_RR1c: .*
+1 DWD_OpenData fc2_21_SunUp: .*
+1 DWD_OpenData fc2_21_TTT: .*
+1 DWD_OpenData fc2_21_time: .*
+1 DWD_OpenData fc2_21_ww: .*
+1 DWD_OpenData fc2_22_FF: .*
+1 DWD_OpenData fc2_22_Neff: .*
+1 DWD_OpenData fc2_22_RR1c: .*
+1 DWD_OpenData fc2_22_SunUp: .*
+1 DWD_OpenData fc2_22_TTT: .*
+1 DWD_OpenData fc2_22_time: .*
+1 DWD_OpenData fc2_22_ww: .*
+1 DWD_OpenData fc2_23_FF: .*
+1 DWD_OpenData fc2_23_Neff: .*
+1 DWD_OpenData fc2_23_RR1c: .*
+1 DWD_OpenData fc2_23_SunUp: .*
+1 DWD_OpenData fc2_23_TTT: .*
+1 DWD_OpenData fc2_23_time: .*
+1 DWD_OpenData fc2_23_ww: .*
+1 DWD_OpenData fc2_2_FF: .*
+1 DWD_OpenData fc2_2_Neff: .*
+1 DWD_OpenData fc2_2_RR1c: .*
+1 DWD_OpenData fc2_2_SunUp: .*
+1 DWD_OpenData fc2_2_TTT: .*
+1 DWD_OpenData fc2_2_time: .*
+1 DWD_OpenData fc2_2_ww: .*
+1 DWD_OpenData fc2_3_FF: .*
+1 DWD_OpenData fc2_3_Neff: .*
+1 DWD_OpenData fc2_3_RR1c: .*
+1 DWD_OpenData fc2_3_SunUp: .*
+1 DWD_OpenData fc2_3_TTT: .*
+1 DWD_OpenData fc2_3_time: .*
+1 DWD_OpenData fc2_3_ww: .*
+1 DWD_OpenData fc2_4_FF: .*
+1 DWD_OpenData fc2_4_Neff: .*
+1 DWD_OpenData fc2_4_RR1c: .*
+1 DWD_OpenData fc2_4_SunUp: .*
+1 DWD_OpenData fc2_4_TTT: .*
+1 DWD_OpenData fc2_4_time: .*
+1 DWD_OpenData fc2_4_ww: .*
+1 DWD_OpenData fc2_5_FF: .*
+1 DWD_OpenData fc2_5_Neff: .*
+1 DWD_OpenData fc2_5_RR1c: .*
+1 DWD_OpenData fc2_5_SunUp: .*
+1 DWD_OpenData fc2_5_TTT: .*
+1 DWD_OpenData fc2_5_time: .*
+1 DWD_OpenData fc2_5_ww: .*
+1 DWD_OpenData fc2_6_FF: .*
+1 DWD_OpenData fc2_6_Neff: .*
+1 DWD_OpenData fc2_6_RR1c: .*
+1 DWD_OpenData fc2_6_SunUp: .*
+1 DWD_OpenData fc2_6_TTT: .*
+1 DWD_OpenData fc2_6_time: .*
+1 DWD_OpenData fc2_6_ww: .*
+1 DWD_OpenData fc2_7_FF: .*
+1 DWD_OpenData fc2_7_Neff: .*
+1 DWD_OpenData fc2_7_RR1c: .*
+1 DWD_OpenData fc2_7_SunUp: .*
+1 DWD_OpenData fc2_7_TTT: .*
+1 DWD_OpenData fc2_7_time: .*
+1 DWD_OpenData fc2_7_ww: .*
+1 DWD_OpenData fc2_8_FF: .*
+1 DWD_OpenData fc2_8_Neff: .*
+1 DWD_OpenData fc2_8_RR1c: .*
+1 DWD_OpenData fc2_8_SunUp: .*
+1 DWD_OpenData fc2_8_TTT: .*
+1 DWD_OpenData fc2_8_time: .*
+1 DWD_OpenData fc2_8_ww: .*
+1 DWD_OpenData fc2_9_FF: .*
+1 DWD_OpenData fc2_9_Neff: .*
+1 DWD_OpenData fc2_9_RR1c: .*
+1 DWD_OpenData fc2_9_SunUp: .*
+1 DWD_OpenData fc2_9_TTT: .*
+1 DWD_OpenData fc2_9_time: .*
+1 DWD_OpenData fc2_9_ww: .*
+1 DWD_OpenData fc2_SunRise: .*
+1 DWD_OpenData fc2_SunSet: .*
+1 DWD_OpenData fc2_date: .*
+1 DWD_OpenData fc2_weekday: Tue
+1 DWD_OpenData fc3_0_FF: .*
+1 DWD_OpenData fc3_0_Neff: .*
+1 DWD_OpenData fc3_0_RR1c: .*
+1 DWD_OpenData fc3_0_SunUp: .*
+1 DWD_OpenData fc3_0_TTT: .*
+1 DWD_OpenData fc3_0_time: .*
+1 DWD_OpenData fc3_0_ww: .*
+1 DWD_OpenData fc3_10_FF: .*
+1 DWD_OpenData fc3_10_Neff: .*
+1 DWD_OpenData fc3_10_RR1c: .*
+1 DWD_OpenData fc3_10_SunUp: .*
+1 DWD_OpenData fc3_10_TTT: .*
+1 DWD_OpenData fc3_10_time: .*
+1 DWD_OpenData fc3_10_ww: .*
+1 DWD_OpenData fc3_11_FF: .*
+1 DWD_OpenData fc3_11_Neff: .*
+1 DWD_OpenData fc3_11_RR1c: .*
+1 DWD_OpenData fc3_11_SunUp: .*
+1 DWD_OpenData fc3_11_TTT: .*
+1 DWD_OpenData fc3_11_time: .*
+1 DWD_OpenData fc3_11_ww: .*
+1 DWD_OpenData fc3_12_FF: .*
+1 DWD_OpenData fc3_12_Neff: .*
+1 DWD_OpenData fc3_12_RR1c: .*
+1 DWD_OpenData fc3_12_SunUp: .*
+1 DWD_OpenData fc3_12_TTT: .*
+1 DWD_OpenData fc3_12_time: .*
+1 DWD_OpenData fc3_12_ww: .*
+1 DWD_OpenData fc3_13_FF: .*
+1 DWD_OpenData fc3_13_Neff: .*
+1 DWD_OpenData fc3_13_RR1c: .*
+1 DWD_OpenData fc3_13_SunUp: .*
+1 DWD_OpenData fc3_13_TTT: .*
+1 DWD_OpenData fc3_13_time: .*
+1 DWD_OpenData fc3_13_ww: .*
+1 DWD_OpenData fc3_14_FF: .*
+1 DWD_OpenData fc3_14_Neff: .*
+1 DWD_OpenData fc3_14_RR1c: .*
+1 DWD_OpenData fc3_14_SunUp: .*
+1 DWD_OpenData fc3_14_TTT: .*
+1 DWD_OpenData fc3_14_time: .*
+1 DWD_OpenData fc3_14_ww: .*
+1 DWD_OpenData fc3_15_FF: .*
+1 DWD_OpenData fc3_15_Neff: .*
+1 DWD_OpenData fc3_15_RR1c: .*
+1 DWD_OpenData fc3_15_SunUp: .*
+1 DWD_OpenData fc3_15_TTT: .*
+1 DWD_OpenData fc3_15_time: .*
+1 DWD_OpenData fc3_15_ww: .*
+1 DWD_OpenData fc3_16_FF: .*
+1 DWD_OpenData fc3_16_Neff: .*
+1 DWD_OpenData fc3_16_RR1c: .*
+1 DWD_OpenData fc3_16_SunUp: .*
+1 DWD_OpenData fc3_16_TTT: .*
+1 DWD_OpenData fc3_16_time: .*
+1 DWD_OpenData fc3_16_ww: .*
+1 DWD_OpenData fc3_17_FF: .*
+1 DWD_OpenData fc3_17_Neff: .*
+1 DWD_OpenData fc3_17_RR1c: .*
+1 DWD_OpenData fc3_17_SunUp: .*
+1 DWD_OpenData fc3_17_TTT: .*
+1 DWD_OpenData fc3_17_time: .*
+1 DWD_OpenData fc3_17_ww: .*
+1 DWD_OpenData fc3_18_FF: .*
+1 DWD_OpenData fc3_18_Neff: .*
+1 DWD_OpenData fc3_18_RR1c: .*
+1 DWD_OpenData fc3_18_SunUp: .*
+1 DWD_OpenData fc3_18_TTT: .*
+1 DWD_OpenData fc3_18_time: .*
+1 DWD_OpenData fc3_18_ww: .*
+1 DWD_OpenData fc3_19_FF: .*
+1 DWD_OpenData fc3_19_Neff: .*
+1 DWD_OpenData fc3_19_RR1c: .*
+1 DWD_OpenData fc3_19_SunUp: .*
+1 DWD_OpenData fc3_19_TTT: .*
+1 DWD_OpenData fc3_19_time: .*
+1 DWD_OpenData fc3_19_ww: .*
+1 DWD_OpenData fc3_1_FF: .*
+1 DWD_OpenData fc3_1_Neff: .*
+1 DWD_OpenData fc3_1_RR1c: .*
+1 DWD_OpenData fc3_1_SunUp: .*
+1 DWD_OpenData fc3_1_TTT: .*
+1 DWD_OpenData fc3_1_time: .*
+1 DWD_OpenData fc3_1_ww: .*
+1 DWD_OpenData fc3_20_FF: .*
+1 DWD_OpenData fc3_20_Neff: .*
+1 DWD_OpenData fc3_20_RR1c: .*
+1 DWD_OpenData fc3_20_SunUp: .*
+1 DWD_OpenData fc3_20_TTT: .*
+1 DWD_OpenData fc3_20_time: .*
+1 DWD_OpenData fc3_20_ww: .*
+1 DWD_OpenData fc3_21_FF: .*
+1 DWD_OpenData fc3_21_Neff: .*
+1 DWD_OpenData fc3_21_RR1c: .*
+1 DWD_OpenData fc3_21_SunUp: .*
+1 DWD_OpenData fc3_21_TTT: .*
+1 DWD_OpenData fc3_21_time: .*
+1 DWD_OpenData fc3_21_ww: .*
+1 DWD_OpenData fc3_22_FF: .*
+1 DWD_OpenData fc3_22_Neff: .*
+1 DWD_OpenData fc3_22_RR1c: .*
+1 DWD_OpenData fc3_22_SunUp: .*
+1 DWD_OpenData fc3_22_TTT: .*
+1 DWD_OpenData fc3_22_time: .*
+1 DWD_OpenData fc3_22_ww: .*
+1 DWD_OpenData fc3_23_FF: .*
+1 DWD_OpenData fc3_23_Neff: .*
+1 DWD_OpenData fc3_23_RR1c: .*
+1 DWD_OpenData fc3_23_SunUp: .*
+1 DWD_OpenData fc3_23_TTT: .*
+1 DWD_OpenData fc3_23_time: .*
+1 DWD_OpenData fc3_23_ww: .*
+1 DWD_OpenData fc3_2_FF: .*
+1 DWD_OpenData fc3_2_Neff: .*
+1 DWD_OpenData fc3_2_RR1c: .*
+1 DWD_OpenData fc3_2_SunUp: .*
+1 DWD_OpenData fc3_2_TTT: .*
+1 DWD_OpenData fc3_2_time: .*
+1 DWD_OpenData fc3_2_ww: .*
+1 DWD_OpenData fc3_3_FF: .*
+1 DWD_OpenData fc3_3_Neff: .*
+1 DWD_OpenData fc3_3_RR1c: .*
+1 DWD_OpenData fc3_3_SunUp: .*
+1 DWD_OpenData fc3_3_TTT: .*
+1 DWD_OpenData fc3_3_time: .*
+1 DWD_OpenData fc3_3_ww: .*
+1 DWD_OpenData fc3_4_FF: .*
+1 DWD_OpenData fc3_4_Neff: .*
+1 DWD_OpenData fc3_4_RR1c: .*
+1 DWD_OpenData fc3_4_SunUp: .*
+1 DWD_OpenData fc3_4_TTT: .*
+1 DWD_OpenData fc3_4_time: .*
+1 DWD_OpenData fc3_4_ww: .*
+1 DWD_OpenData fc3_5_FF: .*
+1 DWD_OpenData fc3_5_Neff: .*
+1 DWD_OpenData fc3_5_RR1c: .*
+1 DWD_OpenData fc3_5_SunUp: .*
+1 DWD_OpenData fc3_5_TTT: .*
+1 DWD_OpenData fc3_5_time: .*
+1 DWD_OpenData fc3_5_ww: .*
+1 DWD_OpenData fc3_6_FF: .*
+1 DWD_OpenData fc3_6_Neff: .*
+1 DWD_OpenData fc3_6_RR1c: .*
+1 DWD_OpenData fc3_6_SunUp: .*
+1 DWD_OpenData fc3_6_TTT: .*
+1 DWD_OpenData fc3_6_time: .*
+1 DWD_OpenData fc3_6_ww: .*
+1 DWD_OpenData fc3_7_FF: .*
+1 DWD_OpenData fc3_7_Neff: .*
+1 DWD_OpenData fc3_7_RR1c: .*
+1 DWD_OpenData fc3_7_SunUp: .*
+1 DWD_OpenData fc3_7_TTT: .*
+1 DWD_OpenData fc3_7_time: .*
+1 DWD_OpenData fc3_7_ww: .*
+1 DWD_OpenData fc3_8_FF: .*
+1 DWD_OpenData fc3_8_Neff: .*
+1 DWD_OpenData fc3_8_RR1c: .*
+1 DWD_OpenData fc3_8_SunUp: .*
+1 DWD_OpenData fc3_8_TTT: .*
+1 DWD_OpenData fc3_8_time: .*
+1 DWD_OpenData fc3_8_ww: .*
+1 DWD_OpenData fc3_9_FF: .*
+1 DWD_OpenData fc3_9_Neff: .*
+1 DWD_OpenData fc3_9_RR1c: .*
+1 DWD_OpenData fc3_9_SunUp: .*
+1 DWD_OpenData fc3_9_TTT: .*
+1 DWD_OpenData fc3_9_time: .*
+1 DWD_OpenData fc3_9_ww: .*
+1 DWD_OpenData fc3_SunRise: .*
+1 DWD_OpenData fc3_SunSet: .*
+1 DWD_OpenData fc3_date: .*
+1 DWD_OpenData fc3_weekday: Wed
+1 DWD_OpenData fc4_0_FF: .*
+1 DWD_OpenData fc4_0_Neff: .*
+1 DWD_OpenData fc4_0_RR1c: .*
+1 DWD_OpenData fc4_0_SunUp: .*
+1 DWD_OpenData fc4_0_TTT: .*
+1 DWD_OpenData fc4_0_time: .*
+1 DWD_OpenData fc4_0_ww: .*
+1 DWD_OpenData fc4_10_FF: .*
+1 DWD_OpenData fc4_10_Neff: .*
+1 DWD_OpenData fc4_10_RR1c: .*
+1 DWD_OpenData fc4_10_SunUp: .*
+1 DWD_OpenData fc4_10_TTT: .*
+1 DWD_OpenData fc4_10_time: .*
+1 DWD_OpenData fc4_10_ww: .*
+1 DWD_OpenData fc4_11_FF: .*
+1 DWD_OpenData fc4_11_Neff: .*
+1 DWD_OpenData fc4_11_RR1c: .*
+1 DWD_OpenData fc4_11_SunUp: .*
+1 DWD_OpenData fc4_11_TTT: .*
+1 DWD_OpenData fc4_11_time: .*
+1 DWD_OpenData fc4_11_ww: .*
+1 DWD_OpenData fc4_12_FF: .*
+1 DWD_OpenData fc4_12_Neff: .*
+1 DWD_OpenData fc4_12_RR1c: .*
+1 DWD_OpenData fc4_12_SunUp: .*
+1 DWD_OpenData fc4_12_TTT: .*
+1 DWD_OpenData fc4_12_time: .*
+1 DWD_OpenData fc4_12_ww: .*
+1 DWD_OpenData fc4_13_FF: .*
+1 DWD_OpenData fc4_13_Neff: .*
+1 DWD_OpenData fc4_13_RR1c: .*
+1 DWD_OpenData fc4_13_SunUp: .*
+1 DWD_OpenData fc4_13_TTT: .*
+1 DWD_OpenData fc4_13_time: .*
+1 DWD_OpenData fc4_13_ww: .*
+1 DWD_OpenData fc4_14_FF: .*
+1 DWD_OpenData fc4_14_Neff: .*
+1 DWD_OpenData fc4_14_RR1c: .*
+1 DWD_OpenData fc4_14_SunUp: .*
+1 DWD_OpenData fc4_14_TTT: .*
+1 DWD_OpenData fc4_14_time: .*
+1 DWD_OpenData fc4_14_ww: .*
+1 DWD_OpenData fc4_15_FF: .*
+1 DWD_OpenData fc4_15_Neff: .*
+1 DWD_OpenData fc4_15_RR1c: .*
+1 DWD_OpenData fc4_15_SunUp: .*
+1 DWD_OpenData fc4_15_TTT: .*
+1 DWD_OpenData fc4_15_time: .*
+1 DWD_OpenData fc4_15_ww: .*
+1 DWD_OpenData fc4_16_FF: .*
+1 DWD_OpenData fc4_16_Neff: .*
+1 DWD_OpenData fc4_16_RR1c: .*
+1 DWD_OpenData fc4_16_SunUp: .*
+1 DWD_OpenData fc4_16_TTT: .*
+1 DWD_OpenData fc4_16_time: .*
+1 DWD_OpenData fc4_16_ww: .*
+1 DWD_OpenData fc4_17_FF: .*
+1 DWD_OpenData fc4_17_Neff: .*
+1 DWD_OpenData fc4_17_RR1c: .*
+1 DWD_OpenData fc4_17_SunUp: .*
+1 DWD_OpenData fc4_17_TTT: .*
+1 DWD_OpenData fc4_17_time: .*
+1 DWD_OpenData fc4_17_ww: .*
+1 DWD_OpenData fc4_18_FF: .*
+1 DWD_OpenData fc4_18_Neff: .*
+1 DWD_OpenData fc4_18_RR1c: .*
+1 DWD_OpenData fc4_18_SunUp: .*
+1 DWD_OpenData fc4_18_TTT: .*
+1 DWD_OpenData fc4_18_time: .*
+1 DWD_OpenData fc4_18_ww: .*
+1 DWD_OpenData fc4_19_FF: .*
+1 DWD_OpenData fc4_19_Neff: .*
+1 DWD_OpenData fc4_19_RR1c: .*
+1 DWD_OpenData fc4_19_SunUp: .*
+1 DWD_OpenData fc4_19_TTT: .*
+1 DWD_OpenData fc4_19_time: .*
+1 DWD_OpenData fc4_19_ww: .*
+1 DWD_OpenData fc4_1_FF: .*
+1 DWD_OpenData fc4_1_Neff: .*
+1 DWD_OpenData fc4_1_RR1c: .*
+1 DWD_OpenData fc4_1_SunUp: .*
+1 DWD_OpenData fc4_1_TTT: .*
+1 DWD_OpenData fc4_1_time: .*
+1 DWD_OpenData fc4_1_ww: .*
+1 DWD_OpenData fc4_20_FF: .*
+1 DWD_OpenData fc4_20_Neff: .*
+1 DWD_OpenData fc4_20_RR1c: .*
+1 DWD_OpenData fc4_20_SunUp: .*
+1 DWD_OpenData fc4_20_TTT: .*
+1 DWD_OpenData fc4_20_time: .*
+1 DWD_OpenData fc4_20_ww: .*
+1 DWD_OpenData fc4_21_FF: .*
+1 DWD_OpenData fc4_21_Neff: .*
+1 DWD_OpenData fc4_21_RR1c: .*
+1 DWD_OpenData fc4_21_SunUp: .*
+1 DWD_OpenData fc4_21_TTT: .*
+1 DWD_OpenData fc4_21_time: .*
+1 DWD_OpenData fc4_21_ww: .*
+1 DWD_OpenData fc4_22_FF: .*
+1 DWD_OpenData fc4_22_Neff: .*
+1 DWD_OpenData fc4_22_RR1c: .*
+1 DWD_OpenData fc4_22_SunUp: .*
+1 DWD_OpenData fc4_22_TTT: .*
+1 DWD_OpenData fc4_22_time: .*
+1 DWD_OpenData fc4_22_ww: .*
+1 DWD_OpenData fc4_23_FF: .*
+1 DWD_OpenData fc4_23_Neff: .*
+1 DWD_OpenData fc4_23_RR1c: .*
+1 DWD_OpenData fc4_23_SunUp: .*
+1 DWD_OpenData fc4_23_TTT: .*
+1 DWD_OpenData fc4_23_time: .*
+1 DWD_OpenData fc4_23_ww: .*
+1 DWD_OpenData fc4_2_FF: .*
+1 DWD_OpenData fc4_2_Neff: .*
+1 DWD_OpenData fc4_2_RR1c: .*
+1 DWD_OpenData fc4_2_SunUp: .*
+1 DWD_OpenData fc4_2_TTT: .*
+1 DWD_OpenData fc4_2_time: .*
+1 DWD_OpenData fc4_2_ww: .*
+1 DWD_OpenData fc4_3_FF: .*
+1 DWD_OpenData fc4_3_Neff: .*
+1 DWD_OpenData fc4_3_RR1c: .*
+1 DWD_OpenData fc4_3_SunUp: .*
+1 DWD_OpenData fc4_3_TTT: .*
+1 DWD_OpenData fc4_3_time: .*
+1 DWD_OpenData fc4_3_ww: .*
+1 DWD_OpenData fc4_4_FF: .*
+1 DWD_OpenData fc4_4_Neff: .*
+1 DWD_OpenData fc4_4_RR1c: .*
+1 DWD_OpenData fc4_4_SunUp: .*
+1 DWD_OpenData fc4_4_TTT: .*
+1 DWD_OpenData fc4_4_time: .*
+1 DWD_OpenData fc4_4_ww: .*
+1 DWD_OpenData fc4_5_FF: .*
+1 DWD_OpenData fc4_5_Neff: .*
+1 DWD_OpenData fc4_5_RR1c: .*
+1 DWD_OpenData fc4_5_SunUp: .*
+1 DWD_OpenData fc4_5_TTT: .*
+1 DWD_OpenData fc4_5_time: .*
+1 DWD_OpenData fc4_5_ww: .*
+1 DWD_OpenData fc4_6_FF: .*
+1 DWD_OpenData fc4_6_Neff: .*
+1 DWD_OpenData fc4_6_RR1c: .*
+1 DWD_OpenData fc4_6_SunUp: .*
+1 DWD_OpenData fc4_6_TTT: .*
+1 DWD_OpenData fc4_6_time: .*
+1 DWD_OpenData fc4_6_ww: .*
+1 DWD_OpenData fc4_7_FF: .*
+1 DWD_OpenData fc4_7_Neff: .*
+1 DWD_OpenData fc4_7_RR1c: .*
+1 DWD_OpenData fc4_7_SunUp: .*
+1 DWD_OpenData fc4_7_TTT: .*
+1 DWD_OpenData fc4_7_time: .*
+1 DWD_OpenData fc4_7_ww: .*
+1 DWD_OpenData fc4_8_FF: .*
+1 DWD_OpenData fc4_8_Neff: .*
+1 DWD_OpenData fc4_8_RR1c: .*
+1 DWD_OpenData fc4_8_SunUp: .*
+1 DWD_OpenData fc4_8_TTT: .*
+1 DWD_OpenData fc4_8_time: .*
+1 DWD_OpenData fc4_8_ww: .*
+1 DWD_OpenData fc4_9_FF: .*
+1 DWD_OpenData fc4_9_Neff: .*
+1 DWD_OpenData fc4_9_RR1c: .*
+1 DWD_OpenData fc4_9_SunUp: .*
+1 DWD_OpenData fc4_9_TTT: .*
+1 DWD_OpenData fc4_9_time: .*
+1 DWD_OpenData fc4_9_ww: .*
+1 DWD_OpenData fc4_SunRise: .*
+1 DWD_OpenData fc4_SunSet: .*
+1 DWD_OpenData fc4_date: .*
+1 DWD_OpenData fc4_weekday: Thu
+1 DWD_OpenData fc5_0_FF: .*
+1 DWD_OpenData fc5_0_Neff: .*
+1 DWD_OpenData fc5_0_RR1c: .*
+1 DWD_OpenData fc5_0_SunUp: .*
+1 DWD_OpenData fc5_0_TTT: .*
+1 DWD_OpenData fc5_0_time: .*
+1 DWD_OpenData fc5_0_ww: .*
+1 DWD_OpenData fc5_10_FF: .*
+1 DWD_OpenData fc5_10_Neff: .*
+1 DWD_OpenData fc5_10_RR1c: .*
+1 DWD_OpenData fc5_10_SunUp: .*
+1 DWD_OpenData fc5_10_TTT: .*
+1 DWD_OpenData fc5_10_time: .*
+1 DWD_OpenData fc5_10_ww: .*
+1 DWD_OpenData fc5_11_FF: .*
+1 DWD_OpenData fc5_11_Neff: .*
+1 DWD_OpenData fc5_11_RR1c: .*
+1 DWD_OpenData fc5_11_SunUp: .*
+1 DWD_OpenData fc5_11_TTT: .*
+1 DWD_OpenData fc5_11_time: .*
+1 DWD_OpenData fc5_11_ww: .*
+1 DWD_OpenData fc5_12_FF: .*
+1 DWD_OpenData fc5_12_Neff: .*
+1 DWD_OpenData fc5_12_RR1c: .*
+1 DWD_OpenData fc5_12_SunUp: .*
+1 DWD_OpenData fc5_12_TTT: .*
+1 DWD_OpenData fc5_12_time: .*
+1 DWD_OpenData fc5_12_ww: .*
+1 DWD_OpenData fc5_13_FF: .*
+1 DWD_OpenData fc5_13_Neff: .*
+1 DWD_OpenData fc5_13_RR1c: .*
+1 DWD_OpenData fc5_13_SunUp: .*
+1 DWD_OpenData fc5_13_TTT: .*
+1 DWD_OpenData fc5_13_time: .*
+1 DWD_OpenData fc5_13_ww: .*
+1 DWD_OpenData fc5_14_FF: .*
+1 DWD_OpenData fc5_14_Neff: .*
+1 DWD_OpenData fc5_14_RR1c: .*
+1 DWD_OpenData fc5_14_SunUp: .*
+1 DWD_OpenData fc5_14_TTT: .*
+1 DWD_OpenData fc5_14_time: .*
+1 DWD_OpenData fc5_14_ww: .*
+1 DWD_OpenData fc5_15_FF: .*
+1 DWD_OpenData fc5_15_Neff: .*
+1 DWD_OpenData fc5_15_RR1c: .*
+1 DWD_OpenData fc5_15_SunUp: .*
+1 DWD_OpenData fc5_15_TTT: .*
+1 DWD_OpenData fc5_15_time: .*
+1 DWD_OpenData fc5_15_ww: .*
+1 DWD_OpenData fc5_16_FF: .*
+1 DWD_OpenData fc5_16_Neff: .*
+1 DWD_OpenData fc5_16_RR1c: .*
+1 DWD_OpenData fc5_16_SunUp: .*
+1 DWD_OpenData fc5_16_TTT: .*
+1 DWD_OpenData fc5_16_time: .*
+1 DWD_OpenData fc5_16_ww: .*
+1 DWD_OpenData fc5_17_FF: .*
+1 DWD_OpenData fc5_17_Neff: .*
+1 DWD_OpenData fc5_17_RR1c: .*
+1 DWD_OpenData fc5_17_SunUp: .*
+1 DWD_OpenData fc5_17_TTT: .*
+1 DWD_OpenData fc5_17_time: .*
+1 DWD_OpenData fc5_17_ww: .*
+1 DWD_OpenData fc5_18_FF: .*
+1 DWD_OpenData fc5_18_Neff: .*
+1 DWD_OpenData fc5_18_RR1c: .*
+1 DWD_OpenData fc5_18_SunUp: .*
+1 DWD_OpenData fc5_18_TTT: .*
+1 DWD_OpenData fc5_18_time: .*
+1 DWD_OpenData fc5_18_ww: .*
+1 DWD_OpenData fc5_19_FF: .*
+1 DWD_OpenData fc5_19_Neff: .*
+1 DWD_OpenData fc5_19_RR1c: .*
+1 DWD_OpenData fc5_19_SunUp: .*
+1 DWD_OpenData fc5_19_TTT: .*
+1 DWD_OpenData fc5_19_time: .*
+1 DWD_OpenData fc5_19_ww: .*
+1 DWD_OpenData fc5_1_FF: .*
+1 DWD_OpenData fc5_1_Neff: .*
+1 DWD_OpenData fc5_1_RR1c: .*
+1 DWD_OpenData fc5_1_SunUp: .*
+1 DWD_OpenData fc5_1_TTT: .*
+1 DWD_OpenData fc5_1_time: .*
+1 DWD_OpenData fc5_1_ww: .*
+1 DWD_OpenData fc5_20_FF: .*
+1 DWD_OpenData fc5_20_Neff: .*
+1 DWD_OpenData fc5_20_RR1c: .*
+1 DWD_OpenData fc5_20_SunUp: .*
+1 DWD_OpenData fc5_20_TTT: .*
+1 DWD_OpenData fc5_20_time: .*
+1 DWD_OpenData fc5_20_ww: .*
+1 DWD_OpenData fc5_21_FF: .*
+1 DWD_OpenData fc5_21_Neff: .*
+1 DWD_OpenData fc5_21_RR1c: .*
+1 DWD_OpenData fc5_21_SunUp: .*
+1 DWD_OpenData fc5_21_TTT: .*
+1 DWD_OpenData fc5_21_time: .*
+1 DWD_OpenData fc5_21_ww: .*
+1 DWD_OpenData fc5_22_FF: .*
+1 DWD_OpenData fc5_22_Neff: .*
+1 DWD_OpenData fc5_22_RR1c: .*
+1 DWD_OpenData fc5_22_SunUp: .*
+1 DWD_OpenData fc5_22_TTT: .*
+1 DWD_OpenData fc5_22_time: .*
+1 DWD_OpenData fc5_22_ww: .*
+1 DWD_OpenData fc5_23_FF: .*
+1 DWD_OpenData fc5_23_Neff: .*
+1 DWD_OpenData fc5_23_RR1c: .*
+1 DWD_OpenData fc5_23_SunUp: .*
+1 DWD_OpenData fc5_23_TTT: .*
+1 DWD_OpenData fc5_23_time: .*
+1 DWD_OpenData fc5_23_ww: .*
+1 DWD_OpenData fc5_2_FF: .*
+1 DWD_OpenData fc5_2_Neff: .*
+1 DWD_OpenData fc5_2_RR1c: .*
+1 DWD_OpenData fc5_2_SunUp: .*
+1 DWD_OpenData fc5_2_TTT: .*
+1 DWD_OpenData fc5_2_time: .*
+1 DWD_OpenData fc5_2_ww: .*
+1 DWD_OpenData fc5_3_FF: .*
+1 DWD_OpenData fc5_3_Neff: .*
+1 DWD_OpenData fc5_3_RR1c: .*
+1 DWD_OpenData fc5_3_SunUp: .*
+1 DWD_OpenData fc5_3_TTT: .*
+1 DWD_OpenData fc5_3_time: .*
+1 DWD_OpenData fc5_3_ww: .*
+1 DWD_OpenData fc5_4_FF: .*
+1 DWD_OpenData fc5_4_Neff: .*
+1 DWD_OpenData fc5_4_RR1c: .*
+1 DWD_OpenData fc5_4_SunUp: .*
+1 DWD_OpenData fc5_4_TTT: .*
+1 DWD_OpenData fc5_4_time: .*
+1 DWD_OpenData fc5_4_ww: .*
+1 DWD_OpenData fc5_5_FF: .*
+1 DWD_OpenData fc5_5_Neff: .*
+1 DWD_OpenData fc5_5_RR1c: .*
+1 DWD_OpenData fc5_5_SunUp: .*
+1 DWD_OpenData fc5_5_TTT: .*
+1 DWD_OpenData fc5_5_time: .*
+1 DWD_OpenData fc5_5_ww: .*
+1 DWD_OpenData fc5_6_FF: .*
+1 DWD_OpenData fc5_6_Neff: .*
+1 DWD_OpenData fc5_6_RR1c: .*
+1 DWD_OpenData fc5_6_SunUp: .*
+1 DWD_OpenData fc5_6_TTT: .*
+1 DWD_OpenData fc5_6_time: .*
+1 DWD_OpenData fc5_6_ww: .*
+1 DWD_OpenData fc5_7_FF: .*
+1 DWD_OpenData fc5_7_Neff: .*
+1 DWD_OpenData fc5_7_RR1c: .*
+1 DWD_OpenData fc5_7_SunUp: .*
+1 DWD_OpenData fc5_7_TTT: .*
+1 DWD_OpenData fc5_7_time: .*
+1 DWD_OpenData fc5_7_ww: .*
+1 DWD_OpenData fc5_8_FF: .*
+1 DWD_OpenData fc5_8_Neff: .*
+1 DWD_OpenData fc5_8_RR1c: .*
+1 DWD_OpenData fc5_8_SunUp: .*
+1 DWD_OpenData fc5_8_TTT: .*
+1 DWD_OpenData fc5_8_time: .*
+1 DWD_OpenData fc5_8_ww: .*
+1 DWD_OpenData fc5_9_FF: .*
+1 DWD_OpenData fc5_9_Neff: .*
+1 DWD_OpenData fc5_9_RR1c: .*
+1 DWD_OpenData fc5_9_SunUp: .*
+1 DWD_OpenData fc5_9_TTT: .*
+1 DWD_OpenData fc5_9_time: .*
+1 DWD_OpenData fc5_9_ww: .*
+1 DWD_OpenData fc5_SunRise: .*
+1 DWD_OpenData fc5_SunSet: .*
+1 DWD_OpenData fc5_date: .*
+1 DWD_OpenData fc5_weekday: Fri
+1 DWD_OpenData fc_coordinates: .*
+1 DWD_OpenData fc_copyright: Datenbasis: Deutscher Wetterdienst
+1 DWD_OpenData fc_description: BRAUNSCHWG.
+1 DWD_OpenData fc_dwdDocSize: .*
+1 DWD_OpenData fc_dwdDocTime: .*:37Z
+1 DWD_OpenData fc_station: .*
+1 DWD_OpenData fc_time: .*
+1 DWD_OpenData nextUpdate: .*
+1 DWD_OpenData state: forecast updated
+1 DWD_OpenData state: updating forecasts
+7596 ESP8266Client_BME680 CO2: .*
+7345 ESP8266Client_BME680 CompensatedHumidity: .*
+6840 ESP8266Client_BME680 CompensatedTemperature: .*
+7383 ESP8266Client_BME680 GasPercentage: .*
+7572 ESP8266Client_BME680 IAQ: .*
+821 ESP8266Client_BME680 IAQ_accuracy: .*
+6185 ESP8266Client_BME680 Pressure: .*
+754 ESP8266Client_BME680 Stabilization: .*
+7564 ESP8266Client_BME680 StaticIAQ: .*
+1508 ESPEasy_ESPEasy_0_Gas presence: absent
+1509 ESPEasy_ESPEasy_0_Gas state: absent
+1509 ESPEasy_ESPEasy_0_System presence: absent
+1510 ESPEasy_ESPEasy_0_System state: absent
+1508 ESPEasy_ESPEasy_1_Gas presence: absent
+1509 ESPEasy_ESPEasy_1_Gas state: absent
+1508 ESPEasy_ESPEasy_1_System presence: absent
+1509 ESPEasy_ESPEasy_1_System state: absent
+1 ESP_Temp state: Initialized
+41 GR.HZ_Badezimmer state: .*
+6 GR.HZ_Badezimmer state: desiredTemperature .*
+24 HZ_Arbeitszimmer desiredTemperature: .*
+8 HZ_Arbeitszimmer temperature: .*
+24 HZ_Arbeitszimmer valveposition: .*
+22 HZ_Badezimmer_Fenster desiredTemperature: .*
+5 HZ_Badezimmer_Fenster temperature: .*
+22 HZ_Badezimmer_Fenster valveposition: .*
+19 HZ_Badezimmer_Handtuch desiredTemperature: .*
+2 HZ_Badezimmer_Handtuch temperature: .*
+19 HZ_Badezimmer_Handtuch valveposition: .*
+19 HZ_Flur desiredTemperature: .*
+3 HZ_Flur temperature: .*
+19 HZ_Flur valveposition: .*
+12 HZ_Kinderzimmer desiredTemperature: .*
+2 HZ_Kinderzimmer temperature: .*
+12 HZ_Kinderzimmer valveposition: .*
+19 HZ_Kueche desiredTemperature: .*
+2 HZ_Kueche temperature: .*
+19 HZ_Kueche valveposition: .*
+22 HZ_Schlafzimmer desiredTemperature: .*
+6 HZ_Schlafzimmer temperature: .*
+22 HZ_Schlafzimmer valveposition: .*
+20 HZ_Treppenhaus_Oben desiredTemperature: .*
+5 HZ_Treppenhaus_Oben temperature: .*
+20 HZ_Treppenhaus_Oben valveposition: .*
+18 HZ_Treppenhaus_Unten desiredTemperature: .*
+3 HZ_Treppenhaus_Unten temperature: .*
+18 HZ_Treppenhaus_Unten valveposition: .*
+1 LGW_02 CONNECTED
+189 LGW_02 FramesPerMinute: .*
+189 LGW_02 FreeHeap: .*
+189 LGW_02 OLED: on
+189 LGW_02 RSSI: -.*
+189 LGW_02 ReceivedFrames: .*
+1 LGW_02 UpTime: 0Tg. 0Std. 0Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 0Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 10Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 10Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 10Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 10Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 10Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 10Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 11Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 11Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 11Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 11Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 11Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 11Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 12Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 12Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 12Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 12Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 12Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 12Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 13Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 13Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 13Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 13Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 13Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 13Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 14Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 14Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 14Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 14Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 14Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 14Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 15Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 15Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 15Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 15Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 15Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 15Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 16Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 16Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 16Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 16Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 16Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 16Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 17Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 17Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 17Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 17Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 17Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 17Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 18Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 18Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 18Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 18Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 18Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 18Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 19Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 19Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 19Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 19Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 19Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 19Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 20Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 20Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 20Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 20Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 20Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 20Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 21Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 21Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 21Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 21Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 21Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 21Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 22Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 22Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 22Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 22Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 22Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 22Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 23Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 23Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 23Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 23Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 23Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 23Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 24Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 24Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 24Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 24Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 24Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 25Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 25Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 25Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 25Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 25Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 25Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 26Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 26Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 26Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 26Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 26Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 26Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 27Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 27Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 27Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 27Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 27Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 27Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 28Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 28Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 28Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 28Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 28Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 28Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 29Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 29Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 29Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 29Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 29Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 29Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 30Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 30Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 30Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 30Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 30Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 30Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 31Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 31Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 31Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 31Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 31Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 31Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 32Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 32Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 32Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 32Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 32Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 32Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 33Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 33Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 33Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 33Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 33Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 33Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 34Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 34Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 34Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 34Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 34Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 34Min. 51Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 35Min. 11Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 35Min. 1Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 4Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 4Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 4Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 4Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 4Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 4Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 5Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 5Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 5Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 5Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 5Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 5Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 6Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 6Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 6Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 6Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 6Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 6Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 7Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 7Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 7Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 7Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 7Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 7Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 8Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 8Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 8Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 8Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 8Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 8Min. 50Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 9Min. 0Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 9Min. 10Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 9Min. 20Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 9Min. 30Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 9Min. 40Sek.
+1 LGW_02 UpTime: 0Tg. 0Std. 9Min. 50Sek.
+189 LGW_02 UpTimeSeconds: .*
+1 LGW_02 raw "OLED show=Strom -.* kWh"
+1787 LGW_02 raw "OLED show=Strom .* kWh"
+1 LGW_02 state: initialized
+1 LGW_02 state: opened
+1713 LaCrosseXX pressure: .*
+2742 LaCrosseXX temperature: .*
+13112 LaCrosse_01 dewpoint: .*
+5520 LaCrosse_01 humidity: .*
+8951 LaCrosse_01 temperature: .*
+13161 LaCrosse_02 dewpoint: .*
+4195 LaCrosse_02 humidity: .*
+10944 LaCrosse_02 temperature: .*
+13187 LaCrosse_14 dewpoint: .*
+4126 LaCrosse_14 humidity: .*
+10785 LaCrosse_14 temperature: .*
+1 Lamp1 on
+6 Livingroom dim0%
+1 Livingroom dim06%
+12 Livingroom dim100%
+1 Livingroom dim18%
+1 Livingroom dim37%
+3 Livingroom dim50%
+1 Livingroom dim62%
+1 Livingroom dim68%
+3 Livingroom dim75%
+2 Livingroom dim87%
+20 Livingroom off
+22 Livingroom on
+1 MAPLECUL1_433 CONNECTED
+491 MAPLECUL1_433 credit10ms: .*
+1 MAPLECUL2_868 CONNECTED
+476 MAPLECUL2_868 credit10ms: .*
+724 MQTT2_DVES_374D29 ENERGY_Power: .*
+127 MQTT2_DVES_374D29 ENERGY_Today: .*
+127 MQTT2_DVES_374D29 ENERGY_Total: .*
+724 MQTT2_DVES_374D29 ENERGY_Voltage: .*
+127 MQTT2_DVES_374D29 ENERGY_Yesterday: .*
+127 MQTT2_DVES_374D29 energy: .*
+127 MQTT2_DVES_374D29 state: off
+126 MQTT2_DVES_374D29 state: set_off
+3561 MQTT2_DVES_6886B0 ENERGY_Power: .*
+1007 MQTT2_DVES_6886B0 ENERGY_Today: .*
+1006 MQTT2_DVES_6886B0 ENERGY_Total: .*
+2961 MQTT2_DVES_6886B0 ENERGY_Voltage: .*
+127 MQTT2_DVES_6886B0 ENERGY_Yesterday: .*
+1006 MQTT2_DVES_6886B0 energy: .*
+6 MQTT2_DVES_6886B0 state: off
+6 MQTT2_DVES_6886B0 state: on
+94559 MQTT2_DVES_91D247 ENERGY_Power: .*
+5260 MQTT2_DVES_91D247 ENERGY_Today: .*
+5254 MQTT2_DVES_91D247 ENERGY_Total: .*
+17954 MQTT2_DVES_91D247 ENERGY_Voltage: .*
+127 MQTT2_DVES_91D247 ENERGY_Yesterday: .*
+5255 MQTT2_DVES_91D247 energy: .*
+1 MQTT2_DVES_91D247 state: on
+170 MQTT2_FHEM_Server nrclients: .*
+13115 MQTT2_shellyem3_244CAB432745 emeter_0_power: -.*
+84412 MQTT2_shellyem3_244CAB432745 emeter_0_power: .*
+94791 MQTT2_shellyem3_244CAB432745 emeter_1_power: .*
+95317 MQTT2_shellyem3_244CAB432745 emeter_2_power: .*
+23660 MQTT2_shellyem3_244CAB432745 energy: .*
+7938 MQTT2_shellyem3_244CAB432745 energy_returned: .*
+18191 MQTT2_shellyem3_244CAB432745 power: -.*
+269442 MQTT2_shellyem3_244CAB432745 power: .*
+1 Office dim100%
+1 Office dim50%
+1 Office dim75%
+1 Office dim93%
+31 Office off
+35 Office on
+28 Outdoor off
+29 Outdoor on
+5 Outdoor on-for-timer .*
+761 PID_Fussbodenheizung actuation: .*
+761 PID_Fussbodenheizung actuationCalc: -.*
+761 PID_Fussbodenheizung delta: -.*
+1203 PID_Fussbodenheizung desired: .*
+761 PID_Fussbodenheizung measured: .*
+761 PID_Fussbodenheizung p_d: .*
+761 PID_Fussbodenheizung p_i: -.*
+761 PID_Fussbodenheizung p_p: -.*
+1 PID_Fussbodenheizung state: initializing
+761 PID_Fussbodenheizung state: processing
+29 Projector off
+17 Projector on
+253 PumpeActor energy: .*
+254 PumpeActor state: .*
+7 ReadingLight dim0%
+13 ReadingLight dim12%
+19 ReadingLight dim37%
+24 ReadingLight off
+5 Rep.MySQL.backup dumpMySQL clientSide
+126 Rep.MySQL.size INFO_history.avg_row_length: .*
+126 Rep.MySQL.size INFO_history.collation: utf8mb4_bin
+126 Rep.MySQL.size INFO_history.create_time: .*
+126 Rep.MySQL.size INFO_history.data_free_MB: .*
+79 Rep.MySQL.size INFO_history.data_index_length_MB: .*
+126 Rep.MySQL.size INFO_history.data_length_MB: .*
+126 Rep.MySQL.size INFO_history.engine: InnoDB
+79 Rep.MySQL.size INFO_history.index_length_MB: .*
+126 Rep.MySQL.size INFO_history.number_of_rows: .*
+126 Rep.MySQL.size INFO_history.row_format: Dynamic
+124 Rep.MySQL.size INFO_history.update_time: .*
+126 Rep.MySQL.size INFO_history.version: .*
+1 Rep.MySQL.size connectionEncoding: utf8mb4
+1 Rep.MySQL.size dbEncoding: utf8mb4
+1 Rep.MySQL.size dbModel: MYSQL
+1 Rep.MySQL.size indexState: Index Report_Idx exists
+126 Rep.MySQL.size number_rows_displayed: .*
+1 Rep.MySQL.size state: connected
+126 Rep.MySQL.size state: done
+126 Rep.MySQL.size state: running
+1 Rep.MySQL.size state: running read database properties
+1 Rep.MySQL.size timestamp_oldest_dataset: .*
+1 Rep.MySQL.size userRights: USAGE,INSERT,DELETE,SELECT,UPDATE
+1445 Rep.MySQL.statistic.Wohnung.day .*
+3555 Rep.MySQL.statistic.Wohnung.day .*: -
+5 Rep.MySQL.statistic.Wohnung.day WARNING - see readings 'less_data_in_period' or 'diff_overrun_limit_XX'
+6 Rep.MySQL.statistic.Wohnung.day background_processing_time: .*
+1 Rep.MySQL.statistic.Wohnung.day connectionEncoding: utf8mb4
+1 Rep.MySQL.statistic.Wohnung.day dbEncoding: utf8mb4
+1 Rep.MySQL.statistic.Wohnung.day dbModel: MYSQL
+5 Rep.MySQL.statistic.Wohnung.day db_lines_processed: .*
+1 Rep.MySQL.statistic.Wohnung.day indexState: Index Report_Idx exists
+5 Rep.MySQL.statistic.Wohnung.day less_data_in_period: .* ||
+5 Rep.MySQL.statistic.Wohnung.day number_rows_displayed: .*
+6 Rep.MySQL.statistic.Wohnung.day sql_processing_time: .*
+1 Rep.MySQL.statistic.Wohnung.day state: connected
+5 Rep.MySQL.statistic.Wohnung.day state: running
+1 Rep.MySQL.statistic.Wohnung.day state: running read database properties
+1 Rep.MySQL.statistic.Wohnung.day timestamp_oldest_dataset: .*
+1 Rep.MySQL.statistic.Wohnung.day userRights: SELECT,UPDATE,DELETE,INSERT,USAGE
+7 SCHED_Arbeitszimmer_Urlaub currValue: .*
+7 SCHED_Arbeitszimmer_Urlaub nextUpdate: .*
+7 SCHED_Arbeitszimmer_Urlaub nextValue: .*
+6 SCHED_Arbeitszimmer_Urlaub state: .*
+1 SCHED_Arbeitszimmer_Urlaub state: active
+1 SCHED_Arbeitszimmer_Urlaub state: inactive
+7 SCHED_Badezimmer_Urlaub currValue: .*
+7 SCHED_Badezimmer_Urlaub nextUpdate: .*
+7 SCHED_Badezimmer_Urlaub nextValue: .*
+6 SCHED_Badezimmer_Urlaub state: .*
+1 SCHED_Badezimmer_Urlaub state: active
+1 SCHED_Badezimmer_Urlaub state: inactive
+7 SCHED_Flur_Urlaub currValue: .*
+7 SCHED_Flur_Urlaub nextUpdate: .*
+7 SCHED_Flur_Urlaub nextValue: .*
+6 SCHED_Flur_Urlaub state: .*
+1 SCHED_Flur_Urlaub state: active
+1 SCHED_Flur_Urlaub state: inactive
+7 SCHED_Kinderzimmer_Urlaub currValue: .*
+7 SCHED_Kinderzimmer_Urlaub nextUpdate: .*
+7 SCHED_Kinderzimmer_Urlaub nextValue: .*
+6 SCHED_Kinderzimmer_Urlaub state: .*
+1 SCHED_Kinderzimmer_Urlaub state: active
+1 SCHED_Kinderzimmer_Urlaub state: inactive
+7 SCHED_Kueche_Urlaub currValue: .*
+7 SCHED_Kueche_Urlaub nextUpdate: .*
+7 SCHED_Kueche_Urlaub nextValue: .*
+6 SCHED_Kueche_Urlaub state: .*
+1 SCHED_Kueche_Urlaub state: active
+1 SCHED_Kueche_Urlaub state: inactive
+7 SCHED_Schlafzimmer_Urlaub currValue: .*
+7 SCHED_Schlafzimmer_Urlaub nextUpdate: .*
+7 SCHED_Schlafzimmer_Urlaub nextValue: .*
+6 SCHED_Schlafzimmer_Urlaub state: .*
+1 SCHED_Schlafzimmer_Urlaub state: active
+1 SCHED_Schlafzimmer_Urlaub state: inactive
+6 SCHED_Treppenhaus_Urlaub currValue: eco
+6 SCHED_Treppenhaus_Urlaub nextUpdate: .*
+6 SCHED_Treppenhaus_Urlaub nextValue: eco
+1 SCHED_Treppenhaus_Urlaub state: active
+5 SCHED_Treppenhaus_Urlaub state: eco
+1 SCHED_Treppenhaus_Urlaub state: inactive
+7 SCHED_Wohnzimmer_Urlaub currValue: .*
+7 SCHED_Wohnzimmer_Urlaub nextUpdate: .*
+7 SCHED_Wohnzimmer_Urlaub nextValue: .*
+6 SCHED_Wohnzimmer_Urlaub state: .*
+1 SCHED_Wohnzimmer_Urlaub state: active
+1 SCHED_Wohnzimmer_Urlaub state: inactive
+1 SVG_01_Garden copyGplotFile
+1 SVG_02_Cellar copyGplotFile
+1 SVG_03_Dewpoint copyGplotFile
+1 SVG_Log.Cellar_1 copyGplotFile
+2 SVG_Log.Dewpoint_1 copyGplotFile
+1 SVG_Log.Garden_1 copyGplotFile
+5 SYS_Backup state: Ausführen
+17 Screen down
+30 Screen up
+1 Sens.Out T: .* IR: no
+147128 ShellyWaschmaschiene current: .*
+55685 ShellyWaschmaschiene dst: ShellyWaschmaschiene/events
+147337 ShellyWaschmaschiene energy: .*
+31327 ShellyWaschmaschiene energy_CounterCurrent: .*
+507 ShellyWaschmaschiene energy_CounterDay1st: .*
+507 ShellyWaschmaschiene energy_CounterDayLast: .*
+1 ShellyWaschmaschiene energy_CounterMonth1st: .*
+1 ShellyWaschmaschiene energy_CounterMonthLast: .*
+72 ShellyWaschmaschiene energy_EnergyCostDay: -.*
+31255 ShellyWaschmaschiene energy_EnergyCostDay: .*
+507 ShellyWaschmaschiene energy_EnergyCostDayLast: .*
+31327 ShellyWaschmaschiene energy_EnergyCostMeter: .*
+31327 ShellyWaschmaschiene energy_EnergyCostMonth: .*
+1 ShellyWaschmaschiene energy_EnergyCostMonthLast: .*
+31327 ShellyWaschmaschiene energy_EnergyCostYear: .*
+72 ShellyWaschmaschiene energy_EnergyDay: -.*
+31255 ShellyWaschmaschiene energy_EnergyDay: .*
+507 ShellyWaschmaschiene energy_EnergyDayLast: .*
+31327 ShellyWaschmaschiene energy_EnergyMeter: .*
+31327 ShellyWaschmaschiene energy_EnergyMonth: .*
+1 ShellyWaschmaschiene energy_EnergyMonthLast: .*
+31327 ShellyWaschmaschiene energy_EnergyYear: .*
+31327 ShellyWaschmaschiene energy_FinanceReserve: -.*
+31327 ShellyWaschmaschiene energy_MonthMeterReading: .*
+31327 ShellyWaschmaschiene energy_PowerCurrent: .*
+31327 ShellyWaschmaschiene energy_PowerDayAver: .*
+520 ShellyWaschmaschiene energy_PowerDayMax: .*
+507 ShellyWaschmaschiene energy_PowerDayMin: .*
+21 ShellyWaschmaschiene method: NotifyEvent
+4 ShellyWaschmaschiene method: NotifyFullStatus
+55660 ShellyWaschmaschiene method: NotifyStatus
+3 ShellyWaschmaschiene online: false
+4 ShellyWaschmaschiene online: true
+3 ShellyWaschmaschiene params_ble_addr: .*,p
+2 ShellyWaschmaschiene params_ble_flags_1: advertising
+1 ShellyWaschmaschiene params_bthome_errors_1: bluetooth_disabled
+4 ShellyWaschmaschiene params_cloud_connected: false
+4 ShellyWaschmaschiene params_events_1_cfg_rev: .*
+21 ShellyWaschmaschiene params_events_1_component: sys
+4 ShellyWaschmaschiene params_events_1_event: config_changed
+1 ShellyWaschmaschiene params_events_1_event: ota_begin
+13 ShellyWaschmaschiene params_events_1_event: ota_progress
+1 ShellyWaschmaschiene params_events_1_event: ota_success
+2 ShellyWaschmaschiene params_events_1_event: scheduled_restart
+1 ShellyWaschmaschiene params_events_1_msg: idle
+13 ShellyWaschmaschiene params_events_1_msg: in_progress
+1 ShellyWaschmaschiene params_events_1_msg: success
+13 ShellyWaschmaschiene params_events_1_progress_percent: .*
+3 ShellyWaschmaschiene params_events_1_restart_required: false
+1 ShellyWaschmaschiene params_events_1_restart_required: true
+2 ShellyWaschmaschiene params_events_1_time_ms: .*
+21 ShellyWaschmaschiene params_events_1_ts: .*
+2 ShellyWaschmaschiene params_matter_commissionable: false
+2 ShellyWaschmaschiene params_matter_commissionable: true
+4 ShellyWaschmaschiene params_matter_num_fabrics: .*
+8 ShellyWaschmaschiene params_mqtt_connected: true
+4 ShellyWaschmaschiene params_script_1_cpu: .*
+4 ShellyWaschmaschiene params_script_1_id: .*
+4 ShellyWaschmaschiene params_script_1_mem_free: .*
+4 ShellyWaschmaschiene params_script_1_running: false
+6932 ShellyWaschmaschiene params_switch_0_aenergy_by_minute_1: .*
+6932 ShellyWaschmaschiene params_switch_0_aenergy_by_minute_2: .*
+6932 ShellyWaschmaschiene params_switch_0_aenergy_by_minute_3: .*
+6932 ShellyWaschmaschiene params_switch_0_aenergy_minute_ts: .*
+6934 ShellyWaschmaschiene params_switch_0_aenergy_total: .*
+30199 ShellyWaschmaschiene params_switch_0_apower: .*
+3511 ShellyWaschmaschiene params_switch_0_counts_on_above_thr: .*
+3511 ShellyWaschmaschiene params_switch_0_counts_on_above_thr_rst_ts: .*
+3511 ShellyWaschmaschiene params_switch_0_counts_on_time: .*
+3511 ShellyWaschmaschiene params_switch_0_counts_on_time_rst_ts: .*
+3511 ShellyWaschmaschiene params_switch_0_counts_switch_on: .*
+3511 ShellyWaschmaschiene params_switch_0_counts_switch_on_rst_ts: .*
+28402 ShellyWaschmaschiene params_switch_0_current: .*
+6934 ShellyWaschmaschiene params_switch_0_freq: .*
+4 ShellyWaschmaschiene params_switch_0_id: .*
+4 ShellyWaschmaschiene params_switch_0_output: true
+6932 ShellyWaschmaschiene params_switch_0_ret_aenergy_by_minute_1: .*
+6932 ShellyWaschmaschiene params_switch_0_ret_aenergy_by_minute_2: .*
+6932 ShellyWaschmaschiene params_switch_0_ret_aenergy_by_minute_3: .*
+6932 ShellyWaschmaschiene params_switch_0_ret_aenergy_minute_ts: .*
+6934 ShellyWaschmaschiene params_switch_0_ret_aenergy_total: .*
+1 ShellyWaschmaschiene params_switch_0_source: button
+3 ShellyWaschmaschiene params_switch_0_source: init
+10 ShellyWaschmaschiene params_switch_0_temperature_tC: .*
+10 ShellyWaschmaschiene params_switch_0_temperature_tF: .*
+6934 ShellyWaschmaschiene params_switch_0_voltage: .*
+4 ShellyWaschmaschiene params_sys_available_updates_beta_version: .*-beta1
+1 ShellyWaschmaschiene params_sys_available_updates_beta_version: .*-beta2
+2 ShellyWaschmaschiene params_sys_available_updates_stable_version: .*
+4 ShellyWaschmaschiene params_sys_bthc_rev: .*
+4 ShellyWaschmaschiene params_sys_btrelay_rev: .*
+8 ShellyWaschmaschiene params_sys_cfg_rev: .*
+4 ShellyWaschmaschiene params_sys_fs_free: .*
+4 ShellyWaschmaschiene params_sys_fs_size: .*
+4 ShellyWaschmaschiene params_sys_kvs_rev: .*
+236 ShellyWaschmaschiene params_sys_last_sync_ts: .*
+4 ShellyWaschmaschiene params_sys_mac: .*
+2 ShellyWaschmaschiene params_sys_provisioning_duration: .*
+2 ShellyWaschmaschiene params_sys_provisioning_stage: confirmed
+2 ShellyWaschmaschiene params_sys_provisioning_started_at: .*
+2 ShellyWaschmaschiene params_sys_provisioning_started_ut: .*
+4 ShellyWaschmaschiene params_sys_ram_free: .*
+4 ShellyWaschmaschiene params_sys_ram_min_free: .*
+4 ShellyWaschmaschiene params_sys_ram_size: .*
+4 ShellyWaschmaschiene params_sys_reset_reason: .*
+3 ShellyWaschmaschiene params_sys_restart_required: false
+1 ShellyWaschmaschiene params_sys_restart_required: true
+5 ShellyWaschmaschiene params_sys_schedule_rev: .*
+236 ShellyWaschmaschiene params_sys_time: .*
+236 ShellyWaschmaschiene params_sys_unixtime: .*
+4 ShellyWaschmaschiene params_sys_uptime: .*
+4 ShellyWaschmaschiene params_sys_utc_offset: .*
+4 ShellyWaschmaschiene params_sys_webhook_rev: .*
+55685 ShellyWaschmaschiene params_ts: .*
+4 ShellyWaschmaschiene params_wifi_bssid: .*:ad
+3 ShellyWaschmaschiene params_wifi_channel: .*
+4 ShellyWaschmaschiene params_wifi_rssi: -.*
+4 ShellyWaschmaschiene params_wifi_ssid: MetalNet
+2 ShellyWaschmaschiene params_wifi_sta_ip6_1: fe80::.*
+2 ShellyWaschmaschiene params_wifi_sta_ip6_2: 2a02:.*
+4 ShellyWaschmaschiene params_wifi_sta_ip: .*
+4 ShellyWaschmaschiene params_wifi_status: got ip
+4 ShellyWaschmaschiene params_ws_connected: false
+152782 ShellyWaschmaschiene power: .*
+55685 ShellyWaschmaschiene src: shellyplugmg3-9070696e6994
+147128 ShellyWaschmaschiene switch_state: on
+147892 ShellyWaschmaschiene voltage: .*
+1 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX
+1 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01
+1 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02
+1 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02,LaCrosse_14
+1 StatDeviceTrend monitoredDevicesMAX: WT_Wohnzimmer
+1 StatDeviceTrend monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer
+1 StatDeviceTrend monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
+1 StatDeviceTrend monitoredDevicesUnknown: AZ_ESPEasy_ESP_Easy_3_Barometer,LaCrosseGas,LaCrosse_22
+152 StatDeviceTrend state: Updated stats for: HZ_Arbeitszimmer
+149 StatDeviceTrend state: Updated stats for: HZ_Badezimmer_Fenster
+146 StatDeviceTrend state: Updated stats for: HZ_Badezimmer_Handtuch
+146 StatDeviceTrend state: Updated stats for: HZ_Flur
+139 StatDeviceTrend state: Updated stats for: HZ_Kinderzimmer
+146 StatDeviceTrend state: Updated stats for: HZ_Kueche
+150 StatDeviceTrend state: Updated stats for: HZ_Schlafzimmer
+147 StatDeviceTrend state: Updated stats for: HZ_Treppenhaus_Oben
+145 StatDeviceTrend state: Updated stats for: HZ_Treppenhaus_Unten
+4439 StatDeviceTrend state: Updated stats for: LaCrosseXX
+14029 StatDeviceTrend state: Updated stats for: LaCrosse_01
+14822 StatDeviceTrend state: Updated stats for: LaCrosse_02
+14585 StatDeviceTrend state: Updated stats for: LaCrosse_14
+2775 StatDeviceTrend state: Updated stats for: WT_Wohnzimmer
+7446 Steckdose_1 state: off
+164 Steckdose_1 state: on
+31882 Strom_Balkonkraftwerk ENERGY_Power: .*
+3548 Strom_Balkonkraftwerk ENERGY_Today: .*
+3548 Strom_Balkonkraftwerk ENERGY_Total: .*
+11269 Strom_Balkonkraftwerk ENERGY_Voltage: .*
+127 Strom_Balkonkraftwerk ENERGY_Yesterday: .*
+3549 Strom_Balkonkraftwerk energy: .*
+1 Strom_Balkonkraftwerk state: on
+1403 SystemMonitor cpu_freq: .*
+6483 SystemMonitor cpu_temp_avg: .*
+3210 SystemStatistics idle: .*
+778 SystemStatistics iowait: .*
+2441 SystemStatistics system: .*
+3019 SystemStatistics user: .*
+11 TE.FolderSize fhem_folder_size: .*
+11 TE.FolderSize state: OK
+11 TE.Free fhem_folder_size: .*
+11 TE.Free state: OK
+31 TV off
+14 TV on
+779 Tageslicht elevation: -.*
+744 Tageslicht elevation: .*
+31 Tageslicht horizon: -.*
+22 Tageslicht horizon: .*
+64 Tageslicht light: .*
+1005 Tageslicht twilight: .*
+1010 Tageslicht twilight_weather: .*
+778 Tageslicht_BS elevation: -.*
+746 Tageslicht_BS elevation: .*
+31 Tageslicht_BS horizon: -.*
+22 Tageslicht_BS horizon: .*
+64 Tageslicht_BS light: .*
+1004 Tageslicht_BS twilight: .*
+1009 Tageslicht_BS twilight_weather: .*
+20 WP profile_count: .*
+1 WP state: assigned
+664 WT_Wohnzimmer desiredTemperature: .*
+2645 WT_Wohnzimmer temperature: .*
+7609 atBKWEinspeisung state: Next: .*
+7609 atBKWNutzung state: Next: .*
+7610 atHeizungAZ state: Next: .*
+15 lcCinema scene AllOff
+19 lcCinema scene Break
+16 lcCinema scene Cinema
+13 lcCinema scene WatchTV
+740 minuteTimer 
+15473 myDbLog CacheOverflowLastNum: .*
+3 myDbLog CacheOverflowLastState: exceeded
+3 myDbLog CacheOverflowLastState: normal
+15477 myDbLog CacheUsage: .*
+1 myDbLog FRAME_INITIALIZED
+1 myDbLog SUBPROC_INITIALIZED
+14883 myDbLog background_processing_time: .*
+14883 myDbLog sql_processing_time: .*
+6 myDbLog state: Another operation is in progress - resync at NextSync
+6 myDbLog state: connected
+1 myLaCrosseGateway CONNECTED
+191 myLaCrosseGateway FramesPerMinute: .*
+191 myLaCrosseGateway FreeHeap: .*
+191 myLaCrosseGateway OLED: none
+191 myLaCrosseGateway RSSI: -.*
+191 myLaCrosseGateway ReceivedFrames: .*
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 10Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 11Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 12Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 13Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 14Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 15Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 16Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 17Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 18Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 19Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 20Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 21Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 22Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 23Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 24Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 25Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 26Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 27Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 28Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 29Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 30Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 31Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 32Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 33Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 34Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 35Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 36Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 37Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 38Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 39Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 40Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 41Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 42Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 43Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 44Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 45Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 46Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 47Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 48Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 49Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 50Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 51Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 52Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 53Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 54Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 55Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 56Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 57Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 58Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 59Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 5Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 6Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 7Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 8Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 0Std. 9Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 0Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 10Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 11Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 12Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 13Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 14Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 15Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 16Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 17Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 18Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 19Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 1Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 20Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 21Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 22Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 23Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 24Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 25Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 26Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 27Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 28Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 29Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 2Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 30Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 31Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 32Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 33Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 34Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 35Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 36Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 37Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 38Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 39Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 3Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 40Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 41Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 42Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 43Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 44Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 45Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 46Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 47Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 48Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 49Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 4Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 50Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 51Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 52Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 53Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 54Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 55Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 56Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 57Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 58Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 59Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 5Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 6Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 7Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 8Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 1Std. 9Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 0Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 10Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 11Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 12Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 13Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 14Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 15Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 16Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 17Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 18Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 19Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 1Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 20Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 21Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 22Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 23Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 24Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 25Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 26Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 27Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 28Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 29Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 2Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 30Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 31Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 32Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 33Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 34Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 35Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 36Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 37Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 38Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 39Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 3Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 40Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 41Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 42Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 43Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 44Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 45Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 46Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 47Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 48Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 49Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 4Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 50Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 51Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 52Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 53Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 54Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 55Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 56Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 57Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 58Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 59Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 5Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 6Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 7Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 8Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 2Std. 9Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 0Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 10Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 11Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 12Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 13Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 14Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 15Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 1Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 2Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 3Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 4Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 5Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 6Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 7Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 8Min. 0Sek.
+1 myLaCrosseGateway UpTime: 0Tg. 3Std. 9Min. 0Sek.
+191 myLaCrosseGateway UpTimeSeconds: .*
+1 myLaCrosseGateway state: initialized
+1 myLaCrosseGateway state: opened
+1 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX
+1 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01
+1 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02
+1 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02,LaCrosse_14
+1 myStatDevice monitoredDevicesMAX: WT_Wohnzimmer
+1 myStatDevice monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer
+1 myStatDevice monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
+152 myStatDevice state: Updated stats for: HZ_Arbeitszimmer
+149 myStatDevice state: Updated stats for: HZ_Badezimmer_Fenster
+146 myStatDevice state: Updated stats for: HZ_Badezimmer_Handtuch
+146 myStatDevice state: Updated stats for: HZ_Flur
+139 myStatDevice state: Updated stats for: HZ_Kinderzimmer
+146 myStatDevice state: Updated stats for: HZ_Kueche
+150 myStatDevice state: Updated stats for: HZ_Schlafzimmer
+147 myStatDevice state: Updated stats for: HZ_Treppenhaus_Oben
+145 myStatDevice state: Updated stats for: HZ_Treppenhaus_Unten
+4439 myStatDevice state: Updated stats for: LaCrosseXX
+14029 myStatDevice state: Updated stats for: LaCrosse_01
+14822 myStatDevice state: Updated stats for: LaCrosse_02
+14585 myStatDevice state: Updated stats for: LaCrosse_14
+2775 myStatDevice state: Updated stats for: WT_Wohnzimmer
+1 rgr_Children home
+1 rgr_Children lastActivity: home
+1 rgr_Children lastActivityBy: Baby
+1 rgr_Children lastAwake: .*
+1 rgr_Children lastDurSleep: .*
+1 rgr_Children lastState: asleep
+2 rgr_Children register rr_Baby
+2 rgr_Children register rr_Daughter
+2 rgr_Children register rr_Son
+1 rgr_Children residentsAsleep: .*
+1 rgr_Children residentsHome: .*
+2 rgr_Guests register rg_Guest1
+2 rgr_Guests register rg_Guest2
+1 rgr_Parents lastActivity: absent
+1 rgr_Parents lastActivityBy: Father
+2 rgr_Parents register rr_Father
+2 rgr_Parents register rr_Mother
+1 rgr_Parents residentsAbsent: .*
+1 rgr_Parents residentsGone: .*
+1 rgr_Residents lastActivity: absent
+1 rgr_Residents lastActivity: home
+1 rgr_Residents lastActivityBy: Baby
+1 rgr_Residents lastActivityBy: Father
+2 rgr_Residents register rg_Guest1
+2 rgr_Residents register rg_Guest2
+2 rgr_Residents register rr_Baby
+2 rgr_Residents register rr_Daughter
+2 rgr_Residents register rr_Father
+2 rgr_Residents register rr_Mother
+2 rgr_Residents register rr_Son
+1 rgr_Residents residentsAbsent: .*
+1 rgr_Residents residentsAsleep: .*
+1 rgr_Residents residentsGone: .*
+1 rgr_Residents residentsHome: .*
+1 rr_Baby durTimerPresence: .*
+2 rr_Baby durTimerSleep: .*
+1 rr_Baby home
+1 rr_Baby lastAwake: .*
+1 rr_Baby lastDurSleep: .*
+1 rr_Baby lastState: asleep
+1 rr_Baby mood: calm
+2 rr_Daughter durTimerAbsence: .*
+1 rr_Father absent
+2 rr_Father durTimerAbsence: .*
+1 rr_Father lastState: gone
+2 rr_Mother durTimerPresence: .*
+2 rr_Son durTimerAbsence: .*
+993 shellyplug9070697146a0 energy: .*
+6134 shellyplug9070697146a0 power: .*
+5 shellyplug9070697146a0 state: off
+5 shellyplug9070697146a0 state: on
+4966 shellyplug9070697146a0 switch_state: off
+720 shellyplug9070697146a0 switch_state: on
+258 shellyplugmg3_1 current: .*
+306 shellyplugmg3_1 energy: .*
+284 shellyplugmg3_1 energy_lastMinute: .*
+306 shellyplugmg3_1 energy_purchased: .*
+5 shellyplugmg3_1 error: .*)
+2 shellyplugmg3_1 error: connect to http://.* timed out
+9 shellyplugmg3_1 error: network
+2 shellyplugmg3_1 error: read from http://.* timed out
+1 shellyplugmg3_1 firmware_ID: .*-ge1a198b
+1 shellyplugmg3_1 firmware_current: v2.*
+1 shellyplugmg3_1 firmware_updIcon: .*
+1 shellyplugmg3_1 firmware_updText: check for beta-version
+1 shellyplugmg3_1 firmware_updText: update needed to v2.*, check for beta-version
+1797 shellyplugmg3_1 frequency: .*
+3389 shellyplugmg3_1 inttemp: .*
+2 shellyplugmg3_1 network: Error: Timeout connecting
+2 shellyplugmg3_1 network: Error: Timeout reading
+1 shellyplugmg3_1 network: connected
+1 shellyplugmg3_1 network: not connected (no route)
+4 shellyplugmg3_1 network_connection: offline
+3 shellyplugmg3_1 network_connection: online
+4 shellyplugmg3_1 network_disconnects: .*
+2877 shellyplugmg3_1 network_rssi: -.*
+307 shellyplugmg3_1 power: .*
+6 shellyplugmg3_1 relay: off
+6 shellyplugmg3_1 relay: on
+2 shellyplugmg3_1 source: MQTT
+1 shellyplugmg3_1 source: button
+2 shellyplugmg3_1 source: init
+4 shellyplugmg3_1 state: Error: Network
+1 shellyplugmg3_1 state: got data
+8 shellyplugmg3_1 state: off
+6 shellyplugmg3_1 state: on
+7572 shellyplugmg3_1 uptime: .*
+6782 shellyplugmg3_1 voltage: .*

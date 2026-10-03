@@ -1,0 +1,13 @@
+services:
+  fhem:
+    image: fhem/fhem:latest
+    container_name: fhem
+    restart: always
+    network_mode: host
+    volumes:
+      - /opt/fhem:/opt/fhem
+      - /opt/backup:/opt/backup
+    environment:
+      - TZ=Europe/Berlin
+    ports:
+      - "8083:8083"

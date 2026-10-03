@@ -1,0 +1,357 @@
+##############################################
+# $Id: 99_attrT_z2m_thermostat_Utils.pm 28989 2024-06-19 19:50:46Z Beta-User $
+#
+
+package FHEM::attrT_z2m_thermostat_Utils;    ## no critic 'Package declaration'
+
+use strict;
+use warnings;
+use JSON qw(decode_json);
+use Carp qw(carp);
+use Scalar::Util qw(looks_like_number);
+
+#use POSIX qw(strftime);
+#use List::Util qw( min max );
+#use Scalar::Util qw(looks_like_number);
+#use Time::HiRes qw( gettimeofday );
+
+use GPUtils qw(GP_Import);
+
+## Import der FHEM Funktionen
+#-- Run before package compilation
+BEGIN {
+    # Import from main context
+    GP_Import(
+        qw(
+          AttrVal
+          InternalVal
+          ReadingsVal
+          ReadingsNum
+          ReadingsAge
+          CommandGet
+          CommandSet
+          readingsSingleUpdate
+          json2nameValue
+          defs
+          Log3
+          IsWe
+          )
+    );
+}
+
+sub ::attrT_z2m_thermostat_Utils_Initialize { goto &Initialize }
+
+# initialize ##################################################################
+sub Initialize {
+  my $hash = shift;
+  return;
+}
+
+# Enter you functions below _this_ line.
+
+my %jsonmap = ( 
+
+);
+
+sub z2t_send_weekprofile {
+  my $name       = shift // carp q[No device name provided!]              && return;
+  my $wp_name    = shift // carp q[No weekprofile device name provided!]  && return;
+  my $wp_profile = shift // AttrVal($name, 'weekprofile', undef) // carp q[No weekprofile profile name provided!] && return;
+  my $model      = shift // ReadingsVal($name,'week','5+2');
+  my $topic      = shift // AttrVal($name,'devicetopic','') . '/set';
+
+  my $hash = $defs{$name} // return;
+  $topic   .= ' ';
+
+  my $wp_profile_data = CommandGet(undef,"$wp_name profile_data $wp_profile 0");
+  if ($wp_profile_data =~ m{(profile.*not.found|usage..profile_data..name)}xms ) {
+    Log3( $hash, 3, "[$name] weekprofile $wp_name: no profile named \"$wp_profile\" available" );
+    return;
+  }
+
+  my @D = qw(Sun Mon Tue Wed Thu Fri Sat); # eqals to my @D = ("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  my $payload;
+  my @days = (0..6);
+  my $decoded;
+  if ( !eval { $decoded  = decode_json($wp_profile_data) ; 1 } ) {
+    Log3($name, 1, "JSON decoding error in $wp_profile provided by $wp_name: $@");
+    return;
+  }
+
+  if ( $model eq '5+2' || $model eq '6+1') {
+    @days = (0,1);
+  } elsif ($model eq '7') {
+    @days = (1);
+  }
+
+  for my $i (@days) {
+      $payload = '{';
+
+      for my $j (0..7) {
+        if (defined $decoded->{$D[$i]}{'time'}[$j]) {
+          my $time = $decoded->{$D[$i]}{'time'}[$j-1] // "00:00";
+          my ($hour,$minute) = split m{:}xms, $time;
+          $hour = 0 if $hour == 24;
+          $payload .= '"hour":' . abs($hour) .',"minute":'. abs($minute) .',"temperature":'.$decoded->{$D[$i]}{'temp'}[$j];
+          $payload .= '},{' if defined $decoded->{$D[$i]}{'time'}[$j+1];
+        }
+      }
+      $payload .='}';
+      if ( $i == 0 && ( $model eq '5+2' || $model eq '6+1') ) {
+        CommandSet($hash,"$name holidays $payload");
+        $payload = '{';
+      }
+      CommandSet($hash,"$name workdays $payload") if $model eq '5+2' || $model eq '6+1' || $model eq '7';
+  }
+  readingsSingleUpdate( $hash, 'weekprofile', "$wp_name $wp_profile",1);
+  return;
+}
+
+
+sub z2t_send_Beca_weekprofile {
+  my $name       = shift // carp q[No device name provided!]              && return;
+  my $wp_name    = shift // carp q[No weekprofile device name provided!]  && return;
+  my $wp_profile = shift // AttrVal($name, 'weekprofile', undef) // carp q[No weekprofile profile name provided!] && return;
+  my $topic      = shift // carp q[No topic to send to provided!]         && return;
+
+  my $hash = $defs{$name} // return;
+
+  my $wp_profile_data = CommandGet(undef,"$wp_name profile_data $wp_profile 0");
+  if ($wp_profile_data =~ m{(profile.*not.found|usage..profile_data..name)}xms ) {
+    Log3( $hash, 3, "[$name] weekprofile $wp_name: no profile named \"$wp_profile\" available" );
+    return;
+  }
+
+  my @D = qw(Sun Mon Tue Wed Thu Fri Sat); # eqals to my @D = ("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  my $payload;
+  my @days = (0,1,6);
+  my $decoded;
+  if ( !eval { $decoded  = decode_json($wp_profile_data) ; 1 } ) {
+    Log3($name, 1, "JSON decoding error in $wp_profile provided by $wp_name: $@");
+    return;
+  }
+
+  for my $i (@days) {
+      my $sd = $i == 0 ? 'u' : $i == 6 ? 'a' : 'w';
+
+      for my $j (0..5) {
+        my $time = $decoded->{$D[$i]}{'time'}[$j];
+        last if !defined $time;
+        my $tmp  = $decoded->{$D[$i]}{'temp'}[$j];
+        my $k = $j+1;
+        next if !looks_like_number($tmp);
+        $payload .= defined $payload ? ',' : '{';
+        $payload .= qq("${sd}${k}h":"$time","${sd}${k}t":$tmp);
+      }
+  }
+  #Log3($hash,3,"$payload");
+  return if !defined $payload;
+  $payload .='}';
+  readingsSingleUpdate( $hash, 'weekprofile', "$wp_name $wp_profile",1);
+  return qq{$topic $payload};
+}
+
+
+sub z2t_send_BHT {
+  my $name       = shift // carp q[No device name provided!]              && return;
+  my $wp_name    = shift // carp q[No weekprofile device name provided!]  && return;
+  my $wp_profile = shift // AttrVal($name, 'weekprofile', undef) // carp q[No weekprofile profile name provided!] && return;
+  my $topic      = shift // AttrVal($name,'devicetopic','') . '/set';
+
+  my $hash = $defs{$name} // return;
+
+  #Log3($hash, 3, "Fetching weekprofile for ${name} day ${today} / $D[${today}] from ${wp_name}/${wp_profile}");
+  my $wp_profile_data = CommandGet(undef,"$wp_name profile_data $wp_profile 0");
+  if ($wp_profile_data =~ m{(profile.*not.found|usage..profile_data..name)}xms ) {
+    Log3( $hash, 3, "[$name] weekprofile $wp_name: no profile named \"$wp_profile\" available" );
+    return;
+  }
+
+  my @D = qw(Sun Mon Tue Wed Thu Fri Sat); # eqals to my @D = ("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  my $today = (localtime(time))[6];
+  #  if ( !($today ~~ [1..5]) ) {$today = 1};
+  if ( !(0 < $today < 6) ) {$today = 1};
+  my @days = ($today,6,0);
+  my $payload;
+  my $decoded;
+  if ( !eval { $decoded  = decode_json($wp_profile_data) ; 1 } ) {
+    Log3($name, 1, "JSON decoding error in $wp_profile provided by $wp_name: $@");
+    return;
+  }
+
+  for my $i (@days) {
+      my $sd = $i == 0 ? 'sunday' : $i == 6 ? 'saturday' : 'weekdays';
+
+      for my $j (0..3) {
+        my $time = $decoded->{$D[$i]}{'time'}[$j];
+        last if !defined $time;
+        my ($hour,$minute) = split m{:}xms, $time;
+        $hour += 0;
+        $minute += 0;
+        my $tmp  = $decoded->{$D[$i]}{'temp'}[$j]+0;
+        my $k = $j+1;
+        next if !looks_like_number($tmp);
+        $payload .= defined $payload ? ',' : '{';
+        $payload .= qq("${sd}_p${k}_hour":$hour,"${sd}_p${k}_minute":$minute,"${sd}_p${k}_temperature":$tmp);
+      }
+  }
+  return if !defined $payload;
+  $payload = '{"program":'.$payload;
+  $payload .='}}';
+  #Log3($hash,3,"Setting $name to new weekprofile: $payload");
+  readingsSingleUpdate( $hash, 'weekprofile', "$wp_name $wp_profile",1);
+  return qq{$topic $payload};
+}
+
+sub z2t_send_TRV {
+  my $name       = shift // carp q[No device name provided!]              && return;
+  my $wp_name    = shift // carp q[No weekprofile device name provided!]  && return;
+  my $wp_profile = shift // AttrVal($name, 'weekprofile', undef) // carp q[No weekprofile profile name provided!] && return;
+  my $topic      = shift // AttrVal($name,'devicetopic','') . '/set';
+
+  my $hash = $defs{$name} // return;
+
+  my $wp_profile_data = CommandGet(undef,"$wp_name profile_data $wp_profile 0");
+  if ($wp_profile_data =~ m{(profile.*not.found|usage..profile_data..name)}xms ) {
+    Log3( $hash, 3, "[$name] weekprofile $wp_name: no profile named \"$wp_profile\" available" );
+    return;
+  }
+
+  my @D = qw(Sun Mon Tue Wed Thu Fri Sat); # eqals to my @D = ("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  my $today = (localtime(time))[6];
+  #  if ( !($today ~~ [1..5]) ) {$today = 1};
+  if ( !(0 < $today < 6) ) {$today = 1};
+  #Log3($hash, 3, "Fetching weekprofile for ${name} day ${today} / $D[${today}] from ${wp_name}/${wp_profile}");
+  my @days = ($today,6,0);
+  my $payload;
+  my $decoded;
+  if ( !eval { $decoded  = decode_json($wp_profile_data) ; 1 } ) {
+    Log3($name, 1, "JSON decoding error in $wp_profile provided by $wp_name: $@");
+    return;
+  }
+
+  for my $i (@days) {
+
+      for my $j (0..3) {
+        my $time = $decoded->{$D[$i]}{'time'}[$j];
+        my ($hour,$minute) = split m{:}xms, $time;
+        $hour += 0;
+        $minute += 0;
+        last if !defined $time;
+        my $tmp  = $decoded->{$D[$i]}{'temp'}[$j]+0;
+        my $k = $j+1;
+        next if !looks_like_number($tmp);
+        $payload .= defined $payload ? '  ' : '"';
+        $payload .= sprintf("%02d:%02d/%d", $hour, $minute, $tmp);
+      }
+  }
+  #  Log3($hash,3,"$payload");
+  return if !defined $payload;
+  $payload = '{"programming_mode":'.$payload;
+  $payload .='"}';
+  #Log3($hash,3,"Setting ${name} to new weekprofile: ${payload}");
+  readingsSingleUpdate( $hash, 'weekprofile', "$wp_name $wp_profile",1);
+  return qq{$topic $payload};
+}
+
+sub z2t_send_ME168 {
+  my $name       = shift // carp q[No device name provided!]              && return;
+  my $wp_name    = shift // carp q[No weekprofile device name provided!]  && return;
+  my $wp_profile = shift // AttrVal($name, 'weekprofile', undef) // carp q[No weekprofile profile name provided!] && return;
+  my $topic      = shift // AttrVal($name,'devicetopic','') . '/set';
+
+  my $hash = $defs{$name} // return;
+
+  my $wp_profile_data = CommandGet(undef,"$wp_name profile_data $wp_profile 0");
+  if ($wp_profile_data =~ m{(profile.*not.found|usage..profile_data..name)}xms ) {
+    Log3( $hash, 3, "[$name] weekprofile $wp_name: no profile named \"$wp_profile\" available" );
+    return;
+  }
+
+  my @D = qw(Sun Mon Tue Wed Thu Fri Sat); # eqals to my @D = ("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  my @DD = qw(sunday monday tuesday wednesday thursday friday saturday); # eqals to my @D = ("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+  my $today = (localtime(time))[6];
+  #  if ( !($today ~~ [1..5]) ) {$today = 1};
+  # if ( !(0 < $today < 6) ) {$today = 1};
+  # Log3($hash, 3, "Fetching weekprofile for ${name} day ${today} / $D[${today}] from ${wp_name}/${wp_profile}");
+  # real dyrty hack, s it seems only the first 6 days are transmitted....
+  my @days = ($today, ($today+1)%7, ($today+2)%7, ($today+3)%7, ($today+4)%7 ,($today+5)%7 ,($today+6)%7);
+  #my @days = (0..6);
+  my $payload;
+  my $decoded;
+  if ( !eval { $decoded  = decode_json($wp_profile_data) ; 1 } ) {
+    Log3($name, 1, "JSON decoding error in $wp_profile provided by $wp_name: $@");
+    return;
+  }
+
+  for my $i (@days) {
+      $payload .= defined $payload ? ', ' : '';
+      $payload .= '"schedule_' . $DD[$i].'":';
+      my $schedule;
+      for my $j (0..3) {
+        my $time = $decoded->{$D[$i]}{'time'}[$j];
+        my ($hour,$minute) = split m{:}xms, $time;
+        $hour += 0;
+        $minute += 0;
+        last if !defined $time;
+        my $tmp  = $decoded->{$D[$i]}{'temp'}[$j]+0;
+        my $k = $j+1;
+        next if !looks_like_number($tmp);
+        $schedule .= defined $schedule ? ' ' : '"';
+        $schedule .= sprintf("%02d:%02d/%d", $hour, $minute, $tmp);
+      }
+      $payload .= $schedule . '"';
+  }
+  #  Log3($hash,3,"$payload");
+  return if !defined $payload;
+  $payload = '{'.$payload;
+  $payload .='}';
+
+  #Log3($hash,3,"Setting ${name} to new weekprofile: ${payload}");
+  readingsSingleUpdate( $hash, 'weekprofile', "$wp_name $wp_profile",1);
+  return qq{$topic $payload};
+}
+
+
+1;
+
+__END__
+
+=pod
+=item summary helper functions needed for zigbee2mqtt thermostats in MQTT2_DEVICE
+=item summary_DE Hilfsfunktionen für zigbee2mqtt MQTT2_DEVICE-Thermostate 
+
+=begin html
+
+<a id="attrT_z2m_thermostat_Utils"></a>
+  There may be room for improvement, please adress any issues in https://forum.fhem.de/index.php/topic,116535.0.html.
+<h3>attrT_z2m_thermostat_Utils</h3>
+<ul>
+  <b>z2t_send_weekprofile</b>
+  <br>
+  This is a special function to request temperature list data from <i>weekprofile</i> and convert and send it out via MQTT<br>
+  <br>
+  General requirements and prerequisites:<br>
+  <ul>
+  <li>existing <i>weekprofile</i> device with activated <i>useTopic</i> feature</li>
+  <li>weekprofile attribute set at calling MQTT2_DEVICE</li>
+  </ul>
+  <br>
+  Special remarks for usage with attrTemplate <i>zigbee2mqtt_thermostat_with_weekrofile</i>:<br>
+  <ul>
+  <li>existing <i>setList</i> entries required (<i>workdays</i> and <i>holidays</i>)</li>
+  <li>for conversion from <i>weekprofile</i> data to entries <i>workdays</i> and <i>holidays</i> only monday and sunday data will be used, other days will be ignored</li>
+  <li>as parameters, <i>$name</i> (name of the calling MQTT2_DEVICE), <i>$wp_name</i> (name of the weekprofile device) and $wp_profile (in "topic:entity" format) have to be used, when topic changes are done via weekprofile, the relevent data will be sent to the MQTT2_DEVICE instances with suitable <i>weekprofile</i> attribute automatically.<br>
+  Additionally you may force sending holiday data by adding a forth parameter ($model) and set that to '5+2'.<br>
+  So entire Perl command for <i>zigbee2mqtt_thermostat_with_weekrofile</i> should look like:
+  <ul>
+   <code>FHEM::attrT_z2m_thermostat_Utils::z2t_send_weekprofile($NAME, $EVTPART1, $EVTPART2)</code><br>
+  </ul><br>or 
+  <ul>
+   <code>FHEM::attrT_z2m_thermostat_Utils::z2t_send_weekprofile($NAME, $EVTPART1, $EVTPART2, '5+2')</code><br>
+  </ul>
+  </li>
+  </ul>
+</ul>
+=end html
+=cut

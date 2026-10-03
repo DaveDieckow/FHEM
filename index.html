@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * UI builder framework for FHEM
+     *
+     * Version: 2.7.*
+     * URL: https://github.com/knowthelist/fhem-tablet-ui
+     *
+     * Copyright (c) 2015-2018 Mario Stephan <mstephan@shared-files.de>
+     * Under MIT License (http://www.opensource.org/licenses/mit-license.php)
+     *
+     * - create a new folder named 'tablet' in /<fhem-path>/www
+     * - copy all files incl. sub folders into /<fhem-path>/www/tablet
+     * - Tadaaa! A new fhem ui in http://<fhem-url>:8083/fhem/tablet/index_empty.html
+     */
+    -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+
+    <!-- define your personal style here, it wont be overwritten  -->
+    <!-- link rel="stylesheet" href="css/fhem-green-ui.css" / -->
+    <!-- link rel="stylesheet" href="css/fhem-tablet-ui-user.css" / -->
+
+    <script src="js/fhem-tablet-ui.min.js" defer></script>
+
+    <title>FHEM-Tablet-UI</title>
+</head>
+
+<body>
+    <div class="gridster">
+        <ul>
+        	<li data-row="1" data-col="1" data-sizey="3" data-sizex="2">
+            	<div class="big" data-type="pagebutton"
+     				data-url="http://voddow.ddns.net/fhem"
+     				data-icon="logo-fhem"></div>
+                <div class="big">Heizung</div>
+                <div class="big">Temperaturen</div>
+
+			</li>
+            <li data-row="2" data-col="1" data-sizey="1" data-sizex="2">
+    			<header>Homestatus</header>
+            	<div class="hbox">
+    				<div>
+        				<div data-type="switch" data-device="Vacation" data-get="state"
+          				data-get-on="Anwesend" data-get-off="!Anwesend"
+          				data-set-on="Anwesend" class="green"
+          				data-icon="fa-user-friends" data-background-icon="fa-square" ></div>
+        				<div class="inline w1x">Mit Lia</div>
+    				</div>
+    				<div>
+        			<div data-type="switch" data-device="Vacation" data-get="state"
+          				data-get-on="Anwesend_ohne_Lia" data-get-off="!Anwesend_ohne_Lia"
+          				data-set-on="Anwesend_ohne_Lia" class="blue"
+          				data-icon="fa-user" data-background-icon="fa-square" ></div>
+        				<div class="inline w1x">Alleine</div>
+    				</div>
+    				<div>
+        				<div data-type="switch" data-device="Vacation" data-get="state"
+          				data-get-on="Urlaub" data-get-off="!Urlaub"
+          				data-set-on="Urlaub" class="red"
+          				data-icon="fa-suitcase" data-background-icon="fa-square" ></div>
+        				<div class="inline w1x">Abwesend</div>
+                	</div>
+            	</div>
+            </li>
+            <li data-row="1" data-col="3" data-sizey="4" data-sizex="6">
+                <header>Heizung</header>
+            	<div class="hbox">
+                	<div class="vbox">
+                    	<div data-type="popup">
+                        	<div class="big" data-type="symbol" data-icon="fa-bed"></div>
+                        	<div class="dialog">
+                            	<header>Schlafzimmer</header>
+                        		<div class="large" data-type="thermostat" 
+     								data-device="HZ_Schlafzimmer" 
+     								data-get="desiredTemperature" 
+     								data-temp="temperature"
+                            		data-valve="valveposition">
+								</div>
+									<div data-type="popup" data-width="450px" class="">
+    									<div data-type="simplechart"
+        									data-device="HZ_Schlafzimmer"
+        									data-logdevice="myDbLog"
+                        					data-logfile="HISTORY"
+        									data-get="temperature"
+        									data-minvalue="10"
+        									data-maxvalue="30"
+        									data-height="60"
+       				 						data-width="90"
+        									data-yticks="2"
+        									class="">
+    									</div>
+    									<div class="dialog">
+        									<header>Schlafzimmer</header>
+        									<div data-type="simplechart"
+            									data-device="HZ_Schlafzimmer"
+            									data-logdevice="myDbLog"
+                            					data-logfile="HISTORY"
+            									data-get="temperature"
+            									data-minvalue="10"
+           				 						data-maxvalue="30"
+            									data-yticks="2"
+            									data-caption="$min°C - $max°C"
+            									data-height="250">
+        									</div>
+    									</div>
+									</div>
+                            </div>
+                        </div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="HZ_Schlafzimmer" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="valveposition">
+						</div>
+                        <div class="big" data-type="symbol" data-icon="fa-suitcase"></div>
+                    	<div class="big">Küche</div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="HZ_Kueche" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="valveposition">
+						</div>
+                    </div>  
+                	<div class="vbox">
+                     	<div class="big">Flur</div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="HZ_Flur" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="valveposition">
+						</div>
+                    	<div class="big" data-type="symbol" data-icon="fa-child"></div>
+                        <div class="big">Kinderzimmer</div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="HZ_Kinderzimmer" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="valveposition">
+						</div>
+                    </div>  
+                	<div class="vbox">
+                    	<div class="big" data-type="symbol" data-icon="fa-bath"></div>
+                     	<div class="big">Badezimmer Handtuch</div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="HZ_Badezimmer_Handtuch" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="valveposition">
+						</div>
+                    	<div class="big" data-type="symbol" data-icon="fa-shower"></div>
+                        <div class="big">Badezimmer</div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="HZ_Badezimmer" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="valveposition">
+						</div>
+                    </div>  
+                	<div class="vbox">
+                        <div class="big">Wohnzimmer</div>
+                        <div class="large" data-type="thermostat" 
+     						data-device="WT_Wohnzimmer" 
+     						data-get="desiredTemperature" 
+     						data-temp="temperature"
+                            data-valve="PID_Fussbodenheizung.actuation">
+						</div>
+						<div data-type="popup"  data-height="600px" data-width="600px">
+                        	<div class="big">Treppenhaus Oben</div>
+                        	<div class="dialog">
+                            	<header>Treppenhaus</header>
+                           		<div class="hbox">
+                                	<div class="vbox">
+                                	<div class="big">Oben</div>
+                        				<div class="large" data-type="thermostat" 
+     										data-device="HZ_Treppenhaus_Oben" 
+     										data-get="desiredTemperature" 
+     										data-temp="temperature"
+                            				data-valve="valveposition">
+										</div>
+                                    	<div data-type="popup" data-width="450px" class="">
+    									<div data-type="simplechart"
+        									data-device="HZ_Treppenhaus_Oben"
+        									data-logdevice="myDbLog"
+                        					data-logfile="HISTORY"
+        									data-get="temperature"
+        									data-minvalue="10"
+        									data-maxvalue="30"
+        									data-height="60"
+       				 						data-width="90"
+        									data-yticks="2"
+        									class="">
+    									</div>
+    									<div class="dialog">
+        									<header>Treppenhaus Oben</header>
+        									<div data-type="simplechart"
+            									data-device="HZ_Treppenhaus_Oben"
+            									data-logdevice="myDbLog"
+                            					data-logfile="HISTORY"
+            									data-get="temperature"
+            									data-minvalue="10"
+           				 						data-maxvalue="30"
+            									data-yticks="2"
+            									data-caption="$min°C - $max°C"
+            									data-height="250">
+        									</div>
+    									</div>
+									</div>
+                                    </div>
+                                	<div class="vbox">
+                                		<div class="big">Unten</div>
+                                		<div class="large" data-type="thermostat" 
+     										data-device="HZ_Treppenhaus_Unten" 
+     										data-get="desiredTemperature" 
+     										data-temp="temperature"
+                            				data-valve="valveposition">
+										</div>
+										<div data-type="popup" data-width="450px" class="">
+    									<div data-type="simplechart"
+        									data-device="HZ_Treppenhaus_Unten"
+        									data-logdevice="myDbLog"
+                        					data-logfile="HISTORY"
+        									data-get="temperature"
+        									data-minvalue="10"
+        									data-maxvalue="30"
+        									data-height="60"
+       				 						data-width="90"
+        									data-yticks="2"
+        									class="">
+    									</div>
+    									<div class="dialog">
+        									<header>Treppenhaus Unten</header>
+        									<div data-type="simplechart"
+            									data-device="HZ_Treppenhaus_Unten"
+            									data-logdevice="myDbLog"
+                            					data-logfile="HISTORY"
+            									data-get="temperature"
+            									data-minvalue="10"
+           				 						data-maxvalue="30"
+            									data-yticks="2"
+            									data-caption="$min°C - $max°C"
+            									data-height="250">
+        									</div>
+    									</div>
+									</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>          
+                </div> 
+                <!-- place your widget here -->
+            </li>
+            <li data-row="1" data-col="9" data-sizey="4" data-sizex="2">
+            	<div class="top-space inline">
+                	<div class="row top-space-2x">
+            			<div class="big" data-type="symbol" data-icon="fa-tint"><div class="mini" data-type="label" data-device="LaCrosse_14" data-get="humidity" data-unit="%"></div></div>
+                    	<div class="big" data-type="symbol" data-icon="fa-tint"><div class="mini" data-type="label" data-device="LaCrosse_14" data-get="humidity" data-unit="%"></div></div>
+                    </div>
+            	</div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

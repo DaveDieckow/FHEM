@@ -1,0 +1,36 @@
+################################################################################################################################
+#  Filestruktur fÃ¼r Mitteilungen:
+#  ==============================
+#  (= Severity 1 - 3: 1 - allgemeine Mitteilung, 2 - wichtige Mitteilung, 3 - Fehler oder Problem)
+#
+#  0|SV|1                   
+#  0|DE|Mitteilung 1....
+#  0|EN|Message 1 ...
+#
+#  1|SV|2
+#  1|DE|Mitteilung 2....
+#  1|EN|Message 2 ...
+#
+#  (Index kann bis max. 99999 laufen)
+#  Zeilenumbruch mit <br>
+#  Link einfÃ¼gen: <html><a href='xxx' target='_blank'>Beitrag</a></html>
+#
+################################################################################################################################
+1|SV|1
+1|DE|Ab 04.08. ca. 08:15 Uhr wird die Version 2.9.4 ausgeliefert. Infos zur Version findest du in diesem <html><a href='https://forum.fhem.de/index.php?msg=1367449' target='_blank'>Beitrag</a></html>. 
+1|EN|Version 2.9.4 will be released starting August 4 at approximately 8:15 a.m. You can find information about this version in this <html><a href=âhttps://forum.fhem.de/index.php?msg=1367449â target=â_blankâ>post</a></html>.
+2|SV|1
+2|DE|Ab 17.08. ca. 08:15 Uhr wird die Version 2.10.0 ausgeliefert. Es gibt eine Vielzahl von Patches und Weiterentwicklungen. Bitte unbedingt vor dem Update die Zusammenfassung in diesem <html><a href='https://forum.fhem.de/index.php?msg=1367815' target='_blank'>Beitrag</a></html> lesen. 
+2|EN|Version 2.10.0 will be released starting August 17 at approximately 8:15 a.m. It includes a large number of patches and enhancements. Please be sure to read the summary in this <html><a href=âhttps://forum.fhem.de/index.php?msg=1367815â target=â_blankâ>post</a></html> before updating.
+3|SV|1
+3|DE|Ab 30.08. ca. 08:15 Uhr wird die Version 2.10.2 mit kleineren Fixes und Anpassungen im internen KI-Guide ausgeliefert.
+3|EN|Starting on August 30 at approximately 8:15 a.m., version 2.10.2âwhich includes minor fixes and adjustments to the internal AI guideâwill be released.
+4|SV|1
+4|DE|Ab 20.09. ca. 08:15 Uhr wird die Version 2.10.3 ausgeliefert. Ãnderungen/Verbesserungen beziehen sich insbesondere auf die FluÃgrafik, Batterie SoC-Prognose, CON-KI Trainingsdatenbereitstellung und die MÃ¶glichkeit mehrere PV Anlagen mit unterschiedlichen geografischen Lokationen in einem FHEM-System zu verwalten. Weitere Informationen sind in diesem <html><a href='https://forum.fhem.de/index.php?msg=1369196' target='_blank'>Beitrag</a></html> zu lesen.
+4|EN|Version 2.10.3 will be released starting September 20 at approximately 8:15 a.m. Changes and improvements primarily relate to the flow graph, battery SoC forecast, CON-KI training data provision, and the ability to manage multiple PV systems with different geographic locations within a single FHEM system. Further information can be found in this <html><a href=âhttps://forum.fhem.de/index.php?msg=1369196â target=â_blankâ>post</a></html>.
+5|SV|1
+5|DE|Ab 21.09. ca. 08:15 Uhr wird die Version 2.10.4 ausgeliefert. Es wird ein potentielles Speicherleck bei Verwendung von AI::FANN beseitigt.
+5|EN|Version 2.10.4 will be released starting September 21 at approximately 8:15 a.m. A potential memory leak when using AI::FANN has been fixed.
+6|SV|1
+6|DE|Ab 28.09. ca. 08:15 Uhr wird die Version 2.10.5 ausgeliefert. Es sind vor Allem weitere Optimierungen und Code Reviews enthalten. Siehe eine Zusammnefassung in diesem <html><a href='https://forum.fhem.de/index.php?msg=1369510' target='_blank'>Beitrag</a></html> 
+6|EN|Version 2.10.5 will be released starting September 28 at approximately 8:15 a.m. It primarily includes further optimizations and code reviews. See a summary in this <html><a href=âhttps://forum.fhem.de/index.php?msg=1369510â target=â_blankâ>post</a></html>
