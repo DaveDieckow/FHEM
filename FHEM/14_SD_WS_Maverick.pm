@@ -1,5 +1,5 @@
 ##############################################
-# $Id: 14_SD_WS_Maverick.pm 27951 2023-09-12 20:02:04Z Sidey $
+# $Id: 14_SD_WS_Maverick.pm 31723 2026-10-03 12:32:29Z Sidey $
 # 
 # The purpose of this module is to support Maverick sensors
 # Sidey79 & Cruizer 2016
@@ -30,7 +30,7 @@ sub SD_WS_Maverick_Initialize
 {
   my ($hash) = @_;
 
-  $hash->{Match}     = "^P47#[A-Fa-f0-9]+";
+  $hash->{Match}     = qr/^P47#[A-Fa-f0-9]+/s;
   $hash->{DefFn}     = \&SD_WS_Maverick_Define;
   $hash->{UndefFn}   = \&SD_WS_Maverick_Undef;
   $hash->{ParseFn}   = \&SD_WS_Maverick_Parse;
@@ -56,11 +56,8 @@ SD_WS_Maverick_Define
         if(int(@a) < 3 );
 
   $hash->{CODE} = $a[2];
-  $hash->{lastMSG} =  "";
- # $hash->{bitMSG} =  "";
 
   $modules{SD_WS_Maverick}{defptr}{$a[2]} = $hash;
-  $hash->{STATE} = "Defined";
   
   return undef;
 }
@@ -206,7 +203,6 @@ SD_WS_Maverick_Parse
 
   $hash->{lastReceive} = time();
   $hash->{lastMSG} = $rawData;
-  #$hash->{bitMSG} = $bitData2; 
   
   # Den SensorState bei Inaktivität zurücksetzen lassen durch Timer 
   my $inactivityinterval=int(AttrVal($name,"inactivityinterval",360));

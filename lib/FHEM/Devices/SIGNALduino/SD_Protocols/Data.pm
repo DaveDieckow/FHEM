@@ -1,4 +1,4 @@
-# $Id: Data.pm 31082 2026-04-05 17:06:43Z Sidey $
+# $Id: Data.pm 31713 2026-10-03 12:26:57Z Sidey $
 # The file is part of the SIGNALduino project.
 # All protocol definitions are contained in this file.
 #
@@ -3367,10 +3367,10 @@ package FHEM::Devices::SIGNALduino::SD_Protocols::Data;
         modulation      => '2-FSK',
         regexMatch      => qr/^40/, 
         preamble        => 'W126#',
-        register        => ['0001','022E','0343','042D','05D4','060e','0780','0800','0D21','0E65','0FE8','10A9','115C','1202','1322','14F8','1543','1916','1B43','1C68'],
+        register        => ['0001','022E','0343','042D','05D4','0609','0780','0800','0D21','0E65','0FE8','10A9','115C','1202','1322','14F8','1543','1916','1B43','1C68'],
         rfmode          => 'Fine_Offset_WH40_868',
         clientmodule    => 'SD_WS',
-        length_min      => '22',
+        length_min      => '18',
         length_max      => '38', # WH68 - length_min => '32', length_max => '38',
       },
     "127" =>  ## Remote control with 14 buttons for ceiling fan

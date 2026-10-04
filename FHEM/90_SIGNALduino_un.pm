@@ -1,5 +1,5 @@
 ##############################################
-# $Id: 90_SIGNALduino_un.pm 31446 2026-07-05 23:37:59Z Sidey $
+# $Id: 90_SIGNALduino_un.pm 31720 2026-10-03 12:30:46Z Sidey $
 #
 # The file is part of the SIGNALduino project
 # see http://www.fhemwiki.de/wiki/SIGNALduino to support debugging of unknown signal data
@@ -22,7 +22,7 @@ my @bitcountlength = (0,0,0);   # array min|default|max
 sub SIGNALduino_un_Initialize {
   my ($hash) = @_;
 
-  $hash->{Match}     = '^[u]\d+(?:.\d)?#.*';
+  $hash->{Match}     = qr/^[u]\d+(?:.\d)?#.*/s;
   $hash->{DefFn}     = \&SIGNALduino_un_Define;
   $hash->{UndefFn}   = \&SIGNALduino_un_Undef;
   $hash->{AttrFn}    = \&SIGNALduino_un_Attr;

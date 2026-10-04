@@ -1,5 +1,5 @@
 ##############################################
-# $Id: 10_SD_Rojaflex.pm 31448 2026-07-05 23:46:20Z Sidey $
+# $Id: 10_SD_Rojaflex.pm 31719 2026-10-03 12:30:11Z Sidey $
 #
 
 package SD_Rojaflex;
@@ -58,7 +58,7 @@ sub Initialize {
 	for my $k (keys %codes) {
 		$rev_codes{$codes{$k}} = $k; # reverse codes
 	}
-	$hash->{Match}      = '^P109#[a-fA-F0-9]{18}';
+	$hash->{Match}      = qr/^P109#[a-fA-F0-9]{18}/s;
 	$hash->{SetFn}      = \&Set;
 	$hash->{DefFn}      = \&Define;
 	$hash->{UndefFn}    = \&Undef;

@@ -1,5 +1,30 @@
 # Add changes at the top of the list. Keep it in ASCII, and 80-char wide.
 # Do not insert empty lines here, update check depends on
+ - change:  14_SD_WS_Maverick: Match-Regex vorkompiliert, lastMSG und STATE
+            werden in Define nicht mehr gesetzt
+ - change:  14_SD_WS09: Match-Regex vorkompiliert, lastMSG, bitMSG und STATE
+            werden in Define nicht mehr gesetzt
+ - change:  14_SD_WS07: Match-Regex vorkompiliert, lastMSG, bitMSG und STATE
+            werden in Define nicht mehr gesetzt
+ - change:  90_SIGNALduino_un: Match-Regex vorkompiliert
+ - change:  10_SD_Rojaflex: Match-Regex vorkompiliert
+ - change:  10_SD_GT: Match-Regex vorkompiliert
+ - change:  10_FS10: Match-Regex vorkompiliert
+ - change:  41_OREGON: Match-Regex vorkompiliert
+ - change:  14_Hideki: Match-Regex vorkompiliert, lastMSG wird in Define nicht
+            mehr gesetzt
+ - change:  14_SD_WS: Dekodiertabelle wird einmal je Modulladung erzeugt und
+            im Modulhash gehalten, Match-Regex vorkompiliert, Protokolle 37,
+            44/44x (Bresser Temeo) und 64 (WH2) tabellengetrieben
+ - bugfix:  14_SD_WS: Protokoll 27 (EuroChron EFS-3110A) prematch korrigiert
+ - bugfix:  lib/FHEM/Devices/SIGNALduino/SD_Protocols/Data.pm: Protokoll 126
+            (Ecowitt WH40): Nachrichtenlaenge korrigiert
+ - feature: 00_SIGNALduino: Flash-Funktionen nach SD_Firmware ausgelagert,
+            Flashen von Arduinos (avrdude) ueber das Netzwerk (TCP/ser2net),
+            ESP8266 und ESP32 ueber HTTP, neues Attribut flashDevice,
+            Pfad des Flashlogs korrigiert, Match-Regex vorkompiliert
+ - feature: lib/FHEM/Devices/SIGNALduino/SD_Firmware.pm: neues Package fuer
+            die Flash-Funktionen des SIGNALduino
  - change:  93_Log2Syslog: v5.12.7 kleinere Optimierungen
  - change:  76_SolarForecast: Version 2.10.5
  - bugfix:  76_SolarForecast: potentielles Speicherleck mit AI::FANN beseitigt

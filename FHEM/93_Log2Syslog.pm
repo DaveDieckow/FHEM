@@ -1,5 +1,5 @@
 ##########################################################################################################################
-# $Id: 93_Log2Syslog.pm 31694 2026-09-28 19:20:33Z DS_Starter $
+# $Id: 93_Log2Syslog.pm 31696 2026-09-29 06:19:56Z DS_Starter $
 ##########################################################################################################################
 #       93_Log2Syslog.pm
 #
@@ -108,9 +108,10 @@ BEGIN {
 
 # Versions History intern:
 my %vNotesIntern = (
+  "5.12.8" => "29.09.2026  Fix Notes ".
   "5.12.7" => "28.09.2026  setPayload: \$otp nur kodieren wenn tatsächlich non-ASCII vorhanden sind ".
                            "Define Funktion refaktoriert, set ... reopen mit neuer Sub _setReopen refaktoriert ".
-                           "openSocket: Fehlendes Leeren von $hash->{CLIENTSOCKET} bei Verbindungsabbrüchen korrigiert ",
+                           "openSocket: Fehlendes Leeren von \$hash->{CLIENTSOCKET} bei Verbindungsabbrüchen korrigiert ",
   "5.12.6" => "10.09.2026  Verbesserungen und Bugfixes in Funktionen charFilter, parseFilter, setPayload, parsePayload, _buildPayload (neu) ".
                            "parsePayload: parseProfile für Unify Console Log verbessert ",
   "5.12.5" => "23.01.2023  Adaptation to change \%logInform in fhem.pl, Forum:#131790 ",
@@ -2702,12 +2703,12 @@ sub setVersionInfo {
   if($modules{$type}{META}{x_prereqs_src} && !$hash->{HELPER}{MODMETAABSENT}) {
       # META-Daten sind vorhanden
       $modules{$type}{META}{version} = "v".$v;                                        # Version aus META.json überschreiben, Anzeige mit {Dumper $modules{Log2Syslog}{META}}
-      if($modules{$type}{META}{x_version}) {                                          # {x_version} ( nur gesetzt wenn $Id: 93_Log2Syslog.pm 31694 2026-09-28 19:20:33Z DS_Starter $ im Kopf komplett! vorhanden )
+      if($modules{$type}{META}{x_version}) {                                          # {x_version} ( nur gesetzt wenn $Id: 93_Log2Syslog.pm 31696 2026-09-29 06:19:56Z DS_Starter $ im Kopf komplett! vorhanden )
           $modules{$type}{META}{x_version} =~ s/1\.1\.1/$v/gx;
       } else {
           $modules{$type}{META}{x_version} = $v; 
       }
-      return $@ unless (FHEM::Meta::SetInternals($hash));                             # FVERSION wird gesetzt ( nur gesetzt wenn $Id: 93_Log2Syslog.pm 31694 2026-09-28 19:20:33Z DS_Starter $ im Kopf komplett! vorhanden )
+      return $@ unless (FHEM::Meta::SetInternals($hash));                             # FVERSION wird gesetzt ( nur gesetzt wenn $Id: 93_Log2Syslog.pm 31696 2026-09-29 06:19:56Z DS_Starter $ im Kopf komplett! vorhanden )
       if(__PACKAGE__ eq "FHEM::$type" || __PACKAGE__ eq $type) {
           # es wird mit Packages gearbeitet -> Perl übliche Modulversion setzen
           # mit {<Modul>->VERSION()} im FHEMWEB kann Modulversion abgefragt werden
