@@ -12,174 +12,176 @@
 426 AllLights off
 33 AllLights on
 477 AllLights undefined
+1 At.LaCrosse.Reconnect state: disabled
+1 At.LaCrosse.Restart state: disabled
 1 At.MySQL.Dump state: disabled
-169 At.MySQL.Size state: Next: .*
-1028 AtCUL state: Next: .*
-1028 AtCUL2 state: Next: .*
-1028 AtCUL3 state: Next: .*
-171 AtPumpe state: Next: .*
-1954 BKW_Einspeisung energy: .*
-4452 BKW_Nutzung energy: .*
-499 Balkonkraftwerk AllPVforecastsToEvent: .* Wh
-16103 Balkonkraftwerk Current_AutarkyRate: .* %
+209 At.MySQL.Size state: Next: .*
+1269 AtCUL state: Next: .*
+1269 AtCUL2 state: Next: .*
+1269 AtCUL3 state: Next: .*
+212 AtPumpe state: Next: .*
+2314 BKW_Einspeisung energy: .*
+5228 BKW_Nutzung energy: .*
+637 Balkonkraftwerk AllPVforecastsToEvent: .* Wh
+21422 Balkonkraftwerk Current_AutarkyRate: .* %
 1 Balkonkraftwerk Current_Consumption: -.* W
-28144 Balkonkraftwerk Current_Consumption: .* W
-22674 Balkonkraftwerk Current_GridConsumption: .* W
-2296 Balkonkraftwerk Current_GridFeedIn: .* W
-17819 Balkonkraftwerk Current_PV: .* W
-18166 Balkonkraftwerk Current_SelfConsumption: .* W
-2689 Balkonkraftwerk Current_SelfConsumptionRate: .* %
-2296 Balkonkraftwerk Current_Surplus: .* W
-179 Balkonkraftwerk LastHourGridconsumptionReal: .* Wh
-103 Balkonkraftwerk LastHourPVforecast: .* Wh
-94 Balkonkraftwerk LastHourPVreal: .* Wh
-3865 Balkonkraftwerk NextHours_Sum01_PVforecast: .* Wh
-4158 Balkonkraftwerk NextHours_Sum02_PVforecast: .* Wh
-4749 Balkonkraftwerk NextHours_Sum03_PVforecast: .* Wh
-7666 Balkonkraftwerk NextHours_Sum04_ConsumptionForecast: .* Wh
-5266 Balkonkraftwerk NextHours_Sum04_PVforecast: .* Wh
-10163 Balkonkraftwerk RestOfDayConsumptionForecast: .* Wh
-3906 Balkonkraftwerk RestOfDayPVforecast: .* Wh
-3136 Balkonkraftwerk Today_CONdeviation: -.* %
-4523 Balkonkraftwerk Today_CONdeviation: .* %
-737 Balkonkraftwerk Today_CONforecast: .* Wh
-12031 Balkonkraftwerk Today_CONreal: .* Wh
-364 Balkonkraftwerk Today_Hour01_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour01_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour01_PVreal: .* Wh
-370 Balkonkraftwerk Today_Hour02_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour02_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour02_PVreal: .* Wh
-359 Balkonkraftwerk Today_Hour03_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour03_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour03_PVreal: .* Wh
-369 Balkonkraftwerk Today_Hour04_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour04_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour04_PVreal: .* Wh
-367 Balkonkraftwerk Today_Hour05_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour05_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour05_PVreal: .* Wh
-364 Balkonkraftwerk Today_Hour06_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour06_GridFeedIn: .* Wh
+37076 Balkonkraftwerk Current_Consumption: .* W
+30071 Balkonkraftwerk Current_GridConsumption: .* W
+2582 Balkonkraftwerk Current_GridFeedIn: .* W
+23762 Balkonkraftwerk Current_PV: .* W
+24165 Balkonkraftwerk Current_SelfConsumption: .* W
+3064 Balkonkraftwerk Current_SelfConsumptionRate: .* %
+2582 Balkonkraftwerk Current_Surplus: .* W
+219 Balkonkraftwerk LastHourGridconsumptionReal: .* Wh
+121 Balkonkraftwerk LastHourPVforecast: .* Wh
+112 Balkonkraftwerk LastHourPVreal: .* Wh
+4526 Balkonkraftwerk NextHours_Sum01_PVforecast: .* Wh
+4891 Balkonkraftwerk NextHours_Sum02_PVforecast: .* Wh
+5626 Balkonkraftwerk NextHours_Sum03_PVforecast: .* Wh
+9463 Balkonkraftwerk NextHours_Sum04_ConsumptionForecast: .* Wh
+6146 Balkonkraftwerk NextHours_Sum04_PVforecast: .* Wh
+12523 Balkonkraftwerk RestOfDayConsumptionForecast: .* Wh
+4536 Balkonkraftwerk RestOfDayPVforecast: .* Wh
+3410 Balkonkraftwerk Today_CONdeviation: -.* %
+5894 Balkonkraftwerk Today_CONdeviation: .* %
+918 Balkonkraftwerk Today_CONforecast: .* Wh
+14765 Balkonkraftwerk Today_CONreal: .* Wh
+469 Balkonkraftwerk Today_Hour01_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour01_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour01_PVreal: .* Wh
+476 Balkonkraftwerk Today_Hour02_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour02_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour02_PVreal: .* Wh
+461 Balkonkraftwerk Today_Hour03_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour03_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour03_PVreal: .* Wh
+473 Balkonkraftwerk Today_Hour04_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour04_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour04_PVreal: .* Wh
+471 Balkonkraftwerk Today_Hour05_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour05_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour05_PVreal: .* Wh
+469 Balkonkraftwerk Today_Hour06_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour06_GridFeedIn: .* Wh
 22 Balkonkraftwerk Today_Hour06_PVforecast: .* Wh
-7 Balkonkraftwerk Today_Hour06_PVreal: .* Wh
-380 Balkonkraftwerk Today_Hour07_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour07_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour06_PVreal: .* Wh
+484 Balkonkraftwerk Today_Hour07_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour07_GridFeedIn: .* Wh
 32 Balkonkraftwerk Today_Hour07_PVforecast: .* Wh
-7 Balkonkraftwerk Today_Hour07_PVreal: .* Wh
-406 Balkonkraftwerk Today_Hour08_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour08_GridFeedIn: .* Wh
-59 Balkonkraftwerk Today_Hour08_PVforecast: .* Wh
-20 Balkonkraftwerk Today_Hour08_PVreal: .* Wh
-401 Balkonkraftwerk Today_Hour09_GridConsumption: .* Wh
-29 Balkonkraftwerk Today_Hour09_GridFeedIn: .* Wh
-53 Balkonkraftwerk Today_Hour09_PVforecast: .* Wh
-218 Balkonkraftwerk Today_Hour09_PVreal: .* Wh
-412 Balkonkraftwerk Today_Hour10_GridConsumption: .* Wh
-24 Balkonkraftwerk Today_Hour10_GridFeedIn: .* Wh
-65 Balkonkraftwerk Today_Hour10_PVforecast: .* Wh
-466 Balkonkraftwerk Today_Hour10_PVreal: .* Wh
-416 Balkonkraftwerk Today_Hour11_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour11_GridFeedIn: .* Wh
-62 Balkonkraftwerk Today_Hour11_PVforecast: .* Wh
-394 Balkonkraftwerk Today_Hour11_PVreal: .* Wh
-400 Balkonkraftwerk Today_Hour12_GridConsumption: .* Wh
-8 Balkonkraftwerk Today_Hour12_GridFeedIn: .* Wh
-55 Balkonkraftwerk Today_Hour12_PVforecast: .* Wh
-407 Balkonkraftwerk Today_Hour12_PVreal: .* Wh
-342 Balkonkraftwerk Today_Hour13_GridConsumption: .* Wh
-59 Balkonkraftwerk Today_Hour13_GridFeedIn: .* Wh
-75 Balkonkraftwerk Today_Hour13_PVforecast: .* Wh
-443 Balkonkraftwerk Today_Hour13_PVreal: .* Wh
-443 Balkonkraftwerk Today_Hour14_GridConsumption: .* Wh
-46 Balkonkraftwerk Today_Hour14_GridFeedIn: .* Wh
-73 Balkonkraftwerk Today_Hour14_PVforecast: .* Wh
-482 Balkonkraftwerk Today_Hour14_PVreal: .* Wh
-431 Balkonkraftwerk Today_Hour15_GridConsumption: .* Wh
-77 Balkonkraftwerk Today_Hour15_GridFeedIn: .* Wh
-76 Balkonkraftwerk Today_Hour15_PVforecast: .* Wh
-509 Balkonkraftwerk Today_Hour15_PVreal: .* Wh
-354 Balkonkraftwerk Today_Hour16_GridConsumption: .* Wh
-214 Balkonkraftwerk Today_Hour16_GridFeedIn: .* Wh
-86 Balkonkraftwerk Today_Hour16_PVforecast: .* Wh
-733 Balkonkraftwerk Today_Hour16_PVreal: .* Wh
-372 Balkonkraftwerk Today_Hour17_GridConsumption: .* Wh
-261 Balkonkraftwerk Today_Hour17_GridFeedIn: .* Wh
-86 Balkonkraftwerk Today_Hour17_PVforecast: .* Wh
-612 Balkonkraftwerk Today_Hour17_PVreal: .* Wh
-367 Balkonkraftwerk Today_Hour18_GridConsumption: .* Wh
-104 Balkonkraftwerk Today_Hour18_GridFeedIn: .* Wh
-9 Balkonkraftwerk Today_Hour18_PVforecast: .* Wh
-344 Balkonkraftwerk Today_Hour18_PVreal: .* Wh
-399 Balkonkraftwerk Today_Hour19_GridConsumption: .* Wh
-14 Balkonkraftwerk Today_Hour19_GridFeedIn: .* Wh
-11 Balkonkraftwerk Today_Hour19_PVforecast: .* Wh
-72 Balkonkraftwerk Today_Hour19_PVreal: .* Wh
-381 Balkonkraftwerk Today_Hour20_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour20_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour20_PVreal: .* Wh
-380 Balkonkraftwerk Today_Hour21_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour21_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour21_PVreal: .* Wh
-389 Balkonkraftwerk Today_Hour22_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour22_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour22_PVreal: .* Wh
-387 Balkonkraftwerk Today_Hour23_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour23_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour23_PVreal: .* Wh
-379 Balkonkraftwerk Today_Hour24_GridConsumption: .* Wh
-7 Balkonkraftwerk Today_Hour24_GridFeedIn: .* Wh
-7 Balkonkraftwerk Today_Hour24_PVreal: .* Wh
-72 Balkonkraftwerk Today_MaxPVforecast: .* Wh
-61 Balkonkraftwerk Today_MaxPVforecastTime: .*
-301 Balkonkraftwerk Today_PVdeviation: -.* %
-2974 Balkonkraftwerk Today_PVdeviation: .* %
-165 Balkonkraftwerk Today_PVforecast: .* Wh
-4621 Balkonkraftwerk Today_PVreal: .* Wh
-7 Balkonkraftwerk Today_SunRise: .*
-7 Balkonkraftwerk Today_SunSet: .*
-541 Balkonkraftwerk Tomorrow_CONforecast: .* Wh
-195 Balkonkraftwerk Tomorrow_PVforecast: .* Wh
-7 Balkonkraftwerk Tomorrow_SunRise: .*
-7 Balkonkraftwerk Tomorrow_SunSet: .*
+9 Balkonkraftwerk Today_Hour07_PVreal: .* Wh
+522 Balkonkraftwerk Today_Hour08_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour08_GridFeedIn: .* Wh
+69 Balkonkraftwerk Today_Hour08_PVforecast: .* Wh
+27 Balkonkraftwerk Today_Hour08_PVreal: .* Wh
+499 Balkonkraftwerk Today_Hour09_GridConsumption: .* Wh
+44 Balkonkraftwerk Today_Hour09_GridFeedIn: .* Wh
+66 Balkonkraftwerk Today_Hour09_PVforecast: .* Wh
+312 Balkonkraftwerk Today_Hour09_PVreal: .* Wh
+477 Balkonkraftwerk Today_Hour10_GridConsumption: .* Wh
+45 Balkonkraftwerk Today_Hour10_GridFeedIn: .* Wh
+81 Balkonkraftwerk Today_Hour10_PVforecast: .* Wh
+541 Balkonkraftwerk Today_Hour10_PVreal: .* Wh
+476 Balkonkraftwerk Today_Hour11_GridConsumption: .* Wh
+8 Balkonkraftwerk Today_Hour11_GridFeedIn: .* Wh
+76 Balkonkraftwerk Today_Hour11_PVforecast: .* Wh
+429 Balkonkraftwerk Today_Hour11_PVreal: .* Wh
+460 Balkonkraftwerk Today_Hour12_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour12_GridFeedIn: .* Wh
+72 Balkonkraftwerk Today_Hour12_PVforecast: .* Wh
+445 Balkonkraftwerk Today_Hour12_PVreal: .* Wh
+402 Balkonkraftwerk Today_Hour13_GridConsumption: .* Wh
+60 Balkonkraftwerk Today_Hour13_GridFeedIn: .* Wh
+88 Balkonkraftwerk Today_Hour13_PVforecast: .* Wh
+489 Balkonkraftwerk Today_Hour13_PVreal: .* Wh
+503 Balkonkraftwerk Today_Hour14_GridConsumption: .* Wh
+47 Balkonkraftwerk Today_Hour14_GridFeedIn: .* Wh
+85 Balkonkraftwerk Today_Hour14_PVforecast: .* Wh
+542 Balkonkraftwerk Today_Hour14_PVreal: .* Wh
+491 Balkonkraftwerk Today_Hour15_GridConsumption: .* Wh
+78 Balkonkraftwerk Today_Hour15_GridFeedIn: .* Wh
+91 Balkonkraftwerk Today_Hour15_PVforecast: .* Wh
+587 Balkonkraftwerk Today_Hour15_PVreal: .* Wh
+404 Balkonkraftwerk Today_Hour16_GridConsumption: .* Wh
+246 Balkonkraftwerk Today_Hour16_GridFeedIn: .* Wh
+102 Balkonkraftwerk Today_Hour16_PVforecast: .* Wh
+882 Balkonkraftwerk Today_Hour16_PVreal: .* Wh
+417 Balkonkraftwerk Today_Hour17_GridConsumption: .* Wh
+303 Balkonkraftwerk Today_Hour17_GridFeedIn: .* Wh
+100 Balkonkraftwerk Today_Hour17_PVforecast: .* Wh
+696 Balkonkraftwerk Today_Hour17_PVreal: .* Wh
+486 Balkonkraftwerk Today_Hour18_GridConsumption: .* Wh
+105 Balkonkraftwerk Today_Hour18_GridFeedIn: .* Wh
+27 Balkonkraftwerk Today_Hour18_PVforecast: .* Wh
+441 Balkonkraftwerk Today_Hour18_PVreal: .* Wh
+518 Balkonkraftwerk Today_Hour19_GridConsumption: .* Wh
+16 Balkonkraftwerk Today_Hour19_GridFeedIn: .* Wh
+20 Balkonkraftwerk Today_Hour19_PVforecast: .* Wh
+90 Balkonkraftwerk Today_Hour19_PVreal: .* Wh
+492 Balkonkraftwerk Today_Hour20_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour20_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour20_PVreal: .* Wh
+493 Balkonkraftwerk Today_Hour21_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour21_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour21_PVreal: .* Wh
+502 Balkonkraftwerk Today_Hour22_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour22_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour22_PVreal: .* Wh
+492 Balkonkraftwerk Today_Hour23_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour23_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour23_PVreal: .* Wh
+482 Balkonkraftwerk Today_Hour24_GridConsumption: .* Wh
+9 Balkonkraftwerk Today_Hour24_GridFeedIn: .* Wh
+9 Balkonkraftwerk Today_Hour24_PVreal: .* Wh
+88 Balkonkraftwerk Today_MaxPVforecast: .* Wh
+76 Balkonkraftwerk Today_MaxPVforecastTime: .*
+387 Balkonkraftwerk Today_PVdeviation: -.* %
+3416 Balkonkraftwerk Today_PVdeviation: .* %
+200 Balkonkraftwerk Today_PVforecast: .* Wh
+5388 Balkonkraftwerk Today_PVreal: .* Wh
+9 Balkonkraftwerk Today_SunRise: .*
+9 Balkonkraftwerk Today_SunSet: .*
+642 Balkonkraftwerk Tomorrow_CONforecast: .* Wh
+228 Balkonkraftwerk Tomorrow_PVforecast: .* Wh
+9 Balkonkraftwerk Tomorrow_SunRise: .*
+9 Balkonkraftwerk Tomorrow_SunSet: .*
 1 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='planned'
-7 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='started'
+8 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='started'
 1 Balkonkraftwerk consumer01: name='Strom Aquarium' state='on' mode='must' planningstate='unknown'
-1129 Balkonkraftwerk consumer01_currentPower: .* W
-19 Balkonkraftwerk consumer01_planned_start: .*
-25 Balkonkraftwerk consumer01_planned_stop: .*
-7562 Balkonkraftwerk consumer02_currentPower: .* W
-15848 Balkonkraftwerk consumer03_currentPower: .* W
-846 Balkonkraftwerk consumer04_currentPower: .* W
-7 Balkonkraftwerk consumer05_currentPower: .* W
-473 Balkonkraftwerk consumer06_currentPower: .* W
-29 Balkonkraftwerk consumer06_planned_start: .*
-36 Balkonkraftwerk consumer06_planned_stop: .*
-8826 Balkonkraftwerk nextCycletime: .*
-686 Balkonkraftwerk nextRadiationAPICall: nach .*
-7 Balkonkraftwerk state: Consumer 'Strom Aquarium' switched off
-7 Balkonkraftwerk state: Consumer 'Strom Aquarium' switched on
-33260 Balkonkraftwerk state: updated
+1540 Balkonkraftwerk consumer01_currentPower: .* W
+24 Balkonkraftwerk consumer01_planned_start: .*
+31 Balkonkraftwerk consumer01_planned_stop: .*
+9238 Balkonkraftwerk consumer02_currentPower: .* W
+22499 Balkonkraftwerk consumer03_currentPower: .* W
+1015 Balkonkraftwerk consumer04_currentPower: .* W
+9 Balkonkraftwerk consumer05_currentPower: .* W
+545 Balkonkraftwerk consumer06_currentPower: .* W
+37 Balkonkraftwerk consumer06_planned_start: .*
+45 Balkonkraftwerk consumer06_planned_stop: .*
+10890 Balkonkraftwerk nextCycletime: .*
+845 Balkonkraftwerk nextRadiationAPICall: nach .*
+8 Balkonkraftwerk state: Consumer 'Strom Aquarium' switched off
+8 Balkonkraftwerk state: Consumer 'Strom Aquarium' switched on
+43693 Balkonkraftwerk state: updated
 1 CUL3_notify_1 state: active
 406 CUL_0 TRANSMIT LIMIT EXCEEDED
 11 CeilingLight dim0%
 19 CeilingLight dim37%
 33 CeilingLight off
-10772 DVES_CA5514 ENERGY_Power: .*
-9804 DVES_CA5514 ENERGY_Today: .*
-9592 DVES_CA5514 ENERGY_Total: .*
-7054 DVES_CA5514 ENERGY_Voltage: .*
-176 DVES_CA5514 ENERGY_Yesterday: .*
-9595 DVES_CA5514 energy: .*
+13187 DVES_CA5514 ENERGY_Power: .*
+11995 DVES_CA5514 ENERGY_Today: .*
+11739 DVES_CA5514 ENERGY_Total: .*
+8821 DVES_CA5514 ENERGY_Voltage: .*
+217 DVES_CA5514 ENERGY_Yesterday: .*
+11742 DVES_CA5514 energy: .*
 1 DVES_CA5514 state: on
-2323 DVES_CA5F28 ENERGY_Power: .*
-1850 DVES_CA5F28 ENERGY_Today: .*
-1849 DVES_CA5F28 ENERGY_Total: .*
-6588 DVES_CA5F28 ENERGY_Voltage: .*
-176 DVES_CA5F28 ENERGY_Yesterday: .*
-1852 DVES_CA5F28 energy: .*
-8 DVES_CA5F28 state: off
-7 DVES_CA5F28 state: on
+2948 DVES_CA5F28 ENERGY_Power: .*
+2367 DVES_CA5F28 ENERGY_Today: .*
+2366 DVES_CA5F28 ENERGY_Total: .*
+8281 DVES_CA5F28 ENERGY_Voltage: .*
+217 DVES_CA5F28 ENERGY_Yesterday: .*
+2369 DVES_CA5F28 energy: .*
+9 DVES_CA5F28 state: off
+8 DVES_CA5F28 state: on
 1 DWD_OpenData fc0_13_FF: .*
 1 DWD_OpenData fc0_13_Neff: .*
 1 DWD_OpenData fc0_13_RR1c: .*
@@ -1131,93 +1133,274 @@
 1 DWD_OpenData nextUpdate: .*
 1 DWD_OpenData state: forecast updated
 1 DWD_OpenData state: updating forecasts
-10279 ESP8266Client_BME680 CO2: .*
-9875 ESP8266Client_BME680 CompensatedHumidity: .*
-9005 ESP8266Client_BME680 CompensatedTemperature: .*
-9977 ESP8266Client_BME680 GasPercentage: .*
-10240 ESP8266Client_BME680 IAQ: .*
-1227 ESP8266Client_BME680 IAQ_accuracy: .*
-8223 ESP8266Client_BME680 Pressure: .*
-1022 ESP8266Client_BME680 Stabilization: .*
-10232 ESP8266Client_BME680 StaticIAQ: .*
-2041 ESPEasy_ESPEasy_0_Gas presence: absent
+12685 ESP8266Client_BME680 CO2: .*
+12168 ESP8266Client_BME680 CompensatedHumidity: .*
+11021 ESP8266Client_BME680 CompensatedTemperature: .*
+12330 ESP8266Client_BME680 GasPercentage: .*
+12641 ESP8266Client_BME680 IAQ: .*
+1494 ESP8266Client_BME680 IAQ_accuracy: .*
+10095 ESP8266Client_BME680 Pressure: .*
+1261 ESP8266Client_BME680 Stabilization: .*
+12632 ESP8266Client_BME680 StaticIAQ: .*
+2519 ESPEasy_ESPEasy_0_Gas presence: absent
 2 ESPEasy_ESPEasy_0_Gas state: Initialized
-2047 ESPEasy_ESPEasy_0_Gas state: absent
-2042 ESPEasy_ESPEasy_0_System presence: absent
+2526 ESPEasy_ESPEasy_0_Gas state: absent
+2520 ESPEasy_ESPEasy_0_System presence: absent
 2 ESPEasy_ESPEasy_0_System state: Initialized
-2048 ESPEasy_ESPEasy_0_System state: absent
-2041 ESPEasy_ESPEasy_1_Gas presence: absent
+2527 ESPEasy_ESPEasy_0_System state: absent
+2519 ESPEasy_ESPEasy_1_Gas presence: absent
 2 ESPEasy_ESPEasy_1_Gas state: Initialized
-2047 ESPEasy_ESPEasy_1_Gas state: absent
-2041 ESPEasy_ESPEasy_1_System presence: absent
+2526 ESPEasy_ESPEasy_1_Gas state: absent
+2519 ESPEasy_ESPEasy_1_System presence: absent
 2 ESPEasy_ESPEasy_1_System state: Initialized
-2047 ESPEasy_ESPEasy_1_System state: absent
-61 GR.HZ_Badezimmer state: .*
-13 GR.HZ_Badezimmer state: desiredTemperature .*
-35 HZ_Arbeitszimmer desiredTemperature: .*
-10 HZ_Arbeitszimmer temperature: .*
-35 HZ_Arbeitszimmer valveposition: .*
-31 HZ_Badezimmer_Fenster desiredTemperature: .*
-6 HZ_Badezimmer_Fenster temperature: .*
-31 HZ_Badezimmer_Fenster valveposition: .*
-30 HZ_Badezimmer_Handtuch desiredTemperature: .*
-4 HZ_Badezimmer_Handtuch temperature: .*
-30 HZ_Badezimmer_Handtuch valveposition: .*
-30 HZ_Flur desiredTemperature: .*
-5 HZ_Flur temperature: .*
-30 HZ_Flur valveposition: .*
-16 HZ_Kinderzimmer desiredTemperature: .*
-3 HZ_Kinderzimmer temperature: .*
-16 HZ_Kinderzimmer valveposition: .*
-28 HZ_Kueche desiredTemperature: .*
-3 HZ_Kueche temperature: .*
-28 HZ_Kueche valveposition: .*
-35 HZ_Schlafzimmer desiredTemperature: .*
-11 HZ_Schlafzimmer temperature: .*
-35 HZ_Schlafzimmer valveposition: .*
-26 HZ_Treppenhaus_Oben desiredTemperature: .*
-6 HZ_Treppenhaus_Oben temperature: .*
-26 HZ_Treppenhaus_Oben valveposition: .*
-26 HZ_Treppenhaus_Unten desiredTemperature: .*
-5 HZ_Treppenhaus_Unten temperature: .*
-26 HZ_Treppenhaus_Unten valveposition: .*
-4 INTF_CUL_433_Main CONNECTED
-1 INTF_CUL_433_Main DISCONNECTED
+2526 ESPEasy_ESPEasy_1_System state: absent
+516 GR.HZ_Badezimmer state: .*
+16 GR.HZ_Badezimmer state: desiredTemperature .*
+4 GR.HZ_Badezimmer state: desiredTemperature comfort
+4 GR.HZ_Badezimmer state: desiredTemperature eco
+17 GR.HZ_Badezimmer state: undefined
+149 HZ_Arbeitszimmer desiredTemperature: .*
+121 HZ_Arbeitszimmer temperature: .*
+148 HZ_Arbeitszimmer valveposition: .*
+147 HZ_Badezimmer_Fenster desiredTemperature: .*
+122 HZ_Badezimmer_Fenster temperature: .*
+155 HZ_Badezimmer_Fenster valveposition: .*
+152 HZ_Badezimmer_Handtuch desiredTemperature: .*
+132 HZ_Badezimmer_Handtuch temperature: .*
+164 HZ_Badezimmer_Handtuch valveposition: .*
+148 HZ_Flur desiredTemperature: .*
+125 HZ_Flur temperature: .*
+155 HZ_Flur valveposition: .*
+129 HZ_Kinderzimmer desiredTemperature: .*
+115 HZ_Kinderzimmer temperature: .*
+129 HZ_Kinderzimmer valveposition: .*
+145 HZ_Kueche desiredTemperature: .*
+122 HZ_Kueche temperature: .*
+170 HZ_Kueche valveposition: .*
+150 HZ_Schlafzimmer desiredTemperature: .*
+122 HZ_Schlafzimmer temperature: .*
+147 HZ_Schlafzimmer valveposition: .*
+94 HZ_Treppenhaus_Oben desiredTemperature: .*
+2 HZ_Treppenhaus_Oben desiredTemperature: off
+73 HZ_Treppenhaus_Oben temperature: .*
+96 HZ_Treppenhaus_Oben valveposition: .*
+65 HZ_Treppenhaus_Unten desiredTemperature: .*
+4 HZ_Treppenhaus_Unten desiredTemperature: off
+43 HZ_Treppenhaus_Unten temperature: .*
+66 HZ_Treppenhaus_Unten valveposition: .*
+6 INTF_CUL_433_Main CONNECTED
+2 INTF_CUL_433_Main DISCONNECTED
 1 INTF_CUL_433_Main reopen
 1 INTF_CUL_868_Secondary CONNECTED
 1 INTF_CUL_868_Secondary DISCONNECTED
 1 INTF_CUL_868_Secondary credit10ms: .*
 1 INTF_CUL_868_Secondary credit10ms: No answer
 1 INTF_CUL_868_Secondary reopen
-2 INTF_CUL_868_Upper CONNECTED
-3 INTF_CUL_868_Upper credit10ms: .*
-127 INTF_CUL_MAX RSSI: -.*
+3 INTF_CUL_868_Upper CONNECTED
+193 INTF_CUL_868_Upper credit10ms: .*
+3108 INTF_CUL_MAX RSSI: -.*
 1 INTF_CUL_MAX broadcastTime
-2 INTF_ESPEasy_Bridge state: Initialized
-1 INTF_LaCrosse_GW CONNECTED
+3 INTF_ESPEasy_Bridge state: Initialized
+2 INTF_LaCrosse_GW CONNECTED
 2 INTF_LaCrosse_GW DISCONNECTED
-14 INTF_LaCrosse_GW FramesPerMinute: .*
-14 INTF_LaCrosse_GW FreeHeap: .*
-14 INTF_LaCrosse_GW OLED: none
-14 INTF_LaCrosse_GW RSSI: -.*
-14 INTF_LaCrosse_GW ReceivedFrames: .*
+190 INTF_LaCrosse_GW FramesPerMinute: .*
+190 INTF_LaCrosse_GW FreeHeap: .*
+190 INTF_LaCrosse_GW OLED: none
+190 INTF_LaCrosse_GW RSSI: -.*
+190 INTF_LaCrosse_GW ReceivedFrames: .*
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 10Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 11Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 12Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 13Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 14Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 15Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 16Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 17Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 18Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 19Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 1Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 20Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 21Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 22Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 23Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 24Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 25Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 26Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 27Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 28Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 29Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 2Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 30Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 31Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 32Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 33Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 34Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 35Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 36Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 37Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 38Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 39Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 3Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 40Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 41Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 42Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 43Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 44Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 45Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 46Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 47Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 48Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 49Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 4Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 50Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 51Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 52Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 53Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 54Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 55Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 56Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 57Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 58Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 59Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 5Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 6Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 7Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 8Min. 0Sek.
 1 INTF_LaCrosse_GW UpTime: 0Tg. 0Std. 9Min. 0Sek.
-14 INTF_LaCrosse_GW UpTimeSeconds: .*
-1 INTF_LaCrosse_GW state: initialized
-1 INTF_LaCrosse_GW state: opened
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 0Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 10Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 11Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 12Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 13Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 14Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 15Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 16Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 17Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 18Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 19Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 1Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 20Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 21Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 22Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 23Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 24Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 25Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 26Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 27Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 28Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 29Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 2Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 30Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 31Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 32Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 33Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 34Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 35Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 36Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 37Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 38Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 39Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 3Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 40Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 41Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 42Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 43Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 44Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 45Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 46Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 47Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 48Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 49Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 4Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 50Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 51Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 52Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 53Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 54Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 55Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 56Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 57Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 58Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 59Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 5Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 6Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 7Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 8Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 1Std. 9Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 0Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 10Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 11Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 12Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 13Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 14Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 15Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 16Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 17Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 18Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 19Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 1Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 20Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 21Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 22Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 23Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 24Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 25Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 26Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 27Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 28Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 29Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 2Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 30Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 31Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 32Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 33Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 34Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 35Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 36Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 37Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 38Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 39Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 3Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 40Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 41Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 42Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 43Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 44Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 45Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 46Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 47Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 48Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 49Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 4Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 50Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 51Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 52Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 53Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 54Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 55Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 56Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 57Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 58Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 59Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 5Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 6Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 7Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 8Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 2Std. 9Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 0Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 10Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 1Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 2Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 3Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 4Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 5Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 6Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 7Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 8Min. 0Sek.
+1 INTF_LaCrosse_GW UpTime: 0Tg. 3Std. 9Min. 0Sek.
+190 INTF_LaCrosse_GW UpTimeSeconds: .*
+2 INTF_LaCrosse_GW state: initialized
+2 INTF_LaCrosse_GW state: opened
 2 INTF_LaCrosse_GW_02 CONNECTED
 190 INTF_LaCrosse_GW_02 FramesPerMinute: .*
 190 INTF_LaCrosse_GW_02 FreeHeap: .*
@@ -1418,19 +1601,19 @@
 643 INTF_LaCrosse_GW_02 raw "OLED show=Strom .* kWh"
 2 INTF_LaCrosse_GW_02 state: initialized
 2 INTF_LaCrosse_GW_02 state: opened
-20 INTF_MQTT_Broker nrclients: .*
-1714 LaCrosseXX pressure: .*
+52 INTF_MQTT_Broker nrclients: .*
+2249 LaCrosseXX pressure: .*
 2 LaCrosseXX temperature: -.*
-2748 LaCrosseXX temperature: .*
-18219 LaCrosse_01 dewpoint: .*
-7480 LaCrosse_01 humidity: .*
-12531 LaCrosse_01 temperature: .*
-17596 LaCrosse_02 dewpoint: .*
-5848 LaCrosse_02 humidity: .*
-14252 LaCrosse_02 temperature: .*
-18312 LaCrosse_14 dewpoint: .*
-5610 LaCrosse_14 humidity: .*
-15021 LaCrosse_14 temperature: .*
+3853 LaCrosseXX temperature: .*
+22099 LaCrosse_01 dewpoint: .*
+8643 LaCrosse_01 humidity: .*
+15599 LaCrosse_01 temperature: .*
+21884 LaCrosse_02 dewpoint: .*
+7184 LaCrosse_02 humidity: .*
+17669 LaCrosse_02 temperature: .*
+22197 LaCrosse_14 dewpoint: .*
+7055 LaCrosse_14 humidity: .*
+17896 LaCrosse_14 temperature: .*
 1 Lamp1 on
 6 Livingroom dim0%
 1 Livingroom dim06%
@@ -1444,37 +1627,39 @@
 2 Livingroom dim87%
 20 Livingroom off
 22 Livingroom on
-983 MQTT2_DVES_374D29 ENERGY_Power: .*
-175 MQTT2_DVES_374D29 ENERGY_Today: .*
-175 MQTT2_DVES_374D29 ENERGY_Total: .*
-983 MQTT2_DVES_374D29 ENERGY_Voltage: .*
-175 MQTT2_DVES_374D29 ENERGY_Yesterday: .*
-175 MQTT2_DVES_374D29 energy: .*
-172 MQTT2_DVES_374D29 state: off
-171 MQTT2_DVES_374D29 state: set_off
-6266 MQTT2_DVES_6886B0 ENERGY_Power: .*
-1731 MQTT2_DVES_6886B0 ENERGY_Today: .*
-1728 MQTT2_DVES_6886B0 ENERGY_Total: .*
-4865 MQTT2_DVES_6886B0 ENERGY_Voltage: .*
-176 MQTT2_DVES_6886B0 ENERGY_Yesterday: .*
-1729 MQTT2_DVES_6886B0 energy: .*
-10 MQTT2_DVES_6886B0 state: off
-9 MQTT2_DVES_6886B0 state: on
-109502 MQTT2_DVES_91D247 ENERGY_Power: .*
-6311 MQTT2_DVES_91D247 ENERGY_Today: .*
-6304 MQTT2_DVES_91D247 ENERGY_Total: .*
-22238 MQTT2_DVES_91D247 ENERGY_Voltage: .*
-176 MQTT2_DVES_91D247 ENERGY_Yesterday: .*
-6308 MQTT2_DVES_91D247 energy: .*
+1213 MQTT2_DVES_374D29 ENERGY_Power: .*
+216 MQTT2_DVES_374D29 ENERGY_Today: .*
+216 MQTT2_DVES_374D29 ENERGY_Total: .*
+1213 MQTT2_DVES_374D29 ENERGY_Voltage: .*
+216 MQTT2_DVES_374D29 ENERGY_Yesterday: .*
+216 MQTT2_DVES_374D29 energy: .*
+213 MQTT2_DVES_374D29 state: off
+1 MQTT2_DVES_374D29 state: on
+212 MQTT2_DVES_374D29 state: set_off
+2 MQTT2_DVES_374D29 state: set_toggle
+7216 MQTT2_DVES_6886B0 ENERGY_Power: .*
+2075 MQTT2_DVES_6886B0 ENERGY_Today: .*
+2071 MQTT2_DVES_6886B0 ENERGY_Total: .*
+5999 MQTT2_DVES_6886B0 ENERGY_Voltage: .*
+217 MQTT2_DVES_6886B0 ENERGY_Yesterday: .*
+2072 MQTT2_DVES_6886B0 energy: .*
+12 MQTT2_DVES_6886B0 state: off
+11 MQTT2_DVES_6886B0 state: on
+139066 MQTT2_DVES_91D247 ENERGY_Power: .*
+7618 MQTT2_DVES_91D247 ENERGY_Today: .*
+7610 MQTT2_DVES_91D247 ENERGY_Total: .*
+28779 MQTT2_DVES_91D247 ENERGY_Voltage: .*
+217 MQTT2_DVES_91D247 ENERGY_Yesterday: .*
+7615 MQTT2_DVES_91D247 energy: .*
 1 MQTT2_DVES_91D247 state: on
-18754 MQTT2_shellyem3_244CAB432745 emeter_0_power: -.*
-106406 MQTT2_shellyem3_244CAB432745 emeter_0_power: .*
-121620 MQTT2_shellyem3_244CAB432745 emeter_1_power: .*
-122355 MQTT2_shellyem3_244CAB432745 emeter_2_power: .*
-31449 MQTT2_shellyem3_244CAB432745 energy: .*
-10765 MQTT2_shellyem3_244CAB432745 energy_returned: .*
-25931 MQTT2_shellyem3_244CAB432745 power: -.*
-343205 MQTT2_shellyem3_244CAB432745 power: .*
+22495 MQTT2_shellyem3_244CAB432745 emeter_0_power: -.*
+133540 MQTT2_shellyem3_244CAB432745 emeter_0_power: .*
+151479 MQTT2_shellyem3_244CAB432745 emeter_1_power: .*
+152528 MQTT2_shellyem3_244CAB432745 emeter_2_power: .*
+38697 MQTT2_shellyem3_244CAB432745 energy: .*
+13232 MQTT2_shellyem3_244CAB432745 energy_returned: .*
+30603 MQTT2_shellyem3_244CAB432745 power: -.*
+429442 MQTT2_shellyem3_244CAB432745 power: .*
 1 Office dim100%
 1 Office dim50%
 1 Office dim75%
@@ -1484,27 +1669,27 @@
 28 Outdoor off
 29 Outdoor on
 5 Outdoor on-for-timer .*
-1034 PID_Fussbodenheizung actuation: .*
-1034 PID_Fussbodenheizung actuationCalc: -.*
-1034 PID_Fussbodenheizung delta: -.*
-1639 PID_Fussbodenheizung desired: .*
-1034 PID_Fussbodenheizung measured: .*
-1034 PID_Fussbodenheizung p_d: .*
-1034 PID_Fussbodenheizung p_i: -.*
-1034 PID_Fussbodenheizung p_p: -.*
-6 PID_Fussbodenheizung state: initializing
-1034 PID_Fussbodenheizung state: processing
+1276 PID_Fussbodenheizung actuation: .*
+1276 PID_Fussbodenheizung actuationCalc: -.*
+1276 PID_Fussbodenheizung delta: -.*
+2021 PID_Fussbodenheizung desired: .*
+1276 PID_Fussbodenheizung measured: .*
+1276 PID_Fussbodenheizung p_d: .*
+1276 PID_Fussbodenheizung p_i: -.*
+1276 PID_Fussbodenheizung p_p: -.*
+7 PID_Fussbodenheizung state: initializing
+1276 PID_Fussbodenheizung state: processing
 29 Projector off
 17 Projector on
-340 PumpeActor energy: .*
-346 PumpeActor state: .*
+420 PumpeActor energy: .*
+427 PumpeActor state: .*
 7 ReadingLight dim0%
 13 ReadingLight dim12%
 19 ReadingLight dim37%
 24 ReadingLight off
-2 Rep.MySQL.agent connectionEncoding: utf8mb4
-2 Rep.MySQL.agent dbEncoding: utf8mb4
-2 Rep.MySQL.agent dbModel: MYSQL
+3 Rep.MySQL.agent connectionEncoding: utf8mb4
+3 Rep.MySQL.agent dbEncoding: utf8mb4
+3 Rep.MySQL.agent dbModel: MYSQL
 1 Rep.MySQL.agent device_not_renamed: WARNING - old: CUL_MAX_Device not found
 1 Rep.MySQL.agent device_not_renamed: WARNING - old: ESP_Temp not found
 1 Rep.MySQL.agent device_not_renamed: WARNING - old: LGW_02 not found
@@ -1513,17 +1698,18 @@
 1 Rep.MySQL.agent device_not_renamed: WARNING - old: MAPLECUL2_868 not found
 1 Rep.MySQL.agent device_not_renamed: WARNING - old: MQTT2_FHEM_Server not found
 1 Rep.MySQL.agent device_not_renamed: WARNING - old: myLaCrosseGateway not found
-2 Rep.MySQL.agent indexState: Index Report_Idx exists
+3 Rep.MySQL.agent indexState: Index Report_Idx exists
 8 Rep.MySQL.agent number_lines_updated: .*
-2 Rep.MySQL.agent state: connected
+3 Rep.MySQL.agent state: connected
 8 Rep.MySQL.agent state: done
 1 Rep.MySQL.agent state: initialized
 8 Rep.MySQL.agent state: running
-2 Rep.MySQL.agent state: running read database properties
-2 Rep.MySQL.agent timestamp_oldest_dataset: .*
+3 Rep.MySQL.agent state: running read database properties
+3 Rep.MySQL.agent timestamp_oldest_dataset: .*
+1 Rep.MySQL.agent userRights: DELETE,INSERT,USAGE,SELECT,UPDATE
 1 Rep.MySQL.agent userRights: UPDATE,INSERT,DELETE,USAGE,SELECT
 1 Rep.MySQL.agent userRights: USAGE,DELETE,SELECT,INSERT,UPDATE
-7 Rep.MySQL.backup dumpMySQL clientSide
+9 Rep.MySQL.backup dumpMySQL clientSide
 1 Rep.MySQL.operate STAT_Aborted_clients: .*
 1 Rep.MySQL.operate STAT_Aborted_connects: .*
 1 Rep.MySQL.operate STAT_Aborted_connects_preauth: .*
@@ -2116,116 +2302,208 @@
 1 Rep.MySQL.shrink state: running read database properties
 1 Rep.MySQL.shrink timestamp_oldest_dataset: .*
 1 Rep.MySQL.shrink userRights: DELETE,UPDATE,USAGE,INSERT,SELECT
-170 Rep.MySQL.size INFO_history.avg_row_length: .*
-170 Rep.MySQL.size INFO_history.collation: utf8mb4_bin
-170 Rep.MySQL.size INFO_history.create_time: .*
-170 Rep.MySQL.size INFO_history.data_free_MB: .*
-105 Rep.MySQL.size INFO_history.data_index_length_MB: .*
-170 Rep.MySQL.size INFO_history.data_length_MB: .*
-170 Rep.MySQL.size INFO_history.engine: InnoDB
-105 Rep.MySQL.size INFO_history.index_length_MB: .*
-170 Rep.MySQL.size INFO_history.number_of_rows: .*
-170 Rep.MySQL.size INFO_history.row_format: Dynamic
-168 Rep.MySQL.size INFO_history.update_time: .*
-170 Rep.MySQL.size INFO_history.version: .*
-5 Rep.MySQL.size connectionEncoding: utf8mb4
-5 Rep.MySQL.size dbEncoding: utf8mb4
-5 Rep.MySQL.size dbModel: MYSQL
-5 Rep.MySQL.size indexState: Index Report_Idx exists
-170 Rep.MySQL.size number_rows_displayed: .*
-5 Rep.MySQL.size state: connected
-170 Rep.MySQL.size state: done
-170 Rep.MySQL.size state: running
-5 Rep.MySQL.size state: running read database properties
-5 Rep.MySQL.size timestamp_oldest_dataset: .*
+210 Rep.MySQL.size INFO_history.avg_row_length: .*
+210 Rep.MySQL.size INFO_history.collation: utf8mb4_bin
+210 Rep.MySQL.size INFO_history.create_time: .*
+210 Rep.MySQL.size INFO_history.data_free_MB: .*
+131 Rep.MySQL.size INFO_history.data_index_length_MB: .*
+210 Rep.MySQL.size INFO_history.data_length_MB: .*
+210 Rep.MySQL.size INFO_history.engine: InnoDB
+131 Rep.MySQL.size INFO_history.index_length_MB: .*
+210 Rep.MySQL.size INFO_history.number_of_rows: .*
+210 Rep.MySQL.size INFO_history.row_format: Dynamic
+208 Rep.MySQL.size INFO_history.update_time: .*
+210 Rep.MySQL.size INFO_history.version: .*
+6 Rep.MySQL.size connectionEncoding: utf8mb4
+6 Rep.MySQL.size dbEncoding: utf8mb4
+6 Rep.MySQL.size dbModel: MYSQL
+6 Rep.MySQL.size indexState: Index Report_Idx exists
+210 Rep.MySQL.size number_rows_displayed: .*
+6 Rep.MySQL.size state: connected
+210 Rep.MySQL.size state: done
+210 Rep.MySQL.size state: running
+6 Rep.MySQL.size state: running read database properties
+6 Rep.MySQL.size timestamp_oldest_dataset: .*
 1 Rep.MySQL.size userRights: INSERT,SELECT,UPDATE,DELETE,USAGE
 1 Rep.MySQL.size userRights: UPDATE,SELECT,INSERT,DELETE,USAGE
+1 Rep.MySQL.size userRights: UPDATE,USAGE,INSERT,SELECT,DELETE
 1 Rep.MySQL.size userRights: USAGE,DELETE,SELECT,INSERT,UPDATE
 1 Rep.MySQL.size userRights: USAGE,INSERT,DELETE,SELECT,UPDATE
 1 Rep.MySQL.size userRights: USAGE,SELECT,DELETE,UPDATE,INSERT
-1734 Rep.MySQL.statistic.Wohnung.day .*
-4266 Rep.MySQL.statistic.Wohnung.day .*: -
-6 Rep.MySQL.statistic.Wohnung.day WARNING - see readings 'less_data_in_period' or 'diff_overrun_limit_XX'
-9 Rep.MySQL.statistic.Wohnung.day background_processing_time: .*
-3 Rep.MySQL.statistic.Wohnung.day connectionEncoding: utf8mb4
-3 Rep.MySQL.statistic.Wohnung.day dbEncoding: utf8mb4
-3 Rep.MySQL.statistic.Wohnung.day dbModel: MYSQL
-6 Rep.MySQL.statistic.Wohnung.day db_lines_processed: .*
-3 Rep.MySQL.statistic.Wohnung.day indexState: Index Report_Idx exists
-6 Rep.MySQL.statistic.Wohnung.day less_data_in_period: .* ||
-6 Rep.MySQL.statistic.Wohnung.day number_rows_displayed: .*
-9 Rep.MySQL.statistic.Wohnung.day sql_processing_time: .*
-3 Rep.MySQL.statistic.Wohnung.day state: connected
-7 Rep.MySQL.statistic.Wohnung.day state: running
-3 Rep.MySQL.statistic.Wohnung.day state: running read database properties
-3 Rep.MySQL.statistic.Wohnung.day timestamp_oldest_dataset: .*
+2312 Rep.MySQL.statistic.Wohnung.day .*
+5688 Rep.MySQL.statistic.Wohnung.day .*: -
+8 Rep.MySQL.statistic.Wohnung.day WARNING - see readings 'less_data_in_period' or 'diff_overrun_limit_XX'
+12 Rep.MySQL.statistic.Wohnung.day background_processing_time: .*
+4 Rep.MySQL.statistic.Wohnung.day connectionEncoding: utf8mb4
+4 Rep.MySQL.statistic.Wohnung.day dbEncoding: utf8mb4
+4 Rep.MySQL.statistic.Wohnung.day dbModel: MYSQL
+8 Rep.MySQL.statistic.Wohnung.day db_lines_processed: .*
+4 Rep.MySQL.statistic.Wohnung.day indexState: Index Report_Idx exists
+8 Rep.MySQL.statistic.Wohnung.day less_data_in_period: .* ||
+8 Rep.MySQL.statistic.Wohnung.day number_rows_displayed: .*
+12 Rep.MySQL.statistic.Wohnung.day sql_processing_time: .*
+4 Rep.MySQL.statistic.Wohnung.day state: connected
+9 Rep.MySQL.statistic.Wohnung.day state: running
+4 Rep.MySQL.statistic.Wohnung.day state: running read database properties
+4 Rep.MySQL.statistic.Wohnung.day timestamp_oldest_dataset: .*
+1 Rep.MySQL.statistic.Wohnung.day userRights: SELECT,INSERT,USAGE,UPDATE,DELETE
 1 Rep.MySQL.statistic.Wohnung.day userRights: SELECT,UPDATE,DELETE,INSERT,USAGE
 1 Rep.MySQL.statistic.Wohnung.day userRights: UPDATE,DELETE,USAGE,INSERT,SELECT
 1 Rep.MySQL.statistic.Wohnung.day userRights: UPDATE,INSERT,USAGE,SELECT,DELETE
-19 SCHED_Arbeitszimmer_Urlaub currValue: .*
-19 SCHED_Arbeitszimmer_Urlaub nextUpdate: .*
-19 SCHED_Arbeitszimmer_Urlaub nextValue: .*
-13 SCHED_Arbeitszimmer_Urlaub state: .*
-6 SCHED_Arbeitszimmer_Urlaub state: active
-6 SCHED_Arbeitszimmer_Urlaub state: inactive
-19 SCHED_Badezimmer_Urlaub currValue: .*
-19 SCHED_Badezimmer_Urlaub nextUpdate: .*
-19 SCHED_Badezimmer_Urlaub nextValue: .*
-13 SCHED_Badezimmer_Urlaub state: .*
-6 SCHED_Badezimmer_Urlaub state: active
-6 SCHED_Badezimmer_Urlaub state: inactive
-19 SCHED_Flur_Urlaub currValue: .*
-19 SCHED_Flur_Urlaub nextUpdate: .*
-19 SCHED_Flur_Urlaub nextValue: .*
-13 SCHED_Flur_Urlaub state: .*
-6 SCHED_Flur_Urlaub state: active
-6 SCHED_Flur_Urlaub state: inactive
-19 SCHED_Kinderzimmer_Urlaub currValue: .*
-19 SCHED_Kinderzimmer_Urlaub nextUpdate: .*
-19 SCHED_Kinderzimmer_Urlaub nextValue: .*
-13 SCHED_Kinderzimmer_Urlaub state: .*
-6 SCHED_Kinderzimmer_Urlaub state: active
-6 SCHED_Kinderzimmer_Urlaub state: inactive
-19 SCHED_Kueche_Urlaub currValue: .*
-19 SCHED_Kueche_Urlaub nextUpdate: .*
-19 SCHED_Kueche_Urlaub nextValue: .*
-13 SCHED_Kueche_Urlaub state: .*
-6 SCHED_Kueche_Urlaub state: active
-6 SCHED_Kueche_Urlaub state: inactive
-19 SCHED_Schlafzimmer_Urlaub currValue: .*
-19 SCHED_Schlafzimmer_Urlaub nextUpdate: .*
-19 SCHED_Schlafzimmer_Urlaub nextValue: .*
-13 SCHED_Schlafzimmer_Urlaub state: .*
-6 SCHED_Schlafzimmer_Urlaub state: active
-6 SCHED_Schlafzimmer_Urlaub state: inactive
-13 SCHED_Treppenhaus_Urlaub currValue: eco
-13 SCHED_Treppenhaus_Urlaub nextUpdate: .*
-13 SCHED_Treppenhaus_Urlaub nextValue: eco
-6 SCHED_Treppenhaus_Urlaub state: active
+1 SCHED_Arbeitszimmer disabled: .*
+1 SCHED_Arbeitszimmer state: inactive
+2 SCHED_Arbeitszimmer_HomeOffice currValue: comfort
+5 SCHED_Arbeitszimmer_HomeOffice currValue: eco
+1 SCHED_Arbeitszimmer_HomeOffice disabled: .*
+7 SCHED_Arbeitszimmer_HomeOffice nextUpdate: .*
+2 SCHED_Arbeitszimmer_HomeOffice nextValue: comfort
+5 SCHED_Arbeitszimmer_HomeOffice nextValue: eco
+1 SCHED_Arbeitszimmer_HomeOffice state: active
+2 SCHED_Arbeitszimmer_HomeOffice state: comfort
+4 SCHED_Arbeitszimmer_HomeOffice state: eco
+1 SCHED_Arbeitszimmer_HomeOffice state: inactive
+21 SCHED_Arbeitszimmer_Urlaub currValue: .*
+1 SCHED_Arbeitszimmer_Urlaub disabled: .*
+21 SCHED_Arbeitszimmer_Urlaub nextUpdate: .*
+21 SCHED_Arbeitszimmer_Urlaub nextValue: .*
+14 SCHED_Arbeitszimmer_Urlaub state: .*
+7 SCHED_Arbeitszimmer_Urlaub state: active
+8 SCHED_Arbeitszimmer_Urlaub state: inactive
+1 SCHED_Badezimmer disabled: .*
+1 SCHED_Badezimmer state: inactive
+2 SCHED_Badezimmer_HomeOffice currValue: .*
+5 SCHED_Badezimmer_HomeOffice currValue: comfort
+4 SCHED_Badezimmer_HomeOffice currValue: eco
+1 SCHED_Badezimmer_HomeOffice disabled: .*
+11 SCHED_Badezimmer_HomeOffice nextUpdate: .*
+2 SCHED_Badezimmer_HomeOffice nextValue: .*
+4 SCHED_Badezimmer_HomeOffice nextValue: comfort
+5 SCHED_Badezimmer_HomeOffice nextValue: eco
+2 SCHED_Badezimmer_HomeOffice state: .*
+3 SCHED_Badezimmer_HomeOffice state: active
+4 SCHED_Badezimmer_HomeOffice state: comfort
+4 SCHED_Badezimmer_HomeOffice state: eco
+1 SCHED_Badezimmer_HomeOffice state: inactive
+21 SCHED_Badezimmer_Urlaub currValue: .*
+1 SCHED_Badezimmer_Urlaub disabled: .*
+21 SCHED_Badezimmer_Urlaub nextUpdate: .*
+21 SCHED_Badezimmer_Urlaub nextValue: .*
+14 SCHED_Badezimmer_Urlaub state: .*
+7 SCHED_Badezimmer_Urlaub state: active
+8 SCHED_Badezimmer_Urlaub state: inactive
+1 SCHED_Flur disabled: .*
+1 SCHED_Flur state: inactive
+2 SCHED_Flur_HomeOffice currValue: comfort
+5 SCHED_Flur_HomeOffice currValue: eco
+1 SCHED_Flur_HomeOffice disabled: .*
+7 SCHED_Flur_HomeOffice nextUpdate: .*
+2 SCHED_Flur_HomeOffice nextValue: comfort
+5 SCHED_Flur_HomeOffice nextValue: eco
+3 SCHED_Flur_HomeOffice state: active
+2 SCHED_Flur_HomeOffice state: comfort
+4 SCHED_Flur_HomeOffice state: eco
+1 SCHED_Flur_HomeOffice state: inactive
+21 SCHED_Flur_Urlaub currValue: .*
+1 SCHED_Flur_Urlaub disabled: .*
+21 SCHED_Flur_Urlaub nextUpdate: .*
+21 SCHED_Flur_Urlaub nextValue: .*
+14 SCHED_Flur_Urlaub state: .*
+7 SCHED_Flur_Urlaub state: active
+8 SCHED_Flur_Urlaub state: inactive
+1 SCHED_Kinderzimmer disabled: .*
+1 SCHED_Kinderzimmer state: inactive
+25 SCHED_Kinderzimmer_Urlaub currValue: .*
+25 SCHED_Kinderzimmer_Urlaub nextUpdate: .*
+25 SCHED_Kinderzimmer_Urlaub nextValue: .*
+17 SCHED_Kinderzimmer_Urlaub state: .*
+8 SCHED_Kinderzimmer_Urlaub state: active
+8 SCHED_Kinderzimmer_Urlaub state: inactive
+1 SCHED_Kueche disabled: .*
+1 SCHED_Kueche state: inactive
+2 SCHED_Kueche_HomeOffice currValue: comfort
+5 SCHED_Kueche_HomeOffice currValue: eco
+1 SCHED_Kueche_HomeOffice disabled: .*
+7 SCHED_Kueche_HomeOffice nextUpdate: .*
+2 SCHED_Kueche_HomeOffice nextValue: comfort
+5 SCHED_Kueche_HomeOffice nextValue: eco
+3 SCHED_Kueche_HomeOffice state: active
+2 SCHED_Kueche_HomeOffice state: comfort
+4 SCHED_Kueche_HomeOffice state: eco
+1 SCHED_Kueche_HomeOffice state: inactive
+21 SCHED_Kueche_Urlaub currValue: .*
+1 SCHED_Kueche_Urlaub disabled: .*
+21 SCHED_Kueche_Urlaub nextUpdate: .*
+21 SCHED_Kueche_Urlaub nextValue: .*
+14 SCHED_Kueche_Urlaub state: .*
+7 SCHED_Kueche_Urlaub state: active
+8 SCHED_Kueche_Urlaub state: inactive
+5 SCHED_Schlafzimmer currValue: comfort
+2 SCHED_Schlafzimmer currValue: eco
+1 SCHED_Schlafzimmer disabled: .*
+7 SCHED_Schlafzimmer nextUpdate: .*
+5 SCHED_Schlafzimmer nextValue: comfort
+2 SCHED_Schlafzimmer nextValue: eco
+3 SCHED_Schlafzimmer state: active
+4 SCHED_Schlafzimmer state: comfort
+2 SCHED_Schlafzimmer state: eco
+1 SCHED_Schlafzimmer state: inactive
+21 SCHED_Schlafzimmer_Urlaub currValue: .*
+1 SCHED_Schlafzimmer_Urlaub disabled: .*
+21 SCHED_Schlafzimmer_Urlaub nextUpdate: .*
+21 SCHED_Schlafzimmer_Urlaub nextValue: .*
+14 SCHED_Schlafzimmer_Urlaub state: .*
+7 SCHED_Schlafzimmer_Urlaub state: active
+8 SCHED_Schlafzimmer_Urlaub state: inactive
+2 SCHED_Treppenhaus currValue: comfort
+5 SCHED_Treppenhaus currValue: eco
+1 SCHED_Treppenhaus disabled: .*
+7 SCHED_Treppenhaus nextUpdate: .*
+2 SCHED_Treppenhaus nextValue: comfort
+5 SCHED_Treppenhaus nextValue: eco
+6 SCHED_Treppenhaus state: active
+2 SCHED_Treppenhaus state: comfort
+3 SCHED_Treppenhaus state: eco
+2 SCHED_Treppenhaus state: inactive
+14 SCHED_Treppenhaus_Urlaub currValue: eco
+1 SCHED_Treppenhaus_Urlaub disabled: .*
+14 SCHED_Treppenhaus_Urlaub nextUpdate: .*
+14 SCHED_Treppenhaus_Urlaub nextValue: eco
+7 SCHED_Treppenhaus_Urlaub state: active
 7 SCHED_Treppenhaus_Urlaub state: eco
-6 SCHED_Treppenhaus_Urlaub state: inactive
-19 SCHED_Wohnzimmer_Urlaub currValue: .*
-19 SCHED_Wohnzimmer_Urlaub nextUpdate: .*
-19 SCHED_Wohnzimmer_Urlaub nextValue: .*
-13 SCHED_Wohnzimmer_Urlaub state: .*
-6 SCHED_Wohnzimmer_Urlaub state: active
-6 SCHED_Wohnzimmer_Urlaub state: inactive
+8 SCHED_Treppenhaus_Urlaub state: inactive
+2 SCHED_Wohnzimmer currValue: comfort
+5 SCHED_Wohnzimmer currValue: eco
+1 SCHED_Wohnzimmer disabled: .*
+7 SCHED_Wohnzimmer nextUpdate: .*
+2 SCHED_Wohnzimmer nextValue: comfort
+5 SCHED_Wohnzimmer nextValue: eco
+4 SCHED_Wohnzimmer state: active
+2 SCHED_Wohnzimmer state: comfort
+4 SCHED_Wohnzimmer state: eco
+1 SCHED_Wohnzimmer state: inactive
+21 SCHED_Wohnzimmer_Urlaub currValue: .*
+1 SCHED_Wohnzimmer_Urlaub disabled: .*
+21 SCHED_Wohnzimmer_Urlaub nextUpdate: .*
+21 SCHED_Wohnzimmer_Urlaub nextValue: .*
+14 SCHED_Wohnzimmer_Urlaub state: .*
+7 SCHED_Wohnzimmer_Urlaub state: active
+8 SCHED_Wohnzimmer_Urlaub state: inactive
 1 SVG_01_Garden copyGplotFile
 1 SVG_02_Cellar copyGplotFile
 1 SVG_03_Dewpoint copyGplotFile
 1 SVG_Log.Cellar_1 copyGplotFile
 2 SVG_Log.Dewpoint_1 copyGplotFile
 1 SVG_Log.Garden_1 copyGplotFile
-9897 SWIT_IT_Arbeitszimmer_Ventilator state: off
-166 SWIT_IT_Arbeitszimmer_Ventilator state: on
-7 SYS_Backup state: Ausführen
+11519 SWIT_IT_Arbeitszimmer_Ventilator state: off
+955 SWIT_IT_Arbeitszimmer_Ventilator state: on
+9 SYS_Backup state: Ausführen
 4 SYS_MAX_Scanner run
 17 Screen down
 30 Screen up
 1 Sens.Out T: .* IR: no
 147128 ShellyWaschmaschiene current: .*
 55685 ShellyWaschmaschiene dst: ShellyWaschmaschiene/events
-147819 ShellyWaschmaschiene energy: .*
+148054 ShellyWaschmaschiene energy: .*
 31327 ShellyWaschmaschiene energy_CounterCurrent: .*
 507 ShellyWaschmaschiene energy_CounterDay1st: .*
 507 ShellyWaschmaschiene energy_CounterDayLast: .*
@@ -2346,115 +2624,116 @@
 4 ShellyWaschmaschiene params_wifi_sta_ip: .*
 4 ShellyWaschmaschiene params_wifi_status: got ip
 4 ShellyWaschmaschiene params_ws_connected: false
-162775 ShellyWaschmaschiene power: .*
+164606 ShellyWaschmaschiene power: .*
 55685 ShellyWaschmaschiene src: shellyplugmg3-9070696e6994
 147128 ShellyWaschmaschiene switch_state: on
-150902 ShellyWaschmaschiene voltage: .*
-6 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX
-6 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01
-6 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02
-6 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02,LaCrosse_14
-5 StatDeviceTrend monitoredDevicesMAX: HZ_Arbeitszimmer
-5 StatDeviceTrend monitoredDevicesMAX: HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
+153529 ShellyWaschmaschiene voltage: .*
+7 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX
+7 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01
+7 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02
+7 StatDeviceTrend monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02,LaCrosse_14
+6 StatDeviceTrend monitoredDevicesMAX: HZ_Arbeitszimmer
+6 StatDeviceTrend monitoredDevicesMAX: HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
 1 StatDeviceTrend monitoredDevicesMAX: WT_Wohnzimmer
 1 StatDeviceTrend monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer
 1 StatDeviceTrend monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
-6 StatDeviceTrend monitoredDevicesUnknown: AZ_ESPEasy_ESP_Easy_3_Barometer,LaCrosseGas,LaCrosse_22
-215 StatDeviceTrend state: Updated stats for: HZ_Arbeitszimmer
-209 StatDeviceTrend state: Updated stats for: HZ_Badezimmer_Fenster
-208 StatDeviceTrend state: Updated stats for: HZ_Badezimmer_Handtuch
-208 StatDeviceTrend state: Updated stats for: HZ_Flur
-194 StatDeviceTrend state: Updated stats for: HZ_Kinderzimmer
-206 StatDeviceTrend state: Updated stats for: HZ_Kueche
-214 StatDeviceTrend state: Updated stats for: HZ_Schlafzimmer
-204 StatDeviceTrend state: Updated stats for: HZ_Treppenhaus_Oben
-204 StatDeviceTrend state: Updated stats for: HZ_Treppenhaus_Unten
-4498 StatDeviceTrend state: Updated stats for: LaCrosseXX
-19376 StatDeviceTrend state: Updated stats for: LaCrosse_01
-19582 StatDeviceTrend state: Updated stats for: LaCrosse_02
-20060 StatDeviceTrend state: Updated stats for: LaCrosse_14
-3766 StatDeviceTrend state: Updated stats for: WT_Wohnzimmer
-37900 Strom_Balkonkraftwerk ENERGY_Power: .*
-4836 Strom_Balkonkraftwerk ENERGY_Today: .*
-4834 Strom_Balkonkraftwerk ENERGY_Total: .*
-14103 Strom_Balkonkraftwerk ENERGY_Voltage: .*
-176 Strom_Balkonkraftwerk ENERGY_Yesterday: .*
-4838 Strom_Balkonkraftwerk energy: .*
+7 StatDeviceTrend monitoredDevicesUnknown: AZ_ESPEasy_ESP_Easy_3_Barometer,LaCrosseGas,LaCrosse_22
+480 StatDeviceTrend state: Updated stats for: HZ_Arbeitszimmer
+480 StatDeviceTrend state: Updated stats for: HZ_Badezimmer_Fenster
+491 StatDeviceTrend state: Updated stats for: HZ_Badezimmer_Handtuch
+476 StatDeviceTrend state: Updated stats for: HZ_Flur
+460 StatDeviceTrend state: Updated stats for: HZ_Kinderzimmer
+490 StatDeviceTrend state: Updated stats for: HZ_Kueche
+480 StatDeviceTrend state: Updated stats for: HZ_Schlafzimmer
+379 StatDeviceTrend state: Updated stats for: HZ_Treppenhaus_Oben
+325 StatDeviceTrend state: Updated stats for: HZ_Treppenhaus_Unten
+6149 StatDeviceTrend state: Updated stats for: LaCrosseXX
+23550 StatDeviceTrend state: Updated stats for: LaCrosse_01
+24167 StatDeviceTrend state: Updated stats for: LaCrosse_02
+24284 StatDeviceTrend state: Updated stats for: LaCrosse_14
+4646 StatDeviceTrend state: Updated stats for: WT_Wohnzimmer
+52593 Strom_Balkonkraftwerk ENERGY_Power: .*
+5633 Strom_Balkonkraftwerk ENERGY_Today: .*
+5631 Strom_Balkonkraftwerk ENERGY_Total: .*
+19285 Strom_Balkonkraftwerk ENERGY_Voltage: .*
+217 Strom_Balkonkraftwerk ENERGY_Yesterday: .*
+5636 Strom_Balkonkraftwerk energy: .*
 1 Strom_Balkonkraftwerk state: on
-2124 SystemMonitor cpu_freq: .*
-8714 SystemMonitor cpu_temp_avg: .*
-4332 SystemStatistics idle: .*
-1051 SystemStatistics iowait: .*
-3278 SystemStatistics system: .*
-4075 SystemStatistics user: .*
-18 TE.FolderSize fhem_folder_size: .*
-18 TE.FolderSize state: OK
-18 TE.Free fhem_folder_size: .*
-18 TE.Free state: OK
+2640 SystemMonitor cpu_freq: .*
+10804 SystemMonitor cpu_temp_avg: .*
+5354 SystemStatistics idle: .*
+1292 SystemStatistics iowait: .*
+4039 SystemStatistics system: .*
+5031 SystemStatistics user: .*
+22 TE.FolderSize fhem_folder_size: .*
+22 TE.FolderSize state: OK
+22 TE.Free fhem_folder_size: .*
+22 TE.Free state: OK
 31 TV off
 14 TV on
-1073 Tageslicht elevation: -.*
-994 Tageslicht elevation: .*
-41 Tageslicht horizon: -.*
-28 Tageslicht horizon: .*
-83 Tageslicht light: .*
-1357 Tageslicht twilight: .*
-1363 Tageslicht twilight_weather: .*
-1074 Tageslicht_BS elevation: -.*
-994 Tageslicht_BS elevation: .*
-42 Tageslicht_BS horizon: -.*
-28 Tageslicht_BS horizon: .*
-84 Tageslicht_BS light: .*
-1351 Tageslicht_BS twilight: .*
-1358 Tageslicht_BS twilight_weather: .*
-36 WP profile_count: .*
-6 WP state: assigned
-901 WT_Wohnzimmer desiredTemperature: .*
-3584 WT_Wohnzimmer temperature: .*
-10304 atBKWEinspeisung state: Next: .*
-10304 atBKWNutzung state: Next: .*
-10309 atHeizungAZ state: Next: .*
+1388 Tageslicht elevation: -.*
+1163 Tageslicht elevation: .*
+53 Tageslicht horizon: -.*
+36 Tageslicht horizon: .*
+107 Tageslicht light: .*
+1671 Tageslicht twilight: .*
+1679 Tageslicht twilight_weather: .*
+1389 Tageslicht_BS elevation: -.*
+1162 Tageslicht_BS elevation: .*
+54 Tageslicht_BS horizon: -.*
+36 Tageslicht_BS horizon: .*
+108 Tageslicht_BS light: .*
+1668 Tageslicht_BS twilight: .*
+1676 Tageslicht_BS twilight_weather: .*
+1 Vacation state: Anwesend_HomeOffice_ohne_Lia
+279 WP profile_count: .*
+7 WP state: assigned
+1114 WT_Wohnzimmer desiredTemperature: .*
+4417 WT_Wohnzimmer temperature: .*
+12715 atBKWEinspeisung state: Next: .*
+12715 atBKWNutzung state: Next: .*
+12720 atHeizungAZ state: Next: .*
 15 lcCinema scene AllOff
 19 lcCinema scene Break
 16 lcCinema scene Cinema
 13 lcCinema scene WatchTV
 740 minuteTimer 
-20866 myDbLog CacheOverflowLastNum: .*
+25687 myDbLog CacheOverflowLastNum: .*
 4 myDbLog CacheOverflowLastState: exceeded
 4 myDbLog CacheOverflowLastState: normal
-20875 myDbLog CacheUsage: .*
-6 myDbLog FRAME_INITIALIZED
+25697 myDbLog CacheUsage: .*
+7 myDbLog FRAME_INITIALIZED
 27 myDbLog SUBPROC_DISCONNECTED
-6 myDbLog SUBPROC_INITIALIZED
-20239 myDbLog background_processing_time: .*
-20239 myDbLog sql_processing_time: .*
+7 myDbLog SUBPROC_INITIALIZED
+25051 myDbLog background_processing_time: .*
+25051 myDbLog sql_processing_time: .*
 8 myDbLog state: Another operation is in progress - resync at NextSync
 15 myDbLog state: Database disconnected by request.
 13 myDbLog state: closed until .* seconds)
-29 myDbLog state: connected
-6 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX
-6 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01
-6 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02
-6 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02,LaCrosse_14
-5 myStatDevice monitoredDevicesMAX: HZ_Arbeitszimmer
-5 myStatDevice monitoredDevicesMAX: HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
+31 myDbLog state: connected
+7 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX
+7 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01
+7 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02
+7 myStatDevice monitoredDevicesLaCrosse: LaCrosseXX,LaCrosse_01,LaCrosse_02,LaCrosse_14
+6 myStatDevice monitoredDevicesMAX: HZ_Arbeitszimmer
+6 myStatDevice monitoredDevicesMAX: HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
 1 myStatDevice monitoredDevicesMAX: WT_Wohnzimmer
 1 myStatDevice monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer
 1 myStatDevice monitoredDevicesMAX: WT_Wohnzimmer,HZ_Arbeitszimmer,HZ_Badezimmer_Fenster
-215 myStatDevice state: Updated stats for: HZ_Arbeitszimmer
-209 myStatDevice state: Updated stats for: HZ_Badezimmer_Fenster
-208 myStatDevice state: Updated stats for: HZ_Badezimmer_Handtuch
-208 myStatDevice state: Updated stats for: HZ_Flur
-194 myStatDevice state: Updated stats for: HZ_Kinderzimmer
-206 myStatDevice state: Updated stats for: HZ_Kueche
-214 myStatDevice state: Updated stats for: HZ_Schlafzimmer
-204 myStatDevice state: Updated stats for: HZ_Treppenhaus_Oben
-204 myStatDevice state: Updated stats for: HZ_Treppenhaus_Unten
-4498 myStatDevice state: Updated stats for: LaCrosseXX
-19376 myStatDevice state: Updated stats for: LaCrosse_01
-19582 myStatDevice state: Updated stats for: LaCrosse_02
-20060 myStatDevice state: Updated stats for: LaCrosse_14
-3766 myStatDevice state: Updated stats for: WT_Wohnzimmer
+480 myStatDevice state: Updated stats for: HZ_Arbeitszimmer
+480 myStatDevice state: Updated stats for: HZ_Badezimmer_Fenster
+491 myStatDevice state: Updated stats for: HZ_Badezimmer_Handtuch
+476 myStatDevice state: Updated stats for: HZ_Flur
+460 myStatDevice state: Updated stats for: HZ_Kinderzimmer
+490 myStatDevice state: Updated stats for: HZ_Kueche
+480 myStatDevice state: Updated stats for: HZ_Schlafzimmer
+379 myStatDevice state: Updated stats for: HZ_Treppenhaus_Oben
+325 myStatDevice state: Updated stats for: HZ_Treppenhaus_Unten
+6149 myStatDevice state: Updated stats for: LaCrosseXX
+23550 myStatDevice state: Updated stats for: LaCrosse_01
+24167 myStatDevice state: Updated stats for: LaCrosse_02
+24284 myStatDevice state: Updated stats for: LaCrosse_14
+4646 myStatDevice state: Updated stats for: WT_Wohnzimmer
 1 notifyCUL3 state: active
 1 rgr_Children home
 1 rgr_Children lastActivity: home
@@ -2503,44 +2782,44 @@
 1 rr_Father lastState: gone
 2 rr_Mother durTimerPresence: .*
 2 rr_Son durTimerAbsence: .*
-1292 shellyplug9070697146a0 energy: .*
-8233 shellyplug9070697146a0 power: .*
-7 shellyplug9070697146a0 state: off
-7 shellyplug9070697146a0 state: on
-6818 shellyplug9070697146a0 switch_state: off
-902 shellyplug9070697146a0 switch_state: on
-287 shellyplugmg3_1 current: .*
-368 shellyplugmg3_1 energy: .*
-408 shellyplugmg3_1 energy_lastMinute: .*
-368 shellyplugmg3_1 energy_purchased: .*
-5 shellyplugmg3_1 error: .*)
-2 shellyplugmg3_1 error: connect to http://.* timed out
-9 shellyplugmg3_1 error: network
+1574 shellyplug9070697146a0 energy: .*
+10381 shellyplug9070697146a0 power: .*
+8 shellyplug9070697146a0 state: off
+8 shellyplug9070697146a0 state: on
+8484 shellyplug9070697146a0 switch_state: off
+1057 shellyplug9070697146a0 switch_state: on
+347 shellyplugmg3_1 current: .*
+424 shellyplugmg3_1 energy: .*
+433 shellyplugmg3_1 energy_lastMinute: .*
+424 shellyplugmg3_1 energy_purchased: .*
+9 shellyplugmg3_1 error: .*)
+4 shellyplugmg3_1 error: connect to http://.* timed out
+15 shellyplugmg3_1 error: network
 2 shellyplugmg3_1 error: read from http://.* timed out
 1 shellyplugmg3_1 firmware_ID: .*-ge1a198b
 1 shellyplugmg3_1 firmware_current: v2.*
 1 shellyplugmg3_1 firmware_updIcon: .*
 1 shellyplugmg3_1 firmware_updText: check for beta-version
 1 shellyplugmg3_1 firmware_updText: update needed to v2.*, check for beta-version
-2523 shellyplugmg3_1 frequency: .*
-4718 shellyplugmg3_1 inttemp: .*
-2 shellyplugmg3_1 network: Error: Timeout connecting
+3083 shellyplugmg3_1 frequency: .*
+5685 shellyplugmg3_1 inttemp: .*
+4 shellyplugmg3_1 network: Error: Timeout connecting
 2 shellyplugmg3_1 network: Error: Timeout reading
-1 shellyplugmg3_1 network: connected
-1 shellyplugmg3_1 network: not connected (no route)
-4 shellyplugmg3_1 network_connection: offline
-4 shellyplugmg3_1 network_connection: online
-4 shellyplugmg3_1 network_disconnects: .*
-3683 shellyplugmg3_1 network_rssi: -.*
-426 shellyplugmg3_1 power: .*
-8 shellyplugmg3_1 relay: off
-8 shellyplugmg3_1 relay: on
-3 shellyplugmg3_1 source: MQTT
-2 shellyplugmg3_1 source: button
+3 shellyplugmg3_1 network: connected
+3 shellyplugmg3_1 network: not connected (no route)
+6 shellyplugmg3_1 network_connection: offline
+6 shellyplugmg3_1 network_connection: online
+6 shellyplugmg3_1 network_disconnects: .*
+4493 shellyplugmg3_1 network_rssi: -.*
+491 shellyplugmg3_1 power: .*
+13 shellyplugmg3_1 relay: off
+13 shellyplugmg3_1 relay: on
+4 shellyplugmg3_1 source: MQTT
+3 shellyplugmg3_1 source: button
 2 shellyplugmg3_1 source: init
-4 shellyplugmg3_1 state: Error: Network
-1 shellyplugmg3_1 state: got data
-11 shellyplugmg3_1 state: off
-8 shellyplugmg3_1 state: on
-10259 shellyplugmg3_1 uptime: .*
-9202 shellyplugmg3_1 voltage: .*
+6 shellyplugmg3_1 state: Error: Network
+3 shellyplugmg3_1 state: got data
+17 shellyplugmg3_1 state: off
+13 shellyplugmg3_1 state: on
+12656 shellyplugmg3_1 uptime: .*
+11305 shellyplugmg3_1 voltage: .*

@@ -11,3 +11,5 @@ restoreDir/
 *.jpg
 *.deb
 *.PNG
+fhem.save
+demolog/eventTypes.txt
